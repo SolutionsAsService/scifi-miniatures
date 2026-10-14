@@ -18,7 +18,7 @@ S = json.loads((PKG / "spec" / "vigil-heavy.spec.json").read_text())
 pz = S["pose"]
 cz = pz["cannon"]
 M = X.place(v3(cz["grip"]), unit(cz["dir"]), (0, 0, 1))
-grip, handle = X.apply(M, (0, 0, 0)), X.apply(M, (cz["handle_x"], 0, 2.5))
+grip, handle = X.apply(M, (0, 0, 0)), X.apply(M, (cz["handle_x"], 0, 2.8))
 pose = X.Pose(pelvis=pz["pelvis"], yaw=pz["yaw"], lean=pz["lean"], twist=pz["twist"], ankles=pz["ankles"],
               feet_yaw=pz["feet_yaw"], fists=(grip, handle), elbow_poles=pz["elbow_poles"], knee_poles=pz["knee_poles"],
               head_yaw=pz["head_yaw"])
@@ -29,11 +29,11 @@ def cannon(g, P):
     X.fist(g, grip, X.apply(M, (-0.17, 0, -0.98)) - grip, grip - P.elbow[0])
     X.fist(g, handle, M[:3, 0], handle - P.elbow[1])
     # belt power cell on the right hip and the cable from the capacitor drum
-    cell = P.pelvis + P.Rp @ v3(-2.55, 1.0, 0.6)
-    g.add(rbox(cell, (0.75, 1.0, 1.15), P.Rp, 0.35), 0.15)
-    a = X.apply(M, (-2.2, 0, 0.2))
+    cell = P.pelvis + P.Rp @ v3(-2.95, 1.1, 0.7)
+    g.add(rbox(cell, (0.85, 1.1, 1.25), P.Rp, 0.38), 0.15)
+    a = X.apply(M, (-2.4, 0, 0.3))
     b = cell + P.Rp @ v3(-0.5, -0.4, -0.9)
-    g.add(tube(bezier(a, a + v3(0, 0, -2.2), b + v3(-0.8, -1.2, -2.0), b, 12), 0.45), 0.2)
+    g.add(tube(bezier(a, a + v3(0, 0, -2.2), b + v3(-0.8, -1.2, -2.0), b, 12), 0.5), 0.2)
 
 
 NOTES = {
