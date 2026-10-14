@@ -1,0 +1,68 @@
+{
+ "id": "vigil-helms-mk2",
+ "name": "Vigil helm library Mk 2 (VH2)",
+ "revision": "0.1",
+ "line": "scifi",
+ "process": "msla_resin",
+ "scale": {
+  "label": "30 mm heroic",
+  "ratio": "1:56",
+  "tool_scale": "28mm"
+ },
+ "voxel_mm": 0.05,
+ "max_triangles": 200000,
+ "peg": {
+  "kind": "D-flat",
+  "d_mm": 1.6,
+  "len_mm": 2,
+  "flat_from_axis": "0.3 d",
+  "key": "flat faces -y (front)",
+  "source": "tools/exosuit.py PEG_HEAD (same as VH-01..10)"
+ },
+ "helm_frame": {
+  "neck_cut_z": 0,
+  "helm_centre_z_mm": 2.8,
+  "helm_scale_HS": 1.12,
+  "faces": "-y",
+  "units": "mm"
+ },
+ "signature": {
+  "visor": "gull-wing wrap visor: outline in (arc length s, height z) helm units, right half (0,0.3) (1.2,0.52) (2.3,1.12) (2.8,1.02) (2.6,0.38) (1.35,0) (0,-0.62); recess 0.38 mm, raised frame 0.26 mm wide x 0.18 mm proud, upper glass facet 0.17 mm proud of the lower",
+  "keel": "0.54 mm keel bar splits the wings and runs down the V-prow; 0.6 mm crest tube from the brow to the nape",
+  "shell": "crown plate 0.25 mm over temple plates 0.13 mm over the skull; nape tiers 0.20 / 0.34 mm",
+  "vents": "slots 0.30 mm wide, 0.25-0.30 mm deep, pitch 0.68 mm (ribs >= 0.38 mm)"
+ },
+ "catalog": {
+  "family": "Bits & Helms",
+  "revision_note": "12 swappable VH2 helms on the line's 1.6 mm D-flat peg",
+  "base": "none (bits)",
+  "footprint": "12 helms",
+  "description": "Second-generation Vigil helm profile (VH2): a gull-wing wrap visor split by the keel bar, layered crown/temple/nape plates, V-prow respirator with chevron vents, cheek guards with vent slots and aural housings with breather hoses. Twelve variants: VH2-01 Lineguard (line trooper), VH2-02 Tidewall (sealed void/EVA), VH2-03 Lookout (recon, optic stalk), VH2-04 Bastion (heavy, armoured respirator), VH2-05 Marshal (sergeant/warden, blade crest), VH2-06 Mender (medic), VH2-07 Wright (engineer, headlamp and goggles), VH2-08 Plumb (marksman, rangefinder), VH2-09 Kite (pilot/crew), VH2-10 Provost (officer, open face), VH2-11 Lineguard scarred and VH2-12 Bastion breached (battle-damaged). Same 1.6 mm D-flat neck peg as VH-01..10, so every helm fits every Vigil figure.",
+  "images": [
+   {
+    "path": "images/vigil-helms-mk2-sheet-front.png",
+    "label": "Display sheet: front"
+   },
+   {
+    "path": "images/vigil-helms-mk2-sheet-34.png",
+    "label": "Display sheet: 3/4"
+   },
+   {
+    "path": "images/vigil-helms-mk2-hero.png",
+    "label": "Library, 3/4 (render)"
+   },
+   {
+    "path": "images/vigil-helms-mk2-turnaround.png",
+    "label": "Turnaround: 3/4, front, side, back"
+   }
+  ],
+  "defaultExplode": 0,
+  "buildNotes": [
+   "Defined in tools/vh2.py (VH2 registry, signed-distance sculpt); built by tools/bitspack.py on a 0.05 mm grid, no mesh decimation of the print files.",
+   "Visor outlines are polygons wrapped round the skull in arc-length coordinates, so the wings follow the dome instead of being projected flat.",
+   "Feature floor: raised details >= 0.5 mm wide, engraved slots >= 0.28 mm wide and 0.25-0.38 mm deep, ribs between slots >= 0.38 mm, antennas >= 0.76 mm diameter.",
+   "Display sheets colour the visor glass (faces inside the visor outline and below the frame) for readability; the print files are one solid each."
+  ],
+  "limitations": "Procedural sculpt at 5.7 mm helm width: the officer's face is a stylised mask (brow, nose, eyes, chin), damage is cut geometry (gouges, pits, chunks), not texture. Printability is a heuristic screen (unified-CAD-MCP), not a test print."
+ }
+}
