@@ -1,0 +1,44 @@
+{
+  "id": "wayfarer-apc",
+  "name": "Wayfarer-class APC",
+  "designation": "AW-8",
+  "role": "Wheeled 8x8 amphibious armoured personnel carrier: moves a full Vigil section fast along colony roads, river crossings and causeways, drops them behind cover and pulls back to overwatch.",
+  "drive": "wheeled 8x8",
+  "crew": 2,
+  "capacity": "10 Vigilants in full exosuit (two inward-facing benches of five)",
+  "weapons": [
+    {
+      "variant": "AW-8A (standard)",
+      "main": "Tally remote weapon station: heavy repeater + 40 mm grenade launcher",
+      "secondary": "2x4 smoke dischargers"
+    },
+    {
+      "variant": "AW-8C Wren",
+      "main": "low-profile two-seat turret, 25 mm Wren autocannon (troops reduced to 8)",
+      "secondary": "coaxial repeater"
+    },
+    {
+      "variant": "AW-8M Sling",
+      "main": "twin-tube 120 mm breech-loaded mortar module in the troop bay (roof doors)",
+      "secondary": "Tally RWS retained"
+    }
+  ],
+  "dims_scale_mm": {
+    "length": 150.6,
+    "width": 58.2,
+    "height": 52.4
+  },
+  "dims_world_m": {
+    "length": 8.43,
+    "width": 3.26,
+    "height": 2.93
+  },
+  "scale": "1:56 (30 mm heroic)",
+  "status": "concept",
+  "images": [
+    "images/wayfarer-apc-hero.png",
+    "images/wayfarer-apc-3view.png"
+  ],
+  "blockout_stl": "blockout/wayfarer-apc-blockout.stl",
+  "blockout_note": "Overlapping primitive shells at 1:56 mm (visual blockout, not a unioned print mesh)."
+}

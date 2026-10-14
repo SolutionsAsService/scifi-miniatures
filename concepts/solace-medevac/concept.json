@@ -1,0 +1,44 @@
+{
+  "id": "solace-medevac",
+  "name": "Solace-class armoured medevac",
+  "designation": "AL-2",
+  "role": "Light 4x4 armoured ambulance and utility runabout: follows the fireteam right up to the line, recovers a downed Vigilant (exosuit and all) into a protected litter pod, and runs them back to the aid post. The rear pod swaps for recon and utility fits.",
+  "drive": "wheeled 4x4 (independent suspension)",
+  "crew": 2,
+  "capacity": "2 armoured litters (suited casualties) + 1 medic, or 4 seated Vigilants in the utility pod",
+  "weapons": [
+    {
+      "variant": "AL-2M Solace (medevac)",
+      "main": "cab-roof light repeater on a ring mount",
+      "secondary": "smoke dischargers; no offensive fit under the medevac marking"
+    },
+    {
+      "variant": "AL-2R Outrider (recon)",
+      "main": "open bed with telescopic sensor mast + twin Spindle anti-armour missiles",
+      "secondary": "light repeater"
+    },
+    {
+      "variant": "AL-2U Wick (utility)",
+      "main": "cargo/ammo pod with crane arm; pintle heavy repeater",
+      "secondary": "smoke"
+    }
+  ],
+  "dims_scale_mm": {
+    "length": 97.2,
+    "width": 43.3,
+    "height": 48.9
+  },
+  "dims_world_m": {
+    "length": 5.44,
+    "width": 2.42,
+    "height": 2.74
+  },
+  "scale": "1:56 (30 mm heroic)",
+  "status": "concept",
+  "images": [
+    "images/solace-medevac-hero.png",
+    "images/solace-medevac-3view.png"
+  ],
+  "blockout_stl": "blockout/solace-medevac-blockout.stl",
+  "blockout_note": "Overlapping primitive shells at 1:56 mm (visual blockout, not a unioned print mesh)."
+}

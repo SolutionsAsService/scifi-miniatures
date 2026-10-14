@@ -1,0 +1,44 @@
+{
+  "id": "palisade-ifv",
+  "name": "Palisade-class IFV",
+  "designation": "AV-3",
+  "role": "Tracked infantry fighting vehicle: carries a Vigil fireteam into contact and stays to fight beside it with a stabilised autocannon.",
+  "drive": "tracked",
+  "crew": 3,
+  "capacity": "6 Vigilants in full exosuit (seated, packs racked)",
+  "weapons": [
+    {
+      "variant": "AV-3A (standard)",
+      "main": "30 mm Rook autocannon, dual feed",
+      "secondary": "coaxial Lance-pattern repeater; 2x3 smoke/chaff dischargers"
+    },
+    {
+      "variant": "AV-3B Spindle",
+      "main": "30 mm Rook + twin Spindle anti-armour missile pod on the turret left",
+      "secondary": "coaxial repeater"
+    },
+    {
+      "variant": "AV-3W Ward",
+      "main": "turretless; roof remote weapon station (heavy repeater)",
+      "secondary": "+2 seats (8 Vigilants), command fit"
+    }
+  ],
+  "dims_scale_mm": {
+    "length": 133.3,
+    "width": 64.4,
+    "height": 56.8
+  },
+  "dims_world_m": {
+    "length": 7.46,
+    "width": 3.61,
+    "height": 3.18
+  },
+  "scale": "1:56 (30 mm heroic)",
+  "status": "concept",
+  "images": [
+    "images/palisade-ifv-hero.png",
+    "images/palisade-ifv-3view.png"
+  ],
+  "blockout_stl": "blockout/palisade-ifv-blockout.stl",
+  "blockout_note": "Overlapping primitive shells at 1:56 mm (visual blockout, not a unioned print mesh)."
+}

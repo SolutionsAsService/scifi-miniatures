@@ -1,0 +1,44 @@
+{
+  "id": "sunder-breaching-carrier",
+  "name": "Sunder-class breaching carrier",
+  "designation": "AB-9",
+  "role": "Heavy articulated assault carrier: noses its armoured assault module straight into a breach (bunker wall, hab lock, barricade), drops the chevron prow ramp and puts a full Vigil assault section out of the front under its own armour; the rear power unit stays back and fires over it.",
+  "drive": "tracked, two articulated units (4 track runs)",
+  "crew": 3,
+  "capacity": "10 Vigilants in full exosuit, standing-ready on grab rails (assault module)",
+  "weapons": [
+    {
+      "variant": "AB-9A (standard)",
+      "main": "Cleaver 90 mm short demolition gun in the rear-unit turret",
+      "secondary": "cab-roof grenade launcher; prow-mounted smoke mortars"
+    },
+    {
+      "variant": "AB-9T Torch",
+      "main": "twin Hearth thermal lances in the rear turret (short range bunker clearing)",
+      "secondary": "as standard"
+    },
+    {
+      "variant": "AB-9H Hold",
+      "main": "Rook 30 mm autocannon turret + point-defence laser on the cab",
+      "secondary": "assault module seats 12"
+    }
+  ],
+  "dims_scale_mm": {
+    "length": 172.7,
+    "width": 70.2,
+    "height": 72.8
+  },
+  "dims_world_m": {
+    "length": 9.67,
+    "width": 3.93,
+    "height": 4.08
+  },
+  "scale": "1:56 (30 mm heroic)",
+  "status": "concept",
+  "images": [
+    "images/sunder-breaching-carrier-hero.png",
+    "images/sunder-breaching-carrier-3view.png"
+  ],
+  "blockout_stl": "blockout/sunder-breaching-carrier-blockout.stl",
+  "blockout_note": "Overlapping primitive shells at 1:56 mm (visual blockout, not a unioned print mesh)."
+}

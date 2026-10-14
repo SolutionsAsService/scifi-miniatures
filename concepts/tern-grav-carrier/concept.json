@@ -1,0 +1,44 @@
+{
+  "id": "tern-grav-carrier",
+  "name": "Tern-class insertion carrier",
+  "designation": "AG-5",
+  "role": "Grav rapid-insertion transport: skims in under sensor cover from the orbital watch, hovers a metre off the ground with both side doors open so a Vigil fireteam can drop out in seconds, then covers the landing zone with door guns and lifts away.",
+  "drive": "grav (four tilting lift rings) + rear thrust",
+  "crew": 2,
+  "capacity": "8 Vigilants in full exosuit (four per side on drop rails) + 2 door gunners from the squad",
+  "weapons": [
+    {
+      "variant": "AG-5A (standard)",
+      "main": "2 pintle heavy repeaters in the side doors",
+      "secondary": "chin sensor turret, flare/chaff pods"
+    },
+    {
+      "variant": "AG-5G Gale",
+      "main": "chin-mounted rotary repeater + 2 stub-wing rocket pods (troops reduced to 6)",
+      "secondary": "door repeaters"
+    },
+    {
+      "variant": "AG-5L Lift",
+      "main": "unarmed cargo/sling variant: belly winch for a Lantern pod or supply crate",
+      "secondary": "defensive flare pods only"
+    }
+  ],
+  "dims_scale_mm": {
+    "length": 144.3,
+    "width": 107.0,
+    "height": 64.0
+  },
+  "dims_world_m": {
+    "length": 8.08,
+    "width": 5.99,
+    "height": 3.58
+  },
+  "scale": "1:56 (30 mm heroic)",
+  "status": "concept",
+  "images": [
+    "images/tern-grav-carrier-hero.png",
+    "images/tern-grav-carrier-3view.png"
+  ],
+  "blockout_stl": "blockout/tern-grav-carrier-blockout.stl",
+  "blockout_note": "Overlapping primitive shells at 1:56 mm (visual blockout, not a unioned print mesh)."
+}
