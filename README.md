@@ -24,7 +24,7 @@ original: no helm, pauldron or weapon is copied from an existing game or film.
 |---|---|---|
 | [`vigil-rifleman`](vigil-rifleman/) | Vigilant Rifleman, advancing | Troopers |
 
-More figures (heavy weapons, warden) are in progress on the `wip/vigil-1` branch.
+Support vehicle concepts (transports, artillery, armour, walkers, drones) are in [`concepts/`](concepts/).
 
 ## Package format
 
