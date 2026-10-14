@@ -1,0 +1,126 @@
+{
+ "id": "vigil-armory",
+ "name": "Vigil armory: weapons and armour bits",
+ "line": "scifi",
+ "family": "Bits & Helms",
+ "revision": "0.1 · weapons and bolt-on armour as loose parts",
+ "description": "Weapons and armour bits for the Vigilant line, by identifier: VW-01 Lance rifle, VW-02 Needle rifle, VW-03 Maul arc-cannon, VW-04 Spur sidearm, VW-05 Talon carbine, VW-06 Brand flamer, VW-07 Halberd shotgun, VW-08 Edge blade; VA-01..04 shoulder caps (standard, riot, command, heavy) and VA-05 knee guard.",
+ "images": [
+  {
+   "path": "images/vigil-armory-hero.png",
+   "label": "Armory"
+  },
+  {
+   "path": "images/vigil-armory-turnaround.png",
+   "label": "Turnaround"
+  }
+ ],
+ "defaultExplode": 0,
+ "buildNotes": [
+  "Defined in tools/armory.py (WEAPONS, ARMOUR registries); built by tools/bitspack.py.",
+  "Barrels at least 1.3 mm, the blade 1.0 mm with rounded edges."
+ ],
+ "limitations": "Procedural designs; printability is a heuristic screen (unified-CAD-MCP), not a test print.",
+ "mini": {
+  "scale": {
+   "label": "30 mm heroic",
+   "ratio": "1:56"
+  },
+  "base": "none (bits)",
+  "footprint": "8 weapons, 5 armour bits",
+  "process": "MSLA resin · 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
+  "volumeMl": 0.5,
+  "volumeLabel": "Resin volume",
+  "printHeightMm": 8.1,
+  "printability": {
+   "verdict": "fail",
+   "preset": "msla_resin",
+   "checkedBy": "unified-CAD-MCP miniature_printability_check",
+   "summary": "va-04-shoulder-cap-heavy: minimum wall (supported) = 1.8622 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+   "issues": [
+    "Advisory: minimum wall (unsupported)"
+   ],
+   "report": "reports/printability.md"
+  },
+  "printParts": [
+   {
+    "name": "VW-01 Lance rifle",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VW-02 Needle rifle",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VW-03 Maul arc-cannon",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VW-04 Spur sidearm",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VW-05 Talon carbine",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VW-06 Brand flamer",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VW-07 Halberd shotgun",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VW-08 Edge blade",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VA-01 Shoulder cap, standard",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VA-02 Shoulder cap, riot",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VA-03 Shoulder cap, command",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VA-04 Shoulder cap, heavy",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VA-05 Knee guard",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   }
+  ]
+ }
+}

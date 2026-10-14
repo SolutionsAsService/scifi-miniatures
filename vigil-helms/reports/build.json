@@ -1,0 +1,136 @@
+{
+ "id": "vigil-helms",
+ "generator": "source/build.py (tools/sdfkit.py: SDF sculpt, marching cubes, manifold3d simplification)",
+ "assembled_bbox_mm": [
+  49.79,
+  19.36,
+  11.49
+ ],
+ "parts": {
+  "vh-01-vigil": {
+   "volume_mm3": 105.01,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.65,
+    6.62,
+    8.36
+   ],
+   "triangles": 83854,
+   "instances": 1
+  },
+  "vh-02-warden": {
+   "volume_mm3": 109.96,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    6.1,
+    6.62,
+    11.49
+   ],
+   "triangles": 94358,
+   "instances": 1
+  },
+  "vh-03-breacher": {
+   "volume_mm3": 110.16,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.65,
+    6.64,
+    8.36
+   ],
+   "triangles": 82088,
+   "instances": 1
+  },
+  "vh-04-seeker": {
+   "volume_mm3": 107.08,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.65,
+    7.17,
+    8.36
+   ],
+   "triangles": 88458,
+   "instances": 1
+  },
+  "vh-05-sentinel": {
+   "volume_mm3": 99.81,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.49,
+    5.99,
+    8.05
+   ],
+   "triangles": 72560,
+   "instances": 1
+  },
+  "vh-06-raptor": {
+   "volume_mm3": 98.51,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    4.86,
+    7.92,
+    8.46
+   ],
+   "triangles": 75784,
+   "instances": 1
+  },
+  "vh-07-diver": {
+   "volume_mm3": 110.35,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.71,
+    6.07,
+    8.05
+   ],
+   "triangles": 84008,
+   "instances": 1
+  },
+  "vh-08-hunter": {
+   "volume_mm3": 95.04,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    4.75,
+    6.9,
+    8.72
+   ],
+   "triangles": 73736,
+   "instances": 1
+  },
+  "vh-09-bulwark": {
+   "volume_mm3": 115.33,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.42,
+    6.0,
+    7.82
+   ],
+   "triangles": 79424,
+   "instances": 1
+  },
+  "vh-10-specter": {
+   "volume_mm3": 145.59,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.94,
+    7.34,
+    8.72
+   ],
+   "triangles": 89024,
+   "instances": 1
+  }
+ },
+ "interference": [],
+ "step": {
+  "file": "cad/vigil-helms-assembly.step",
+  "kind": "faceted B-rep reference (about 5000 triangles per part) written by FreeCAD"
+ }
+}

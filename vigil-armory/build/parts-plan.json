@@ -1,0 +1,67 @@
+[
+ {
+  "stl": "vw-01-lance-rifle",
+  "label": "VW-01 Lance rifle",
+  "plan": true
+ },
+ {
+  "stl": "vw-02-needle-rifle",
+  "label": "VW-02 Needle rifle",
+  "plan": true
+ },
+ {
+  "stl": "vw-03-maul-arc-cannon",
+  "label": "VW-03 Maul arc-cannon",
+  "plan": true
+ },
+ {
+  "stl": "vw-04-spur-sidearm",
+  "label": "VW-04 Spur sidearm",
+  "plan": true
+ },
+ {
+  "stl": "vw-05-talon-carbine",
+  "label": "VW-05 Talon carbine",
+  "plan": true
+ },
+ {
+  "stl": "vw-06-brand-flamer",
+  "label": "VW-06 Brand flamer",
+  "plan": true
+ },
+ {
+  "stl": "vw-07-halberd-shotgun",
+  "label": "VW-07 Halberd shotgun",
+  "plan": true
+ },
+ {
+  "stl": "vw-08-edge-blade",
+  "label": "VW-08 Edge blade",
+  "plan": true
+ },
+ {
+  "stl": "va-01-shoulder-cap-standard",
+  "label": "VA-01 Shoulder cap, standard",
+  "plan": true
+ },
+ {
+  "stl": "va-02-shoulder-cap-riot",
+  "label": "VA-02 Shoulder cap, riot",
+  "plan": true
+ },
+ {
+  "stl": "va-03-shoulder-cap-command",
+  "label": "VA-03 Shoulder cap, command",
+  "plan": true
+ },
+ {
+  "stl": "va-04-shoulder-cap-heavy",
+  "label": "VA-04 Shoulder cap, heavy",
+  "plan": true
+ },
+ {
+  "stl": "va-05-knee-guard",
+  "label": "VA-05 Knee guard",
+  "plan": true
+ }
+]

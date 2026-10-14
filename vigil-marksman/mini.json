@@ -1,0 +1,75 @@
+{
+ "id": "vigil-marksman",
+ "name": "Vigilant Marksman, kneeling",
+ "line": "scifi",
+ "family": "Troopers",
+ "revision": "0.1 · resin figure, helm, backpack and 32 mm base",
+ "description": "A Vigilant marksman down on one knee, Needle marksman rifle shouldered and aimed, the long barrel steadied by the support gauntlet under the receiver. Right knee and shin on the deck, left foot planted forward. Same Kestrel armour kit, Vigil helm and power pack as the squad.",
+ "images": [
+  {
+   "path": "images/vigil-marksman-hero.png",
+   "label": "3/4 front (render)"
+  },
+  {
+   "path": "images/vigil-marksman-turnaround.png",
+   "label": "Turnaround: 3/4, front, side, back"
+  }
+ ],
+ "defaultExplode": 0.25,
+ "buildNotes": [
+  "Sculpted as signed-distance fields (tools/sdfkit.py): smooth-blended anatomy, armour plates grown off the body and cut to oval outlines, panel lines engraved 0.25-0.4 mm deep.",
+  "Heroic scale: 30 mm to the visor line; the Lance rifle is 14 mm long with a 1.3 mm barrel, a 2.3 mm deep receiver and a box magazine behind the grip, thickened well past true scale so it prints and survives handling.",
+  "The figure stands on an integral 1.1 mm footplate that drops into a keyed recess in the base (0.1 mm glue clearance per side); no thin pins through the feet.",
+  "Helm on a 1.6 mm D-flat peg (keyed to face along the rifle), backpack on a 2.0 mm D-flat peg: sizes from miniature_base_and_peg; every helm and pack in the line fits every figure.",
+  "Prints: figure tilted on supports at the angle miniature_support_plan picked, helm and backpack on supports, base flat on the plate (magnet pocket vented to the rim)."
+ ],
+ "limitations": "Procedural sculpt, not a hand sculpt: faces of the armour are smooth (no battle damage or texture), hands are gauntlet fists. Printability is a heuristic screen through unified-CAD-MCP, not a test print; the STEP is a faceted reference, not a parametric model.",
+ "mini": {
+  "scale": {
+   "label": "30 mm heroic (about 32.5 mm to the crown)",
+   "ratio": "1:56"
+  },
+  "base": "25 mm round deck-plate base, 3.8 mm, 5 × 2 mm magnet pocket",
+  "footprint": "Ø 25 mm",
+  "process": "MSLA resin · 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
+  "volumeMl": 2.9,
+  "volumeLabel": "Resin volume",
+  "printHeightMm": 24.7,
+  "printability": {
+   "verdict": "fail",
+   "preset": "msla_resin",
+   "checkedBy": "unified-CAD-MCP miniature_printability_check + support_plan",
+   "summary": "base_and_peg: wall around the socket = 0.6 (limit 0.6); figure: no enclosed voids = 0.008 (limit 0); figure: minimum wall (supported) = 12.2774 (limit <= 0.5 mm2 thinner than 0.4 mm); helm: minimum wall (supported) = 5.6188 (limit <= 0.5 mm2 thinner than 0.4 mm); backpack: minimum wall (supported) = 11.0494 (limit <= 0.5 mm2 thinner than 0.4 mm); base: minimum wall (supported) = 6.6109 (limit <= 0",
+   "issues": [
+    "Advisory: minimum wall (unsupported)"
+   ],
+   "report": "reports/printability.md"
+  },
+  "printParts": [
+   {
+    "name": "Figure (with footplate)",
+    "qty": 1,
+    "orientation": "tilted +30 deg about x, +0 deg about y, on supports",
+    "supports": "light/medium resin supports"
+   },
+   {
+    "name": "Helm",
+    "qty": 1,
+    "orientation": "tilted +30 deg about x, +0 deg about y, on supports",
+    "supports": "light/medium resin supports"
+   },
+   {
+    "name": "Backpack",
+    "qty": 1,
+    "orientation": "tilted +30 deg about x, +15 deg about y, on supports",
+    "supports": "light/medium resin supports"
+   },
+   {
+    "name": "25 mm base",
+    "qty": 1,
+    "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
+    "supports": "light/medium resin supports"
+   }
+  ]
+ }
+}

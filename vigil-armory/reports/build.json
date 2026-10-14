@@ -1,0 +1,172 @@
+{
+ "id": "vigil-armory",
+ "generator": "source/build.py (tools/sdfkit.py: SDF sculpt, marching cubes, manifold3d simplification)",
+ "assembled_bbox_mm": [
+  48.78,
+  79.1,
+  9.35
+ ],
+ "parts": {
+  "vw-01-lance-rifle": {
+   "volume_mm3": 75.42,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    14.94,
+    2.0,
+    6.28
+   ],
+   "triangles": 73492,
+   "instances": 1
+  },
+  "vw-02-needle-rifle": {
+   "volume_mm3": 50.71,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    17.58,
+    1.76,
+    5.15
+   ],
+   "triangles": 67640,
+   "instances": 1
+  },
+  "vw-03-maul-arc-cannon": {
+   "volume_mm3": 79.18,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    14.34,
+    3.1,
+    4.42
+   ],
+   "triangles": 72816,
+   "instances": 1
+  },
+  "vw-04-spur-sidearm": {
+   "volume_mm3": 5.41,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    4.35,
+    1.0,
+    2.39
+   ],
+   "triangles": 10120,
+   "instances": 1
+  },
+  "vw-05-talon-carbine": {
+   "volume_mm3": 26.74,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    8.8,
+    2.67,
+    4.14
+   ],
+   "triangles": 34380,
+   "instances": 1
+  },
+  "vw-06-brand-flamer": {
+   "volume_mm3": 42.26,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    9.6,
+    2.1,
+    4.35
+   ],
+   "triangles": 47660,
+   "instances": 1
+  },
+  "vw-07-halberd-shotgun": {
+   "volume_mm3": 46.52,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    13.91,
+    1.7,
+    3.79
+   ],
+   "triangles": 51780,
+   "instances": 1
+  },
+  "vw-08-edge-blade": {
+   "volume_mm3": 10.87,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    2.4,
+    1.1,
+    8.1
+   ],
+   "triangles": 18336,
+   "instances": 1
+  },
+  "va-01-shoulder-cap-standard": {
+   "volume_mm3": 27.94,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.2,
+    4.9,
+    2.1
+   ],
+   "triangles": 30152,
+   "instances": 1
+  },
+  "va-02-shoulder-cap-riot": {
+   "volume_mm3": 31.52,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.2,
+    4.9,
+    2.1
+   ],
+   "triangles": 33188,
+   "instances": 1
+  },
+  "va-03-shoulder-cap-command": {
+   "volume_mm3": 28.73,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.2,
+    4.9,
+    2.3
+   ],
+   "triangles": 30804,
+   "instances": 1
+  },
+  "va-04-shoulder-cap-heavy": {
+   "volume_mm3": 30.01,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.52,
+    4.9,
+    2.3
+   ],
+   "triangles": 31720,
+   "instances": 1
+  },
+  "va-05-knee-guard": {
+   "volume_mm3": 9.39,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    3.0,
+    1.5,
+    3.6
+   ],
+   "triangles": 13568,
+   "instances": 1
+  }
+ },
+ "interference": [],
+ "step": {
+  "file": "cad/vigil-armory-assembly.step",
+  "kind": "faceted B-rep reference (about 5000 triangles per part) written by FreeCAD"
+ }
+}
