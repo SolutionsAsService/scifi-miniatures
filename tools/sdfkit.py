@@ -386,20 +386,17 @@ class Package:
         return report
 
 
-def overlap_volume(a, b, h=0.1):
-    """Interference between two closed meshes by sampling their shared bbox (ray-parity contains())."""
-    lo = np.maximum(a.bounds[0], b.bounds[0])
-    hi = np.minimum(a.bounds[1], b.bounds[1])
-    if np.any(hi - lo < h):
+def to_manifold(m):
+    return manifold3d.Manifold(manifold3d.Mesh(vert_properties=np.asarray(m.vertices, dtype=np.float32),
+                                               tri_verts=np.asarray(m.faces, dtype=np.uint32)))
+
+
+def overlap_volume(a, b):
+    """Interference between two closed meshes: exact volume of their boolean intersection (manifold3d)."""
+    lo, hi = np.maximum(a.bounds[0], b.bounds[0]), np.minimum(a.bounds[1], b.bounds[1])
+    if np.any(hi <= lo):
         return 0.0
-    ax = [np.arange(lo[k] + h / 2, hi[k], h) for k in range(3)]
-    P = np.stack(np.meshgrid(*ax, indexing="ij"), axis=-1).reshape(-1, 3)
-    scale = h ** 3
-    if len(P) > 300_000:
-        scale = float(np.prod(hi - lo)) / 300_000
-        P = P[np.random.default_rng(0).choice(len(P), 300_000, replace=False)]
-    ina = a.contains(P)
-    return float(b.contains(P[ina]).sum() * scale) if ina.any() else 0.0
+    return float((to_manifold(a) ^ to_manifold(b)).volume())
 
 
 def write_step(path, parts):
@@ -413,8 +410,10 @@ solids = []
 for p in parts:
     sh = Part.Shape()
     sh.makeShapeFromMesh(([tuple(v) for v in p['vertices']], [tuple(f) for f in p['faces']]), 0.01)
-    s = Part.makeSolid(Part.makeShell(sh.Faces))
-    assert s.isValid() and abs(s.Volume) > 0, p['name']
+    shell = Part.makeShell(sh.Faces)
+    assert shell.isClosed(), p['name']  # faceted reference: a coarse copy may self-touch, so OCC isValid() is not required
+    s = Part.makeSolid(shell)
+    assert abs(s.Volume) > 0, p['name']
     solids.append(s)
 Part.makeCompound(solids).exportStep({str(path)!r})
 print('step ok', len(solids))

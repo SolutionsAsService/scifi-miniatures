@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tools"))
 from mcpcheck import main  # noqa: E402
 from checkplan import figure_plan  # noqa: E402
 
-PLAN = figure_plan(scale_features=[
+PLAN = figure_plan(25, scale_features=[
     {"name": "Lance rifle barrel (24 mm)", "kind": "wire", "real_mm": 24, "wire_length_real_mm": 100},
     {"name": "Lance receiver depth (60 mm)", "kind": "wall", "real_mm": 60},
 ], exaggerated=["Lance rifle barrel (24 mm)"])
