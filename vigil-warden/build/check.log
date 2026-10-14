@@ -1,0 +1,39 @@
+{
+ "all_pass": false,
+ "problems": [
+  "base_and_peg: wall around the socket = 0.6 (limit 0.6)",
+  "figure: minimum wall (supported) = 7.7069 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "helm: minimum wall (supported) = 5.8194 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "base: minimum wall (supported) = 5.0096 (limit <= 0.5 mm2 thinner than 0.4 mm)"
+ ],
+ "parts": {
+  "figure": {
+   "pose": "tilted +0 deg about x, -30 deg about y, on supports",
+   "ml": 1.106,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "helm": {
+   "pose": "tilted +30 deg about x, +0 deg about y, on supports",
+   "ml": 0.11,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "backpack": {
+   "pose": "tilted +30 deg about x, -15 deg about y, on supports",
+   "ml": 0.089,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "base": {
+   "pose": "tilted +0 deg about x, -45 deg about y, on supports",
+   "ml": 1.549,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  }
+ }
+}

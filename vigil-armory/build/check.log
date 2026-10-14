@@ -1,0 +1,83 @@
+{
+ "all_pass": false,
+ "problems": [
+  "va-04-shoulder-cap-heavy: minimum wall (supported) = 1.8622 (limit <= 0.5 mm2 thinner than 0.4 mm)"
+ ],
+ "parts": {
+  "vw-01-lance-rifle": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.075,
+   "warnings": []
+  },
+  "vw-02-needle-rifle": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.051,
+   "warnings": []
+  },
+  "vw-03-maul-arc-cannon": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.079,
+   "warnings": []
+  },
+  "vw-04-spur-sidearm": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.005,
+   "warnings": []
+  },
+  "vw-05-talon-carbine": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.027,
+   "warnings": []
+  },
+  "vw-06-brand-flamer": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.042,
+   "warnings": []
+  },
+  "vw-07-halberd-shotgun": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.047,
+   "warnings": []
+  },
+  "vw-08-edge-blade": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.011,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "va-01-shoulder-cap-standard": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.028,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "va-02-shoulder-cap-riot": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.032,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "va-03-shoulder-cap-command": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.029,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "va-04-shoulder-cap-heavy": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.03,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "va-05-knee-guard": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.009,
+   "warnings": []
+  }
+ }
+}
