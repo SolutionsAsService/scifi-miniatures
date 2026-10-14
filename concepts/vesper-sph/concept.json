@@ -1,0 +1,41 @@
+{
+  "id": "vesper-sph",
+  "name": "Vesper-class Self-Propelled Howitzer",
+  "designation": "FS-1 Vesper",
+  "role": "Tracked indirect-fire artillery: on-call fire missions, smoke and illumination for Vigil fireteams up to 40 km behind the line.",
+  "drive": "tracked (6 road wheels a side)",
+  "crew": 3,
+  "capacity": "40 ready rounds in the bustle autoloader; no passengers",
+  "weapons": [
+    {
+      "variant": "FS-1 (standard)",
+      "main": "155 mm-class coil-assisted howitzer, 7.4 m tube",
+      "secondary": "pintle Lance-pattern heavy rifle on the commander's cupola"
+    },
+    {
+      "variant": "FS-1L Long Vesper",
+      "main": "extended 52-calibre tube with a fourth coil band, ER rocket-assist shells"
+    },
+    {
+      "variant": "FS-1B Bell",
+      "main": "short 210 mm siege mortar-howitzer for bunker and urban work"
+    }
+  ],
+  "dims_world_m": {
+    "length": 12.86,
+    "width": 3.71,
+    "height": 3.57
+  },
+  "dims_scale_mm": {
+    "length": 229.7,
+    "width": 66.3,
+    "height": 63.7
+  },
+  "scale": "1:56 (30 mm heroic)",
+  "images": [
+    "images/vesper-sph-hero.png",
+    "images/vesper-sph-3view.png"
+  ],
+  "blockout": "blockout/vesper-sph-blockout.stl",
+  "status": "concept"
+}

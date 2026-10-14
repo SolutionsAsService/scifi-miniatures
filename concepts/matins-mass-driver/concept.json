@@ -1,0 +1,40 @@
+{
+  "id": "matins-mass-driver",
+  "name": "Matins-class Mass-Driver Walker",
+  "designation": "FS-4 Matins",
+  "role": "Theatre-depth precision fire: an 11 m electromagnetic mass driver on a four-legged walker that braces into broken ground; strikes command posts, artillery and landing zones far beyond the Vigil front so the fireteams fight an enemy that has lost its support.",
+  "drive": "walker (four bracing legs, spade feet)",
+  "crew": 2,
+  "capacity": "18 guided slugs in the breech magazine; reactor endurance 36 h",
+  "weapons": [
+    {
+      "variant": "FS-4 (standard)",
+      "main": "11 m twin-rail mass driver firing 40 kg guided 'Matin' slugs (direct lay to low-orbit intercept)"
+    },
+    {
+      "variant": "FS-4S Lauds",
+      "main": "6 m short rail with a rapid-fire 12 kg glide-shell loader (shorter, walks with the brigade)"
+    },
+    {
+      "variant": "FS-4R Watchtower",
+      "main": "rail replaced by a folding counter-battery radar mast and twin point-defence turrets (spotter for the battery)"
+    }
+  ],
+  "dims_world_m": {
+    "length": 11.25,
+    "width": 6.92,
+    "height": 8.43
+  },
+  "dims_scale_mm": {
+    "length": 200.9,
+    "width": 123.5,
+    "height": 150.5
+  },
+  "scale": "1:56 (30 mm heroic)",
+  "images": [
+    "images/matins-mass-driver-hero.png",
+    "images/matins-mass-driver-3view.png"
+  ],
+  "blockout": "blockout/matins-mass-driver-blockout.stl",
+  "status": "concept"
+}

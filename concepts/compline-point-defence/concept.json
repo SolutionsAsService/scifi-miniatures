@@ -1,0 +1,42 @@
+{
+  "id": "compline-point-defence",
+  "name": "Compline-class Point-Defence Skimmer",
+  "designation": "FS-5 Compline",
+  "role": "Grav-lifted air and missile defence: rides with the Vigil fireteams and the artillery park, swatting drones, rockets, shells and gunships out of the sky with twin rotary cannons and a 16-cell interceptor battery cued by a tilting phased array.",
+  "drive": "grav skimmer (four repulsor nacelles, hovers 0.75 m)",
+  "crew": 2,
+  "capacity": "16 interceptors in vertical cells, 2 x 1 800 cannon rounds",
+  "base": "60 mm round flight base with a 5 mm post (magnetised top joint)",
+  "weapons": [
+    {
+      "variant": "FS-5 (standard)",
+      "main": "twin 6-barrel 30 mm 'Lattice' rotary flak cannons",
+      "secondary": "16-cell 'Psalter' short-range interceptor VLS"
+    },
+    {
+      "variant": "FS-5L Lamplight",
+      "main": "single pulsed laser projector in the dome (cannon pods replaced by radiator fins)"
+    },
+    {
+      "variant": "FS-5P Psalter",
+      "main": "cannons replaced by two 8-round box launchers for medium-range interceptors; VLS kept"
+    }
+  ],
+  "dims_world_m": {
+    "length": 6.62,
+    "width": 5.54,
+    "height": 3.1
+  },
+  "dims_scale_mm": {
+    "length": 118.3,
+    "width": 99.0,
+    "height": 55.4
+  },
+  "scale": "1:56 (30 mm heroic)",
+  "images": [
+    "images/compline-point-defence-hero.png",
+    "images/compline-point-defence-3view.png"
+  ],
+  "blockout": "blockout/compline-point-defence-blockout.stl",
+  "status": "concept"
+}

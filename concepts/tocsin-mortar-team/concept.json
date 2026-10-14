@@ -1,0 +1,41 @@
+{
+  "id": "tocsin-mortar-team",
+  "name": "Tocsin-pattern Heavy Mortar Team",
+  "designation": "FS-3 Tocsin",
+  "role": "Organic company-level indirect fire: three Vigilants bring a 120 mm mortar forward on foot, dig in behind a chevron ward wall and drop smoke, HE and illumination within 7 km of the fireteams they support.",
+  "drive": "emplacement (man-portable, crew-served)",
+  "crew": 3,
+  "capacity": "3 crew figures: loader, gunner (kneeling at the sight), section leader with rangefinder (Warden helm); 12 ready rounds",
+  "base": "100 x 70 mm oval, 4 mm, three 5 x 2 mm magnet pockets",
+  "weapons": [
+    {
+      "variant": "FS-3 (standard)",
+      "main": "120 mm smoothbore 'Tocsin' mortar on a chevron-ribbed baseplate"
+    },
+    {
+      "variant": "FS-3G Tocsin Guided",
+      "main": "4-canister launcher for 'Lark' loitering munitions on the same baseplate"
+    },
+    {
+      "variant": "FS-3A Twin Toll",
+      "main": "twin 81 mm auto-mortar on a tripod with a clip feed (loader swaps to a magazine pose)"
+    }
+  ],
+  "dims_world_m": {
+    "length": 3.92,
+    "width": 5.6,
+    "height": 2.17
+  },
+  "dims_scale_mm": {
+    "length": 70.0,
+    "width": 100.0,
+    "height": 38.8
+  },
+  "scale": "1:56 (30 mm heroic)",
+  "images": [
+    "images/tocsin-mortar-team-hero.png",
+    "images/tocsin-mortar-team-3view.png"
+  ],
+  "blockout": "blockout/tocsin-mortar-team-blockout.stl",
+  "status": "concept"
+}

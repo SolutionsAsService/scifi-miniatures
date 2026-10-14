@@ -1,0 +1,41 @@
+{
+  "id": "carillon-mrl",
+  "name": "Carillon-class Rocket Artillery Carrier",
+  "designation": "FS-2 Carillon",
+  "role": "Wheeled shoot-and-scoot rocket artillery: saturates an area or breaks up an assault ahead of Vigil fireteams, then relocates before counter-battery fire.",
+  "drive": "wheeled 8x8 (two steering axles forward), deployable stabiliser jacks",
+  "crew": 3,
+  "capacity": "one launcher load (2 pods); reload by the integral crane from a tender",
+  "weapons": [
+    {
+      "variant": "FS-2 (standard)",
+      "main": "2 x 12-cell 140 mm 'Peal' guided rocket pods",
+      "secondary": "cab remote weapon station (Lance-pattern heavy rifle)"
+    },
+    {
+      "variant": "FS-2K Knell",
+      "main": "2 x 2-cell long-range 'Knell' ballistic missile pods (same pod shells, 2 big cells)"
+    },
+    {
+      "variant": "FS-2C Chime",
+      "main": "2 x 24-cell 80 mm 'Chime' saturation / smoke / scatter-mine rockets"
+    }
+  ],
+  "dims_world_m": {
+    "length": 9.87,
+    "width": 3.54,
+    "height": 5.96
+  },
+  "dims_scale_mm": {
+    "length": 176.2,
+    "width": 63.2,
+    "height": 106.5
+  },
+  "scale": "1:56 (30 mm heroic)",
+  "images": [
+    "images/carillon-mrl-hero.png",
+    "images/carillon-mrl-3view.png"
+  ],
+  "blockout": "blockout/carillon-mrl-blockout.stl",
+  "status": "concept"
+}
