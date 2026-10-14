@@ -1,0 +1,119 @@
+{
+ "id": "vigil-warden",
+ "name": "Vigilant Warden, squad leader",
+ "revision": "0.1",
+ "line": "scifi",
+ "scale": {
+  "label": "30 mm heroic (about 32.5 mm to the visor crest)",
+  "ratio": "1:56",
+  "tool_scale": "30mm",
+  "note": "30 mm from the soles to the visor line (eye convention); same Kestrel kit and proportions as the whole line."
+ },
+ "process": "msla_resin",
+ "base": {
+  "d": 32,
+  "h": 4,
+  "top_inset": 1,
+  "magnet": "5x2",
+  "recess_depth": 1.1,
+  "recess_clearance": 0.1
+ },
+ "pose": {
+  "pelvis": [
+   0,
+   0,
+   16.5
+  ],
+  "yaw": 4,
+  "lean": 3,
+  "twist": 6,
+  "ankles": [
+   [
+    -2.3,
+    1.2,
+    1.7
+   ],
+   [
+    2.5,
+    -2.6,
+    1.7
+   ]
+  ],
+  "feet_yaw": [
+   -18,
+   14
+  ],
+  "elbow_poles": [
+   [
+    -0.3,
+    0.4,
+    -1
+   ],
+   [
+    1,
+    0.3,
+    -1
+   ]
+  ],
+  "head_yaw": 14,
+  "point": {
+   "dir": [
+    0.32,
+    -1,
+    0.14
+   ],
+   "reach": 9.3
+  },
+  "sidearm": {
+   "grip": [
+    -4,
+    -3.4,
+    23.4
+   ],
+   "dir": [
+    0.05,
+    -0.2,
+    1
+   ]
+  }
+ },
+ "voxel_mm": 0.085,
+ "base_seed": 11,
+ "bbox": [
+  [
+   -9.5,
+   -14.5,
+   -1.3
+  ],
+  [
+   11.5,
+   7.5,
+   28
+  ]
+ ],
+ "catalog": {
+  "family": "Command",
+  "revision_note": "resin figure, command helm, comms pack and 32 mm base",
+  "base": "32 mm round deck-plate base, 4 mm, 5 × 2 mm magnet pocket",
+  "footprint": "Ø 32 mm",
+  "description": "The squad's Warden directing the advance: left arm thrown forward pointing the way, Spur sidearm raised at the shoulder, a cloth tabard hanging from the belt over the leading leg. Wears the command helm (crest blade and whip antenna) and the long-range comms pack.",
+  "images": [
+   {
+    "path": "images/vigil-warden-hero.png",
+    "label": "3/4 front (render)"
+   },
+   {
+    "path": "images/vigil-warden-turnaround.png",
+    "label": "Turnaround: 3/4, front, side, back"
+   }
+  ],
+  "defaultExplode": 0.25,
+  "buildNotes": [
+   "Same Kestrel exosuit kit as the line (tools/exosuit.py); this figure adds a pointing open hand (0.68 mm index finger), the Spur sidearm and a swept cloth tabard (0.84 mm thick).",
+   "Command helm: crest blade and a 0.84 mm whip antenna; the comms pack antenna is 0.84 mm with a 1.1 mm ball tip, both well inside the Formlabs wire table.",
+   "Integral 1.1 mm footplate keyed into the base recess; helm (1.6 mm) and backpack (2.0 mm) on D-flat pegs from miniature_base_and_peg.",
+   "Prints: figure tilted on supports at the angle miniature_support_plan picked; base flat on the plate."
+  ],
+  "limitations": "Procedural sculpt, not a hand sculpt: smooth armour faces, simplified fingers. Printability is a heuristic screen through unified-CAD-MCP, not a test print; the STEP is a faceted reference."
+ }
+}

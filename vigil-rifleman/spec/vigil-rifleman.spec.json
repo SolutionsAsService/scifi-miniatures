@@ -1,0 +1,100 @@
+{
+ "id": "vigil-rifleman",
+ "name": "Vigilant Rifleman, advancing",
+ "revision": "0.1",
+ "line": "scifi",
+ "scale": {
+  "label": "30 mm heroic (about 32.5 mm to the crown)",
+  "ratio": "1:56",
+  "tool_scale": "30mm",
+  "note": "30 mm from the soles to the visor line (eye convention, ratio from miniature_scale_convert); heroic power-armour proportions: helm about 1/5.7 of the height, hands and weapon oversized, 7.6 mm thigh and 7.3 mm shin."
+ },
+ "process": "msla_resin",
+ "base": {
+  "d": 32,
+  "h": 4,
+  "top_inset": 1,
+  "magnet": "5x2",
+  "recess_depth": 1.1,
+  "recess_clearance": 0.1
+ },
+ "pose": {
+  "pelvis": [
+   0,
+   -0.3,
+   16.2
+  ],
+  "yaw": -8,
+  "lean": 8,
+  "twist": -14,
+  "ankles": [
+   [
+    -1.9,
+    2.6,
+    1.7
+   ],
+   [
+    2,
+    -3.4,
+    1.7
+   ]
+  ],
+  "feet_yaw": [
+   -25,
+   5
+  ],
+  "elbow_poles": [
+   [
+    -1,
+    0.6,
+    -0.8
+   ],
+   [
+    0.2,
+    -0.2,
+    -1
+   ]
+  ],
+  "head_yaw": 22,
+  "rifle": {
+   "stock": [
+    -2.6,
+    -3,
+    23
+   ],
+   "dir": [
+    0.1,
+    -1,
+    -0.45
+   ]
+  }
+ },
+ "voxel_mm": 0.085,
+ "base_seed": 3,
+ "catalog": {
+  "family": "Troopers",
+  "revision_note": "resin figure, helm, backpack and 32 mm base",
+  "base": "32 mm round deck-plate base, 4 mm, 5 × 2 mm magnet pocket",
+  "footprint": "Ø 32 mm",
+  "description": "A Vigilant of the Aster Compact advancing at low ready: Kestrel-pattern exosuit over a ribbed bodysuit, Lance bullpup rifle shouldered and angled down, torso bladed to the left foot. Helm and backpack are separate keyed parts, swappable across the whole line.",
+  "images": [
+   {
+    "path": "images/vigil-rifleman-hero.png",
+    "label": "3/4 front (render)"
+   },
+   {
+    "path": "images/vigil-rifleman-turnaround.png",
+    "label": "Turnaround: 3/4, front, side, back"
+   }
+  ],
+  "defaultExplode": 0.25,
+  "buildNotes": [
+   "Sculpted as signed-distance fields (tools/sdfkit.py): smooth-blended anatomy, armour plates grown off the body and cut to oval outlines, panel lines engraved 0.25-0.4 mm deep.",
+   "Heroic scale: 30 mm to the visor line; the Lance rifle is about 13 mm long with a 0.84 mm barrel and 1.9 mm deep receiver, thickened well past true scale so it prints and survives handling.",
+   "The figure stands on an integral 1.1 mm footplate that drops into a keyed recess in the base (0.1 mm glue clearance per side); no thin pins through the feet.",
+   "Helm on a 1.6 mm D-flat peg (keyed to face along the rifle), backpack on a 2.0 mm D-flat peg: sizes from miniature_base_and_peg; every helm and pack in the line fits every figure.",
+   "Prints: figure tilted on supports at the angle miniature_support_plan picked, helm and backpack on supports, base flat on the plate (magnet pocket vented to the rim)."
+  ],
+  "limitations": "Procedural sculpt, not a hand sculpt: faces of the armour are smooth (no battle damage or texture), hands are gauntlet fists. Printability is a heuristic screen through unified-CAD-MCP, not a test print; the STEP is a faceted reference, not a parametric model."
+ }
+}
