@@ -1,6 +1,6 @@
 {
  "id": "vigil-warden",
- "name": "Vigilant Warden, squad leader",
+ "name": "Vigilant Warden (sergeant)",
  "revision": "0.1",
  "line": "scifi",
  "scale": {
@@ -11,8 +11,8 @@
  },
  "process": "msla_resin",
  "base": {
-  "d": 32,
-  "h": 4,
+  "d": 25,
+  "h": 3.8,
   "top_inset": 1,
   "magnet": "5x2",
   "recess_depth": 1.1,
@@ -22,26 +22,38 @@
   "pelvis": [
    0,
    0,
-   16.5
+   15.5
   ],
   "yaw": 4,
   "lean": 3,
   "twist": 6,
   "ankles": [
    [
-    -2.3,
-    1.2,
-    1.7
+    -3.3,
+    1.6,
+    1.9
    ],
    [
-    2.5,
-    -2.6,
-    1.7
+    3.1,
+    -3,
+    1.9
    ]
   ],
   "feet_yaw": [
    -18,
    14
+  ],
+  "knee_poles": [
+   [
+    -0.35,
+    -1,
+    0
+   ],
+   [
+    0.35,
+    -1,
+    0
+   ]
   ],
   "elbow_poles": [
    [
@@ -62,13 +74,13 @@
     -1,
     0.14
    ],
-   "reach": 9.3
+   "reach": 10
   },
   "sidearm": {
    "grip": [
-    -4,
-    -3.4,
-    23.4
+    -4.7,
+    -3.8,
+    22.4
    ],
    "dir": [
     0.05,
@@ -81,22 +93,22 @@
  "base_seed": 11,
  "bbox": [
   [
-   -9.5,
-   -14.5,
+   -10.5,
+   -16,
    -1.3
   ],
   [
-   11.5,
-   7.5,
-   28
+   12.5,
+   8,
+   30.5
   ]
  ],
  "catalog": {
   "family": "Command",
   "revision_note": "resin figure, command helm, comms pack and 32 mm base",
-  "base": "32 mm round deck-plate base, 4 mm, 5 × 2 mm magnet pocket",
-  "footprint": "Ø 32 mm",
-  "description": "The squad's Warden directing the advance: left arm thrown forward pointing the way, Spur sidearm raised at the shoulder, a cloth tabard hanging from the belt over the leading leg. Wears the command helm (crest blade and whip antenna) and the long-range comms pack.",
+  "base": "25 mm round deck-plate base, 3.8 mm, 5 × 2 mm magnet pocket",
+  "footprint": "Ø 25 mm",
+  "description": "The squad's sergeant (a Warden) directing the advance: left gauntlet thrown forward pointing the way, Spur sidearm raised at the shoulder, a cloth tabard hanging from the belt over the leading leg. Wears the command helm (crest blade and whip antenna) and the long-range comms pack.",
   "images": [
    {
     "path": "images/vigil-warden-hero.png",
@@ -109,7 +121,7 @@
   ],
   "defaultExplode": 0.25,
   "buildNotes": [
-   "Same Kestrel exosuit kit as the line (tools/exosuit.py); this figure adds a pointing open hand (0.68 mm index finger), the Spur sidearm and a swept cloth tabard (0.84 mm thick).",
+   "Same Kestrel exosuit kit as the squad (tools/exosuit.py); this figure adds a pointing gauntlet (0.76 mm index finger), the Spur sidearm and a swept cloth tabard (0.84 mm thick).",
    "Command helm: crest blade and a 0.84 mm whip antenna; the comms pack antenna is 0.84 mm with a 1.1 mm ball tip, both well inside the Formlabs wire table.",
    "Integral 1.1 mm footplate keyed into the base recess; helm (1.6 mm) and backpack (2.0 mm) on D-flat pegs from miniature_base_and_peg.",
    "Prints: figure tilted on supports at the angle miniature_support_plan picked; base flat on the plate."
