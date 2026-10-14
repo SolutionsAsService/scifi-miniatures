@@ -22,10 +22,12 @@ def build_figure(pkg, spec, pose, extras, helm_variant, pack_variant, notes):
     mid = spec["id"]
     bd = spec["base"]["d"]
     H0 = X.BASES[bd]["h"]
-    body = X.figure(pose, h=spec.get("voxel_mm", 0.085), extras=extras, bbox=spec.get("bbox")).mesh("figure", 90_000)
-    helm = X.helm(helm_variant).mesh("helm", 30_000)
-    pack = X.backpack(pack_variant).mesh("backpack", 25_000)
-    base = X.base(pose, d=bd, seed=spec.get("base_seed", 1)).mesh("base", 50_000)
+    # print meshes stay near full resolution (3dada lesson: heavy simplification leaves sub-0.4 mm slivers); the
+    # pure-Python checks accept up to 300k triangles, so voxel_mm is chosen to land the figure under that
+    body = X.figure(pose, h=spec.get("voxel_mm", 0.12), extras=extras, bbox=spec.get("bbox")).mesh("figure", 280_000)
+    helm = X.helm(helm_variant).mesh("helm", 150_000)
+    pack = X.backpack(pack_variant).mesh("backpack", 150_000)
+    base = X.base(pose, d=bd, seed=spec.get("base_seed", 1)).mesh("base", 200_000)
     k = Package(mid, pkg)
     lift = translate(0, 0, H0)
     k.add(notes["figure"][0], body, stl="figure", color=COLORS["figure"], group="figure", note=notes["figure"][1],

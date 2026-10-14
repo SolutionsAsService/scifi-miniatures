@@ -27,7 +27,7 @@ def figure_plan(base_d, scale_features=(), exaggerated=()):
             {"stl": "figure", "label": "Figure (with footplate)", "plan": True},
             {"stl": "helm", "label": "Helm", "plan": True},
             {"stl": "backpack", "label": "Backpack", "plan": True},
-            {"stl": "base", "label": f"{base_d} mm base", "on_build_plate": True,
-             "orientation": "flat, underside on the plate (magnet pocket vented to the rim)", "supports": "none"},
+            # printed flat, the deck recess + magnet pocket seal into suction cups: let the support plan tilt it
+            {"stl": "base", "label": f"{base_d} mm base", "plan": True},
         ],
     }

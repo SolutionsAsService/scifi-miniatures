@@ -1,0 +1,10 @@
+{
+ "format": "unified-cad-mcp/stl-meta@1",
+ "rotate_deg_from_model": [
+  0.0,
+  -30.0,
+  0.0
+ ],
+ "source": "source/build.py + tools/mcpcheck.py (print pose)",
+ "units": "mm"
+}

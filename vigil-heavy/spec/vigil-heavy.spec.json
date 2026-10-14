@@ -82,7 +82,6 @@
    "handle_x": 3.5
   }
  },
- "voxel_mm": 0.085,
  "base_seed": 7,
  "bbox": [
   [
@@ -99,8 +98,8 @@
  "catalog": {
   "family": "Heavy Weapons",
   "revision_note": "resin figure, helm, backpack and 32 mm base",
-  "base": "32 mm round deck-plate base, 4 mm, 5 × 2 mm magnet pocket",
-  "footprint": "Ø 32 mm",
+  "base": "32 mm round deck-plate base, 4 mm, 5 \u00d7 2 mm magnet pocket",
+  "footprint": "\u00d8 32 mm",
   "description": "A Vigilant heavy gunner braced in a wide stance, firing the Maul arc-cannon from the hip: rear grip in the right fist, left fist on the carry handle, a power cable sweeping from the capacitor drum to a cell on the belt. Helm and backpack are separate keyed parts.",
   "images": [
    {

@@ -409,16 +409,21 @@ def helm_placement(P):
 # ------------------------------------------------------------------------------------------------ weapons (local: x to the muzzle, z up, origin = grip / fist centre)
 def lance_rifle():
     """'Lance' bullpup rifle: 14 mm long, 2.3 mm deep receiver, 1.3 mm barrel, box magazine behind the grip, optic."""
-    s = rbox(v3(0.5, 0, 1.05), (3.4, 0.8, 1.15), I3, 0.35)                                   # receiver
-    s = s | rbox(v3(5.3, 0, 1.3), (1.7, 0.68, 0.75), I3, 0.3).clip(half(v3(6.7, 0, 1.9), unit((1, 0, 0.8))))  # shroud
-    s = s | cyl(v3(6.5, 0, 1.3), v3(8.9, 0, 1.3), 0.65, 0.12)                                # barrel, 1.3 mm
-    s = s | cyl(v3(8.4, 0, 1.3), v3(9.4, 0, 1.3), 0.85, 0.2)                                 # muzzle brake
-    s = s | rbox(v3(-3.9, 0, 0.95), (0.9, 0.72, 1.25), rot(RY, 8), 0.35)                     # butt
-    s = s | rbox(v3(0.9, 0, 2.65), (1.5, 0.5, 0.5), I3, 0.22)                                # optic
-    s = s | cyl(v3(2.3, 0, 2.7), v3(2.75, 0, 2.7), 0.62, 0.12)                               # optic hood
-    s = s | rbox(v3(0, 0, -0.4), (0.45, 0.48, 0.95), rot(RY, -14), 0.22)                     # grip
-    s = s | rbox(v3(-1.95, 0, -0.6), (0.8, 0.62, 1.2), rot(RY, 10), 0.25)                    # magazine (bullpup)
-    s = s | rbox(v3(2.9, 0, -0.1), (0.42, 0.45, 0.8), rot(RY, -8), 0.2)                      # fore grip
+    s = rbox(v3(0.4, 0, 1.15), (3.6, 1.0, 1.4), I3, 0.4)                                    # receiver, 2.0 x 2.8 mm
+    s = s - rbox(v3(0.4, -1.0, 1.15), (2.6, 0.12, 0.12), I3, 0.0)                           # panel seam, right
+    s = s - rbox(v3(0.4, 1.0, 1.15), (2.6, 0.12, 0.12), I3, 0.0)                            # panel seam, left
+    s = s | rbox(v3(5.4, 0, 1.4), (1.8, 0.85, 0.95), I3, 0.35).clip(half(v3(6.9, 0, 2.1), unit((1, 0, 0.8))))  # shroud
+    s = s | cyl(v3(6.6, 0, 1.4), v3(9.2, 0, 1.4), 0.7, 0.12)                                # barrel, 1.4 mm
+    s = s | cyl(v3(8.6, 0, 1.4), v3(9.8, 0, 1.4), 0.95, 0.2)                                # muzzle brake
+    s = s | rbox(v3(-4.0, 0, 1.0), (1.0, 0.9, 1.45), rot(RY, 8), 0.4)                       # butt
+    s = s | rbox(v3(0.8, 0, 3.0), (1.7, 0.62, 0.62), I3, 0.25)                              # optic body
+    s = s | cyl(v3(2.4, 0, 3.05), v3(3.0, 0, 3.05), 0.78, 0.15)                             # optic hood
+    s = s | rbox(v3(0.8, 0, 2.5), (0.6, 0.45, 0.3), I3, 0.12)                               # optic mount
+    s = s | rbox(v3(0, 0, -0.45), (0.5, 0.55, 1.0), rot(RY, -14), 0.22)                     # grip
+    s = s | rbox(v3(-2.0, 0, -0.85), (0.95, 0.75, 1.5), rot(RY, 10), 0.28)                  # magazine (bullpup)
+    s = s | rbox(v3(-2.0, 0, -0.05), (1.05, 0.82, 0.25), rot(RY, 10), 0.1)                  # magazine collar
+    s = s | rbox(v3(3.0, 0, -0.15), (0.48, 0.5, 0.85), rot(RY, -8), 0.2)                    # fore grip
+    s = s | rbox(v3(4.6, 0, 2.15), (0.9, 0.3, 0.25), I3, 0.1)                               # top rail
     return s
 
 

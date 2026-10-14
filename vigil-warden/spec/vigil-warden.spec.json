@@ -89,7 +89,6 @@
    ]
   }
  },
- "voxel_mm": 0.085,
  "base_seed": 11,
  "bbox": [
   [
@@ -106,8 +105,8 @@
  "catalog": {
   "family": "Command",
   "revision_note": "resin figure, command helm, comms pack and 32 mm base",
-  "base": "25 mm round deck-plate base, 3.8 mm, 5 × 2 mm magnet pocket",
-  "footprint": "Ø 25 mm",
+  "base": "25 mm round deck-plate base, 3.8 mm, 5 \u00d7 2 mm magnet pocket",
+  "footprint": "\u00d8 25 mm",
   "description": "The squad's sergeant (a Warden) directing the advance: left gauntlet thrown forward pointing the way, Spur sidearm raised at the shoulder, a cloth tabard hanging from the belt over the leading leg. Wears the command helm (crest blade and whip antenna) and the long-range comms pack.",
   "images": [
    {
