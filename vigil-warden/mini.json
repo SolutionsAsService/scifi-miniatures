@@ -1,0 +1,74 @@
+{
+ "id": "vigil-warden",
+ "name": "Vigilant Warden (sergeant)",
+ "line": "scifi",
+ "family": "Command",
+ "revision": "0.1 · resin figure, command helm, comms pack and 32 mm base",
+ "description": "The squad's sergeant (a Warden) directing the advance: left gauntlet thrown forward pointing the way, Spur sidearm raised at the shoulder, a cloth tabard hanging from the belt over the leading leg. Wears the command helm (crest blade and whip antenna) and the long-range comms pack.",
+ "images": [
+  {
+   "path": "images/vigil-warden-hero.png",
+   "label": "3/4 front (render)"
+  },
+  {
+   "path": "images/vigil-warden-turnaround.png",
+   "label": "Turnaround: 3/4, front, side, back"
+  }
+ ],
+ "defaultExplode": 0.25,
+ "buildNotes": [
+  "Same Kestrel exosuit kit as the squad (tools/exosuit.py); this figure adds a pointing gauntlet (0.76 mm index finger), the Spur sidearm and a swept cloth tabard (0.84 mm thick).",
+  "Command helm: crest blade and a 0.84 mm whip antenna; the comms pack antenna is 0.84 mm with a 1.1 mm ball tip, both well inside the Formlabs wire table.",
+  "Integral 1.1 mm footplate keyed into the base recess; helm (1.6 mm) and backpack (2.0 mm) on D-flat pegs from miniature_base_and_peg.",
+  "Prints: figure tilted on supports at the angle miniature_support_plan picked; base flat on the plate."
+ ],
+ "limitations": "Procedural sculpt, not a hand sculpt: smooth armour faces, simplified fingers. Printability is a heuristic screen through unified-CAD-MCP, not a test print; the STEP is a faceted reference.",
+ "mini": {
+  "scale": {
+   "label": "30 mm heroic (about 32.5 mm to the visor crest)",
+   "ratio": "1:56"
+  },
+  "base": "25 mm round deck-plate base, 3.8 mm, 5 × 2 mm magnet pocket",
+  "footprint": "Ø 25 mm",
+  "process": "MSLA resin · 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
+  "volumeMl": 2.9,
+  "volumeLabel": "Resin volume",
+  "printHeightMm": 31.2,
+  "printability": {
+   "verdict": "fail",
+   "preset": "msla_resin",
+   "checkedBy": "unified-CAD-MCP miniature_printability_check + support_plan",
+   "summary": "base_and_peg: wall around the socket = 0.6 (limit 0.6); figure: minimum wall (supported) = 7.7069 (limit <= 0.5 mm2 thinner than 0.4 mm); helm: minimum wall (supported) = 5.8194 (limit <= 0.5 mm2 thinner than 0.4 mm); base: minimum wall (supported) = 5.0096 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+   "issues": [
+    "Advisory: minimum wall (unsupported)"
+   ],
+   "report": "reports/printability.md"
+  },
+  "printParts": [
+   {
+    "name": "Figure (with footplate)",
+    "qty": 1,
+    "orientation": "tilted +0 deg about x, -30 deg about y, on supports",
+    "supports": "light/medium resin supports"
+   },
+   {
+    "name": "Helm",
+    "qty": 1,
+    "orientation": "tilted +30 deg about x, +0 deg about y, on supports",
+    "supports": "light/medium resin supports"
+   },
+   {
+    "name": "Backpack",
+    "qty": 1,
+    "orientation": "tilted +30 deg about x, -15 deg about y, on supports",
+    "supports": "light/medium resin supports"
+   },
+   {
+    "name": "25 mm base",
+    "qty": 1,
+    "orientation": "tilted +0 deg about x, -45 deg about y, on supports",
+    "supports": "light/medium resin supports"
+   }
+  ]
+ }
+}

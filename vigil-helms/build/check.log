@@ -1,0 +1,83 @@
+{
+ "all_pass": false,
+ "problems": [
+  "vh-01-vigil: minimum wall (supported) = 5.7911 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "vh-02-warden: minimum wall (supported) = 5.9129 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "vh-04-seeker: minimum wall (supported) = 8.5132 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "vh-05-sentinel: minimum wall (supported) = 1.2974 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "vh-07-diver: minimum wall (supported) = 0.5201 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "vh-08-hunter: minimum wall (supported) = 1.3219 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "vh-09-bulwark: minimum wall (supported) = 1.2285 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "vh-10-specter: minimum wall (supported) = 2.4024 (limit <= 0.5 mm2 thinner than 0.4 mm)"
+ ],
+ "parts": {
+  "vh-01-vigil": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.105,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh-02-warden": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.11,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh-03-breacher": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.11,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh-04-seeker": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.107,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh-05-sentinel": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.1,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh-06-raptor": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.099,
+   "warnings": []
+  },
+  "vh-07-diver": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.11,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh-08-hunter": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.095,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh-09-bulwark": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.115,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh-10-specter": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.146,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  }
+ }
+}

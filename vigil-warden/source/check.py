@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tools"))
 from mcpcheck import main  # noqa: E402
 from checkplan import figure_plan  # noqa: E402
 
-PLAN = figure_plan(scale_features=[
+PLAN = figure_plan(25, scale_features=[
     {"name": "index finger (20 mm)", "kind": "wire", "real_mm": 20, "wire_length_real_mm": 80},
     {"name": "whip antenna (12 mm)", "kind": "wire", "real_mm": 12, "wire_length_real_mm": 300},
     {"name": "tabard cloth (4 mm)", "kind": "wall", "real_mm": 4},

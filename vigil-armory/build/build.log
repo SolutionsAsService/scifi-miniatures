@@ -1,0 +1,141 @@
+VW-01 Lance rifle: built
+VW-02 Needle rifle: built
+VW-03 Maul arc-cannon: built
+VW-04 Spur sidearm: built
+VW-05 Talon carbine: built
+VW-06 Brand flamer: built
+VW-07 Halberd shotgun: built
+VW-08 Edge blade: built
+VA-01 Shoulder cap, standard: built
+VA-02 Shoulder cap, riot: built
+VA-03 Shoulder cap, command: built
+VA-04 Shoulder cap, heavy: built
+VA-05 Knee guard: built
+{
+ "id": "vigil-armory",
+ "parts": {
+  "vw-01-lance-rifle": [
+   75.42,
+   [
+    14.94,
+    2.0,
+    6.28
+   ],
+   73492
+  ],
+  "vw-02-needle-rifle": [
+   50.71,
+   [
+    17.58,
+    1.76,
+    5.15
+   ],
+   67640
+  ],
+  "vw-03-maul-arc-cannon": [
+   79.18,
+   [
+    14.34,
+    3.1,
+    4.42
+   ],
+   72816
+  ],
+  "vw-04-spur-sidearm": [
+   5.41,
+   [
+    4.35,
+    1.0,
+    2.39
+   ],
+   10120
+  ],
+  "vw-05-talon-carbine": [
+   26.74,
+   [
+    8.8,
+    2.67,
+    4.14
+   ],
+   34380
+  ],
+  "vw-06-brand-flamer": [
+   42.26,
+   [
+    9.6,
+    2.1,
+    4.35
+   ],
+   47660
+  ],
+  "vw-07-halberd-shotgun": [
+   46.52,
+   [
+    13.91,
+    1.7,
+    3.79
+   ],
+   51780
+  ],
+  "vw-08-edge-blade": [
+   10.87,
+   [
+    2.4,
+    1.1,
+    8.1
+   ],
+   18336
+  ],
+  "va-01-shoulder-cap-standard": [
+   27.94,
+   [
+    5.2,
+    4.9,
+    2.1
+   ],
+   30152
+  ],
+  "va-02-shoulder-cap-riot": [
+   31.52,
+   [
+    5.2,
+    4.9,
+    2.1
+   ],
+   33188
+  ],
+  "va-03-shoulder-cap-command": [
+   28.73,
+   [
+    5.2,
+    4.9,
+    2.3
+   ],
+   30804
+  ],
+  "va-04-shoulder-cap-heavy": [
+   30.01,
+   [
+    5.52,
+    4.9,
+    2.3
+   ],
+   31720
+  ],
+  "va-05-knee-guard": [
+   9.39,
+   [
+    3.0,
+    1.5,
+    3.6
+   ],
+   13568
+  ]
+ },
+ "assembled_bbox_mm": [
+  48.78,
+  79.1,
+  9.35
+ ],
+ "interference": []
+}

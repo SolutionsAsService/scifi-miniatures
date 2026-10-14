@@ -1,0 +1,74 @@
+{
+ "id": "vigil-heavy",
+ "name": "Vigilant Heavy Gunner, Maul arc-cannon",
+ "line": "scifi",
+ "family": "Heavy Weapons",
+ "revision": "0.1 · resin figure, helm, backpack and 32 mm base",
+ "description": "A Vigilant heavy gunner braced in a wide stance, firing the Maul arc-cannon from the hip: rear grip in the right fist, left fist on the carry handle, a power cable sweeping from the capacitor drum to a cell on the belt. Helm and backpack are separate keyed parts.",
+ "images": [
+  {
+   "path": "images/vigil-heavy-hero.png",
+   "label": "3/4 front (render)"
+  },
+  {
+   "path": "images/vigil-heavy-turnaround.png",
+   "label": "Turnaround: 3/4, front, side, back"
+  }
+ ],
+ "defaultExplode": 0.25,
+ "buildNotes": [
+  "Same Kestrel exosuit kit as the line (tools/exosuit.py); this figure adds the Maul arc-cannon, a swept power cable and a belt power cell.",
+  "The Maul is about 16 mm long; its three emitter rails are 0.9 mm round and braced by two rings, so none is a free-standing wire.",
+  "Integral 1.1 mm footplate keyed into the base recess; helm (1.6 mm) and backpack (2.0 mm) on D-flat pegs from miniature_base_and_peg.",
+  "Prints: figure tilted on supports at the angle miniature_support_plan picked; base flat on the plate."
+ ],
+ "limitations": "Procedural sculpt, not a hand sculpt: smooth armour faces, gauntlet fists. The cannon overhangs the base edge by design. Printability is a heuristic screen through unified-CAD-MCP, not a test print; the STEP is a faceted reference.",
+ "mini": {
+  "scale": {
+   "label": "30 mm heroic (about 32.5 mm to the crown)",
+   "ratio": "1:56"
+  },
+  "base": "32 mm round deck-plate base, 4 mm, 5 × 2 mm magnet pocket",
+  "footprint": "Ø 32 mm",
+  "process": "MSLA resin · 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
+  "volumeMl": 4.2,
+  "volumeLabel": "Resin volume",
+  "printHeightMm": 28.8,
+  "printability": {
+   "verdict": "fail",
+   "preset": "msla_resin",
+   "checkedBy": "unified-CAD-MCP miniature_printability_check + support_plan",
+   "summary": "base_and_peg: wall around the socket = 0.6 (limit 0.6); figure: minimum wall (supported) = 7.376 (limit <= 0.5 mm2 thinner than 0.4 mm); helm: minimum wall (supported) = 5.6188 (limit <= 0.5 mm2 thinner than 0.4 mm); backpack: minimum wall (supported) = 11.0494 (limit <= 0.5 mm2 thinner than 0.4 mm); base: minimum wall (supported) = 4.8865 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+   "issues": [
+    "Advisory: minimum wall (unsupported)"
+   ],
+   "report": "reports/printability.md"
+  },
+  "printParts": [
+   {
+    "name": "Figure (with footplate)",
+    "qty": 1,
+    "orientation": "tilted +30 deg about x, +0 deg about y, on supports",
+    "supports": "light/medium resin supports"
+   },
+   {
+    "name": "Helm",
+    "qty": 1,
+    "orientation": "tilted +30 deg about x, +0 deg about y, on supports",
+    "supports": "light/medium resin supports"
+   },
+   {
+    "name": "Backpack",
+    "qty": 1,
+    "orientation": "tilted +30 deg about x, +15 deg about y, on supports",
+    "supports": "light/medium resin supports"
+   },
+   {
+    "name": "32 mm base",
+    "qty": 1,
+    "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
+    "supports": "light/medium resin supports"
+   }
+  ]
+ }
+}

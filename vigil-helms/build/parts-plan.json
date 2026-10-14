@@ -1,0 +1,52 @@
+[
+ {
+  "stl": "vh-01-vigil",
+  "label": "VH-01 Vigil",
+  "plan": true
+ },
+ {
+  "stl": "vh-02-warden",
+  "label": "VH-02 Warden",
+  "plan": true
+ },
+ {
+  "stl": "vh-03-breacher",
+  "label": "VH-03 Breacher",
+  "plan": true
+ },
+ {
+  "stl": "vh-04-seeker",
+  "label": "VH-04 Seeker",
+  "plan": true
+ },
+ {
+  "stl": "vh-05-sentinel",
+  "label": "VH-05 Sentinel",
+  "plan": true
+ },
+ {
+  "stl": "vh-06-raptor",
+  "label": "VH-06 Raptor",
+  "plan": true
+ },
+ {
+  "stl": "vh-07-diver",
+  "label": "VH-07 Diver",
+  "plan": true
+ },
+ {
+  "stl": "vh-08-hunter",
+  "label": "VH-08 Hunter",
+  "plan": true
+ },
+ {
+  "stl": "vh-09-bulwark",
+  "label": "VH-09 Bulwark",
+  "plan": true
+ },
+ {
+  "stl": "vh-10-specter",
+  "label": "VH-10 Specter",
+  "plan": true
+ }
+]

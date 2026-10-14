@@ -1,0 +1,34 @@
+{
+ "id": "vigil-armory",
+ "name": "Vigil armory: weapons and armour bits",
+ "revision": "0.1",
+ "line": "scifi",
+ "process": "msla_resin",
+ "scale": {
+  "label": "30 mm heroic",
+  "ratio": "1:56",
+  "tool_scale": "28mm"
+ },
+ "catalog": {
+  "family": "Bits & Weapons",
+  "revision_note": "weapons and bolt-on armour as loose parts",
+  "base": "none (bits)",
+  "footprint": "8 weapons, 5 armour bits",
+  "description": "Weapons and armour bits for the Vigilant line, by identifier: VW-01 Lance rifle, VW-02 Needle rifle, VW-03 Maul arc-cannon, VW-04 Spur sidearm, VW-05 Talon carbine, VW-06 Brand flamer, VW-07 Halberd shotgun, VW-08 Edge blade; VA-01..04 shoulder caps (standard, riot, command, heavy) and VA-05 knee guard.",
+  "images": [
+   {
+    "path": "images/vigil-armory-hero.png",
+    "label": "Armory"
+   },
+   {
+    "path": "images/vigil-armory-turnaround.png",
+    "label": "Turnaround"
+   }
+  ],
+  "buildNotes": [
+   "Defined in tools/armory.py (WEAPONS, ARMOUR registries); built by tools/bitspack.py.",
+   "Barrels at least 1.3 mm, the blade 1.0 mm with rounded edges."
+  ],
+  "limitations": "Procedural designs; printability is a heuristic screen (unified-CAD-MCP), not a test print."
+ }
+}

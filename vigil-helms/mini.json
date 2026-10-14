@@ -1,0 +1,108 @@
+{
+ "id": "vigil-helms",
+ "name": "Vigil helm library",
+ "line": "scifi",
+ "family": "Bits & Helms",
+ "revision": "0.1 · swappable helms on 1.6 mm D-flat pegs",
+ "description": "Swappable helm designs for the Vigilant troopers, each named by identifier: VH-01 Vigil, VH-02 Warden, VH-03 Breacher, VH-04 Seeker, VH-05 Sentinel, VH-06 Raptor, VH-07 Diver, VH-08 Hunter, VH-09 Bulwark, VH-10 Specter. Every helm has the same 1.6 mm D-flat neck peg, so any helm fits any trooper.",
+ "images": [
+  {
+   "path": "images/vigil-helms-hero.png",
+   "label": "Helm library"
+  },
+  {
+   "path": "images/vigil-helms-turnaround.png",
+   "label": "Turnaround"
+  }
+ ],
+ "defaultExplode": 0,
+ "buildNotes": [
+  "Defined in tools/armory.py (HELMS registry); built by tools/bitspack.py.",
+  "Lens and visor recesses are at least 0.25 mm deep; crests and fins at least 0.7 mm thick."
+ ],
+ "limitations": "Procedural designs; printability is a heuristic screen (unified-CAD-MCP), not a test print.",
+ "mini": {
+  "scale": {
+   "label": "30 mm heroic",
+   "ratio": "1:56"
+  },
+  "base": "none (bits)",
+  "footprint": "10 helms",
+  "process": "MSLA resin · 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
+  "volumeMl": 1.1,
+  "volumeLabel": "Resin volume",
+  "printHeightMm": 11.5,
+  "printability": {
+   "verdict": "fail",
+   "preset": "msla_resin",
+   "checkedBy": "unified-CAD-MCP miniature_printability_check",
+   "summary": "vh-01-vigil: minimum wall (supported) = 5.7911 (limit <= 0.5 mm2 thinner than 0.4 mm); vh-02-warden: minimum wall (supported) = 5.9129 (limit <= 0.5 mm2 thinner than 0.4 mm); vh-04-seeker: minimum wall (supported) = 8.5132 (limit <= 0.5 mm2 thinner than 0.4 mm); vh-05-sentinel: minimum wall (supported) = 1.2974 (limit <= 0.5 mm2 thinner than 0.4 mm); vh-07-diver: minimum wall (supported) = 0.5201 ",
+   "issues": [
+    "Advisory: minimum wall (unsupported)"
+   ],
+   "report": "reports/printability.md"
+  },
+  "printParts": [
+   {
+    "name": "VH-01 Vigil",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VH-02 Warden",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VH-03 Breacher",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VH-04 Seeker",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VH-05 Sentinel",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VH-06 Raptor",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VH-07 Diver",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VH-08 Hunter",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VH-09 Bulwark",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   },
+   {
+    "name": "VH-10 Specter",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright"
+   }
+  ]
+ }
+}

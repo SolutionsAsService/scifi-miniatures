@@ -1,0 +1,2598 @@
+{
+ "process": "msla_resin",
+ "printer": {
+  "name": "8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
+  "build_volume_mm": [
+   153.36,
+   77.76,
+   165
+  ]
+ },
+ "tool_calls": [
+  {
+   "tool": "miniature_scale_convert",
+   "args": {
+    "scale": "30mm",
+    "process": "msla_resin",
+    "features": [
+     {
+      "name": "visor-line height",
+      "real_mm": 1666
+     },
+     {
+      "name": "gauntlet (110 mm)",
+      "kind": "wall",
+      "real_mm": 110
+     },
+     {
+      "name": "armour plate step (8 mm)",
+      "kind": "embossed",
+      "real_mm": 8
+     },
+     {
+      "name": "panel line (6 mm)",
+      "kind": "engraved",
+      "real_mm": 6
+     },
+     {
+      "name": "sensor fin (10 mm)",
+      "kind": "wall",
+      "real_mm": 10
+     },
+     {
+      "name": "Lance rifle barrel (24 mm)",
+      "kind": "wire",
+      "real_mm": 24,
+      "wire_length_real_mm": 100
+     },
+     {
+      "name": "Lance receiver depth (60 mm)",
+      "kind": "wall",
+      "real_mm": 60
+     }
+    ]
+   }
+  },
+  {
+   "tool": "miniature_base_and_peg",
+   "args": {
+    "base": "25",
+    "magnet": "5x2",
+    "base_height_mm": 2.7,
+    "process": "msla_resin"
+   }
+  },
+  {
+   "tool": "miniature_base_and_peg",
+   "args": {
+    "base": "25",
+    "magnet": null,
+    "peg_diameter_mm": 1.6,
+    "host_section_mm": 4.6,
+    "process": "msla_resin"
+   }
+  },
+  {
+   "tool": "miniature_base_and_peg",
+   "args": {
+    "base": "25",
+    "magnet": null,
+    "peg_diameter_mm": 2.0,
+    "host_section_mm": 3.4,
+    "process": "msla_resin"
+   }
+  },
+  {
+   "tool": "miniature_support_plan",
+   "args": {
+    "stl_path": "/mnt/d/ai-stack/repos/scifi-miniatures/vigil-rifleman/build/upright/figure.stl",
+    "process": "msla_resin"
+   }
+  },
+  {
+   "tool": "miniature_printability_check",
+   "args": {
+    "stl_path": "/mnt/d/ai-stack/repos/scifi-miniatures/vigil-rifleman/print/stl/figure.stl",
+    "process": "msla_resin",
+    "on_build_plate": false,
+    "build_volume_mm": [
+     153.36,
+     77.76,
+     165
+    ]
+   }
+  },
+  {
+   "tool": "miniature_support_plan",
+   "args": {
+    "stl_path": "/mnt/d/ai-stack/repos/scifi-miniatures/vigil-rifleman/build/upright/helm.stl",
+    "process": "msla_resin"
+   }
+  },
+  {
+   "tool": "miniature_printability_check",
+   "args": {
+    "stl_path": "/mnt/d/ai-stack/repos/scifi-miniatures/vigil-rifleman/print/stl/helm.stl",
+    "process": "msla_resin",
+    "on_build_plate": false,
+    "build_volume_mm": [
+     153.36,
+     77.76,
+     165
+    ]
+   }
+  },
+  {
+   "tool": "miniature_support_plan",
+   "args": {
+    "stl_path": "/mnt/d/ai-stack/repos/scifi-miniatures/vigil-rifleman/build/upright/backpack.stl",
+    "process": "msla_resin"
+   }
+  },
+  {
+   "tool": "miniature_printability_check",
+   "args": {
+    "stl_path": "/mnt/d/ai-stack/repos/scifi-miniatures/vigil-rifleman/print/stl/backpack.stl",
+    "process": "msla_resin",
+    "on_build_plate": false,
+    "build_volume_mm": [
+     153.36,
+     77.76,
+     165
+    ]
+   }
+  },
+  {
+   "tool": "miniature_printability_check",
+   "args": {
+    "stl_path": "/mnt/d/ai-stack/repos/scifi-miniatures/vigil-rifleman/print/stl/base.stl",
+    "process": "msla_resin",
+    "on_build_plate": true,
+    "build_volume_mm": [
+     153.36,
+     77.76,
+     165
+    ]
+   }
+  }
+ ],
+ "scale_convert": {
+  "scale": "30mm",
+  "ratio": 55.54,
+  "kind": "figure",
+  "convention": "eye",
+  "stature_mm": 1780.0,
+  "note": "A 30 mm figure measured feet-to-eyes of a 1780 mm person. Makers disagree on the convention (Wikipedia 'Miniature wargame'); heroic figures also exaggerate heads, hands and weapons, so use the ratio for vehicles and terrain, not anatomy.",
+  "process": "msla_resin",
+  "features": [
+   {
+    "name": "visor-line height",
+    "kind": "length",
+    "real_mm": 1666.0,
+    "model_mm": 29.9964,
+    "printable": true
+   },
+   {
+    "name": "gauntlet (110 mm)",
+    "kind": "wall",
+    "real_mm": 110.0,
+    "model_mm": 1.9806,
+    "limit_mm": 0.6,
+    "printable": true
+   },
+   {
+    "name": "armour plate step (8 mm)",
+    "kind": "embossed",
+    "real_mm": 8.0,
+    "model_mm": 0.144,
+    "limit_mm": 0.1,
+    "printable": true
+   },
+   {
+    "name": "panel line (6 mm)",
+    "kind": "engraved",
+    "real_mm": 6.0,
+    "model_mm": 0.108,
+    "limit_mm": 0.4,
+    "printable": false,
+    "exaggerate_to_mm": 0.4,
+    "exaggeration_factor": 3.7
+   },
+   {
+    "name": "sensor fin (10 mm)",
+    "kind": "wall",
+    "real_mm": 10.0,
+    "model_mm": 0.1801,
+    "limit_mm": 0.6,
+    "printable": false,
+    "exaggerate_to_mm": 0.6,
+    "exaggeration_factor": 3.33
+   },
+   {
+    "name": "Lance rifle barrel (24 mm)",
+    "kind": "wire",
+    "real_mm": 24.0,
+    "model_mm": 0.4321,
+    "limit_mm": 0.3,
+    "max_free_length_mm": 9.532,
+    "wire_length_model_mm": 1.801,
+    "printable": true
+   },
+   {
+    "name": "Lance receiver depth (60 mm)",
+    "kind": "wall",
+    "real_mm": 60.0,
+    "model_mm": 1.0803,
+    "limit_mm": 0.6,
+    "printable": true
+   }
+  ],
+  "below_limit": [
+   "panel line (6 mm)",
+   "sensor fin (10 mm)"
+  ],
+  "limits": {
+   "min_wall_supported_mm": 0.4,
+   "min_wall_unsupported_mm": 0.6,
+   "min_hole_mm": 0.5,
+   "min_embossed_mm": 0.1,
+   "min_engraved_mm": 0.4,
+   "min_clearance_mm": 0.5,
+   "min_drain_hole_mm": 3.5,
+   "self_supporting_deg": 19.0,
+   "wire_mm": [
+    [
+     0.3,
+     7.0
+    ],
+    [
+     1.5,
+     30.0
+    ]
+   ],
+   "layer_mm": 0.05,
+   "basis": "Formlabs Design Guide (SLA, Clear resin, 100 um layers); hobby MSLA printers at 0.03-0.05 mm often hold finer detail, so these limits are conservative. Fit clearances are a hobby convention, not from the guide: print a stepped tolerance coupon on your printer and resin before trusting them."
+  },
+  "estimate_kind": "HEURISTIC: process limits from the cited design guides; thicken (heroic exaggeration) or drop features below them. Walls use the unsupported-wall limit."
+ },
+ "base_and_peg": [
+  {
+   "process": "msla_resin",
+   "base": {
+    "shape": "round",
+    "diameter_mm": 25.0,
+    "standard": true,
+    "height_mm": 2.7,
+    "note": "Standard sizes follow the Games Workshop base range (round 25-160 mm, oval 60x35-170x105) that most tabletop games use; ~3-4.5 mm tall with a bevelled rim. Measure a commercial base if the game cares."
+   },
+   "magnet_pocket": {
+    "magnet_mm": [
+     5,
+     2
+    ],
+    "pocket_diameter_mm": 5.2,
+    "pocket_depth_mm": 2.1,
+    "fit": "glue",
+    "opens": "underside",
+    "entry_chamfer_mm": 0.2,
+    "note": "Neodymium discs are typically +/-0.05-0.1 mm; resin holes print slightly small. Glue fit takes a drop of CA; a press fit can crack thin resin. Mark polarity before gluing a set.",
+    "floor_above_pocket_mm": 0.6
+   },
+   "checks": [
+    {
+     "name": "magnet pocket floor",
+     "value": 0.6,
+     "pass": true,
+     "limit": 0.4,
+     "basis": "Material above the pocket; a thinner floor holds harder to steel but must still print (supported wall)."
+    },
+    {
+     "name": "rim around the magnet pocket",
+     "value": 9.9,
+     "pass": true,
+     "limit": 2,
+     "basis": "Leave >= 2 mm of base around the pocket."
+    }
+   ],
+   "all_checks_pass": true,
+   "clearances_basis": "Formlabs Design Guide (SLA, Clear resin, 100 um layers); hobby MSLA printers at 0.03-0.05 mm often hold finer detail, so these limits are conservative. Fit clearances are a hobby convention, not from the guide: print a stepped tolerance coupon on your printer and resin before trusting them.",
+   "catalog": {
+    "round_mm": [
+     25,
+     28.5,
+     32,
+     40,
+     50,
+     60,
+     80,
+     90,
+     100,
+     130,
+     160
+    ],
+    "oval_mm": [
+     [
+      60,
+      35
+     ],
+     [
+      75,
+      42
+     ],
+     [
+      90,
+      52
+     ],
+     [
+      105,
+      70
+     ],
+     [
+      120,
+      92
+     ],
+     [
+      170,
+      105
+     ]
+    ],
+    "magnets_mm": {
+     "2x1": [
+      2,
+      1
+     ],
+     "3x1": [
+      3,
+      1
+     ],
+     "3x2": [
+      3,
+      2
+     ],
+     "4x2": [
+      4,
+      2
+     ],
+     "5x1": [
+      5,
+      1
+     ],
+     "5x2": [
+      5,
+      2
+     ],
+     "6x2": [
+      6,
+      2
+     ],
+     "6x3": [
+      6,
+      3
+     ],
+     "8x2": [
+      8,
+      2
+     ],
+     "10x2": [
+      10,
+      2
+     ]
+    }
+   },
+   "estimate_kind": "HEURISTIC fits: print a stepped tolerance coupon (pockets and sockets in 0.05 mm steps) first."
+  },
+  {
+   "process": "msla_resin",
+   "base": {
+    "shape": "round",
+    "diameter_mm": 25.0,
+    "standard": true,
+    "height_mm": 4.0,
+    "note": "Standard sizes follow the Games Workshop base range (round 25-160 mm, oval 60x35-170x105) that most tabletop games use; ~3-4.5 mm tall with a bevelled rim. Measure a commercial base if the game cares."
+   },
+   "peg": {
+    "diameter_mm": 1.6,
+    "length_mm": 2.0,
+    "tip_chamfer_mm": 0.21,
+    "key": {
+     "type": "D-flat",
+     "flat_at_mm_from_axis": 0.48,
+     "why": "a flat (or a second peg) lets the joint go together one way only"
+    },
+    "socket_diameter_mm": 1.8,
+    "socket_flat_at_mm_from_axis": 0.58,
+    "socket_depth_mm": 2.2,
+    "fit": "glue",
+    "clearance_per_side_mm": 0.1
+   },
+   "checks": [
+    {
+     "name": "peg prints as a free-standing pin",
+     "value": 2.0,
+     "pass": true,
+     "limit": 32.0,
+     "basis": "Formlabs wire table (0.3 mm/7 mm to 1.5 mm/30 mm): stubby pegs survive printing, washing and assembly."
+    },
+    {
+     "name": "wall around the socket",
+     "value": 1.4,
+     "pass": true,
+     "limit": 0.6,
+     "basis": "Material left around the socket in the receiving part (unsupported-wall limit)."
+    }
+   ],
+   "all_checks_pass": true,
+   "clearances_basis": "Formlabs Design Guide (SLA, Clear resin, 100 um layers); hobby MSLA printers at 0.03-0.05 mm often hold finer detail, so these limits are conservative. Fit clearances are a hobby convention, not from the guide: print a stepped tolerance coupon on your printer and resin before trusting them.",
+   "catalog": {
+    "round_mm": [
+     25,
+     28.5,
+     32,
+     40,
+     50,
+     60,
+     80,
+     90,
+     100,
+     130,
+     160
+    ],
+    "oval_mm": [
+     [
+      60,
+      35
+     ],
+     [
+      75,
+      42
+     ],
+     [
+      90,
+      52
+     ],
+     [
+      105,
+      70
+     ],
+     [
+      120,
+      92
+     ],
+     [
+      170,
+      105
+     ]
+    ],
+    "magnets_mm": {
+     "2x1": [
+      2,
+      1
+     ],
+     "3x1": [
+      3,
+      1
+     ],
+     "3x2": [
+      3,
+      2
+     ],
+     "4x2": [
+      4,
+      2
+     ],
+     "5x1": [
+      5,
+      1
+     ],
+     "5x2": [
+      5,
+      2
+     ],
+     "6x2": [
+      6,
+      2
+     ],
+     "6x3": [
+      6,
+      3
+     ],
+     "8x2": [
+      8,
+      2
+     ],
+     "10x2": [
+      10,
+      2
+     ]
+    }
+   },
+   "estimate_kind": "HEURISTIC fits: print a stepped tolerance coupon (pockets and sockets in 0.05 mm steps) first."
+  },
+  {
+   "process": "msla_resin",
+   "base": {
+    "shape": "round",
+    "diameter_mm": 25.0,
+    "standard": true,
+    "height_mm": 4.0,
+    "note": "Standard sizes follow the Games Workshop base range (round 25-160 mm, oval 60x35-170x105) that most tabletop games use; ~3-4.5 mm tall with a bevelled rim. Measure a commercial base if the game cares."
+   },
+   "peg": {
+    "diameter_mm": 2.0,
+    "length_mm": 2.5,
+    "tip_chamfer_mm": 0.25,
+    "key": {
+     "type": "D-flat",
+     "flat_at_mm_from_axis": 0.6,
+     "why": "a flat (or a second peg) lets the joint go together one way only"
+    },
+    "socket_diameter_mm": 2.2,
+    "socket_flat_at_mm_from_axis": 0.7,
+    "socket_depth_mm": 2.7,
+    "fit": "glue",
+    "clearance_per_side_mm": 0.1
+   },
+   "checks": [
+    {
+     "name": "peg prints as a free-standing pin",
+     "value": 2.5,
+     "pass": true,
+     "limit": 40.0,
+     "basis": "Formlabs wire table (0.3 mm/7 mm to 1.5 mm/30 mm): stubby pegs survive printing, washing and assembly."
+    },
+    {
+     "name": "wall around the socket",
+     "value": 0.6,
+     "pass": false,
+     "limit": 0.6,
+     "basis": "Material left around the socket in the receiving part (unsupported-wall limit)."
+    }
+   ],
+   "all_checks_pass": false,
+   "clearances_basis": "Formlabs Design Guide (SLA, Clear resin, 100 um layers); hobby MSLA printers at 0.03-0.05 mm often hold finer detail, so these limits are conservative. Fit clearances are a hobby convention, not from the guide: print a stepped tolerance coupon on your printer and resin before trusting them.",
+   "catalog": {
+    "round_mm": [
+     25,
+     28.5,
+     32,
+     40,
+     50,
+     60,
+     80,
+     90,
+     100,
+     130,
+     160
+    ],
+    "oval_mm": [
+     [
+      60,
+      35
+     ],
+     [
+      75,
+      42
+     ],
+     [
+      90,
+      52
+     ],
+     [
+      105,
+      70
+     ],
+     [
+      120,
+      92
+     ],
+     [
+      170,
+      105
+     ]
+    ],
+    "magnets_mm": {
+     "2x1": [
+      2,
+      1
+     ],
+     "3x1": [
+      3,
+      1
+     ],
+     "3x2": [
+      3,
+      2
+     ],
+     "4x2": [
+      4,
+      2
+     ],
+     "5x1": [
+      5,
+      1
+     ],
+     "5x2": [
+      5,
+      2
+     ],
+     "6x2": [
+      6,
+      2
+     ],
+     "6x3": [
+      6,
+      3
+     ],
+     "8x2": [
+      8,
+      2
+     ],
+     "10x2": [
+      10,
+      2
+     ]
+    }
+   },
+   "estimate_kind": "HEURISTIC fits: print a stepped tolerance coupon (pockets and sockets in 0.05 mm steps) first."
+  }
+ ],
+ "parts": {
+  "figure": {
+   "support_plan": {
+    "as_modelled": {
+     "rotate_deg": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "height_mm": 26.95,
+     "max_layer_area_mm2": 99.62,
+     "support_area_mm2": 134.3,
+     "support_start_points": 143,
+     "score": 1.75
+    },
+    "best": [
+     {
+      "rotate_deg": [
+       30.0,
+       0.0,
+       0.0
+      ],
+      "height_mm": 28.81,
+      "max_layer_area_mm2": 78.25,
+      "support_area_mm2": 17.34,
+      "support_start_points": 107,
+      "score": 1.0371
+     },
+     {
+      "rotate_deg": [
+       15.0,
+       -15.0,
+       0.0
+      ],
+      "height_mm": 27.92,
+      "max_layer_area_mm2": 78.67,
+      "support_area_mm2": 13.88,
+      "support_start_points": 131,
+      "score": 1.0704
+     },
+     {
+      "rotate_deg": [
+       30.0,
+       -30.0,
+       0.0
+      ],
+      "height_mm": 25.73,
+      "max_layer_area_mm2": 82.98,
+      "support_area_mm2": 18.37,
+      "support_start_points": 115,
+      "score": 1.1024
+     },
+     {
+      "rotate_deg": [
+       30.0,
+       -15.0,
+       0.0
+      ],
+      "height_mm": 26.38,
+      "max_layer_area_mm2": 79.35,
+      "support_area_mm2": 15.25,
+      "support_start_points": 145,
+      "score": 1.1068
+     },
+     {
+      "rotate_deg": [
+       45.0,
+       0.0,
+       0.0
+      ],
+      "height_mm": 26.84,
+      "max_layer_area_mm2": 83.86,
+      "support_area_mm2": 25.44,
+      "support_start_points": 101,
+      "score": 1.1131
+     }
+    ],
+    "orientations_sampled": 49,
+    "score": "max layer area / as-modelled + 0.5 x support area / as-modelled + 0.25 x support starts / as-modelled (lower is better)"
+   },
+   "rotate_deg": [
+    30.0,
+    0.0,
+    0.0
+   ],
+   "pose": "tilted +30 deg about x, +0 deg about y, on supports",
+   "qty": 1,
+   "label": "Figure (with footplate)",
+   "supports": "light/medium resin supports",
+   "printability": {
+    "process": "msla_resin",
+    "basis": "Formlabs Design Guide (SLA, Clear resin, 100 um layers); hobby MSLA printers at 0.03-0.05 mm often hold finer detail, so these limits are conservative. Fit clearances are a hobby convention, not from the guide: print a stepped tolerance coupon on your printer and resin before trusting them.",
+    "rotate_deg": [
+     0,
+     0,
+     0
+    ],
+    "on_build_plate": false,
+    "bounding_box_mm": {
+     "min": [
+      -7.719,
+      -15.147,
+      0.0
+     ],
+     "max": [
+      7.719,
+      15.147,
+      28.814
+     ],
+     "size": [
+      15.439,
+      30.293,
+      28.814
+     ]
+    },
+    "volume_mm3": 1127.25,
+    "resin_ml": 1.127,
+    "mass_g": 1.24,
+    "density_g_cm3": 1.1,
+    "topology": {
+     "open_edges": 0,
+     "non_manifold_edges": 0,
+     "inconsistent_winding_edges": 0,
+     "degenerate_triangles": 0,
+     "vertices": 43935
+    },
+    "shells": {
+     "shell_count": 1,
+     "outer_shell_count": 1,
+     "internal_cavity_count": 0,
+     "inverted_shell_count": 0
+    },
+    "thickness": {
+     "min_mm": 0.0,
+     "area_below_supported_mm2": 12.114,
+     "area_below_unsupported_mm2": 22.188,
+     "thin_spots": [
+      {
+       "at_mm": [
+        -5.1,
+        0.86,
+        14.97
+       ],
+       "min_mm": 0.0,
+       "area_mm2": 0.0
+      },
+      {
+       "at_mm": [
+        -3.08,
+        0.84,
+        20.05
+       ],
+       "min_mm": 0.0,
+       "area_mm2": 0.067
+      },
+      {
+       "at_mm": [
+        -1.01,
+        -2.84,
+        18.8
+       ],
+       "min_mm": 0.0,
+       "area_mm2": 0.011
+      },
+      {
+       "at_mm": [
+        5.85,
+        -6.3,
+        21.16
+       ],
+       "min_mm": 0.0,
+       "area_mm2": 0.011
+      },
+      {
+       "at_mm": [
+        -2.23,
+        -14.37,
+        13.07
+       ],
+       "min_mm": 0.001,
+       "area_mm2": 0.001
+      },
+      {
+       "at_mm": [
+        -5.63,
+        8.19,
+        5.24
+       ],
+       "min_mm": 0.001,
+       "area_mm2": 0.072
+      },
+      {
+       "at_mm": [
+        -4.44,
+        -1.13,
+        21.87
+       ],
+       "min_mm": 0.001,
+       "area_mm2": 0.001
+      },
+      {
+       "at_mm": [
+        -1.0,
+        -1.55,
+        17.61
+       ],
+       "min_mm": 0.001,
+       "area_mm2": 0.093
+      },
+      {
+       "at_mm": [
+        -2.23,
+        -5.08,
+        21.37
+       ],
+       "min_mm": 0.001,
+       "area_mm2": 0.001
+      },
+      {
+       "at_mm": [
+        -0.25,
+        -4.4,
+        19.66
+       ],
+       "min_mm": 0.001,
+       "area_mm2": 0.0
+      },
+      {
+       "at_mm": [
+        2.48,
+        -2.27,
+        9.81
+       ],
+       "min_mm": 0.001,
+       "area_mm2": 0.0
+      },
+      {
+       "at_mm": [
+        -5.12,
+        -5.81,
+        20.6
+       ],
+       "min_mm": 0.002,
+       "area_mm2": 0.025
+      }
+     ],
+     "samples": 29309
+    },
+    "overhang_area_mm2_by_angle_from_level": {
+     "0-10 deg": 5.04,
+     "10-20 deg": 14.05,
+     "20-30 deg": 88.64,
+     "30-40 deg": 92.84,
+     "40-50 deg": 47.54,
+     "50-60 deg": 70.67
+    },
+    "support_area_mm2": 17.34,
+    "islands": {
+     "count": 22,
+     "first": [
+      {
+       "z_mm": 4.982,
+       "xy_mm": [
+        -4.1,
+        7.07
+       ],
+       "area_mm2": 0.075
+      },
+      {
+       "z_mm": 10.89,
+       "xy_mm": [
+        -4.03,
+        1.12
+       ],
+       "area_mm2": 0.113
+      },
+      {
+       "z_mm": 12.829,
+       "xy_mm": [
+        -1.51,
+        -13.96
+       ],
+       "area_mm2": 0.242
+      },
+      {
+       "z_mm": 15.915,
+       "xy_mm": [
+        0.16,
+        -0.11
+       ],
+       "area_mm2": 0.131
+      },
+      {
+       "z_mm": 16.18,
+       "xy_mm": [
+        -2.55,
+        -9.15
+       ],
+       "area_mm2": 0.081
+      },
+      {
+       "z_mm": 16.356,
+       "xy_mm": [
+        -0.53,
+        -8.49
+       ],
+       "area_mm2": 0.838
+      },
+      {
+       "z_mm": 16.445,
+       "xy_mm": [
+        -1.56,
+        -1.79
+       ],
+       "area_mm2": 0.156
+      },
+      {
+       "z_mm": 16.533,
+       "xy_mm": [
+        0.86,
+        -7.48
+       ],
+       "area_mm2": 0.26
+      },
+      {
+       "z_mm": 16.885,
+       "xy_mm": [
+        2.76,
+        -5.8
+       ],
+       "area_mm2": 0.201
+      },
+      {
+       "z_mm": 16.974,
+       "xy_mm": [
+        0.42,
+        -2.32
+       ],
+       "area_mm2": 0.093
+      },
+      {
+       "z_mm": 18.561,
+       "xy_mm": [
+        -3.11,
+        -6.42
+       ],
+       "area_mm2": 0.416
+      },
+      {
+       "z_mm": 18.561,
+       "xy_mm": [
+        -4.0,
+        -5.76
+       ],
+       "area_mm2": 0.035
+      },
+      {
+       "z_mm": 18.561,
+       "xy_mm": [
+        -4.32,
+        -5.01
+       ],
+       "area_mm2": 0.031
+      },
+      {
+       "z_mm": 18.649,
+       "xy_mm": [
+        -2.34,
+        -7.52
+       ],
+       "area_mm2": 0.279
+      },
+      {
+       "z_mm": 18.649,
+       "xy_mm": [
+        -5.37,
+        -2.32
+       ],
+       "area_mm2": 0.35
+      },
+      {
+       "z_mm": 18.737,
+       "xy_mm": [
+        -1.18,
+        -3.73
+       ],
+       "area_mm2": 0.056
+      },
+      {
+       "z_mm": 19.09,
+       "xy_mm": [
+        0.57,
+        -3.38
+       ],
+       "area_mm2": 0.079
+      },
+      {
+       "z_mm": 19.178,
+       "xy_mm": [
+        -0.67,
+        -3.2
+       ],
+       "area_mm2": 0.002
+      },
+      {
+       "z_mm": 20.941,
+       "xy_mm": [
+        6.19,
+        -6.11
+       ],
+       "area_mm2": 0.0
+      },
+      {
+       "z_mm": 22.088,
+       "xy_mm": [
+        -1.97,
+        1.12
+       ],
+       "area_mm2": 0.005
+      }
+     ]
+    },
+    "suction_cups": [
+     {
+      "layers": 50,
+      "max_area_mm2": 5.558,
+      "z_mm": [
+       7.274,
+       25.526
+      ],
+      "xy_mm": [
+       0.97,
+       -2.41
+      ]
+     },
+     {
+      "layers": 1,
+      "max_area_mm2": 0.018,
+      "z_mm": [
+       17.943,
+       17.943
+      ],
+      "xy_mm": [
+       0.26,
+       -1.96
+      ]
+     },
+     {
+      "layers": 1,
+      "max_area_mm2": 0.005,
+      "z_mm": [
+       18.296,
+       18.296
+      ],
+      "xy_mm": [
+       0.12,
+       -1.7
+      ]
+     },
+     {
+      "layers": 1,
+      "max_area_mm2": 0.002,
+      "z_mm": [
+       18.737,
+       18.737
+      ],
+      "xy_mm": [
+       -1.64,
+       -8.58
+      ]
+     },
+     {
+      "layers": 1,
+      "max_area_mm2": 0.002,
+      "z_mm": [
+       19.971,
+       19.971
+      ],
+      "xy_mm": [
+       1.2,
+       2.18
+      ]
+     },
+     {
+      "layers": 1,
+      "max_area_mm2": 0.001,
+      "z_mm": [
+       18.296,
+       18.296
+      ],
+      "xy_mm": [
+       0.02,
+       -1.7
+      ]
+     },
+     {
+      "layers": 1,
+      "max_area_mm2": 0.001,
+      "z_mm": [
+       18.296,
+       18.296
+      ],
+      "xy_mm": [
+       0.17,
+       -1.7
+      ]
+     },
+     {
+      "layers": 1,
+      "max_area_mm2": 0.001,
+      "z_mm": [
+       21.03,
+       21.03
+      ],
+      "xy_mm": [
+       -3.25,
+       -7.17
+      ]
+     }
+    ],
+    "enclosed_void_mm3": [
+     0.002,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "spikes": [],
+    "largest_layer": {
+     "area_mm2": 78.47,
+     "z_mm": 22.969
+    },
+    "voxel_mm": 0.0882,
+    "checks": [
+     {
+      "name": "closed (watertight)",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "fail",
+      "basis": "Every edge shared by exactly two triangles (trimesh is_watertight); slicers guess at open meshes."
+     },
+     {
+      "name": "manifold",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "fail",
+      "basis": "No edge shared by more than two triangles (touching bodies, tangent booleans)."
+     },
+     {
+      "name": "consistent winding",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "warn",
+      "basis": "Neighbouring triangles must wind the same way so inside and outside are defined."
+     },
+     {
+      "name": "separate bodies",
+      "value": 1,
+      "pass": true,
+      "limit": 1,
+      "severity": "fail",
+      "basis": "Disconnected shells print as separate pieces or loose islands; split them into parts or join them."
+     },
+     {
+      "name": "no enclosed voids",
+      "value": 0.002,
+      "pass": false,
+      "limit": 0,
+      "severity": "fail",
+      "basis": "Sealed cavities trap uncured resin that later cracks the part: add a drain hole (>= 3.5 mm, Formlabs) and a vent, as PrusaSlicer SLA hollowing does."
+     },
+     {
+      "name": "minimum wall (supported)",
+      "value": 12.1145,
+      "pass": false,
+      "limit": "<= 0.5 mm2 thinner than 0.4 mm",
+      "severity": "fail",
+      "basis": "Formlabs: walls connected on two or more sides >= 0.4 mm; thinner walls warp on peel. Small areas at tips and edges are tolerated."
+     },
+     {
+      "name": "minimum wall (unsupported)",
+      "value": 22.1883,
+      "pass": false,
+      "limit": "<= 0.5 mm2 thinner than 0.6 mm",
+      "severity": "warn",
+      "basis": "Formlabs: walls connected on fewer than two sides >= 0.6 mm. Thin spots listed here are fine only if braced on two sides."
+     },
+     {
+      "name": "thin spikes / wires",
+      "value": 0,
+      "pass": true,
+      "limit": "none longer than the process wire table allows",
+      "severity": "fail",
+      "basis": "Formlabs: a wire (length > 2 x width) holds 0.3 mm up to 7 mm tall and 1.5 mm up to 30 mm; longer ones wave or snap. Detected along the print z axis only; horizontal pins show up as thin walls."
+     },
+     {
+      "name": "suction cups",
+      "value": 5.558,
+      "pass": true,
+      "limit": "<= 10.0 mm2 sealed layer area",
+      "severity": "fail",
+      "basis": "A cavity the vat film seals while it peels (Lychee/CHITUBOX 'suction cup') pulls the part off its supports or deforms it. Vent it sideways or toward the plate, or re-orient. The default limit is a heuristic; 0 flags every cup."
+     },
+     {
+      "name": "overhangs needing support",
+      "value": 17.34,
+      "pass": true,
+      "limit": "downward faces flatter than 19.0 deg from level",
+      "severity": "warn",
+      "basis": "Formlabs: unsupported overhangs >= 19 deg from level (resin); the Prusa KB 'overhang threshold' is measured the same way (45 deg is the usual FDM rule)."
+     },
+     {
+      "name": "islands",
+      "value": 22,
+      "pass": true,
+      "limit": 0,
+      "severity": "warn",
+      "basis": "A layer region with nothing under it (CHITUBOX/Lychee island detection) needs a support there."
+     },
+     {
+      "name": "fits build volume",
+      "value": [
+       15.44,
+       30.29,
+       28.81
+      ],
+      "pass": true,
+      "limit": [
+       153.36,
+       77.76,
+       165.0
+      ],
+      "severity": "fail",
+      "basis": "Bounding box in print orientation vs the printer build volume."
+     }
+    ],
+    "all_checks_pass": false,
+    "warnings": [
+     "minimum wall (unsupported)"
+    ],
+    "method": "Edge topology after welding to 0.1 um; shells and cavities by edge-connected groups with ray parity; wall thickness by inward-normal ray casting from triangle centroids; islands, suction cups, voids and wires on a ray-cast voxel model (rows along x, exact in x, voxel_mm in y and z). z up = away from the build plate.",
+    "estimate_kind": "HEURISTIC printability screen, not a slicer: confirm supports and suction in your slicer (Lychee, CHITUBOX, PrusaSlicer) and print a test piece."
+   }
+  },
+  "helm": {
+   "support_plan": {
+    "as_modelled": {
+     "rotate_deg": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "height_mm": 8.36,
+     "max_layer_area_mm2": 24.48,
+     "support_area_mm2": 7.2,
+     "support_start_points": 9,
+     "score": 1.75
+    },
+    "best": [
+     {
+      "rotate_deg": [
+       30.0,
+       0.0,
+       0.0
+      ],
+      "height_mm": 8.05,
+      "max_layer_area_mm2": 23.06,
+      "support_area_mm2": 2.36,
+      "support_start_points": 18,
+      "score": 1.6059
+     },
+     {
+      "rotate_deg": [
+       0.0,
+       -45.0,
+       0.0
+      ],
+      "height_mm": 6.74,
+      "max_layer_area_mm2": 26.25,
+      "support_area_mm2": 2.08,
+      "support_start_points": 15,
+      "score": 1.6334
+     },
+     {
+      "rotate_deg": [
+       0.0,
+       -30.0,
+       0.0
+      ],
+      "height_mm": 7.61,
+      "max_layer_area_mm2": 25.7,
+      "support_area_mm2": 2.61,
+      "support_start_points": 15,
+      "score": 1.6478
+     },
+     {
+      "rotate_deg": [
+       0.0,
+       30.0,
+       0.0
+      ],
+      "height_mm": 7.61,
+      "max_layer_area_mm2": 25.7,
+      "support_area_mm2": 2.67,
+      "support_start_points": 17,
+      "score": 1.7075
+     },
+     {
+      "rotate_deg": [
+       0.0,
+       45.0,
+       0.0
+      ],
+      "height_mm": 6.74,
+      "max_layer_area_mm2": 26.25,
+      "support_area_mm2": 2.09,
+      "support_start_points": 18,
+      "score": 1.7174
+     }
+    ],
+    "orientations_sampled": 49,
+    "score": "max layer area / as-modelled + 0.5 x support area / as-modelled + 0.25 x support starts / as-modelled (lower is better)"
+   },
+   "rotate_deg": [
+    30.0,
+    0.0,
+    0.0
+   ],
+   "pose": "tilted +30 deg about x, +0 deg about y, on supports",
+   "qty": 1,
+   "label": "Helm",
+   "supports": "light/medium resin supports",
+   "printability": {
+    "process": "msla_resin",
+    "basis": "Formlabs Design Guide (SLA, Clear resin, 100 um layers); hobby MSLA printers at 0.03-0.05 mm often hold finer detail, so these limits are conservative. Fit clearances are a hobby convention, not from the guide: print a stepped tolerance coupon on your printer and resin before trusting them.",
+    "rotate_deg": [
+     0,
+     0,
+     0
+    ],
+    "on_build_plate": false,
+    "bounding_box_mm": {
+     "min": [
+      -2.824,
+      -3.097,
+      0.0
+     ],
+     "max": [
+      2.824,
+      3.097,
+      8.046
+     ],
+     "size": [
+      5.649,
+      6.194,
+      8.046
+     ]
+    },
+    "volume_mm3": 104.93,
+    "resin_ml": 0.105,
+    "mass_g": 0.115,
+    "density_g_cm3": 1.1,
+    "topology": {
+     "open_edges": 0,
+     "non_manifold_edges": 0,
+     "inconsistent_winding_edges": 0,
+     "degenerate_triangles": 0,
+     "vertices": 14798
+    },
+    "shells": {
+     "shell_count": 1,
+     "outer_shell_count": 1,
+     "internal_cavity_count": 0,
+     "inverted_shell_count": 0
+    },
+    "thickness": {
+     "min_mm": 0.0,
+     "area_below_supported_mm2": 5.702,
+     "area_below_unsupported_mm2": 6.226,
+     "thin_spots": [
+      {
+       "at_mm": [
+        -0.97,
+        -0.83,
+        1.48
+       ],
+       "min_mm": 0.0,
+       "area_mm2": 0.304
+      },
+      {
+       "at_mm": [
+        0.64,
+        -1.06,
+        1.34
+       ],
+       "min_mm": 0.0,
+       "area_mm2": 0.294
+      },
+      {
+       "at_mm": [
+        0.84,
+        -1.31,
+        1.52
+       ],
+       "min_mm": 0.0,
+       "area_mm2": 2.215
+      },
+      {
+       "at_mm": [
+        1.35,
+        -2.2,
+        5.0
+       ],
+       "min_mm": 0.0,
+       "area_mm2": 0.0
+      },
+      {
+       "at_mm": [
+        1.44,
+        1.71,
+        6.5
+       ],
+       "min_mm": 0.0,
+       "area_mm2": 0.0
+      },
+      {
+       "at_mm": [
+        -1.25,
+        -0.42,
+        1.79
+       ],
+       "min_mm": 0.001,
+       "area_mm2": 0.055
+      },
+      {
+       "at_mm": [
+        0.0,
+        -2.31,
+        3.59
+       ],
+       "min_mm": 0.001,
+       "area_mm2": 0.272
+      },
+      {
+       "at_mm": [
+        -1.2,
+        -1.21,
+        1.74
+       ],
+       "min_mm": 0.002,
+       "area_mm2": 2.186
+      },
+      {
+       "at_mm": [
+        1.22,
+        -0.38,
+        1.81
+       ],
+       "min_mm": 0.003,
+       "area_mm2": 0.051
+      },
+      {
+       "at_mm": [
+        0.21,
+        -2.51,
+        3.91
+       ],
+       "min_mm": 0.017,
+       "area_mm2": 0.003
+      },
+      {
+       "at_mm": [
+        0.83,
+        -2.29,
+        3.76
+       ],
+       "min_mm": 0.035,
+       "area_mm2": 0.082
+      },
+      {
+       "at_mm": [
+        -1.08,
+        -2.12,
+        3.71
+       ],
+       "min_mm": 0.046,
+       "area_mm2": 0.089
+      }
+     ],
+     "samples": 29592
+    },
+    "overhang_area_mm2_by_angle_from_level": {
+     "0-10 deg": 0.62,
+     "10-20 deg": 2.0,
+     "20-30 deg": 6.23,
+     "30-40 deg": 5.91,
+     "40-50 deg": 3.25,
+     "50-60 deg": 4.94
+    },
+    "support_area_mm2": 2.36,
+    "islands": {
+     "count": 14,
+     "first": [
+      {
+       "z_mm": 1.125,
+       "xy_mm": [
+        -0.0,
+        -1.5
+       ],
+       "area_mm2": 0.042
+      },
+      {
+       "z_mm": 1.225,
+       "xy_mm": [
+        -0.01,
+        -0.85
+       ],
+       "area_mm2": 0.12
+      },
+      {
+       "z_mm": 1.425,
+       "xy_mm": [
+        0.01,
+        0.5
+       ],
+       "area_mm2": 0.057
+      },
+      {
+       "z_mm": 1.775,
+       "xy_mm": [
+        -1.22,
+        -0.37
+       ],
+       "area_mm2": 0.001
+      },
+      {
+       "z_mm": 1.875,
+       "xy_mm": [
+        -1.38,
+        -0.62
+       ],
+       "area_mm2": 0.003
+      },
+      {
+       "z_mm": 1.875,
+       "xy_mm": [
+        1.38,
+        -0.62
+       ],
+       "area_mm2": 0.002
+      },
+      {
+       "z_mm": 1.875,
+       "xy_mm": [
+        -1.98,
+        -0.22
+       ],
+       "area_mm2": 0.182
+      },
+      {
+       "z_mm": 1.875,
+       "xy_mm": [
+        1.98,
+        -0.22
+       ],
+       "area_mm2": 0.178
+      },
+      {
+       "z_mm": 3.575,
+       "xy_mm": [
+        -0.0,
+        -2.37
+       ],
+       "area_mm2": 0.001
+      },
+      {
+       "z_mm": 3.725,
+       "xy_mm": [
+        -0.96,
+        -2.22
+       ],
+       "area_mm2": 0.002
+      },
+      {
+       "z_mm": 3.725,
+       "xy_mm": [
+        0.97,
+        -2.22
+       ],
+       "area_mm2": 0.002
+      },
+      {
+       "z_mm": 3.725,
+       "xy_mm": [
+        -1.01,
+        -2.17
+       ],
+       "area_mm2": 0.001
+      },
+      {
+       "z_mm": 3.775,
+       "xy_mm": [
+        -0.76,
+        -2.32
+       ],
+       "area_mm2": 0.003
+      },
+      {
+       "z_mm": 3.775,
+       "xy_mm": [
+        0.76,
+        -2.32
+       ],
+       "area_mm2": 0.003
+      }
+     ]
+    },
+    "suction_cups": [],
+    "enclosed_void_mm3": [],
+    "spikes": [],
+    "largest_layer": {
+     "area_mm2": 23.07,
+     "z_mm": 4.725
+    },
+    "voxel_mm": 0.05,
+    "checks": [
+     {
+      "name": "closed (watertight)",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "fail",
+      "basis": "Every edge shared by exactly two triangles (trimesh is_watertight); slicers guess at open meshes."
+     },
+     {
+      "name": "manifold",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "fail",
+      "basis": "No edge shared by more than two triangles (touching bodies, tangent booleans)."
+     },
+     {
+      "name": "consistent winding",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "warn",
+      "basis": "Neighbouring triangles must wind the same way so inside and outside are defined."
+     },
+     {
+      "name": "separate bodies",
+      "value": 1,
+      "pass": true,
+      "limit": 1,
+      "severity": "fail",
+      "basis": "Disconnected shells print as separate pieces or loose islands; split them into parts or join them."
+     },
+     {
+      "name": "no enclosed voids",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "fail",
+      "basis": "Sealed cavities trap uncured resin that later cracks the part: add a drain hole (>= 3.5 mm, Formlabs) and a vent, as PrusaSlicer SLA hollowing does."
+     },
+     {
+      "name": "minimum wall (supported)",
+      "value": 5.7019,
+      "pass": false,
+      "limit": "<= 0.5 mm2 thinner than 0.4 mm",
+      "severity": "fail",
+      "basis": "Formlabs: walls connected on two or more sides >= 0.4 mm; thinner walls warp on peel. Small areas at tips and edges are tolerated."
+     },
+     {
+      "name": "minimum wall (unsupported)",
+      "value": 6.2261,
+      "pass": false,
+      "limit": "<= 0.5 mm2 thinner than 0.6 mm",
+      "severity": "warn",
+      "basis": "Formlabs: walls connected on fewer than two sides >= 0.6 mm. Thin spots listed here are fine only if braced on two sides."
+     },
+     {
+      "name": "thin spikes / wires",
+      "value": 0,
+      "pass": true,
+      "limit": "none longer than the process wire table allows",
+      "severity": "fail",
+      "basis": "Formlabs: a wire (length > 2 x width) holds 0.3 mm up to 7 mm tall and 1.5 mm up to 30 mm; longer ones wave or snap. Detected along the print z axis only; horizontal pins show up as thin walls."
+     },
+     {
+      "name": "suction cups",
+      "value": 0.0,
+      "pass": true,
+      "limit": "<= 10.0 mm2 sealed layer area",
+      "severity": "fail",
+      "basis": "A cavity the vat film seals while it peels (Lychee/CHITUBOX 'suction cup') pulls the part off its supports or deforms it. Vent it sideways or toward the plate, or re-orient. The default limit is a heuristic; 0 flags every cup."
+     },
+     {
+      "name": "overhangs needing support",
+      "value": 2.36,
+      "pass": true,
+      "limit": "downward faces flatter than 19.0 deg from level",
+      "severity": "warn",
+      "basis": "Formlabs: unsupported overhangs >= 19 deg from level (resin); the Prusa KB 'overhang threshold' is measured the same way (45 deg is the usual FDM rule)."
+     },
+     {
+      "name": "islands",
+      "value": 14,
+      "pass": true,
+      "limit": 0,
+      "severity": "warn",
+      "basis": "A layer region with nothing under it (CHITUBOX/Lychee island detection) needs a support there."
+     },
+     {
+      "name": "fits build volume",
+      "value": [
+       5.65,
+       6.19,
+       8.05
+      ],
+      "pass": true,
+      "limit": [
+       153.36,
+       77.76,
+       165.0
+      ],
+      "severity": "fail",
+      "basis": "Bounding box in print orientation vs the printer build volume."
+     }
+    ],
+    "all_checks_pass": false,
+    "warnings": [
+     "minimum wall (unsupported)"
+    ],
+    "method": "Edge topology after welding to 0.1 um; shells and cavities by edge-connected groups with ray parity; wall thickness by inward-normal ray casting from triangle centroids; islands, suction cups, voids and wires on a ray-cast voxel model (rows along x, exact in x, voxel_mm in y and z). z up = away from the build plate.",
+    "estimate_kind": "HEURISTIC printability screen, not a slicer: confirm supports and suction in your slicer (Lychee, CHITUBOX, PrusaSlicer) and print a test piece."
+   }
+  },
+  "backpack": {
+   "support_plan": {
+    "as_modelled": {
+     "rotate_deg": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "height_mm": 8.43,
+     "max_layer_area_mm2": 18.07,
+     "support_area_mm2": 8.5,
+     "support_start_points": 31,
+     "score": 1.75
+    },
+    "best": [
+     {
+      "rotate_deg": [
+       30.0,
+       15.0,
+       0.0
+      ],
+      "height_mm": 8.26,
+      "max_layer_area_mm2": 17.83,
+      "support_area_mm2": 2.12,
+      "support_start_points": 23,
+      "score": 1.2969
+     },
+     {
+      "rotate_deg": [
+       30.0,
+       -15.0,
+       0.0
+      ],
+      "height_mm": 8.26,
+      "max_layer_area_mm2": 17.83,
+      "support_area_mm2": 2.22,
+      "support_start_points": 25,
+      "score": 1.3189
+     },
+     {
+      "rotate_deg": [
+       30.0,
+       0.0,
+       0.0
+      ],
+      "height_mm": 7.92,
+      "max_layer_area_mm2": 17.31,
+      "support_area_mm2": 2.61,
+      "support_start_points": 28,
+      "score": 1.3373
+     },
+     {
+      "rotate_deg": [
+       15.0,
+       15.0,
+       0.0
+      ],
+      "height_mm": 8.89,
+      "max_layer_area_mm2": 18.3,
+      "support_area_mm2": 2.4,
+      "support_start_points": 28,
+      "score": 1.3797
+     },
+     {
+      "rotate_deg": [
+       15.0,
+       -15.0,
+       0.0
+      ],
+      "height_mm": 8.88,
+      "max_layer_area_mm2": 18.29,
+      "support_area_mm2": 2.54,
+      "support_start_points": 31,
+      "score": 1.4116
+     }
+    ],
+    "orientations_sampled": 49,
+    "score": "max layer area / as-modelled + 0.5 x support area / as-modelled + 0.25 x support starts / as-modelled (lower is better)"
+   },
+   "rotate_deg": [
+    30.0,
+    15.0,
+    0.0
+   ],
+   "pose": "tilted +30 deg about x, +15 deg about y, on supports",
+   "qty": 1,
+   "label": "Backpack",
+   "supports": "light/medium resin supports",
+   "printability": {
+    "process": "msla_resin",
+    "basis": "Formlabs Design Guide (SLA, Clear resin, 100 um layers); hobby MSLA printers at 0.03-0.05 mm often hold finer detail, so these limits are conservative. Fit clearances are a hobby convention, not from the guide: print a stepped tolerance coupon on your printer and resin before trusting them.",
+    "rotate_deg": [
+     0,
+     0,
+     0
+    ],
+    "on_build_plate": false,
+    "bounding_box_mm": {
+     "min": [
+      -3.45,
+      -3.664,
+      0.0
+     ],
+     "max": [
+      3.45,
+      3.664,
+      8.258
+     ],
+     "size": [
+      6.899,
+      7.327,
+      8.258
+     ]
+    },
+    "volume_mm3": 86.62,
+    "resin_ml": 0.087,
+    "mass_g": 0.095,
+    "density_g_cm3": 1.1,
+    "topology": {
+     "open_edges": 0,
+     "non_manifold_edges": 0,
+     "inconsistent_winding_edges": 0,
+     "degenerate_triangles": 0,
+     "vertices": 12019
+    },
+    "shells": {
+     "shell_count": 1,
+     "outer_shell_count": 1,
+     "internal_cavity_count": 0,
+     "inverted_shell_count": 0
+    },
+    "thickness": {
+     "min_mm": 0.002,
+     "area_below_supported_mm2": 10.771,
+     "area_below_unsupported_mm2": 42.874,
+     "thin_spots": [
+      {
+       "at_mm": [
+        -3.38,
+        2.93,
+        1.89
+       ],
+       "min_mm": 0.002,
+       "area_mm2": 1.683
+      },
+      {
+       "at_mm": [
+        -2.74,
+        2.94,
+        1.21
+       ],
+       "min_mm": 0.002,
+       "area_mm2": 0.557
+      },
+      {
+       "at_mm": [
+        1.54,
+        2.94,
+        0.06
+       ],
+       "min_mm": 0.002,
+       "area_mm2": 0.896
+      },
+      {
+       "at_mm": [
+        2.2,
+        3.56,
+        1.02
+       ],
+       "min_mm": 0.002,
+       "area_mm2": 0.48
+      },
+      {
+       "at_mm": [
+        -2.5,
+        3.66,
+        2.22
+       ],
+       "min_mm": 0.003,
+       "area_mm2": 0.45
+      },
+      {
+       "at_mm": [
+        -2.85,
+        3.53,
+        2.41
+       ],
+       "min_mm": 0.005,
+       "area_mm2": 0.124
+      },
+      {
+       "at_mm": [
+        1.31,
+        3.08,
+        0.21
+       ],
+       "min_mm": 0.005,
+       "area_mm2": 0.724
+      },
+      {
+       "at_mm": [
+        2.5,
+        3.23,
+        0.68
+       ],
+       "min_mm": 0.006,
+       "area_mm2": 0.848
+      },
+      {
+       "at_mm": [
+        2.5,
+        3.21,
+        0.67
+       ],
+       "min_mm": 0.007,
+       "area_mm2": 1.584
+      },
+      {
+       "at_mm": [
+        1.37,
+        3.55,
+        0.86
+       ],
+       "min_mm": 0.012,
+       "area_mm2": 0.174
+      },
+      {
+       "at_mm": [
+        -2.28,
+        3.28,
+        1.37
+       ],
+       "min_mm": 0.013,
+       "area_mm2": 0.925
+      },
+      {
+       "at_mm": [
+        1.25,
+        3.43,
+        0.67
+       ],
+       "min_mm": 0.014,
+       "area_mm2": 2.146
+      }
+     ],
+     "samples": 24034
+    },
+    "overhang_area_mm2_by_angle_from_level": {
+     "0-10 deg": 0.32,
+     "10-20 deg": 2.2,
+     "20-30 deg": 4.17,
+     "30-40 deg": 11.63,
+     "40-50 deg": 7.33,
+     "50-60 deg": 9.74
+    },
+    "support_area_mm2": 2.12,
+    "islands": {
+     "count": 13,
+     "first": [
+      {
+       "z_mm": 0.675,
+       "xy_mm": [
+        2.5,
+        3.21
+       ],
+       "area_mm2": 0.0
+      },
+      {
+       "z_mm": 0.925,
+       "xy_mm": [
+        2.38,
+        3.41
+       ],
+       "area_mm2": 0.0
+      },
+      {
+       "z_mm": 1.025,
+       "xy_mm": [
+        2.16,
+        3.56
+       ],
+       "area_mm2": 0.001
+      },
+      {
+       "z_mm": 1.075,
+       "xy_mm": [
+        2.12,
+        3.56
+       ],
+       "area_mm2": 0.0
+      },
+      {
+       "z_mm": 1.075,
+       "xy_mm": [
+        2.0,
+        3.61
+       ],
+       "area_mm2": 0.005
+      },
+      {
+       "z_mm": 1.075,
+       "xy_mm": [
+        1.77,
+        3.66
+       ],
+       "area_mm2": 0.002
+      },
+      {
+       "z_mm": 1.175,
+       "xy_mm": [
+        -2.45,
+        2.66
+       ],
+       "area_mm2": 0.293
+      },
+      {
+       "z_mm": 1.275,
+       "xy_mm": [
+        -2.89,
+        2.86
+       ],
+       "area_mm2": 0.0
+      },
+      {
+       "z_mm": 2.125,
+       "xy_mm": [
+        0.09,
+        -2.84
+       ],
+       "area_mm2": 0.006
+      },
+      {
+       "z_mm": 2.325,
+       "xy_mm": [
+        -3.14,
+        3.31
+       ],
+       "area_mm2": 0.0
+      },
+      {
+       "z_mm": 2.325,
+       "xy_mm": [
+        -3.08,
+        3.41
+       ],
+       "area_mm2": 0.0
+      },
+      {
+       "z_mm": 2.375,
+       "xy_mm": [
+        -3.01,
+        3.41
+       ],
+       "area_mm2": 0.001
+      },
+      {
+       "z_mm": 3.875,
+       "xy_mm": [
+        0.37,
+        2.19
+       ],
+       "area_mm2": 0.075
+      }
+     ]
+    },
+    "suction_cups": [],
+    "enclosed_void_mm3": [],
+    "spikes": [],
+    "largest_layer": {
+     "area_mm2": 17.84,
+     "z_mm": 3.325
+    },
+    "voxel_mm": 0.05,
+    "checks": [
+     {
+      "name": "closed (watertight)",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "fail",
+      "basis": "Every edge shared by exactly two triangles (trimesh is_watertight); slicers guess at open meshes."
+     },
+     {
+      "name": "manifold",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "fail",
+      "basis": "No edge shared by more than two triangles (touching bodies, tangent booleans)."
+     },
+     {
+      "name": "consistent winding",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "warn",
+      "basis": "Neighbouring triangles must wind the same way so inside and outside are defined."
+     },
+     {
+      "name": "separate bodies",
+      "value": 1,
+      "pass": true,
+      "limit": 1,
+      "severity": "fail",
+      "basis": "Disconnected shells print as separate pieces or loose islands; split them into parts or join them."
+     },
+     {
+      "name": "no enclosed voids",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "fail",
+      "basis": "Sealed cavities trap uncured resin that later cracks the part: add a drain hole (>= 3.5 mm, Formlabs) and a vent, as PrusaSlicer SLA hollowing does."
+     },
+     {
+      "name": "minimum wall (supported)",
+      "value": 10.771,
+      "pass": false,
+      "limit": "<= 0.5 mm2 thinner than 0.4 mm",
+      "severity": "fail",
+      "basis": "Formlabs: walls connected on two or more sides >= 0.4 mm; thinner walls warp on peel. Small areas at tips and edges are tolerated."
+     },
+     {
+      "name": "minimum wall (unsupported)",
+      "value": 42.874,
+      "pass": false,
+      "limit": "<= 0.5 mm2 thinner than 0.6 mm",
+      "severity": "warn",
+      "basis": "Formlabs: walls connected on fewer than two sides >= 0.6 mm. Thin spots listed here are fine only if braced on two sides."
+     },
+     {
+      "name": "thin spikes / wires",
+      "value": 0,
+      "pass": true,
+      "limit": "none longer than the process wire table allows",
+      "severity": "fail",
+      "basis": "Formlabs: a wire (length > 2 x width) holds 0.3 mm up to 7 mm tall and 1.5 mm up to 30 mm; longer ones wave or snap. Detected along the print z axis only; horizontal pins show up as thin walls."
+     },
+     {
+      "name": "suction cups",
+      "value": 0.0,
+      "pass": true,
+      "limit": "<= 10.0 mm2 sealed layer area",
+      "severity": "fail",
+      "basis": "A cavity the vat film seals while it peels (Lychee/CHITUBOX 'suction cup') pulls the part off its supports or deforms it. Vent it sideways or toward the plate, or re-orient. The default limit is a heuristic; 0 flags every cup."
+     },
+     {
+      "name": "overhangs needing support",
+      "value": 2.12,
+      "pass": true,
+      "limit": "downward faces flatter than 19.0 deg from level",
+      "severity": "warn",
+      "basis": "Formlabs: unsupported overhangs >= 19 deg from level (resin); the Prusa KB 'overhang threshold' is measured the same way (45 deg is the usual FDM rule)."
+     },
+     {
+      "name": "islands",
+      "value": 13,
+      "pass": true,
+      "limit": 0,
+      "severity": "warn",
+      "basis": "A layer region with nothing under it (CHITUBOX/Lychee island detection) needs a support there."
+     },
+     {
+      "name": "fits build volume",
+      "value": [
+       6.9,
+       7.33,
+       8.26
+      ],
+      "pass": true,
+      "limit": [
+       153.36,
+       77.76,
+       165.0
+      ],
+      "severity": "fail",
+      "basis": "Bounding box in print orientation vs the printer build volume."
+     }
+    ],
+    "all_checks_pass": false,
+    "warnings": [
+     "minimum wall (unsupported)"
+    ],
+    "method": "Edge topology after welding to 0.1 um; shells and cavities by edge-connected groups with ray parity; wall thickness by inward-normal ray casting from triangle centroids; islands, suction cups, voids and wires on a ray-cast voxel model (rows along x, exact in x, voxel_mm in y and z). z up = away from the build plate.",
+    "estimate_kind": "HEURISTIC printability screen, not a slicer: confirm supports and suction in your slicer (Lychee, CHITUBOX, PrusaSlicer) and print a test piece."
+   }
+  },
+  "base": {
+   "rotate_deg": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "pose": "flat, underside on the plate (magnet pocket vented to the rim)",
+   "qty": 1,
+   "label": "25 mm base",
+   "supports": "none",
+   "printability": {
+    "process": "msla_resin",
+    "basis": "Formlabs Design Guide (SLA, Clear resin, 100 um layers); hobby MSLA printers at 0.03-0.05 mm often hold finer detail, so these limits are conservative. Fit clearances are a hobby convention, not from the guide: print a stepped tolerance coupon on your printer and resin before trusting them.",
+    "rotate_deg": [
+     0,
+     0,
+     0
+    ],
+    "on_build_plate": true,
+    "bounding_box_mm": {
+     "min": [
+      -12.478,
+      -12.485,
+      0.0
+     ],
+     "max": [
+      12.478,
+      12.485,
+      5.126
+     ],
+     "size": [
+      24.957,
+      24.971,
+      5.126
+     ]
+    },
+    "volume_mm3": 1546.84,
+    "resin_ml": 1.547,
+    "mass_g": 1.702,
+    "density_g_cm3": 1.1,
+    "topology": {
+     "open_edges": 0,
+     "non_manifold_edges": 0,
+     "inconsistent_winding_edges": 0,
+     "degenerate_triangles": 0,
+     "vertices": 24049
+    },
+    "shells": {
+     "shell_count": 1,
+     "outer_shell_count": 1,
+     "internal_cavity_count": 0,
+     "inverted_shell_count": 0
+    },
+    "thickness": {
+     "min_mm": 0.0,
+     "area_below_supported_mm2": 5.486,
+     "area_below_unsupported_mm2": 10.88,
+     "thin_spots": [
+      {
+       "at_mm": [
+        -8.83,
+        -7.39,
+        3.73
+       ],
+       "min_mm": 0.0,
+       "area_mm2": 0.001
+      },
+      {
+       "at_mm": [
+        5.44,
+        9.45,
+        3.25
+       ],
+       "min_mm": 0.0,
+       "area_mm2": 0.0
+      },
+      {
+       "at_mm": [
+        6.78,
+        7.77,
+        3.73
+       ],
+       "min_mm": 0.0,
+       "area_mm2": 0.0
+      },
+      {
+       "at_mm": [
+        -10.16,
+        5.41,
+        3.73
+       ],
+       "min_mm": 0.001,
+       "area_mm2": 0.0
+      },
+      {
+       "at_mm": [
+        -3.32,
+        9.15,
+        4.89
+       ],
+       "min_mm": 0.001,
+       "area_mm2": 0.001
+      },
+      {
+       "at_mm": [
+        -7.08,
+        1.93,
+        3.57
+       ],
+       "min_mm": 0.002,
+       "area_mm2": 0.263
+      },
+      {
+       "at_mm": [
+        7.42,
+        -5.86,
+        3.82
+       ],
+       "min_mm": 0.005,
+       "area_mm2": 0.012
+      },
+      {
+       "at_mm": [
+        8.61,
+        -1.5,
+        3.81
+       ],
+       "min_mm": 0.005,
+       "area_mm2": 0.007
+      },
+      {
+       "at_mm": [
+        -4.6,
+        -7.48,
+        3.76
+       ],
+       "min_mm": 0.01,
+       "area_mm2": 0.001
+      },
+      {
+       "at_mm": [
+        0.58,
+        -6.77,
+        3.76
+       ],
+       "min_mm": 0.011,
+       "area_mm2": 0.02
+      },
+      {
+       "at_mm": [
+        7.24,
+        -3.56,
+        3.82
+       ],
+       "min_mm": 0.011,
+       "area_mm2": 0.025
+      },
+      {
+       "at_mm": [
+        1.01,
+        9.39,
+        3.25
+       ],
+       "min_mm": 0.011,
+       "area_mm2": 0.0
+      }
+     ],
+     "samples": 24058
+    },
+    "overhang_area_mm2_by_angle_from_level": {
+     "0-10 deg": 37.29,
+     "10-20 deg": 3.93,
+     "20-30 deg": 1.99,
+     "30-40 deg": 2.21,
+     "40-50 deg": 5.26,
+     "50-60 deg": 2.79
+    },
+    "support_area_mm2": 41.04,
+    "islands": {
+     "count": 0,
+     "first": []
+    },
+    "suction_cups": [
+     {
+      "layers": 22,
+      "max_area_mm2": 149.235,
+      "z_mm": [
+       2.725,
+       3.775
+      ],
+      "xy_mm": [
+       -1.0,
+       -10.86
+      ]
+     }
+    ],
+    "enclosed_void_mm3": [],
+    "spikes": [],
+    "largest_layer": {
+     "area_mm2": 458.16,
+     "z_mm": 0.075
+    },
+    "voxel_mm": 0.05,
+    "checks": [
+     {
+      "name": "closed (watertight)",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "fail",
+      "basis": "Every edge shared by exactly two triangles (trimesh is_watertight); slicers guess at open meshes."
+     },
+     {
+      "name": "manifold",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "fail",
+      "basis": "No edge shared by more than two triangles (touching bodies, tangent booleans)."
+     },
+     {
+      "name": "consistent winding",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "warn",
+      "basis": "Neighbouring triangles must wind the same way so inside and outside are defined."
+     },
+     {
+      "name": "separate bodies",
+      "value": 1,
+      "pass": true,
+      "limit": 1,
+      "severity": "fail",
+      "basis": "Disconnected shells print as separate pieces or loose islands; split them into parts or join them."
+     },
+     {
+      "name": "no enclosed voids",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "fail",
+      "basis": "Sealed cavities trap uncured resin that later cracks the part: add a drain hole (>= 3.5 mm, Formlabs) and a vent, as PrusaSlicer SLA hollowing does."
+     },
+     {
+      "name": "minimum wall (supported)",
+      "value": 5.4855,
+      "pass": false,
+      "limit": "<= 0.5 mm2 thinner than 0.4 mm",
+      "severity": "fail",
+      "basis": "Formlabs: walls connected on two or more sides >= 0.4 mm; thinner walls warp on peel. Small areas at tips and edges are tolerated."
+     },
+     {
+      "name": "minimum wall (unsupported)",
+      "value": 10.8796,
+      "pass": false,
+      "limit": "<= 0.5 mm2 thinner than 0.6 mm",
+      "severity": "warn",
+      "basis": "Formlabs: walls connected on fewer than two sides >= 0.6 mm. Thin spots listed here are fine only if braced on two sides."
+     },
+     {
+      "name": "thin spikes / wires",
+      "value": 0,
+      "pass": true,
+      "limit": "none longer than the process wire table allows",
+      "severity": "fail",
+      "basis": "Formlabs: a wire (length > 2 x width) holds 0.3 mm up to 7 mm tall and 1.5 mm up to 30 mm; longer ones wave or snap. Detected along the print z axis only; horizontal pins show up as thin walls."
+     },
+     {
+      "name": "suction cups",
+      "value": 149.235,
+      "pass": false,
+      "limit": "<= 10.0 mm2 sealed layer area",
+      "severity": "fail",
+      "basis": "A cavity the vat film seals while it peels (Lychee/CHITUBOX 'suction cup') pulls the part off its supports or deforms it. Vent it sideways or toward the plate, or re-orient. The default limit is a heuristic; 0 flags every cup."
+     },
+     {
+      "name": "overhangs needing support",
+      "value": 41.04,
+      "pass": true,
+      "limit": "downward faces flatter than 19.0 deg from level",
+      "severity": "warn",
+      "basis": "Formlabs: unsupported overhangs >= 19 deg from level (resin); the Prusa KB 'overhang threshold' is measured the same way (45 deg is the usual FDM rule)."
+     },
+     {
+      "name": "islands",
+      "value": 0,
+      "pass": true,
+      "limit": 0,
+      "severity": "warn",
+      "basis": "A layer region with nothing under it (CHITUBOX/Lychee island detection) needs a support there."
+     },
+     {
+      "name": "fits build volume",
+      "value": [
+       24.96,
+       24.97,
+       5.13
+      ],
+      "pass": true,
+      "limit": [
+       153.36,
+       77.76,
+       165.0
+      ],
+      "severity": "fail",
+      "basis": "Bounding box in print orientation vs the printer build volume."
+     }
+    ],
+    "all_checks_pass": false,
+    "warnings": [
+     "minimum wall (unsupported)"
+    ],
+    "method": "Edge topology after welding to 0.1 um; shells and cavities by edge-connected groups with ray parity; wall thickness by inward-normal ray casting from triangle centroids; islands, suction cups, voids and wires on a ray-cast voxel model (rows along x, exact in x, voxel_mm in y and z). z up = away from the build plate.",
+    "estimate_kind": "HEURISTIC printability screen, not a slicer: confirm supports and suction in your slicer (Lychee, CHITUBOX, PrusaSlicer) and print a test piece."
+   }
+  }
+ },
+ "problems": [
+  "base_and_peg: wall around the socket = 0.6 (limit 0.6)",
+  "figure: no enclosed voids = 0.002 (limit 0)",
+  "figure: minimum wall (supported) = 12.1145 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "helm: minimum wall (supported) = 5.7019 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "backpack: minimum wall (supported) = 10.771 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "base: minimum wall (supported) = 5.4855 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "base: suction cups = 149.235 (limit <= 10.0 mm2 sealed layer area)"
+ ],
+ "all_pass": false
+}

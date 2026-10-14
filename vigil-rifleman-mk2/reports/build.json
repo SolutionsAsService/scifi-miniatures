@@ -1,0 +1,69 @@
+{
+ "id": "vigil-rifleman-mk2",
+ "generator": "source/build.py (tools/sdfkit.py: SDF sculpt, marching cubes, manifold3d simplification)",
+ "assembled_bbox_mm": [
+  24.96,
+  28.77,
+  35.08
+ ],
+ "parts": {
+  "figure": {
+   "volume_mm3": 1152.5,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    15.43,
+    23.38,
+    26.95
+   ],
+   "triangles": 274022,
+   "instances": 1
+  },
+  "helm": {
+   "volume_mm3": 105.03,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.65,
+    6.62,
+    8.36
+   ],
+   "triangles": 114512,
+   "instances": 1
+  },
+  "backpack": {
+   "volume_mm3": 86.68,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    6.36,
+    5.92,
+    8.43
+   ],
+   "triangles": 115536,
+   "instances": 1
+  },
+  "base": {
+   "volume_mm3": 1546.92,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    24.96,
+    24.97,
+    5.13
+   ],
+   "triangles": 60546,
+   "instances": 1
+  }
+ },
+ "interference": [],
+ "step": {
+  "file": "cad/vigil-rifleman-mk2-assembly.step",
+  "kind": "faceted B-rep reference (about 5000 triangles per part) written by FreeCAD"
+ },
+ "heights_above_base_top_mm": {
+  "visor_line": 27.85,
+  "crown": 31.28,
+  "method": "visor: neck cut + helm centre height + lens centre offset (exosuit.py); crown: assembled helm mesh max z minus the base top"
+ }
+}

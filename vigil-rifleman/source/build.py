@@ -19,9 +19,10 @@ S = json.loads((PKG / "spec" / "vigil-rifleman.spec.json").read_text())
 pz = S["pose"]
 d = unit(pz["rifle"]["dir"])
 M = X.place(v3(pz["rifle"]["stock"]) + d * 3.6, d, (0, 0, 1))          # stock butt in the shoulder, grip 3.6 mm ahead
-grip, fore = X.apply(M, (0, 0, 0)), X.apply(M, (2.6, 0, 0.05))
+grip, fore = X.apply(M, (0, 0, 0)), X.apply(M, (2.9, 0, -0.2))
 pose = X.Pose(pelvis=pz["pelvis"], yaw=pz["yaw"], lean=pz["lean"], twist=pz["twist"], ankles=pz["ankles"],
-              feet_yaw=pz["feet_yaw"], fists=(grip, fore), elbow_poles=pz["elbow_poles"], head_yaw=pz["head_yaw"])
+              feet_yaw=pz["feet_yaw"], fists=(grip, fore), elbow_poles=pz["elbow_poles"], knee_poles=pz["knee_poles"],
+              head_yaw=pz["head_yaw"])
 
 
 def rifle(g, P):
@@ -30,8 +31,8 @@ def rifle(g, P):
     X.fist(g, grip, down, grip - P.elbow[0])
     X.fist(g, fore, down, fore - P.elbow[1])
     # magazine pouches on the belt
-    for sx in (-1.2, 1.2):
-        g.add(X.rbox(P.pelvis + P.Rp @ v3(sx, -2.35, 0.25), (0.55, 0.4, 0.6), P.Rp, 0.2), 0.1)
+    for sx in (-1.5, 1.5):
+        g.add(X.rbox(P.pelvis + P.Rp @ v3(sx, -2.7, 0.4), (0.6, 0.45, 0.65), P.Rp, 0.2), 0.1)
 
 
 NOTES = {
