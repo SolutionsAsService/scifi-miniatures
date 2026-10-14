@@ -1,0 +1,51 @@
+{
+  "id": "armour-keelwright-erv",
+  "name": "Keelwright-class Engineer & Recovery Vehicle",
+  "designation": "ERV-5",
+  "line": "scifi",
+  "faction": "Aster Compact - Vigil",
+  "lane": "armour-walkers-drones",
+  "role": "Combat engineer / armoured recovery",
+  "drive": "wheeled 6x6",
+  "crew": "2 + 4 (driver, crane operator; 4-trooper Vigil sapper team in the rear bay)",
+  "capacity": "4 sappers + bridging planks; crane ~12 t, winch 30 t",
+  "scale": "1:56 (30 mm heroic)",
+  "dims_world_m": {
+    "length": 9.7,
+    "width": 4,
+    "height_crane_raised": 4.3,
+    "height_cab": 2.7
+  },
+  "dims_scale_mm": {
+    "length": 172.5,
+    "width": 71,
+    "height_crane_raised": 77,
+    "height_cab": 48
+  },
+  "base": "none; hull sits on its wheels",
+  "weapons": [
+    {
+      "variant": "A (Recovery)",
+      "main": "slewing telescopic crane + 30 t winch, rear spades",
+      "secondary": "roof pintle (Talon carbine)"
+    },
+    {
+      "variant": "B (Sapper)",
+      "main": "crane replaced by a Breach mortar (demolition charge projector)",
+      "secondary": "dozer blade, mine-plough"
+    },
+    {
+      "variant": "C (Bridger)",
+      "main": "crane replaced by a folding scissor bridge (12 m)",
+      "secondary": "dozer blade"
+    }
+  ],
+  "pitch": "A 6x6 workhorse with a dozer blade, a crane and a sapper team: it clears the road and drags the Rampart home.",
+  "images": [
+    "images/armour-keelwright-erv-hero.png",
+    "images/armour-keelwright-erv-turnaround.png"
+  ],
+  "blockout": "blockout/armour-keelwright-erv-blockout.stl",
+  "source": "source/concept.py",
+  "status": "concept"
+}

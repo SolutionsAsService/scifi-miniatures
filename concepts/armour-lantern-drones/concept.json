@@ -1,0 +1,53 @@
+{
+  "id": "armour-lantern-drones",
+  "name": "Lantern-pattern Squad Drone Kit",
+  "designation": "SD-1 Wisp / SD-2 Tick / SD-C cradle",
+  "line": "scifi",
+  "faction": "Aster Compact - Vigil",
+  "lane": "armour-walkers-drones",
+  "role": "Fireteam recon & ground drones",
+  "drive": "rotor (SD-1 quadcopter) + tracked (SD-2 ground drone)",
+  "crew": "0 (controlled by a Vigil fireteam member)",
+  "capacity": "SD-2 can carry one 0.4 m payload pod (charges, med pack, relay)",
+  "scale": "1:56 (30 mm heroic)",
+  "dims_world_m": {
+    "wisp_span": 0.9,
+    "wisp_height": 0.22,
+    "tick_length": 1.05,
+    "tick_width": 0.7,
+    "tick_height": 0.6
+  },
+  "dims_scale_mm": {
+    "wisp_span": 16,
+    "wisp_height": 4,
+    "tick_length": 19,
+    "tick_width": 13,
+    "tick_height": 11
+  },
+  "base": "32 mm round (same as infantry, 5x2 mm magnet); Wisp on a 1.6 mm clear stem",
+  "weapons": [
+    {
+      "variant": "Wisp A (Recon)",
+      "main": "chin sensor ball (split chevron lenses)",
+      "secondary": "none"
+    },
+    {
+      "variant": "Wisp B (Spotter / Strike)",
+      "main": "underslung laser designator or a single shaped-charge munition",
+      "secondary": "-"
+    },
+    {
+      "variant": "Tick A/B/C",
+      "main": "A: Talon-carbine mount (VW-05 barrel); B: mine-plough + charge layer; C: relay mast + smoke",
+      "secondary": "sensor mast"
+    }
+  ],
+  "pitch": "Two tiny squad drones and a backpack cradle: the fireteam's eyes in the air and nose on the ground.",
+  "images": [
+    "images/armour-lantern-drones-hero.png",
+    "images/armour-lantern-drones-turnaround.png"
+  ],
+  "blockout": "blockout/armour-lantern-drones-blockout.stl",
+  "source": "source/concept.py",
+  "status": "concept"
+}

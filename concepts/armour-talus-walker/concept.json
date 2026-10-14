@@ -1,0 +1,50 @@
+{
+  "id": "armour-talus-walker",
+  "name": "Talus-class Heavy Support Frame",
+  "designation": "HF-2",
+  "line": "scifi",
+  "faction": "Aster Compact - Vigil",
+  "lane": "armour-walkers-drones",
+  "role": "Crewed bipedal fire-support walker",
+  "drive": "bipedal walker",
+  "crew": "1 pilot (a Vigil in the torso pod)",
+  "capacity": "none; carries 2 weapon hardpoints + shoulder rack",
+  "scale": "1:56 (30 mm heroic)",
+  "dims_world_m": {
+    "height": 4.2,
+    "width": 3.4,
+    "depth": 3.8
+  },
+  "dims_scale_mm": {
+    "height_over_base": 75,
+    "height_with_base": 78.5,
+    "width": 60,
+    "depth": 68
+  },
+  "base": "60 mm round, 2 x 5x2 mm magnets",
+  "weapons": [
+    {
+      "variant": "A (Hammerfall)",
+      "main": "right arm: Hammerfall twin rotary autocannon",
+      "secondary": "left arm: siege claw + Bulwark forearm plate; shoulder Volley 4-cell missile pod"
+    },
+    {
+      "variant": "B (Breacher)",
+      "main": "right arm: Maul-pattern heavy arc cannon (VW-03 scaled x3)",
+      "secondary": "left arm: siege claw; shoulder smoke rack"
+    },
+    {
+      "variant": "C (Overwatch)",
+      "main": "both arms: twin long-barrel coil rifles",
+      "secondary": "shoulder: Lantern Wisp drone launch rail"
+    }
+  ],
+  "pitch": "A 4 m walker whose cockpit pod is a giant Vigil helm: heavy guns that go where the fireteam goes.",
+  "images": [
+    "images/armour-talus-walker-hero.png",
+    "images/armour-talus-walker-turnaround.png"
+  ],
+  "blockout": "blockout/armour-talus-walker-blockout.stl",
+  "source": "source/concept.py",
+  "status": "concept"
+}

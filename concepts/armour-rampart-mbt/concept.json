@@ -1,0 +1,51 @@
+{
+  "id": "armour-rampart-mbt",
+  "name": "Rampart-class Main Battle Tank",
+  "designation": "AT-7",
+  "line": "scifi",
+  "faction": "Aster Compact - Vigil",
+  "lane": "armour-walkers-drones",
+  "role": "Main battle tank / breakthrough armour",
+  "drive": "tracked",
+  "crew": "3 (driver, gunner, commander)",
+  "capacity": "desant: one 5-trooper fireteam riding on the engine-deck rails (no internal troop bay)",
+  "scale": "1:56 (30 mm heroic)",
+  "dims_world_m": {
+    "length": 9.8,
+    "length_hull": 7.5,
+    "width": 4.2,
+    "height": 2.7
+  },
+  "dims_scale_mm": {
+    "length": 174.7,
+    "length_hull": 134,
+    "width": 75.2,
+    "height": 48.5
+  },
+  "base": null,
+  "weapons": [
+    {
+      "variant": "A (standard)",
+      "main": "Longwatch 120 coil cannon (sleeved coil barrel, muzzle block)",
+      "secondary": "coaxial Lance-pattern MG + remote weapon station"
+    },
+    {
+      "variant": "B (siege)",
+      "main": "twin Maul-pattern heavy arc projectors (scaled VW-03)",
+      "secondary": "remote weapon station"
+    },
+    {
+      "variant": "C (overwatch)",
+      "main": "Volley 8-cell missile cassette in place of the gun mantlet",
+      "secondary": "coaxial MG, drone tubes"
+    }
+  ],
+  "pitch": "Low keel-prowed wedge with a chevron-plan turret: the line breaker the Vigil advance behind.",
+  "images": [
+    "images/armour-rampart-mbt-hero.png",
+    "images/armour-rampart-mbt-turnaround.png"
+  ],
+  "blockout": "blockout/armour-rampart-mbt-blockout.stl",
+  "source": "source/concept.py",
+  "status": "concept"
+}

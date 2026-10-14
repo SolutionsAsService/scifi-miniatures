@@ -1,0 +1,49 @@
+{
+  "id": "armour-pathbearer-quad",
+  "name": "Pathbearer-class Quadruped Carrier",
+  "designation": "QC-4",
+  "line": "scifi",
+  "faction": "Aster Compact - Vigil",
+  "lane": "armour-walkers-drones",
+  "role": "Unmanned quadruped cargo / weapons carrier",
+  "drive": "quadruped walker",
+  "crew": "0 (autonomous; slaved to a Vigil fireteam leader)",
+  "capacity": "~2 t: 6 pannier cassettes + rail load, or 1 casualty litter underslung",
+  "scale": "1:56 (30 mm heroic)",
+  "dims_world_m": {
+    "length": 7.2,
+    "width": 5.1,
+    "height": 3.1
+  },
+  "dims_scale_mm": {
+    "length": 128,
+    "width": 91,
+    "height": 56
+  },
+  "base": "none (four 11 mm pad feet with 5x2 mm magnet pockets); optional 120 x 92 mm oval",
+  "weapons": [
+    {
+      "variant": "A (Carrier)",
+      "main": "Picket remote weapon (gimballed Lance-pattern rifle) on the forward rail",
+      "secondary": "6 cargo cassettes, casualty litter"
+    },
+    {
+      "variant": "B (Hailfall)",
+      "main": "Hailfall 4-tube light mortar battery on the cargo rail",
+      "secondary": "ammo cassettes"
+    },
+    {
+      "variant": "C (Screen)",
+      "main": "twin autocannon gimbal + smoke dischargers",
+      "secondary": "Tick drone garage cassettes (2 Ticks)"
+    }
+  ],
+  "pitch": "A long-legged autonomous pack beast that carries the squad's ammo, mortars and wounded.",
+  "images": [
+    "images/armour-pathbearer-quad-hero.png",
+    "images/armour-pathbearer-quad-turnaround.png"
+  ],
+  "blockout": "blockout/armour-pathbearer-quad-blockout.stl",
+  "source": "source/concept.py",
+  "status": "concept"
+}
