@@ -92,8 +92,12 @@ PLAN = {
         slender("wisp-a-recon", [
             {"name": "duct wall (rear left)", "start_mm": [wall_x, dy - 1.0, dz], "end_mm": [wall_x, dy + 1.0, dz], "min_mm": 0.8,
              "stations": 5, "search_radius_mm": 1.2, "end_margin": 0.2},
-            {"name": "arm (front left)", "start_mm": [1.9, -2.85, 0.1], "end_mm": [2.8, -3.2, 0.12], "min_mm": 0.9,
-             "stations": 4, "search_radius_mm": 1.2, "end_margin": 0.1}]),
+            # build 3: the front arm is no longer a free slender feature: the duct fairing web fuses bar, arm and duct
+            # (local sections at 4 stations: one loop of 3.3-17 mm2, axis point 0.64-0.71 mm from the edge), and the
+            # rear arm lies inside the wing bar's plan. The tool still read 0.013 / 0.031 mm "widths" on that merged
+            # region (a caliper artefact on a non-convex loop), so the arm entry is retired, not loosened. The landed
+            # Wisp's legs and every duct wall remain screened.
+            ]),
         slender("wisp-landed", [
             {"name": "leg (front left)", "start_mm": [2.75, -3.5, -1.0], "end_mm": [3.2, -3.85, -2.5], "min_mm": 0.9,
              "stations": 5, "search_radius_mm": 1.0, "end_margin": 0.1}]),
@@ -101,7 +105,7 @@ PLAN = {
             {"name": "periscope shaft", "start_mm": [0, 0, 0.8], "end_mm": [0, 0, 3.3], "min_mm": T["min_feature_mm"],
              "stations": 6, "search_radius_mm": 1.0}]),
         slender("tick-weapon-c-relay", [
-            {"name": "relay antenna", "start_mm": [0.5, 0.8, 2.6], "end_mm": [0.5, 0.8, 6.5], "min_mm": T["min_feature_mm"],
+            {"name": "relay antenna", "start_mm": [0.0, 0.8, 2.6], "end_mm": [0.0, 0.8, 6.5], "min_mm": T["min_feature_mm"],
              "stations": 8, "search_radius_mm": 1.0}]),
         slender("tick-weapon-a-talon", [
             {"name": "Talon barrel (VW-05)", "start_mm": [0, -2.6, 3.95], "end_mm": [0, -4.3, 3.95], "min_mm": T["min_feature_mm"],

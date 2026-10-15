@@ -15,6 +15,7 @@ import time
 from pathlib import Path
 
 import numpy as np
+import trimesh
 from scipy.ndimage import map_coordinates
 
 PKG = Path(__file__).resolve().parents[1]
@@ -185,23 +186,60 @@ def images(asm_parts, meshes, pack_m):
            size=480, title="SD-C cradle + saddle on the line power pack (grey: reference pack, not in this kit)")
 
 
+def images_only(up, render_tris=40_000):
+    """Renders in their own process from build/upright: each part is simplified for the render only (manifold3d,
+    render_tris), never the print mesh. 13 parts x 150k triangles in one painter's-algorithm pass exceeded 1.5 GB."""
+    meshes = {}
+    for n in PARTS:
+        m = trimesh.load(up / f"{n}.stl")
+        meshes[n] = sdfkit.decimate(m, render_tris, n)
+    parts = []
+    for name, M, ex in assemble(meshes):
+        a = meshes[name].copy()
+        if M is not None:
+            a.apply_transform(M)
+        parts.append(dict(name=PARTS[name][0], stl=name, color=PARTS[name][1], placement=M, asm=a))
+    _, pack_m = power_pack()
+    images(parts, meshes, pack_m)
+
+
 def main(only):
     t0 = time.time()
     up = PKG / "build" / "upright"
     up.mkdir(parents=True, exist_ok=True)
     pack_g = pack_m = hm = None
-    need = only or list(PARTS)
-    if "sdc-pack-saddle" in need or not only:
+    # --reuse [part ...]: load every other part from build/upright (pitch.json), re-sculpt only the named ones, then
+    # assemble, measure fits and render. Lets each part be sculpted in its own capped process (memory, 8 GB host).
+    pj = up / "pitch.json"
+    pitches = json.loads(pj.read_text()) if pj.exists() else {}
+    if only and only[0] == "--images":
+        images_only(up)
+        print(f"images done in {time.time() - t0:.0f} s")
+        return
+    reuse = bool(only) and only[0] == "--reuse"
+    if reuse:
+        only = only[1:]
+    need = list(PARTS) if (reuse or not only) else only
+    if "sdc-pack-saddle" in need and not (reuse and "sdc-pack-saddle" not in only
+                                          and (up / "sdc-pack-saddle.stl").exists()):
         pack_g, pack_m = power_pack()
         hm = L.pack_heightmap(pack_g, S["cradle"]["saddle_clearance"])
     meshes = {}
     for n in need:
+        if reuse and n not in only and (up / f"{n}.stl").exists() and n in pitches:
+            m = trimesh.load(up / f"{n}.stl")
+            m.metadata["pitch_mm"] = pitches[n]
+            meshes[n] = m
+            continue
         meshes[n] = build_mesh(n, hm)
-        if only:
-            meshes[n].export(up / f"{n}.stl")
-    if only:
+        pitches[n] = meshes[n].metadata["pitch_mm"]
+        meshes[n].export(up / f"{n}.stl")
+        pj.write_text(json.dumps(pitches, indent=1))
+    if only and not reuse:
         print(f"partial build done in {time.time() - t0:.0f} s")
         return
+    if pack_m is None:
+        pack_g, pack_m = power_pack()
     sdfkit.write_step = lambda path, parts: None   # FreeCAD absent on this host: STEP skipped (see docstring)
     k = sdfkit.Package(S["id"], PKG)
     for name, M, ex in assemble(meshes):
@@ -227,7 +265,10 @@ def main(only):
     ticks = [p["asm"] for p in k.parts if p["stl"] in ("tick-hull", "tick-mast")]
     rep["fits"]["tick_with_mast_height_mm"] = round(float(max(m.bounds[1][2] for m in ticks) - S["base"]["h"]), 2)
     (PKG / "reports" / "build.json").write_text(json.dumps(rep, indent=1))
-    images(k.parts, meshes, pack_m)
+    if reuse:
+        print("renders: run build.py --images in a fresh process (the in-process render was OOM-killed at 1.5 GB)")
+    else:
+        images(k.parts, meshes, pack_m)
     print(json.dumps(rep["fits"], indent=1))
     print(f"build done in {time.time() - t0:.0f} s")
 

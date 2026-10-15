@@ -1,0 +1,172 @@
+base-32-stem: probe predicts 705552 triangles at 0.08 mm, meshing at 0.1384 mm
+base-32-stem: 235256 tris at 0.1384 mm, vol 2259.10 mm3, bbox [31.94, 31.95, 4.55] (6 s)
+partial build done in 6 s
+EXIT 0 source/build.py base-32-stem
+{
+ "id": "lantern-drones",
+ "parts": {
+  "base-32-stem": [
+   2259.1,
+   [
+    31.94,
+    31.95,
+    4.55
+   ],
+   235256
+  ],
+  "flight-stem": [
+   54.15,
+   [
+    1.6,
+    1.6,
+    27.0
+   ],
+   99328
+  ],
+  "wisp-a-recon": [
+   208.16,
+   [
+    16.0,
+    14.4,
+    4.1
+   ],
+   151016
+  ],
+  "wisp-b-designator": [
+   217.08,
+   [
+    16.0,
+    14.4,
+    4.72
+   ],
+   146828
+  ],
+  "base-32-plain": [
+   2223.9,
+   [
+    31.93,
+    31.94,
+    3.0
+   ],
+   232852
+  ],
+  "tick-hull": [
+   987.44,
+   [
+    12.96,
+    18.54,
+    6.5
+   ],
+   151860
+  ],
+  "tick-mast": [
+   13.57,
+   [
+    2.6,
+    2.2,
+    7.5
+   ],
+   72880
+  ],
+  "tick-weapon-a-talon": [
+   42.45,
+   [
+    3.37,
+    8.9,
+    7.5
+   ],
+   151192
+  ],
+  "wisp-landed": [
+   246.9,
+   [
+    16.0,
+    14.4,
+    4.9
+   ],
+   146632
+  ],
+  "tick-weapon-b-plough": [
+   77.02,
+   [
+    13.13,
+    13.0,
+    8.68
+   ],
+   150104
+  ],
+  "tick-weapon-c-relay": [
+   35.49,
+   [
+    5.54,
+    3.4,
+    10.7
+   ],
+   151100
+  ],
+  "sdc-pack-saddle": [
+   81.13,
+   [
+    6.3,
+    5.8,
+    5.07
+   ],
+   150328
+  ],
+  "sdc-cradle": [
+   298.32,
+   [
+    9.41,
+    8.0,
+    10.35
+   ],
+   150732
+  ]
+ },
+ "assembled_bbox_mm": [
+  139.94,
+  61.08,
+  36.76
+ ],
+ "interference": []
+}
+renders: run build.py --images in a fresh process (the in-process render was OOM-killed at 1.5 GB)
+{
+ "saddle_on_pack": {
+  "overlap_mm3": 0.0,
+  "min_clearance_mm": 0.05,
+  "method": "manifold3d boolean intersection volume; clearance = pack signed distance field (exosuit.backpack('power'), 0.05 mm grid) sampled at every saddle vertex, minimum"
+ },
+ "cradle_in_saddle": {
+  "overlap_mm3": -0.0
+ },
+ "cradle_on_pack_stickout_mm": 12.3,
+ "cradle_folded_wisp_envelope_mm": [
+  9.41,
+  8.0,
+  10.35
+ ],
+ "tick_hull_extent_mm": [
+  12.96,
+  18.54,
+  6.5
+ ],
+ "wisp_a_extent_mm": [
+  16.0,
+  14.4,
+  4.1
+ ],
+ "flying_wisp": {
+  "stem_lean_deg": 24,
+  "wisp_pitch_nose_down_deg": 24.0,
+  "wisp_centre_offset_from_base_centre_mm": 0.08,
+  "wisp_top_above_table_mm": 30.93,
+  "wisp_bottom_above_base_top_mm": 20.55
+ },
+ "tick_with_mast_height_mm": 11.5
+}
+build done in 79 s
+EXIT 0 source/build.py --reuse
+images done in 40 s
+EXIT 0 source/build.py --images
+ALL DONE Wed Oct 14 19:21:05 MDT 2026

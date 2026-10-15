@@ -1,0 +1,169 @@
+wisp-a-recon: probe predicts 542480 triangles at 0.05 mm, meshing at 0.0948 mm
+wisp-a-recon: 150924 tris at 0.0948 mm, vol 206.01 mm3, bbox [16.0, 14.4, 4.1] (5 s)
+partial build done in 6 s
+EXIT 0 source/build.py wisp-a-recon
+wisp-b-designator: probe predicts 577568 triangles at 0.05 mm, meshing at 0.0978 mm
+wisp-b-designator: 149676 tris at 0.0978 mm, vol 214.86 mm3, bbox [16.0, 14.4, 4.37] (6 s)
+partial build done in 6 s
+EXIT 0 source/build.py wisp-b-designator
+wisp-landed: probe predicts 576720 triangles at 0.05 mm, meshing at 0.0978 mm
+wisp-landed: 149656 tris at 0.0978 mm, vol 244.57 mm3, bbox [16.0, 14.4, 4.9] (5 s)
+partial build done in 5 s
+EXIT 0 source/build.py wisp-landed
+tick-hull: probe predicts 488072 triangles at 0.06 mm, meshing at 0.1079 mm
+tick-hull: 151196 tris at 0.1079 mm, vol 984.03 mm3, bbox [12.96, 18.53, 6.5] (4 s)
+partial build done in 4 s
+EXIT 0 source/build.py tick-hull
+tick-mast: 72880 tris at 0.04 mm, vol 13.57 mm3, bbox [2.6, 2.2, 7.5] (1 s)
+partial build done in 1 s
+EXIT 0 source/build.py tick-mast
+tick-weapon-c-relay: probe predicts 164704 triangles at 0.04 mm, meshing at 0.0418 mm
+tick-weapon-c-relay: 151100 tris at 0.0418 mm, vol 35.49 mm3, bbox [5.54, 3.4, 10.7] (3 s)
+partial build done in 3 s
+EXIT 0 source/build.py tick-weapon-c-relay
+sdc-cradle: probe predicts 492264 triangles at 0.045 mm, meshing at 0.0813 mm
+sdc-cradle: 149908 tris at 0.0813 mm, vol 261.87 mm3, bbox [9.4, 8.35, 10.35] (6 s)
+partial build done in 6 s
+EXIT 0 source/build.py sdc-cradle
+sdc-pack-saddle: probe predicts 204000 triangles at 0.045 mm, meshing at 0.0523 mm
+sdc-pack-saddle: 150328 tris at 0.0523 mm, vol 81.13 mm3, bbox [6.3, 5.8, 5.07] (3 s)
+partial build done in 6 s
+EXIT 0 source/build.py sdc-pack-saddle
+base-32-stem: probe predicts 701616 triangles at 0.08 mm, meshing at 0.138 mm
+base-32-stem: 229640 tris at 0.138 mm, vol 2243.07 mm3, bbox [31.93, 31.94, 4.55] (5 s)
+partial build done in 5 s
+EXIT 0 source/build.py base-32-stem
+base-32-plain: probe predicts 687072 triangles at 0.08 mm, meshing at 0.1366 mm
+base-32-plain: 232852 tris at 0.1366 mm, vol 2223.90 mm3, bbox [31.93, 31.94, 3.0] (5 s)
+partial build done in 5 s
+EXIT 0 source/build.py base-32-plain
+{
+ "id": "lantern-drones",
+ "parts": {
+  "base-32-stem": [
+   2243.07,
+   [
+    31.93,
+    31.94,
+    4.55
+   ],
+   229640
+  ],
+  "flight-stem": [
+   54.15,
+   [
+    1.6,
+    1.6,
+    27.0
+   ],
+   99328
+  ],
+  "wisp-a-recon": [
+   206.01,
+   [
+    16.0,
+    14.4,
+    4.1
+   ],
+   150924
+  ],
+  "wisp-b-designator": [
+   214.86,
+   [
+    16.0,
+    14.4,
+    4.37
+   ],
+   149676
+  ],
+  "base-32-plain": [
+   2223.9,
+   [
+    31.93,
+    31.94,
+    3.0
+   ],
+   232852
+  ],
+  "tick-hull": [
+   984.03,
+   [
+    12.96,
+    18.53,
+    6.5
+   ],
+   151196
+  ],
+  "tick-mast": [
+   13.57,
+   [
+    2.6,
+    2.2,
+    7.5
+   ],
+   72880
+  ],
+  "tick-weapon-a-talon": [
+   42.45,
+   [
+    3.37,
+    8.9,
+    7.5
+   ],
+   151192
+  ],
+  "wisp-landed": [
+   244.57,
+   [
+    16.0,
+    14.4,
+    4.9
+   ],
+   149656
+  ],
+  "tick-weapon-b-plough": [
+   77.02,
+   [
+    13.13,
+    13.0,
+    8.68
+   ],
+   150104
+  ],
+  "tick-weapon-c-relay": [
+   35.49,
+   [
+    5.54,
+    3.4,
+    10.7
+   ],
+   151100
+  ],
+  "sdc-pack-saddle": [
+   81.13,
+   [
+    6.3,
+    5.8,
+    5.07
+   ],
+   150328
+  ],
+  "sdc-cradle": [
+   261.87,
+   [
+    9.4,
+    8.35,
+    10.35
+   ],
+   149908
+  ]
+ },
+ "assembled_bbox_mm": [
+  139.93,
+  61.08,
+  36.76
+ ],
+ "interference": []
+}
+EXIT 137 source/build.py --reuse
+ALL DONE Wed Oct 14 19:06:33 MDT 2026

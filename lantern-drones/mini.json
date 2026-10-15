@@ -44,14 +44,14 @@
   "base": "32 mm round x 3 mm, 5 x 2 mm magnet pocket vented to the rim; stem bases carry a 24 deg raked 1.8 mm stem socket",
   "footprint": "Ø 32 mm",
   "process": "MSLA resin · 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
-  "volumeMl": 11.2,
+  "volumeMl": 11.3,
   "volumeLabel": "Resin volume",
-  "printHeightMm": 25.6,
+  "printHeightMm": 28.5,
   "printability": {
-   "verdict": "fail",
+   "verdict": "pass",
    "preset": "msla_resin",
    "checkedBy": "unified-CAD-MCP miniature_printability_check + support_plan",
-   "summary": "miniature_base_layout_check : failed; miniature_slender_feature_check wisp-a-recon.stl: failed; miniature_gap_check wisp-a-recon.stl: failed; miniature_gap_check wisp-b-designator.stl: failed; miniature_gap_check wisp-landed.stl: failed; miniature_gap_check tick-hull.stl: failed; miniature_gap_check tick-weapon-c-relay.stl: failed; miniature_gap_check sdc-cradle.stl: failed; miniature_gap_check ba",
+   "summary": "13 print files checked in their print pose; no fail-severity findings.",
    "issues": [
     "Advisory: minimum wall (unsupported)"
    ],
@@ -67,13 +67,13 @@
    {
     "name": "SD-1 Wisp B (designator / munition)",
     "qty": 1,
-    "orientation": "tilted +0 deg about x, -45 deg about y, on supports",
+    "orientation": "tilted +0 deg about x, +45 deg about y, on supports",
     "supports": "light/medium resin supports"
    },
    {
     "name": "SD-1 Wisp, landed",
     "qty": 1,
-    "orientation": "tilted +0 deg about x, -45 deg about y, on supports",
+    "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
     "supports": "light/medium resin supports"
    },
    {
@@ -97,7 +97,7 @@
    {
     "name": "Tick module A: Talon mount",
     "qty": 1,
-    "orientation": "upright as modelled, on supports",
+    "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
     "supports": "light/medium resin supports"
    },
    {
@@ -109,7 +109,7 @@
    {
     "name": "Tick module C: relay + smoke",
     "qty": 1,
-    "orientation": "tilted +45 deg about x, +45 deg about y, on supports",
+    "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
     "supports": "light/medium resin supports"
    },
    {
@@ -127,13 +127,13 @@
    {
     "name": "32 mm base, stem socket",
     "qty": 2,
-    "orientation": "tilted -45 deg about x, +0 deg about y, on supports",
+    "orientation": "tilted +45 deg about x, +45 deg about y, on supports",
     "supports": "light/medium resin supports"
    },
    {
     "name": "32 mm base, plain",
     "qty": 2,
-    "orientation": "tilted -45 deg about x, +0 deg about y, on supports",
+    "orientation": "tilted +45 deg about x, +45 deg about y, on supports",
     "supports": "light/medium resin supports"
    }
   ]

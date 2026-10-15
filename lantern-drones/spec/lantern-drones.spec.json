@@ -144,10 +144,11 @@
     0,
     9.6
    ],
-   "r": 2.4,
+   "r": 3.0,
    "h": 1.4,
    "socket_d": 1.8,
-   "socket_depth": 3.2
+   "socket_depth": 3.2,
+   "note_r": "3.0 (build 3; 2.4 left the raked bore 0.11 mm inside the pad footprint, layout check needs 0.40)"
   }
  },
  "voxel_mm": {
@@ -170,7 +171,7 @@
   "family": "Drones",
   "revision_note": "resin drone kit: 2 flying Wisps, landed Wisp, Tick + 3 weapon modules, cradle + pack saddle, stems, 32 mm bases",
   "base": "32 mm round x 3 mm, 5 x 2 mm magnet pocket vented to the rim; stem bases carry a 24 deg raked 1.8 mm stem socket",
-  "footprint": "Ø 32 mm",
+  "footprint": "\u00d8 32 mm",
   "description": "The Lantern kit every Vigil fireteam carries: the SD-1 Wisp ducted quadcopter (recon, or designator and munition, plus a landed marker), the SD-2 Tick tracked crawler with a periscope mast and swappable Talon carbine, mine-plough or relay-and-smoke modules, and the SD-C cradle that clips a folded Wisp behind a trooper's spine pack.",
   "images": [
    {

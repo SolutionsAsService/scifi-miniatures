@@ -1,7 +1,7 @@
 {
  "format": "unified-cad-mcp/stl-meta@1",
  "rotate_deg_from_model": [
-  0.0,
+  45.0,
   0.0,
   0.0
  ],

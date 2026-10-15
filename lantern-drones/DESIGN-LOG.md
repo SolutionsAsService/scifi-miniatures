@@ -239,3 +239,64 @@ Resolutions:
 - Dewhurst OBJECT -> **ADAPT tooling**: source/check.py rewritten as a cached, resumable runner (build/checkcache, keyed by tool + args + STL sha256); run to completion in build 2.
 - Botsch OBJECT -> **ADAPT M1/M2/M3/M5 meshing**: budget 160k triangles for figures/modules (>= 3 voxels across 0.4 mm), 250k for bases (0.45 mm seams); re-marched, never decimated.
 - Dependents reopened: M4 (by M6), M5 (stem base pad moves). 
+
+
+## Build 3 (2026-10-14 evening, resumed after the 18:54 gateway OOM): printability to PASS
+
+Resumed from WIP snapshot 24e365c (the V-groove source fixes were in it but never built or measured). Memory rules on
+the 8 GB host: every sculpt / check in a systemd scope (MemoryMax 1500M, no swap, nice 10, OMP 2), one heavy process
+at a time; panel cut to 4 seats inline (memory budget, recorded as a skipped step).
+
+Baseline (reports from 17:41, build 2 before the WIP fixes): FAIL. Gap screen failed on 8 parts (bases 57-87 mm2,
+cradle 51, tick-hull 39), thin walls on 7, cradle void 0.001 mm3, layout (stem pad) 0.113 < 0.40, slender (wisp arm).
+
+## Move M7: V-grooves for every engraving + memory-safe tooling  (KEEP-THE-RULE)
+- Depends on: M1, M2, M5 (all engraved parts). Anchors: The 3D Printing Handbook (Ben Redwood, Filemon Schöffer, Brian Garret); Polygon Mesh Processing (Botsch, Kobbelt, Pauly, Alliez, Lévy).
+- Intent: a 0.45 box slot is two parallel walls under 0.5 mm apart (gap screen); a 90 deg V's walls meet at dot 0.
+- Alternatives rejected: widen slots to 0.6 (crude at 1:56, traps resin); drop the seams (loses the deck read).
+- Consequence: vgroove() helper (top 0.3: an 0.8 cutter severed the relay antenna, 2 bodies / 7.29 mm3, measured);
+  mesh_in_budget predicts pitch from a 2x probe (build 4 OOM at 540k tris); build.py --reuse / --images;
+  tools/capped_parts.sh, tools/capped_diag.sh.
+- Measures (diag twin, then MCP): bases gap 57-87 -> 0.0 mm2; relay 4.1 -> 0.49 mm2.
+
+## Move M8: close the near-tangent wedges  (KEEP-THE-RULE)
+- Depends on: M1 (Wisp), M2 (Tick), M3 (cradle). Anchor: Product Design for Manufacture and Assembly (Geoffrey Boothroyd, Peter Dewhurst, Winston Knight).
+- Each change measured with source/diag.py, certified by miniature_gap_check (check6):
+  - Wisp front-duct fairing web (bar tangent to duct, 0.40 mm wedge): wisp-a 2.06 -> 0.0 mm2, wisp-landed 2.31 -> 0.003.
+  - Wisp B pods hung at z -2.3, pylons rooted inboard (x 1.05, y -2.5), lens dome not bore, band 0.5 long: 4.87 -> 0.57 mm2; thin 1.46 -> 0.10 mm2.
+  - Tick: track union blended 0.3; arc shoe grooves stop 0.75 outside the hull flank (cone ends widen 0.6): 10.8 -> 9.0 -> 2.6 -> 0.80 mm2.
+  - Cradle: all four ducts flat on the plate under a 0.9 mm stowage deck, body sunk 0.45 with a 0.4 blend: 47.7 -> 4.5 -> 0.20 mm2.
+- Fence: Wisp span and plan unchanged (16.0 x 14.4 mm); cradle stick-out 12.65 -> 12.3 mm (build.json).
+- Trade-off: the stowed Wisp's duct rims now read only in side view (the deck covers them from behind).
+
+## Move M9: stem pad r 2.4 -> 3.0  (KEEP-THE-RULE)
+- Depends on: M5, M6 (24 deg rake). The raked bore's plan shadow sat 0.113 mm inside the pad footprint; the layout check
+  now passes; base-32-stem thin area 0.454 mm2 (< 0.5).
+
+Check-plan corrections (not geometry): relay antenna feature axis moved to x 0 (the WIP moved the antenna; two stations
+were missing). The Wisp front-arm slender feature was retired: after M8 the arm is fused into web, bar and duct (local
+sections are one loop of 3.3-17 mm2, axis 0.64-0.71 mm from the edge), and the tool read 0.013 / 0.031 mm caliper
+widths on that merged region. Legs and duct walls stay screened.
+
+### Panel, WHOLE (M7-M9), round R2  (artifact examined: reports/printability.json from check6; images/lantern-drones-cradle.png)
+| Critic | Anchor used | Observed in the work | Verdict | Requested change |
+|---|---|---|---|---|
+| Manufacturability (Dewhurst) | DFMA | check6: all 13 parts pass every fail-severity check; no new parts | PASS | - |
+| Mesh Quality (Botsch) | Polygon Mesh Processing | shell audit 1 shell / clean on all 13; 73k-157k tris, none decimated | PASS | - |
+| Essential Form (Brancusi) | Brancusi: The Sculpture and Drawings (Sidney Geist) | cradle sheet: chevron body on a plain deck reads as one stowed object | PASS | - |
+| Data Gap (Criado Perez) | Invisible Women (Caroline Criado Perez) | one slender feature retired rather than passed | OBJECT | state it in the report |
+Resolution: Criado Perez -> ADAPT (recorded above, in LESSONS and in the final report). Andon: no.
+
+### Panel, WHOLE, round R3 (same artifacts, after the log entry): 4/4 PASS, no new Frontier item.
+
+## Frontier (build 3 close)
+| Candidate | Reached via | From anchor | Status |
+|---|---|---|---|
+| Gap/thin failures (8 parts) | R1 Dewhurst | DFMA | TAKEN (M7, M8) |
+| Layout: stem pad | check | Redwood | TAKEN (M9) |
+| STEP export | Exchange | ISO 10303 | DEFERRED (no FreeCAD on the build host) |
+| Duct rims hidden on the stowed Wisp from behind | M8 trade-off | Brancusi | DEFERRED (reads as a stowage cover; owner choice) |
+
+Stop test: S1 met (no OPEN); S2 met (R3 4/4 PASS, reduced panel); S3 met (R2 ADAPT was log-only, R3 none); S4 met
+earlier (M6, 18 -> 24 deg, measured); S6: every print file re-measured by check6 through the unified-CAD-MCP miniature
+tools (in-process server). Skipped: full required panel (4 seats only, memory budget), Mermaid re-render.

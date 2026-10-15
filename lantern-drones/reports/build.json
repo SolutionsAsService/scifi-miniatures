@@ -8,7 +8,7 @@
  ],
  "parts": {
   "base-32-stem": {
-   "volume_mm3": 2230.84,
+   "volume_mm3": 2259.1,
    "bodies": 1,
    "watertight": true,
    "bbox_mm": [
@@ -16,9 +16,9 @@
     31.95,
     4.55
    ],
-   "triangles": 249232,
+   "triangles": 235256,
    "instances": 2,
-   "pitch_mm": 0.1353
+   "pitch_mm": 0.1384
   },
   "flight-stem": {
    "volume_mm3": 54.15,
@@ -34,7 +34,7 @@
    "pitch_mm": 0.06
   },
   "wisp-a-recon": {
-   "volume_mm3": 205.57,
+   "volume_mm3": 208.16,
    "bodies": 1,
    "watertight": true,
    "bbox_mm": [
@@ -42,38 +42,38 @@
     14.4,
     4.1
    ],
-   "triangles": 157140,
+   "triangles": 151016,
    "instances": 1,
-   "pitch_mm": 0.0929
+   "pitch_mm": 0.0944
   },
   "wisp-b-designator": {
-   "volume_mm3": 214.48,
+   "volume_mm3": 217.08,
    "bodies": 1,
    "watertight": true,
    "bbox_mm": [
     16.0,
     14.4,
-    4.37
+    4.72
    ],
-   "triangles": 157892,
+   "triangles": 146828,
    "instances": 1,
-   "pitch_mm": 0.0959
+   "pitch_mm": 0.0975
   },
   "base-32-plain": {
-   "volume_mm3": 2211.84,
+   "volume_mm3": 2223.9,
    "bodies": 1,
    "watertight": true,
    "bbox_mm": [
+    31.93,
     31.94,
-    31.95,
     3.0
    ],
-   "triangles": 241308,
+   "triangles": 232852,
    "instances": 2,
-   "pitch_mm": 0.1338
+   "pitch_mm": 0.1366
   },
   "tick-hull": {
-   "volume_mm3": 1006.59,
+   "volume_mm3": 987.44,
    "bodies": 1,
    "watertight": true,
    "bbox_mm": [
@@ -81,12 +81,12 @@
     18.54,
     6.5
    ],
-   "triangles": 153568,
+   "triangles": 151860,
    "instances": 1,
-   "pitch_mm": 0.1079
+   "pitch_mm": 0.1069
   },
   "tick-mast": {
-   "volume_mm3": 13.47,
+   "volume_mm3": 13.57,
    "bodies": 1,
    "watertight": true,
    "bbox_mm": [
@@ -94,7 +94,7 @@
     2.2,
     7.5
    ],
-   "triangles": 73568,
+   "triangles": 72880,
    "instances": 1,
    "pitch_mm": 0.04
   },
@@ -107,12 +107,12 @@
     8.9,
     7.5
    ],
-   "triangles": 165348,
+   "triangles": 151192,
    "instances": 1,
-   "pitch_mm": 0.04
+   "pitch_mm": 0.0418
   },
   "wisp-landed": {
-   "volume_mm3": 244.16,
+   "volume_mm3": 246.9,
    "bodies": 1,
    "watertight": true,
    "bbox_mm": [
@@ -120,38 +120,38 @@
     14.4,
     4.9
    ],
-   "triangles": 157888,
+   "triangles": 146632,
    "instances": 1,
-   "pitch_mm": 0.0955
+   "pitch_mm": 0.0974
   },
   "tick-weapon-b-plough": {
    "volume_mm3": 77.02,
    "bodies": 1,
    "watertight": true,
    "bbox_mm": [
-    13.14,
+    13.13,
     13.0,
     8.68
    ],
-   "triangles": 157596,
+   "triangles": 150104,
    "instances": 1,
-   "pitch_mm": 0.0609
+   "pitch_mm": 0.0623
   },
   "tick-weapon-c-relay": {
-   "volume_mm3": 31.85,
+   "volume_mm3": 35.49,
    "bodies": 1,
    "watertight": true,
    "bbox_mm": [
-    5.19,
-    3.44,
+    5.54,
+    3.4,
     10.7
    ],
-   "triangles": 170976,
+   "triangles": 151100,
    "instances": 1,
-   "pitch_mm": 0.04
+   "pitch_mm": 0.0418
   },
   "sdc-pack-saddle": {
-   "volume_mm3": 81.12,
+   "volume_mm3": 81.13,
    "bodies": 1,
    "watertight": true,
    "bbox_mm": [
@@ -159,22 +159,22 @@
     5.8,
     5.07
    ],
-   "triangles": 156552,
+   "triangles": 150328,
    "instances": 1,
-   "pitch_mm": 0.0512
+   "pitch_mm": 0.0523
   },
   "sdc-cradle": {
-   "volume_mm3": 261.42,
+   "volume_mm3": 298.32,
    "bodies": 1,
    "watertight": true,
    "bbox_mm": [
-    9.4,
-    8.35,
+    9.41,
+    8.0,
     10.35
    ],
-   "triangles": 156944,
+   "triangles": 150732,
    "instances": 1,
-   "pitch_mm": 0.0797
+   "pitch_mm": 0.0715
   }
  },
  "interference": [],
@@ -186,16 +186,16 @@
  "fits": {
   "saddle_on_pack": {
    "overlap_mm3": 0.0,
-   "min_clearance_mm": 0.063,
+   "min_clearance_mm": 0.05,
    "method": "manifold3d boolean intersection volume; clearance = pack signed distance field (exosuit.backpack('power'), 0.05 mm grid) sampled at every saddle vertex, minimum"
   },
   "cradle_in_saddle": {
    "overlap_mm3": -0.0
   },
-  "cradle_on_pack_stickout_mm": 12.65,
+  "cradle_on_pack_stickout_mm": 12.3,
   "cradle_folded_wisp_envelope_mm": [
-   9.4,
-   8.35,
+   9.41,
+   8.0,
    10.35
   ],
   "tick_hull_extent_mm": [

@@ -67,7 +67,7 @@ def along(a, b, hw, hh, r=0.2, ext=0.0, up=(0, 0, 1)):
     return rbox((a + b) / 2, (hw, L / 2 + ext, hh), np.stack([u, n, upv], axis=1), r)
 
 
-def vgroove(a, b, n, depth=0.3, top=0.8):
+def vgroove(a, b, n, depth=0.3, top=0.3):
     """Engraved V-groove from a to b (points on the surface), outward surface normal n: 90 deg included angle, so it is
     2 x depth wide at the surface (0.3 deep -> 0.6 wide), with conical ends (no acute groove-end corners).
     Why a V and not a slot: the two walls of a 90 deg V face each other at dot = 0, so the slit never reads as a
@@ -85,6 +85,8 @@ def vgroove(a, b, n, depth=0.3, top=0.8):
         s = r @ n
         lat = np.linalg.norm(r - s[:, None] * n, axis=1)
         return np.maximum((lat - s - depth) / s2, s - top)
+    # top 0.3 (was 0.8): above the surface the V keeps widening (2 x (s + depth)), so a tall cutter shaved
+    # neighbours: at 0.8 it severed the relay antenna from the discharger bank (2 bodies, 7.29 mm3 loose)
     pad = depth + top + 0.1
     return Shape(f, np.minimum(a, b) - pad, np.maximum(a, b) + pad)
 
@@ -114,6 +116,13 @@ def mesh_in_budget(ops, name, h0, budget=250_000, limit=290_000):
     """Mesh at pitch h0; if the marched mesh is over the checker budget, re-mesh the field coarser (triangles scale
     with 1 / pitch^2, the miniature_mesh_budget rule). Never decimates the print mesh."""
     h = h0
+    # memory: predict the pitch from a coarse probe (2 x h0, ~1/8 the grid) before marching at h0; the first build
+    # marched wisp-landed at h0 (540k tris) and was OOM-killed under a 1.5 GB cap (2026-10-14 19:01)
+    n2 = len(ops.sculpt(h0 * 2).mesh(name).faces)
+    pred = n2 * 4
+    if pred > budget:
+        h = round(h0 * math.sqrt(pred / budget) * 1.03, 4)
+        print(f"{name}: probe predicts {pred} triangles at {h0} mm, meshing at {h} mm", flush=True)
     for _ in range(3):
         m = ops.sculpt(h).mesh(name)
         if len(m.faces) <= limit:
@@ -146,13 +155,13 @@ def duct(o, M, spin=0.0, top=True, bottom=True, cover=False):
         o.add(T(round_cone(v3(0, 0, -0.5), v3(0, 0, -0.75), 0.6, 0.3)))               # stator hub
 
 
-def wisp_core(o, S, M=np.eye(4)):
+def wisp_core(o, S, M=np.eye(4), k0=0.0):
     """Chevron-plan body (two swept wing bars meeting at the nose, a notch at the tail), dorsal hump, keel spine,
     chin sensor ball with split-chevron lenses."""
     W = S["wisp"]
     T = lambda s: s.moved(M)  # noqa: E731
     nose = v3(0, W["nose_y"], 0.1)
-    o.add(T(ellipsoid(v3(0, -1.4, 0.15), (1.8, 2.9, 1.1))))                          # core
+    o.add(T(ellipsoid(v3(0, -1.4, 0.15), (1.8, 2.9, 1.1))), k0)                      # core
     for s in (-1, 1):
         tail = v3(s * W["tail"][0], W["tail"][1], 0.0)
         o.add(T(along(nose, tail, 1.15, 0.75, 0.5)), 0.4)                             # wing bar 2.3 x 1.5
@@ -183,6 +192,10 @@ def wisp_arms_ducts(o, S, M=np.eye(4), bottom=True):
             root = v3(sx * 1.2, -2.6, 0.1) if sy < 0 else v3(sx * 1.9, 1.6, 0.1)
             end = c - unit(c - root) * 2.55                                           # ends inside the duct wall
             o.add(along(root, end, 0.6, 0.45, 0.2).moved(M), 0.25)                    # arm 1.2 x 0.9
+            if sy < 0:
+                # duct fairing web: the wing bar runs almost tangent to the front duct (0.40-0.45 mm wedge either
+                # side of the arm, build 2 gap screen 2.06 mm2); fill the wedge so bar, arm and duct read as one cowl
+                o.add(along(v3(sx * 1.75, -4.45, 0.1), v3(sx * 2.55, -2.05, 0.1), 0.55, 0.6, 0.25).moved(M), 0.35)
             spin = 15 * sx + 40 * (sy > 0)
             duct(o, M @ mat(t=c), spin, top=True, bottom=bottom)
 
@@ -200,12 +213,15 @@ def wisp(S, variant="A"):
         o.cut(cyl(v3(sx, sy, st["boss_bottom_z"] - 0.5), v3(sx, sy, st["boss_bottom_z"] + st["depth"]), st["d"] / 2))
     if variant == "B":
         # laser designator pod (right, -x) and shaped-charge munition (left, +x), each on a pylon under the body
-        o.add(along(v3(-1.6, -2.4, -0.6), v3(-1.95, -3.6, -1.6), 0.45, 0.45, 0.2), 0.15)
-        o.add(cyl(v3(-1.95, -2.7, -1.95), v3(-1.95, -5.6, -1.95), 0.6, 0.2), 0.15)
-        o.cut(cyl(v3(-1.95, -5.9, -1.95), v3(-1.95, -5.3, -1.95), 0.3))                  # lens 0.6 dia, 0.3 deep
-        o.add(along(v3(1.6, -2.4, -0.6), v3(1.95, -3.6, -1.6), 0.45, 0.45, 0.2), 0.15)
-        o.add(round_cone(v3(1.95, -2.7, -1.95), v3(1.95, -5.3, -1.95), 0.72, 0.45), 0.15)
-        o.add(cyl(v3(1.95, -3.9, -1.95), v3(1.95, -3.6, -1.95), 0.82, 0.1), 0.05)        # band, 0.15 proud
+        # build 3: pods hung lower and pylons rooted inboard (x 1.05 under the core, y -2.5 clear of the chin ball)
+        # so nothing comes within 0.5 mm of the front duct rims (build 2: pylon 0.17 mm under the arm / duct); the
+        # lens is a proud dome, not a bore (a 0.6 bore in a 1.2 pod left a 0.27 mm rim)
+        for s in (-1, 1):
+            o.add(along(v3(s * 1.05, -2.5, -0.1), v3(s * 1.65, -2.5, -1.8), 0.35, 0.45, 0.15), 0.2)   # pylon 0.7 x 0.9
+        o.add(cyl(v3(-1.65, -2.8, -2.3), v3(-1.65, -5.6, -2.3), 0.6, 0.2), 0.15)        # designator pod
+        o.add(sphere(v3(-1.65, -5.55, -2.3), 0.38), 0.05)                                # lens dome 0.76
+        o.add(round_cone(v3(1.65, -2.8, -2.3), v3(1.65, -5.4, -2.3), 0.72, 0.45), 0.15) # munition
+        o.add(cyl(v3(1.65, -4.05, -2.3), v3(1.65, -3.55, -2.3), 0.82, 0.1), 0.05)        # band 0.5 long (0.3 read as a thin fin)
     if variant == "L":
         zs = W["landed_skid_z"]
         for sx in (-1, 1):
@@ -220,11 +236,14 @@ def wisp_folded(o, S, M):
     """Stowed Wisp for the cradle: body nose-up, keel facing out (+y); the four ducts swung behind it into a 2 x 2
     stack with covers on (lower pair flat against the cradle plate, upper pair stepped 0.5 mm out)."""
     Rd = rot(RX, -90)                         # local z (duct axis) -> +y ; body nose (-y) -> +z
+    # build 3: all four ducts flat on the plate (y 1.0..2.8) under a 0.9 mm stowage deck (y 2.5..3.4), the body
+    # sunk 0.45 into the deck with a 0.4 blend. Build 2 stepped the upper pair 0.5 out and laid the body on them:
+    # 0.1-0.5 mm slits between body, duct covers and plate (gap screen 47.7 mm2, min 0.002 mm)
     for k, (sx, sz) in enumerate(((-1, -1), (1, -1), (-1, 1), (1, 1))):
-        upper = sz > 0
-        yc = 1.9 + (0.5 if upper else 0.0)
-        duct(o, M @ mat(Rd, (sx * 1.7, yc, sz * 1.7)), top=False, bottom=False, cover=upper)
-    wisp_core(o, S, M @ mat(Rd, (0, 4.25, 0.3)))
+        duct(o, M @ mat(Rd, (sx * 1.7, 1.9, sz * 1.7)), top=False, bottom=False, cover=sz > 0)
+    # deck covers the whole 2 x 2 stack (x, z +-4.5): a 3.0-wide deck left 0.12-0.33 mm wedges on the duct tops
+    o.add(rbox(v3(0, 2.95, 0.0), (4.5, 0.45, 4.5), I3, 0.4).moved(M), 0.4)
+    wisp_core(o, S, M @ mat(Rd, (0, 3.9, 0.3)), k0=0.4)
     for sx in (-1, 1):                                                               # folded arm stubs
         o.add(along(v3(sx * 1.1, 4.0, -1.8), v3(sx * 1.7, 3.0, -2.4), 0.6, 0.45, 0.2).moved(M), 0.2)
         o.add(along(v3(sx * 1.1, 4.0, 2.2), v3(sx * 1.7, 3.4, 2.6), 0.6, 0.45, 0.2).moved(M), 0.2)
@@ -314,7 +333,9 @@ def tick_hull(S):
     o.add(rbox(v3(0, -0.6, 3.5), (hw, 8.9, 2.5), I3, 0.4).clip(*chev, glacis_up, glacis_lo))   # hull, chevron prow
     for s in (-1, 1):
         xc = s * tr["xc"]
-        o.add(track(xc, tr["y0"], tr["y1"], tr["r"], tr["w"]), 0.0)
+        # blend 0.3 (build 2 used a hard union): the track's 0.25 rounded edges met the hull flank in cusps the gap
+        # screen read as 0.003-0.16 mm slits at the rear corners (10.8 mm2)
+        o.add(track(xc, tr["y0"], tr["y1"], tr["r"], tr["w"]), 0.3)
         # sponson / guard over the flat top run only (y +-5.0 inside the +-5.4 straight), bottom at z 4.0 so it meets
         # the track's vertical face square; build 1 ran it over the end arcs, where its underside and the falling
         # track formed 0.01-0.05 mm wedge slits (gap screen)
@@ -334,7 +355,10 @@ def tick_hull(S):
                 p = v3(xc, cy, r) + nrm * r
                 if p[2] > 3.4:                                                        # upper arc: plain
                     continue
-                o.cut(vgroove(p - v3(w / 2 + 0.3, 0, 0), p + v3(w / 2 + 0.3, 0, 0), nrm, 0.3))
+                # inner end stops 0.15 outside the hull flank (build 2/3: grooves run to x 3.0 cut into the hull's
+                # rear corners, x <= 3.7, leaving 0.003-0.13 mm slivers: gap screen 9.0 mm2)
+                pin = v3(s * (hw + 0.75), p[1], p[2])                           # cone end widens 0.6 above the skin
+                o.cut(vgroove(pin, p + v3(s * (w / 2 + 0.3), 0, 0), nrm, 0.3))
         face = s * (tr["xc"] + w / 2)
         for y, rr in ((ay, 1.25), (by, 1.25), (-2.8, 1.0), (0.0, 1.0), (2.8, 1.0)):     # idlers 1.25: >= 0.55 under the sponson
             zc = r if rr > 1.2 else 1.25
