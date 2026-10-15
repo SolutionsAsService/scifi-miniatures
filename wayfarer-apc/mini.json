@@ -1,98 +1,98 @@
 {
- "id": "wayfarer-apc",
- "name": "Wayfarer-class APC (AW-8A, Tally RWS)",
- "line": "scifi",
- "family": "Vehicles",
- "revision": "0.1 · resin kit: split hollow hull, 8 wheels, Tally RWS on the 30 mm ring, ramp, 4 hatches",
- "description": "The Aster Compact's road-and-river battle taxi at 1:56: a deep-V blast-chevron hull with tumblehome sides, keel crest up the long glacis, six alternating applique plates a side, eight chunky-tread wheels on D-flat axle stubs and a Tally remote weapon station that drops onto the shared 30 mm magnetised ring. The stern ramp and four roof hatches are separate, so it can be built buttoned up or deploying its section.",
- "images": [
-  {
-   "path": "images/wayfarer-apc-hero.png",
-   "label": "3/4 front with a Vigilant for scale (render)"
-  },
-  {
-   "path": "images/wayfarer-apc-turnaround.png",
-   "label": "Turnaround: 3/4, front, side, back (orthographic)"
-  },
-  {
-   "path": "images/wayfarer-apc-deployed.png",
-   "label": "Deployed: ramp open, hatches off (render)"
+  "id": "wayfarer-apc-aw8a",
+  "name": "Wayfarer-class APC (AW-8A, Tally RWS)",
+  "line": "scifi",
+  "family": "Vehicles & Drones",
+  "revision": "0.1 \u00b7 resin kit: split hollow hull, 8 wheels, Tally RWS on the 30 mm ring, ramp, 4 hatches",
+  "description": "The Aster Compact's road-and-river battle taxi at 1:56: a deep-V blast-chevron hull with tumblehome sides, keel crest up the long glacis, six alternating applique plates a side, eight chunky-tread wheels on D-flat axle stubs and a Tally remote weapon station that drops onto the shared 30 mm magnetised ring. The stern ramp and four roof hatches are separate, so it can be built buttoned up or deploying its section.",
+  "images": [
+    {
+      "path": "images/wayfarer-apc-hero.png",
+      "label": "3/4 front with a Vigilant for scale (render)"
+    },
+    {
+      "path": "images/wayfarer-apc-turnaround.png",
+      "label": "Turnaround: 3/4, front, side, back (orthographic)"
+    },
+    {
+      "path": "images/wayfarer-apc-deployed.png",
+      "label": "Deployed: ramp open, hatches off (render)"
+    }
+  ],
+  "defaultExplode": 0.3,
+  "buildNotes": [
+    "Hull prints as two hollow halves (1.8 mm walls) split at x = -11.5 under the RWS ring; each half prints standing on its split face, so the mating faces are flat and the show faces carry no supports (only internal supports under the glacis / stern ceilings). Glue with two of the three printed D-flat split pins (or 3 mm rod).",
+    "Drains: 3.5 mm keel holes at x -60 and +40, a 3.5 mm hole on the split line at the keel and at the roof spine (half in each part; it vents the cavity while printing), a roof vent under the turntable; the hatch openings and the stern door also drain the bay.",
+    "Wheels: one part, print 8. Each hub has a 3.2 mm D-flat socket that only fits its axle stub one way round.",
+    "Tally RWS: glue a 5 x 2 mm magnet in the turntable underside and one in the hull ring seat (mark polarity); the RWS turns freely and swaps with the Palisade's ring tops.",
+    "Stern ramp: the hinge pins drop into open-top slots in the two stern cheeks; glue closed, or open at 122 deg so the lip rests on the table. Hatches plug into their coamings closed, or glue open.",
+    "Embark matrix at true 1:56 (reports/fit.md, measured figure envelopes, 0.5 mm clearance a side): rifleman, rifleman Mk2, heavy and warden board through the stern door crouched (door 26 x 23.7 mm) and pass a roof hatch lengthwise (24.5 x 16.8 mm); the marksman's 31 mm rifle passes neither (embark it as a token). No figure stands in the 1.33 m bay; the ten seats are for stooped troopers."
+  ],
+  "limitations": "Procedural CSG model (manifold3d), not a hand sculpt: crisp facets, no weld beads or tool stowage. Capacity at true 1:56: seats 10 stooped (bay 1.33 m clear), no standing room; the open ramp is a deploy point for based figures and a crouched Vigilant clears the door (reports/fit.md). STEP export skipped (FreeCAD not installed in this environment). Printability is a heuristic screen through unified-CAD-MCP, not a test print; print a ring/peg tolerance coupon first.",
+  "mini": {
+    "scale": {
+      "label": "1:56 (30 mm heroic vehicle scale)",
+      "ratio": "1:56"
+    },
+    "base": "none: stands on its eight wheels",
+    "footprint": "about 152 x 59 mm",
+    "process": "MSLA resin \u00b7 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
+    "volumeMl": 68.4,
+    "volumeLabel": "Resin volume",
+    "printHeightMm": 86.1,
+    "printability": {
+      "verdict": "pass",
+      "preset": "msla_resin",
+      "checkedBy": "unified-CAD-MCP miniature_printability_check + support_plan",
+      "summary": "7 print files checked in their print pose; no fail-severity findings.",
+      "issues": [
+        "Advisory: minimum wall (unsupported)"
+      ],
+      "report": "reports/printability.md"
+    },
+    "printParts": [
+      {
+        "name": "Hull, front half",
+        "qty": 1,
+        "orientation": "standing on its split face (nose up), flat on the plate",
+        "supports": "internal only (under the glacis ceiling inside the cavity); none on show faces"
+      },
+      {
+        "name": "Hull, rear half",
+        "qty": 1,
+        "orientation": "standing on its split face (stern up), flat on the plate",
+        "supports": "internal only (under the stern-wall ceiling); light supports under the waterjet nozzles and hinge cheeks"
+      },
+      {
+        "name": "Wheel",
+        "qty": 8,
+        "orientation": "standing on its tread (axis horizontal) so neither hub dish faces the film",
+        "supports": "light supports on the lower tread blocks"
+      },
+      {
+        "name": "Tally RWS",
+        "qty": 1,
+        "orientation": "tilted -45 deg about x, +0 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "Stern ramp",
+        "qty": 1,
+        "orientation": "tilted -45 deg about x, +0 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "Roof hatch",
+        "qty": 4,
+        "orientation": "tilted +0 deg about x, -45 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "Split pin (3 mm D-flat; 1 spare)",
+        "qty": 3,
+        "orientation": "lying on its D-flat, flat on the plate",
+        "supports": "none (flat on the plate)"
+      }
+    ]
   }
- ],
- "defaultExplode": 0.3,
- "buildNotes": [
-  "Hull prints as two hollow halves (1.8 mm walls) split at x = -11.5 under the RWS ring; each half prints standing on its split face, so the mating faces are flat and the show faces carry no supports (only internal supports under the glacis / stern ceilings). Glue with two of the three printed D-flat split pins (or 3 mm rod).",
-  "Drains: 3.5 mm keel holes at x -60 and +40, a 3.5 mm hole on the split line at the keel and at the roof spine (half in each part; it vents the cavity while printing), a roof vent under the turntable; the hatch openings and the stern door also drain the bay.",
-  "Wheels: one part, print 8. Each hub has a 3.2 mm D-flat socket that only fits its axle stub one way round.",
-  "Tally RWS: glue a 5 x 2 mm magnet in the turntable underside and one in the hull ring seat (mark polarity); the RWS turns freely and swaps with the Palisade's ring tops.",
-  "Stern ramp: the hinge pins drop into open-top slots in the two stern cheeks; glue closed, or open at 122 deg so the lip rests on the table. Hatches plug into their coamings closed, or glue open.",
-  "Embark matrix at true 1:56 (reports/fit.md, measured figure envelopes, 0.5 mm clearance a side): rifleman, rifleman Mk2, heavy and warden board through the stern door crouched (door 26 x 23.7 mm) and pass a roof hatch lengthwise (24.5 x 16.8 mm); the marksman's 31 mm rifle passes neither (embark it as a token). No figure stands in the 1.33 m bay; the ten seats are for stooped troopers."
- ],
- "limitations": "Procedural CSG model (manifold3d), not a hand sculpt: crisp facets, no weld beads or tool stowage. Capacity at true 1:56: seats 10 stooped (bay 1.33 m clear), no standing room; the open ramp is a deploy point for based figures and a crouched Vigilant clears the door (reports/fit.md). STEP export skipped (FreeCAD not installed in this environment). Printability is a heuristic screen through unified-CAD-MCP, not a test print; print a ring/peg tolerance coupon first.",
- "mini": {
-  "scale": {
-   "label": "1:56 (30 mm heroic vehicle scale)",
-   "ratio": "1:56"
-  },
-  "base": "none: stands on its eight wheels",
-  "footprint": "about 152 x 59 mm",
-  "process": "MSLA resin · 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
-  "volumeMl": 68.4,
-  "volumeLabel": "Resin volume",
-  "printHeightMm": 86.1,
-  "printability": {
-   "verdict": "pass",
-   "preset": "msla_resin",
-   "checkedBy": "unified-CAD-MCP miniature_printability_check + support_plan",
-   "summary": "7 print files checked in their print pose; no fail-severity findings.",
-   "issues": [
-    "Advisory: minimum wall (unsupported)"
-   ],
-   "report": "reports/printability.md"
-  },
-  "printParts": [
-   {
-    "name": "Hull, front half",
-    "qty": 1,
-    "orientation": "standing on its split face (nose up), flat on the plate",
-    "supports": "internal only (under the glacis ceiling inside the cavity); none on show faces"
-   },
-   {
-    "name": "Hull, rear half",
-    "qty": 1,
-    "orientation": "standing on its split face (stern up), flat on the plate",
-    "supports": "internal only (under the stern-wall ceiling); light supports under the waterjet nozzles and hinge cheeks"
-   },
-   {
-    "name": "Wheel",
-    "qty": 8,
-    "orientation": "standing on its tread (axis horizontal) so neither hub dish faces the film",
-    "supports": "light supports on the lower tread blocks"
-   },
-   {
-    "name": "Tally RWS",
-    "qty": 1,
-    "orientation": "tilted -45 deg about x, +0 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "Stern ramp",
-    "qty": 1,
-    "orientation": "tilted -45 deg about x, +0 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "Roof hatch",
-    "qty": 4,
-    "orientation": "tilted +0 deg about x, -45 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "Split pin (3 mm D-flat; 1 spare)",
-    "qty": 3,
-    "orientation": "lying on its D-flat, flat on the plate",
-    "supports": "none (flat on the plate)"
-   }
-  ]
- }
 }

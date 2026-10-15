@@ -1,141 +1,141 @@
 {
- "id": "lantern-drones",
- "name": "Lantern-pattern Squad Drone Kit (SD-1 Wisp, SD-2 Tick, SD-C cradle)",
- "line": "scifi",
- "family": "Drones",
- "revision": "0.1 · resin drone kit: 2 flying Wisps, landed Wisp, Tick + 3 weapon modules, cradle + pack saddle, stems, 32 mm bases",
- "description": "The Lantern kit every Vigil fireteam carries: the SD-1 Wisp ducted quadcopter (recon, or designator and munition, plus a landed marker), the SD-2 Tick tracked crawler with a periscope mast and swappable Talon carbine, mine-plough or relay-and-smoke modules, and the SD-C cradle that clips a folded Wisp behind a trooper's spine pack.",
- "images": [
-  {
-   "path": "images/lantern-drones-hero.png",
-   "label": "3/4 front: Wisp A on its raked stem, Tick A (render)"
-  },
-  {
-   "path": "images/lantern-drones-turnaround.png",
-   "label": "Kit turnaround: 3/4, front, side, back"
-  },
-  {
-   "path": "images/lantern-drones-wisp.png",
-   "label": "Wisp A, B and landed: 3/4, front, side, top"
-  },
-  {
-   "path": "images/lantern-drones-tick.png",
-   "label": "Tick with modules A, B, C: 3/4, front, side, top"
-  },
-  {
-   "path": "images/lantern-drones-cradle.png",
-   "label": "SD-C cradle on the line power pack (pack not in this kit)"
+  "id": "lantern-drones",
+  "name": "Lantern-pattern Squad Drone Kit (SD-1 Wisp, SD-2 Tick, SD-C cradle)",
+  "line": "scifi",
+  "family": "Vehicles & Drones",
+  "revision": "0.1 \u00b7 resin drone kit: 2 flying Wisps, landed Wisp, Tick + 3 weapon modules, cradle + pack saddle, stems, 32 mm bases",
+  "description": "The Lantern kit every Vigil fireteam carries: the SD-1 Wisp ducted quadcopter (recon, or designator and munition, plus a landed marker), the SD-2 Tick tracked crawler with a periscope mast and swappable Talon carbine, mine-plough or relay-and-smoke modules, and the SD-C cradle that clips a folded Wisp behind a trooper's spine pack.",
+  "images": [
+    {
+      "path": "images/lantern-drones-hero.png",
+      "label": "3/4 front: Wisp A on its raked stem, Tick A (render)"
+    },
+    {
+      "path": "images/lantern-drones-turnaround.png",
+      "label": "Kit turnaround: 3/4, front, side, back"
+    },
+    {
+      "path": "images/lantern-drones-wisp.png",
+      "label": "Wisp A, B and landed: 3/4, front, side, top"
+    },
+    {
+      "path": "images/lantern-drones-tick.png",
+      "label": "Tick with modules A, B, C: 3/4, front, side, top"
+    },
+    {
+      "path": "images/lantern-drones-cradle.png",
+      "label": "SD-C cradle on the line power pack (pack not in this kit)"
+    }
+  ],
+  "defaultExplode": 0.2,
+  "buildNotes": [
+    "Wisp: one piece (chevron body, four 0.85 mm-wall ducts, rotors recessed 0.4 mm, chin ball with split-chevron lenses); round 1.8 mm stem socket under the body.",
+    "Flight stem: printed 1.6 mm resin, or cut a 1.6 mm clear acrylic rod to 27 mm; it seats 3 mm into the raked base socket and 2 mm into the Wisp.",
+    "Tick: hull and tracks in one piece; the periscope mast (1.2 mm D-flat peg) and one weapon module (1.6 mm D-flat peg) plug into the deck.",
+    "SD-C: glue the pack saddle over the top and back of a line-standard power pack; the cradle (folded Wisp) plugs into the saddle on the standard 2.0 mm D-flat pack peg, or straight into a figure's pack socket.",
+    "Every part prints on supports in the orientation miniature_support_plan picked (print/stl is already in that pose)."
+  ],
+  "limitations": "Procedural SDF sculpt, not a hand sculpt. Printability is a heuristic screen through unified-CAD-MCP, not a test print; print a tolerance coupon for the 0.1 mm glue fits. No STEP: FreeCAD is not installed on the build host, so cad/ holds no assembly STEP (recorded as skipped).",
+  "mini": {
+    "scale": {
+      "label": "1:56 (30 mm heroic Vigil line)",
+      "ratio": "1:56"
+    },
+    "base": "32 mm round x 3 mm, 5 x 2 mm magnet pocket vented to the rim; stem bases carry a 24 deg raked 1.8 mm stem socket",
+    "footprint": "\u00d8 32 mm",
+    "process": "MSLA resin \u00b7 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
+    "volumeMl": 11.3,
+    "volumeLabel": "Resin volume",
+    "printHeightMm": 28.5,
+    "printability": {
+      "verdict": "pass",
+      "preset": "msla_resin",
+      "checkedBy": "unified-CAD-MCP miniature_printability_check + support_plan",
+      "summary": "13 print files checked in their print pose; no fail-severity findings.",
+      "issues": [
+        "Advisory: minimum wall (unsupported)"
+      ],
+      "report": "reports/printability.md"
+    },
+    "printParts": [
+      {
+        "name": "SD-1 Wisp A (recon)",
+        "qty": 1,
+        "orientation": "tilted +0 deg about x, -45 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "SD-1 Wisp B (designator / munition)",
+        "qty": 1,
+        "orientation": "tilted +0 deg about x, +45 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "SD-1 Wisp, landed",
+        "qty": 1,
+        "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "Flight stem 1.6 mm",
+        "qty": 2,
+        "orientation": "tilted +15 deg about x, -15 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "SD-2 Tick hull + tracks",
+        "qty": 1,
+        "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "Tick periscope mast",
+        "qty": 1,
+        "orientation": "tilted +0 deg about x, -45 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "Tick module A: Talon mount",
+        "qty": 1,
+        "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "Tick module B: mine-plough",
+        "qty": 1,
+        "orientation": "upright as modelled, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "Tick module C: relay + smoke",
+        "qty": 1,
+        "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "SD-C cradle with folded Wisp",
+        "qty": 1,
+        "orientation": "tilted +30 deg about x, -45 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "SD-C pack saddle",
+        "qty": 1,
+        "orientation": "tilted -45 deg about x, +0 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "32 mm base, stem socket",
+        "qty": 2,
+        "orientation": "tilted +45 deg about x, +45 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      },
+      {
+        "name": "32 mm base, plain",
+        "qty": 2,
+        "orientation": "tilted +45 deg about x, +45 deg about y, on supports",
+        "supports": "light/medium resin supports"
+      }
+    ]
   }
- ],
- "defaultExplode": 0.2,
- "buildNotes": [
-  "Wisp: one piece (chevron body, four 0.85 mm-wall ducts, rotors recessed 0.4 mm, chin ball with split-chevron lenses); round 1.8 mm stem socket under the body.",
-  "Flight stem: printed 1.6 mm resin, or cut a 1.6 mm clear acrylic rod to 27 mm; it seats 3 mm into the raked base socket and 2 mm into the Wisp.",
-  "Tick: hull and tracks in one piece; the periscope mast (1.2 mm D-flat peg) and one weapon module (1.6 mm D-flat peg) plug into the deck.",
-  "SD-C: glue the pack saddle over the top and back of a line-standard power pack; the cradle (folded Wisp) plugs into the saddle on the standard 2.0 mm D-flat pack peg, or straight into a figure's pack socket.",
-  "Every part prints on supports in the orientation miniature_support_plan picked (print/stl is already in that pose)."
- ],
- "limitations": "Procedural SDF sculpt, not a hand sculpt. Printability is a heuristic screen through unified-CAD-MCP, not a test print; print a tolerance coupon for the 0.1 mm glue fits. No STEP: FreeCAD is not installed on the build host, so cad/ holds no assembly STEP (recorded as skipped).",
- "mini": {
-  "scale": {
-   "label": "1:56 (30 mm heroic Vigil line)",
-   "ratio": "1:56"
-  },
-  "base": "32 mm round x 3 mm, 5 x 2 mm magnet pocket vented to the rim; stem bases carry a 24 deg raked 1.8 mm stem socket",
-  "footprint": "Ø 32 mm",
-  "process": "MSLA resin · 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
-  "volumeMl": 11.3,
-  "volumeLabel": "Resin volume",
-  "printHeightMm": 28.5,
-  "printability": {
-   "verdict": "pass",
-   "preset": "msla_resin",
-   "checkedBy": "unified-CAD-MCP miniature_printability_check + support_plan",
-   "summary": "13 print files checked in their print pose; no fail-severity findings.",
-   "issues": [
-    "Advisory: minimum wall (unsupported)"
-   ],
-   "report": "reports/printability.md"
-  },
-  "printParts": [
-   {
-    "name": "SD-1 Wisp A (recon)",
-    "qty": 1,
-    "orientation": "tilted +0 deg about x, -45 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "SD-1 Wisp B (designator / munition)",
-    "qty": 1,
-    "orientation": "tilted +0 deg about x, +45 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "SD-1 Wisp, landed",
-    "qty": 1,
-    "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "Flight stem 1.6 mm",
-    "qty": 2,
-    "orientation": "tilted +15 deg about x, -15 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "SD-2 Tick hull + tracks",
-    "qty": 1,
-    "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "Tick periscope mast",
-    "qty": 1,
-    "orientation": "tilted +0 deg about x, -45 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "Tick module A: Talon mount",
-    "qty": 1,
-    "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "Tick module B: mine-plough",
-    "qty": 1,
-    "orientation": "upright as modelled, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "Tick module C: relay + smoke",
-    "qty": 1,
-    "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "SD-C cradle with folded Wisp",
-    "qty": 1,
-    "orientation": "tilted +30 deg about x, -45 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "SD-C pack saddle",
-    "qty": 1,
-    "orientation": "tilted -45 deg about x, +0 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "32 mm base, stem socket",
-    "qty": 2,
-    "orientation": "tilted +45 deg about x, +45 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   },
-   {
-    "name": "32 mm base, plain",
-    "qty": 2,
-    "orientation": "tilted +45 deg about x, +45 deg about y, on supports",
-    "supports": "light/medium resin supports"
-   }
-  ]
- }
 }
