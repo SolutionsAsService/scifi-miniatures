@@ -67,6 +67,49 @@ def along(a, b, hw, hh, r=0.2, ext=0.0, up=(0, 0, 1)):
     return rbox((a + b) / 2, (hw, L / 2 + ext, hh), np.stack([u, n, upv], axis=1), r)
 
 
+def vgroove(a, b, n, depth=0.3, top=0.8):
+    """Engraved V-groove from a to b (points on the surface), outward surface normal n: 90 deg included angle, so it is
+    2 x depth wide at the surface (0.3 deep -> 0.6 wide), with conical ends (no acute groove-end corners).
+    Why a V and not a slot: the two walls of a 90 deg V face each other at dot = 0, so the slit never reads as a
+    narrow air gap (miniature_gap_check counts facing surfaces, dot < -0.2, closer than 0.5 mm), a wash finds the
+    whole line, and the open mouth drains on peel; the first build's 0.40-0.45 mm box slots failed the gap screen."""
+    a, b, n = v3(a), v3(b), unit(n)
+    dvec = b - a
+    L = float(np.linalg.norm(dvec))
+    u = dvec / L if L > 1e-9 else v3(1, 0, 0)
+    s2 = math.sqrt(2.0)
+
+    def f(P):
+        t = np.clip((P - a) @ u, 0.0, L)
+        r = P - (a + t[:, None] * u)
+        s = r @ n
+        lat = np.linalg.norm(r - s[:, None] * n, axis=1)
+        return np.maximum((lat - s - depth) / s2, s - top)
+    pad = depth + top + 0.1
+    return Shape(f, np.minimum(a, b) - pad, np.maximum(a, b) + pad)
+
+
+def chords(t, n, r_out, holes, step=0.02):
+    """Runs of the line {q . n = t} (2D, n unit) that stay inside radius r_out and outside every hole (cx, cy, r)."""
+    m = np.array([-n[1], n[0]])
+    smax = math.sqrt(max(r_out * r_out - t * t, 0.0))
+    s = np.arange(-smax, smax + 1e-9, step)
+    q = np.outer(np.ones_like(s), np.array(n[:2]) * t) + np.outer(s, m)
+    ok = np.hypot(q[:, 0], q[:, 1]) <= r_out
+    for cx, cy, r in holes:
+        ok &= np.hypot(q[:, 0] - cx, q[:, 1] - cy) >= r
+    runs, start = [], None
+    for i, v in enumerate(ok):
+        if v and start is None:
+            start = i
+        if (not v or i == len(ok) - 1) and start is not None:
+            end = i if v else i - 1
+            if s[end] - s[start] > 1.0:
+                runs.append((q[start], q[end]))
+            start = None
+    return runs
+
+
 def mesh_in_budget(ops, name, h0, budget=250_000, limit=290_000):
     """Mesh at pitch h0; if the marched mesh is over the checker budget, re-mesh the field coarser (triangles scale
     with 1 / pitch^2, the miniature_mesh_budget rule). Never decimates the print mesh."""
@@ -119,11 +162,16 @@ def wisp_core(o, S, M=np.eye(4)):
         tail = v3(s * W["tail"][0], W["tail"][1], 0.0)
         n = unit(tail - nose)
         c = tail - n * 1.7 + v3(0, 0, 0.75)
-        o.cut(T(rbox(c, (0.22, 1.5, 0.3), np.stack([n, np.cross(Z, n), Z], axis=1), 0.05)))
+        w = unit(np.cross(Z, n))
+        o.cut(T(vgroove(c - w * 1.5, c + w * 1.5, Z, 0.3)))                           # V 0.6 x 0.3, open at both sides
     cb = W["chin_ball"]
     o.add(T(sphere(v3(cb["c"]), cb["r"])), 0.25)
-    for s in (-1, 1):                                                                 # split-chevron lenses
-        o.cut(T(rbox(v3(cb["c"]) + v3(s * 0.47, -1.05, 0.12), (0.5, 0.45, 0.22), rot(RY, s * 28), 0.06)))
+    cc = v3(cb["c"])
+    for s in (-1, 1):                                                                 # split-chevron lenses: V 0.5 x 0.25
+        e = rot(RY, s * 28) @ v3(1, 0, 0)
+        q = v3(s * 0.55, 0, 0.12)
+        q[1] = -math.sqrt(max(cb["r"] ** 2 - q[0] ** 2 - q[2] ** 2, 0.0))
+        o.cut(T(vgroove(cc + q - e * 0.28, cc + q + e * 0.28, unit(q), 0.25)))
 
 
 def wisp_arms_ducts(o, S, M=np.eye(4), bottom=True):
@@ -267,31 +315,34 @@ def tick_hull(S):
     for s in (-1, 1):
         xc = s * tr["xc"]
         o.add(track(xc, tr["y0"], tr["y1"], tr["r"], tr["w"]), 0.0)
-        o.add(rbox(v3(s * 5.05, -0.2, 5.15), (1.4, 7.0, 0.85), I3, 0.3).clip(*chev), 0.15)          # sponson / guard
-        o.add(rbox(v3(s * 5.95, -0.2, 3.95), (0.5, 6.8, 0.65), I3, 0.2).clip(*chev), 0.1)            # skirt lip 1.0
+        # sponson / guard over the flat top run only (y +-5.0 inside the +-5.4 straight), bottom at z 4.0 so it meets
+        # the track's vertical face square; build 1 ran it over the end arcs, where its underside and the falling
+        # track formed 0.01-0.05 mm wedge slits (gap screen)
+        o.add(rbox(v3(s * 5.05, 0.0, 5.0), (1.4, 5.0, 1.0), I3, 0.3).clip(*chev), 0.15)
+        o.add(rbox(v3(s * 5.95, 0.0, 3.95), (0.5, 3.0, 0.65), I3, 0.2), 0.1)                         # skirt lip, between the idlers
     # track shoe grooves 0.4 x 0.3: bottom run and the lower arcs only; the top run sits under the sponson, where a
     # groove would be a sealed void (first build: 22 bodies, the groove boxes as 0.73 mm3 inner shells)
     for s in (-1, 1):
         xc, r, w = s * tr["xc"], tr["r"], tr["w"]
         ay, by = tr["y0"] + r, tr["y1"] - r
-        for y in np.arange(ay + 0.45, by, 0.95):
-            o.cut(rbox(v3(xc, y, 0.0), (w / 2 + 0.2, 0.2, 0.3), I3, 0.0))
+        # shoe grooves: 90 deg V 0.6 wide x 0.3 deep on a 1.2 mm pitch, across the full tread (open at both faces)
+        for y in np.arange(ay + 0.6, by, 1.2):
+            o.cut(vgroove((xc - w / 2 - 0.3, y, 0.0), (xc + w / 2 + 0.3, y, 0.0), (0, 0, -1), 0.3))
         for cy, sgn in ((ay, -1), (by, 1)):
-            for phi in np.arange(0.45 / r, math.pi, 0.95 / r):
-                p = v3(xc, cy + sgn * r * math.sin(phi), r + r * math.cos(phi))
-                if p[2] > 3.2:                                                        # under the skirt / sponson
+            for phi in np.arange(0.6 / r, math.pi, 1.2 / r):
+                nrm = v3(0, sgn * math.sin(phi), -math.cos(phi))                      # outward normal on the arc
+                p = v3(xc, cy, r) + nrm * r
+                if p[2] > 3.4:                                                        # upper arc: plain
                     continue
-                nrm = v3(0, sgn * math.sin(phi), math.cos(phi))
-                tan = np.cross(v3(1, 0, 0), nrm)
-                o.cut(rbox(p, (w / 2 + 0.2, 0.2, 0.3), np.stack([v3(1, 0, 0), tan, nrm], axis=1), 0.0))
+                o.cut(vgroove(p - v3(w / 2 + 0.3, 0, 0), p + v3(w / 2 + 0.3, 0, 0), nrm, 0.3))
         face = s * (tr["xc"] + w / 2)
-        for y, rr in ((ay, 1.65), (by, 1.65), (-2.8, 1.0), (0.0, 1.0), (2.8, 1.0)):
+        for y, rr in ((ay, 1.25), (by, 1.25), (-2.8, 1.0), (0.0, 1.0), (2.8, 1.0)):     # idlers 1.25: >= 0.55 under the sponson
             zc = r if rr > 1.2 else 1.25
             o.add(cyl(v3(face - s * 0.1, y, zc), v3(face + s * 0.22, y, zc), rr, 0.1))        # wheels / idlers
             o.add(cyl(v3(face, y, zc), v3(face + s * 0.38, y, zc), 0.42, 0.1))                # hubs
     o.add(capsule(v3(0, 0.6, dz), v3(0, 7.2, dz), 0.5), 0.2)                          # keel ridge 1.0 wide
-    for y in (4.6, 5.5, 6.4):                                                         # engine grille slots 0.44
-        o.cut(rbox(v3(2.0, y, dz), (1.1, 0.22, 0.35), I3, 0.05))
+    for y in (4.5, 5.4, 6.3):                                                         # engine grille, V 0.6 x 0.3
+        o.cut(vgroove(v3(1.0, y, dz), v3(3.0, y, dz), (0, 0, 1), 0.3))
     o.add(rbox(v3(2.0, 1.4, dz + 0.1), (1.05, 1.25, 0.28), I3, 0.15), 0.08)           # access hatch, 0.2 proud
     ng = unit((0, -(dz - 3.6), 4.0))
     for s in (-1, 1):                                                                 # split chevron on the glacis
@@ -299,7 +350,7 @@ def tick_hull(S):
         e = unit(e - ng * float(e @ ng))
         c = v3(s * 1.05, -7.7, 0)
         c[2] = 3.6 + (c[1] - py) / (dz - 3.6 + 1e-9) * 0 + (c[1] - py) * (dz - 3.6) / 4.0
-        o.cut(rbox(c, (1.0, 0.22, 0.3), np.stack([e, np.cross(ng, e), ng], axis=1), 0.05))
+        o.cut(vgroove(c - e * 0.85, c + e * 0.85, ng, 0.3))
     o.add(rbox(v3(0, 8.45, 2.5), (1.0, 0.6, 0.6), I3, 0.25), 0.15)                    # tow hitch
     for key, sd in (("weapon_socket", T["weapon_socket"]), ("mast_socket", T["mast_socket"])):
         x, y = sd["xy"]
@@ -318,8 +369,10 @@ def tick_mast(S):
     o.add(cyl(v3(0, 0, 0.3), v3(0, 0, 3.8), 0.55, 0.1), 0.15)
     o.add(rbox(v3(0, -0.15, 4.3), (1.3, 0.85, 0.75), I3, 0.3), 0.2)
     o.add(capsule(v3(0, -0.6, 5.05), v3(0, 0.6, 5.05), 0.45), 0.15)                     # keel cap 0.9 wide
-    for s in (-1, 1):
-        o.cut(rbox(v3(s * 0.5, -1.05, 4.3), (0.5, 0.35, 0.22), rot(RY, s * 26), 0.06))     # lens bars 0.44 x 0.3
+    for s in (-1, 1):                                                                 # lens bars: V 0.6 x 0.3
+        e = rot(RY, s * 26) @ v3(1, 0, 0)
+        q = v3(s * 0.6, -1.0, 4.3)
+        o.cut(vgroove(q - e * 0.3, q + e * 0.3, (0, -1, 0), 0.3))
     peg_down(o, S["tick"]["mast_socket"])
     return o
 
@@ -369,18 +422,25 @@ def relay(S):
     o = Ops()
     o.add(cyl(v3(0, 0, 0), v3(0, 0, 0.8), 1.5, 0.2))
     o.add(rbox(v3(0, 0.3, 1.5), (1.3, 1.2, 0.75), I3, 0.3), 0.2)
-    o.add(cyl(v3(0.5, 0.8, 2.0), v3(0.5, 0.8, 5.0), 0.6, 0.1), 0.15)
-    o.add(cyl(v3(0.5, 0.8, 4.8), v3(0.5, 0.8, 5.2), 0.78, 0.1), 0.05)
-    o.add(cyl(v3(0.5, 0.8, 5.0), v3(0.5, 0.8, 8.0), 0.5, 0.1), 0.1)
-    o.add(sphere(v3(0.5, 0.8, 8.05), 0.65), 0.1)
-    o.add(rbox(v3(0.5, 0.8, 7.0), (1.2, 0.45, 0.45), I3, 0.15), 0.1)                   # dipole bar 0.9
+    # antenna on the centre line (build 1 had it at x 0.5, 0.06 mm from the right discharger bank: gap screen)
+    o.add(cyl(v3(0, 0.8, 2.0), v3(0, 0.8, 5.0), 0.6, 0.1), 0.15)
+    o.add(cyl(v3(0, 0.8, 4.8), v3(0, 0.8, 5.2), 0.78, 0.1), 0.05)
+    o.add(cyl(v3(0, 0.8, 5.0), v3(0, 0.8, 8.0), 0.5, 0.1), 0.1)
+    o.add(sphere(v3(0, 0.8, 8.05), 0.65), 0.1)
+    o.add(rbox(v3(0, 0.8, 7.0), (1.2, 0.45, 0.45), I3, 0.15), 0.1)                     # dipole bar 0.9
+    # smoke discharger banks: one 1.0 mm-thick block of three tubes per side, the tubes read through two 90 deg
+    # V-grooves (build 1: three loose 1.0 mm tubes on a 1.05 mm pitch = 0.05 mm slits, and 0.56 mm bores that left
+    # 0.22 mm tube walls; both failed the gap and wall screens)
+    Y = v3(0, 1, 0)
     for s in (-1, 1):
-        d = unit((s * 0.8, -0.25, 0.6))
-        for y in (-0.75, 0.3, 1.35):
-            b = v3(s * 1.0, y, 1.7)
-            e = b + d * 1.7
-            o.add(cyl(b, e, 0.5, 0.1), 0.05)                                           # discharger 1.0 dia
-            o.cut(cyl(e - d * 0.35, e + d * 0.3, 0.28))                                # bore 0.56, 0.35 deep
+        d = unit((s * 0.8, 0.0, 0.6))
+        tn = unit(np.cross(Y, d))
+        tn = tn if tn[2] > 0 else -tn
+        c = v3(s * 1.15, 0.3, 1.75) + d * 0.85
+        o.add(rbox(c, (0.5, 1.6, 0.95), np.stack([tn, Y, d], axis=1), 0.3), 0.1)
+        for yk in (-0.53, 0.53):
+            g0 = c + tn * 0.5 + Y * yk
+            o.cut(vgroove(g0 - d * 0.7, g0 + d * 1.2, tn, 0.2))
     peg_down(o, S["tick"]["weapon_socket"])
     return o
 
@@ -414,13 +474,17 @@ def base(S, stem=False):
         side = (rr - (R0 - k * np.clip(Q[:, 2], 0, H0))) / math.sqrt(1 + k * k)
         return np.maximum(side, np.maximum(-Q[:, 2], Q[:, 2] - H0))
     o.add(Shape(body, (-R0, -R0, 0), (R0, R0, H0)))
-    ring = lambda Q: np.maximum(np.hypot(Q[:, 0], Q[:, 1]) - (R0 - ins - 1.5), 3.6 - np.hypot(Q[:, 0], Q[:, 1]))  # noqa: E731
+    # deck seams: 90 deg V-grooves 0.6 wide x 0.3 deep (build 2; the 0.45 x 0.35 box slots clipped by a ring left
+    # acute groove-end corners that the gap screen read as 0.015 mm slits), conical ends 1.5 mm inside the rim,
+    # clear of the magnet floor (r 3.9) and, on the stem base, 0.6 mm clear of the launch pad
+    holes = [(0.0, 0.0, 3.9)]
+    if stem:
+        holes.append((B["stem_boss"]["xy"][0], B["stem_boss"]["xy"][1], B["stem_boss"]["r"] + 0.9))
     for ang in (35.0, -35.0):
-        n = v3(math.cos(math.radians(ang)), math.sin(math.radians(ang)), 0)
+        n = (math.cos(math.radians(ang)), math.sin(math.radians(ang)))
         for t in np.arange(-12.0, 12.1, 6.0):
-            seam = Shape(lambda Q, n=n, t=t: np.maximum(np.abs(Q @ n - t) - 0.225, H0 - 0.35 - Q[:, 2]),
-                         (-R0, -R0, H0 - 0.6), (R0, R0, H0 + 0.6))
-            o.cut(seam.clip(Shape(ring, (-R0, -R0, 0), (R0, R0, H0 + 1))))
+            for qa, qb in chords(t, n, R0 - ins - 1.5, holes):
+                o.cut(vgroove((qa[0], qa[1], H0), (qb[0], qb[1], H0), (0, 0, 1), 0.3))
     o.cut(cyl(v3(0, 0, -1), v3(0, 0, B["pocket_depth"]), B["pocket_d"] / 2))
     o.cut(rbox(v3(-R0 / 2, 0, 0), (R0 / 2 + 1, B["vent_w"] / 2, B["vent_d"]), I3, 0.0))    # vent to the rim (-x)
     if stem:

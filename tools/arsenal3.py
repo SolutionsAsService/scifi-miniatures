@@ -1072,18 +1072,23 @@ def weapon_shape(ident):
     return item(ident).shape()
 
 
-def sculpt_fit(build, name, h0=0.05, budget=285_000, h_max=0.075, open_r=None, log=None):
+def sculpt_fit(build, name, h0=0.05, budget=285_000, h_max=0.075, open_r=None, log=None, morph_r=None):
     """Mesh a Build on its own grid at pitch h0; if the marched mesh is over the checker budget, RE-MESH THE FIELD
     COARSER (triangles scale with 1 / h^2) instead of decimating (3dada lesson: never QEM-decimate SDF meshes).
     Returns (mesh, pitch)."""
     h = h0
     while True:
         g = build.sculpt(h)
-        removed = open_slivers(g, open_r) if open_r else 0.0
+        if morph_r:                       # tools/morph.py closing + opening (walls >= 2 r_open, gaps >= 2 r_close)
+            import morph
+            st = morph.print_safe(g, *morph_r)
+            removed = -st["volume_change_mm3"]
+        else:
+            removed = open_slivers(g, open_r) if open_r else 0.0
         m = g.mesh(name, None)
         n = len(m.faces)
         if log is not None:
-            log[name] = {"pitch_mm": h, "triangles": n, "opening_r_mm": open_r, "opened_away_mm3": round(removed, 4)}
+            log[name] = {"pitch_mm": h, "triangles": n, "opening_r_mm": open_r, "morph_r_mm": morph_r, "opened_away_mm3": round(removed, 4)}
         if n <= budget or h >= h_max:
             return m, h
         h = min(h_max, round(h * math.sqrt(n / (budget * 0.93)) + 0.0005, 4))

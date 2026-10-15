@@ -1,7 +1,7 @@
 {
  "id": "vigil-helms-mk3",
  "name": "Vigil helm library Mk 3 (VH3)",
- "revision": "0.1",
+ "revision": "0.2",
  "line": "scifi",
  "process": "msla_resin",
  "scale": {
@@ -84,5 +84,10 @@
    "Display sheets colour the glass from each helm's own glass masks; the print files are one solid each."
   ],
   "limitations": "Procedural sculpt at about 6 mm helm width: faces are stylised; damage is cut geometry. No STEP on this host (no FreeCAD). Printability is a heuristic screen (unified-CAD-MCP), not a test print."
+ },
+ "morph": {
+  "r_open_mm": 0.25,
+  "r_close_mm": 0.26,
+  "why": "tools/morph.py closing then opening on the voxel field: every wall holds a 0.25 mm ball (>= 0.5 mm, MSLA supported limit 0.4) and every slot/inside corner >= 0.52 mm (gap limit 0.5); hand fixes of knife lips did not converge (dev checks 1-3)"
  }
 }

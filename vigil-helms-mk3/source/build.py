@@ -21,6 +21,7 @@ PKG = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PKG.parent / "tools"))
 sys.path.insert(0, str(PKG / "source"))
 import helms3  # noqa: E402
+import morph  # noqa: E402
 import sdfkit  # noqa: E402
 import sheet  # noqa: E402
 from vigil import build_loose  # noqa: E402
@@ -51,6 +52,9 @@ def slug(k):
 
 def _mesh(k, h, tri_cap):
     g = helms3.helm(k, h)
+    mo = SPEC.get("morph", {})
+    st = morph.print_safe(g, mo.get("r_open_mm", 0.25), mo.get("r_close_mm", 0.26))   # walls >= 2r, gaps >= 2c
+    print(k, "morph", st, flush=True)
     m = g.mesh(k, None)                                     # no simplification of the print mesh
     if len(m.faces) > tri_cap:
         raise SystemExit(f"{k}: {len(m.faces)} triangles > {tri_cap}: coarsen voxel_mm instead of decimating")
