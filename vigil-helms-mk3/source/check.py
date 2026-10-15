@@ -11,7 +11,7 @@ from pathlib import Path
 
 PKG = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PKG.parent / "tools"))
-from mcpcheck import main  # noqa: E402
+import cachedcheck  # noqa: E402
 
 PLAN = {
     "scale_features": [
@@ -27,4 +27,4 @@ PLAN = {
 }
 
 if __name__ == "__main__":
-    main(__file__, PLAN)
+    cachedcheck.main(__file__, PLAN)

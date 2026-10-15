@@ -5,6 +5,6 @@
   0.0,
   0.0
  ],
- "source": "source/build.py + tools/mcpcheck.py (print pose)",
+ "source": "source/build.py + tools/cachedcheck.py (print pose)",
  "units": "mm"
 }

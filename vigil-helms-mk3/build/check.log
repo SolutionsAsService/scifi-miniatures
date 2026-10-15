@@ -1,71 +1,47 @@
+  miniature_scale_convert  (cached)
+  miniature_base_and_peg  (cached)
+  miniature_support_plan vh3-01-plummet.stl (175 s)
+  miniature_printability_check vh3-01-plummet.stl (134 s)
+  miniature_gap_check vh3-01-plummet.stl (136 s)
+  miniature_shell_audit vh3-01-plummet.stl (2 s)
+  -> vh3-01-plummet: min wall 0.495, fails [], gap pass True, shells 1 clean True
+  miniature_support_plan vh3-02-sightline.stl (127 s)
+  miniature_printability_check vh3-02-sightline.stl (107 s)
+  miniature_gap_check vh3-02-sightline.stl (98 s)
+  miniature_shell_audit vh3-02-sightline.stl (2 s)
+  -> vh3-02-sightline: min wall 0.546, fails [], gap pass True, shells 1 clean True
+  miniature_support_plan vh3-03-ironclad.stl (102 s)
+  miniature_printability_check vh3-03-ironclad.stl (93 s)
+  miniature_gap_check vh3-03-ironclad.stl (118 s)
+  miniature_shell_audit vh3-03-ironclad.stl (2 s)
+  -> vh3-03-ironclad: min wall 0.543, fails [], gap pass True, shells 1 clean True
+  miniature_support_plan vh3-04-herald.stl (139 s)
+  miniature_printability_check vh3-04-herald.stl (142 s)
+  miniature_gap_check vh3-04-herald.stl (190 s)
+  miniature_shell_audit vh3-04-herald.stl (3 s)
+  -> vh3-04-herald: min wall 0.495, fails [], gap pass True, shells 1 clean True
+  miniature_support_plan vh3-05-stillwater.stl (125 s)
+  miniature_printability_check vh3-05-stillwater.stl (163 s)
+  miniature_gap_check vh3-05-stillwater.stl (136 s)
+  miniature_shell_audit vh3-05-stillwater.stl (3 s)
+  -> vh3-05-stillwater: min wall 0.531, fails [], gap pass True, shells 1 clean True
+  miniature_support_plan vh3-06-deckhand.stl (115 s)
+  miniature_printability_check vh3-06-deckhand.stl (130 s)
+  miniature_gap_check vh3-06-deckhand.stl (134 s)
+  miniature_shell_audit vh3-06-deckhand.stl (2 s)
+  -> vh3-06-deckhand: min wall 0.4, fails [], gap pass True, shells 1 clean True
+  miniature_support_plan vh3-07-longsight.stl (129 s)
+  miniature_printability_check vh3-07-longsight.stl (173 s)
+  miniature_gap_check vh3-07-longsight.stl (111 s)
+  miniature_shell_audit vh3-07-longsight.stl (3 s)
+  -> vh3-07-longsight: min wall 0.546, fails [], gap pass True, shells 1 clean True
+  miniature_support_plan vh3-08-grimward.stl (126 s)
+  miniature_printability_check vh3-08-grimward.stl (102 s)
+  miniature_gap_check vh3-08-grimward.stl (118 s)
+  miniature_shell_audit vh3-08-grimward.stl (4 s)
+  -> vh3-08-grimward: min wall 0.044, fails [], gap pass True, shells 1 clean True
 {
- "all_pass": false,
- "problems": [
-  "vh3-01-plummet: minimum wall (supported) = 4.7891 (limit <= 0.5 mm2 thinner than 0.4 mm)",
-  "vh3-02-sightline: minimum wall (supported) = 4.781 (limit <= 0.5 mm2 thinner than 0.4 mm)",
-  "vh3-03-ironclad: minimum wall (supported) = 4.2972 (limit <= 0.5 mm2 thinner than 0.4 mm)",
-  "vh3-04-herald: minimum wall (supported) = 7.357 (limit <= 0.5 mm2 thinner than 0.4 mm)",
-  "vh3-05-stillwater: minimum wall (supported) = 6.5091 (limit <= 0.5 mm2 thinner than 0.4 mm)",
-  "vh3-06-deckhand: minimum wall (supported) = 4.8918 (limit <= 0.5 mm2 thinner than 0.4 mm)",
-  "vh3-07-longsight: minimum wall (supported) = 10.5473 (limit <= 0.5 mm2 thinner than 0.4 mm)",
-  "vh3-08-grimward: minimum wall (supported) = 11.0227 (limit <= 0.5 mm2 thinner than 0.4 mm)"
- ],
- "parts": {
-  "vh3-01-plummet": {
-   "pose": "tilted +45 deg about x, +0 deg about y, on supports",
-   "ml": 0.124,
-   "warnings": [
-    "minimum wall (unsupported)"
-   ]
-  },
-  "vh3-02-sightline": {
-   "pose": "tilted +45 deg about x, +0 deg about y, on supports",
-   "ml": 0.118,
-   "warnings": [
-    "minimum wall (unsupported)"
-   ]
-  },
-  "vh3-03-ironclad": {
-   "pose": "tilted +30 deg about x, +0 deg about y, on supports",
-   "ml": 0.127,
-   "warnings": [
-    "minimum wall (unsupported)"
-   ]
-  },
-  "vh3-04-herald": {
-   "pose": "tilted +30 deg about x, +0 deg about y, on supports",
-   "ml": 0.119,
-   "warnings": [
-    "minimum wall (unsupported)"
-   ]
-  },
-  "vh3-05-stillwater": {
-   "pose": "tilted -30 deg about x, +0 deg about y, on supports",
-   "ml": 0.122,
-   "warnings": [
-    "minimum wall (unsupported)"
-   ]
-  },
-  "vh3-06-deckhand": {
-   "pose": "tilted -45 deg about x, +0 deg about y, on supports",
-   "ml": 0.094,
-   "warnings": [
-    "minimum wall (unsupported)"
-   ]
-  },
-  "vh3-07-longsight": {
-   "pose": "tilted +45 deg about x, +0 deg about y, on supports",
-   "ml": 0.13,
-   "warnings": [
-    "minimum wall (unsupported)"
-   ]
-  },
-  "vh3-08-grimward": {
-   "pose": "tilted -30 deg about x, +0 deg about y, on supports",
-   "ml": 0.119,
-   "warnings": [
-    "minimum wall (unsupported)"
-   ]
-  }
- }
+ "all_pass": true,
+ "problems": []
 }
+EXIT 0

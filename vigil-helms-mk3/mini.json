@@ -3,7 +3,7 @@
  "name": "Vigil helm library Mk 3 (VH3)",
  "line": "scifi",
  "family": "Bits & Helms",
- "revision": "0.1 · 8 swappable VH3 helms on the line's 1.6 mm D-flat peg",
+ "revision": "0.2 · 8 swappable VH3 helms on the line's 1.6 mm D-flat peg",
  "description": "Third-generation Vigil helm library (VH3): eight helms chosen for silhouette. VH3-01 Plummet (drop trooper: wide wrap visor under a brow ridge, flared jaw armour), VH3-02 Sightline (recon: twin chevron lenses, side optic pod), VH3-03 Ironclad (heavy assault: flat-topped, portcullis grille faceplate, hoses to a collar), VH3-04 Herald (officer: swept keel fin, comm mast, rank chevrons), VH3-05 Stillwater (sealed void globe with a domed window, collar and back pack), VH3-06 Deckhand (open-face crew cap with goggles and headset), VH3-07 Longsight (sniper: sallet tail, flip-down monocular), VH3-08 Grimward (scarred veteran: original relief death's-head faceplate, shattered fin). Every helm keeps the split-chevron glass and keel line, with the glass as a separate recessed surface for painting. Same 1.6 mm D-flat neck peg as VH-01..10 and VH2.",
  "images": [
   {
@@ -49,12 +49,12 @@
   "process": "MSLA resin · 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
   "volumeMl": 1.0,
   "volumeLabel": "Resin volume",
-  "printHeightMm": 11.2,
+  "printHeightMm": 11.3,
   "printability": {
-   "verdict": "fail",
+   "verdict": "pass",
    "preset": "msla_resin",
    "checkedBy": "unified-CAD-MCP miniature_printability_check + support_plan",
-   "summary": "vh3-01-plummet: minimum wall (supported) = 4.7891 (limit <= 0.5 mm2 thinner than 0.4 mm); vh3-02-sightline: minimum wall (supported) = 4.781 (limit <= 0.5 mm2 thinner than 0.4 mm); vh3-03-ironclad: minimum wall (supported) = 4.2972 (limit <= 0.5 mm2 thinner than 0.4 mm); vh3-04-herald: minimum wall (supported) = 7.357 (limit <= 0.5 mm2 thinner than 0.4 mm); vh3-05-stillwater: minimum wall (support",
+   "summary": "8 print files checked in their print pose; no fail-severity findings.",
    "issues": [
     "Advisory: minimum wall (unsupported)"
    ],
@@ -64,7 +64,7 @@
    {
     "name": "VH3-01 Plummet",
     "qty": 1,
-    "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
+    "orientation": "upright as modelled, on supports",
     "supports": "light resin supports (rotation from miniature_support_plan)"
    },
    {
@@ -82,19 +82,19 @@
    {
     "name": "VH3-04 Herald",
     "qty": 1,
-    "orientation": "tilted +30 deg about x, +0 deg about y, on supports",
+    "orientation": "tilted +15 deg about x, +0 deg about y, on supports",
     "supports": "light resin supports (rotation from miniature_support_plan)"
    },
    {
     "name": "VH3-05 Stillwater",
     "qty": 1,
-    "orientation": "tilted -30 deg about x, +0 deg about y, on supports",
+    "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
     "supports": "light resin supports (rotation from miniature_support_plan)"
    },
    {
     "name": "VH3-06 Deckhand",
     "qty": 1,
-    "orientation": "tilted -45 deg about x, +0 deg about y, on supports",
+    "orientation": "tilted +0 deg about x, +45 deg about y, on supports",
     "supports": "light resin supports (rotation from miniature_support_plan)"
    },
    {
@@ -106,7 +106,7 @@
    {
     "name": "VH3-08 Grimward",
     "qty": 1,
-    "orientation": "tilted -30 deg about x, +0 deg about y, on supports",
+    "orientation": "upright as modelled, on supports",
     "supports": "light resin supports (rotation from miniature_support_plan)"
    }
   ]
