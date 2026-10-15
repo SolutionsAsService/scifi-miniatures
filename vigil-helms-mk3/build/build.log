@@ -1,0 +1,114 @@
+VH3-01 Plummet: built 205634 triangles
+VH3-02 Sightline: built 194816 triangles
+VH3-03 Ironclad: built 210132 triangles
+VH3-04 Herald: built 213822 triangles
+VH3-05 Stillwater: built 227226 triangles
+VH3-06 Deckhand: built 186906 triangles
+VH3-07 Longsight: built 209862 triangles
+VH3-08 Grimward: built 196944 triangles
+{
+ "id": "vigil-helms-mk3",
+ "parts": {
+  "vh3-01-plummet": [
+   123.83,
+   [
+    6.87,
+    6.81,
+    8.56
+   ],
+   205634
+  ],
+  "vh3-02-sightline": [
+   118.28,
+   [
+    7.49,
+    7.11,
+    8.54
+   ],
+   194816
+  ],
+  "vh3-03-ironclad": [
+   127.18,
+   [
+    6.38,
+    6.86,
+    7.9
+   ],
+   210132
+  ],
+  "vh3-04-herald": [
+   119.46,
+   [
+    6.24,
+    6.66,
+    10.9
+   ],
+   213822
+  ],
+  "vh3-05-stillwater": [
+   121.87,
+   [
+    5.91,
+    7.03,
+    8.75
+   ],
+   227226
+  ],
+  "vh3-06-deckhand": [
+   94.28,
+   [
+    6.12,
+    6.44,
+    8.36
+   ],
+   186906
+  ],
+  "vh3-07-longsight": [
+   130.17,
+   [
+    5.65,
+    8.73,
+    8.51
+   ],
+   209862
+  ],
+  "vh3-08-grimward": [
+   119.24,
+   [
+    5.91,
+    6.93,
+    9.09
+   ],
+   196944
+  ]
+ },
+ "assembled_bbox_mm": [
+  33.26,
+  18.77,
+  10.9
+ ],
+ "interference": []
+}
+	Command being timed: "/home/openclaw/projects/venvs/scifi-sculpt/bin/python source/build.py"
+	User time (seconds): 826.65
+	System time (seconds): 78.86
+	Percent of CPU this job got: 193%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 7:47.36
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1226300
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 74
+	Minor (reclaiming a frame) page faults: 2291380
+	Voluntary context switches: 29578
+	Involuntary context switches: 3347975
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

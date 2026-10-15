@@ -1,0 +1,114 @@
+{
+ "id": "vigil-helms-mk3",
+ "name": "Vigil helm library Mk 3 (VH3)",
+ "line": "scifi",
+ "family": "Bits & Helms",
+ "revision": "0.1 · 8 swappable VH3 helms on the line's 1.6 mm D-flat peg",
+ "description": "Third-generation Vigil helm library (VH3): eight helms chosen for silhouette. VH3-01 Plummet (drop trooper: wide wrap visor under a brow ridge, flared jaw armour), VH3-02 Sightline (recon: twin chevron lenses, side optic pod), VH3-03 Ironclad (heavy assault: flat-topped, portcullis grille faceplate, hoses to a collar), VH3-04 Herald (officer: swept keel fin, comm mast, rank chevrons), VH3-05 Stillwater (sealed void globe with a domed window, collar and back pack), VH3-06 Deckhand (open-face crew cap with goggles and headset), VH3-07 Longsight (sniper: sallet tail, flip-down monocular), VH3-08 Grimward (scarred veteran: original relief death's-head faceplate, shattered fin). Every helm keeps the split-chevron glass and keel line, with the glass as a separate recessed surface for painting. Same 1.6 mm D-flat neck peg as VH-01..10 and VH2.",
+ "images": [
+  {
+   "path": "images/vigil-helms-mk3-sheet-front.png",
+   "label": "Display sheet: front"
+  },
+  {
+   "path": "images/vigil-helms-mk3-sheet-34.png",
+   "label": "Display sheet: 3/4"
+  },
+  {
+   "path": "images/vigil-helms-mk3-sheet-side.png",
+   "label": "Display sheet: side"
+  },
+  {
+   "path": "images/vigil-helms-mk3-fit.png",
+   "label": "Fit test: each helm on the rifleman"
+  },
+  {
+   "path": "images/vigil-helms-mk3-hero.png",
+   "label": "Library, 3/4 (render)"
+  },
+  {
+   "path": "images/vigil-helms-mk3-turnaround.png",
+   "label": "Turnaround: 3/4, front, side, back"
+  }
+ ],
+ "defaultExplode": 0,
+ "buildNotes": [
+  "Defined in tools/helms3.py (VH3 registry, signed-distance sculpt on tools/vh2.py building blocks); built on a 0.05 mm grid, print meshes not simplified or decimated.",
+  "Silhouette variety is measured (source/silhouettes.py: front/side silhouette IoU); see DESIGN-LOG.md.",
+  "Fit tested on the rifleman (source/fit.py): exact helm/figure and helm/backpack overlap volume after exosuit.helm_placement.",
+  "Display sheets colour the glass from each helm's own glass masks; the print files are one solid each."
+ ],
+ "limitations": "Procedural sculpt at about 6 mm helm width: faces are stylised; damage is cut geometry. No STEP on this host (no FreeCAD). Printability is a heuristic screen (unified-CAD-MCP), not a test print.",
+ "mini": {
+  "scale": {
+   "label": "30 mm heroic",
+   "ratio": "1:56"
+  },
+  "base": "none (bits)",
+  "footprint": "8 helms",
+  "process": "MSLA resin · 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
+  "volumeMl": 1.0,
+  "volumeLabel": "Resin volume",
+  "printHeightMm": 11.2,
+  "printability": {
+   "verdict": "fail",
+   "preset": "msla_resin",
+   "checkedBy": "unified-CAD-MCP miniature_printability_check + support_plan",
+   "summary": "vh3-01-plummet: minimum wall (supported) = 4.7891 (limit <= 0.5 mm2 thinner than 0.4 mm); vh3-02-sightline: minimum wall (supported) = 4.781 (limit <= 0.5 mm2 thinner than 0.4 mm); vh3-03-ironclad: minimum wall (supported) = 4.2972 (limit <= 0.5 mm2 thinner than 0.4 mm); vh3-04-herald: minimum wall (supported) = 7.357 (limit <= 0.5 mm2 thinner than 0.4 mm); vh3-05-stillwater: minimum wall (support",
+   "issues": [
+    "Advisory: minimum wall (unsupported)"
+   ],
+   "report": "reports/printability.md"
+  },
+  "printParts": [
+   {
+    "name": "VH3-01 Plummet",
+    "qty": 1,
+    "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
+    "supports": "light resin supports (rotation from miniature_support_plan)"
+   },
+   {
+    "name": "VH3-02 Sightline",
+    "qty": 1,
+    "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
+    "supports": "light resin supports (rotation from miniature_support_plan)"
+   },
+   {
+    "name": "VH3-03 Ironclad",
+    "qty": 1,
+    "orientation": "tilted +30 deg about x, +0 deg about y, on supports",
+    "supports": "light resin supports (rotation from miniature_support_plan)"
+   },
+   {
+    "name": "VH3-04 Herald",
+    "qty": 1,
+    "orientation": "tilted +30 deg about x, +0 deg about y, on supports",
+    "supports": "light resin supports (rotation from miniature_support_plan)"
+   },
+   {
+    "name": "VH3-05 Stillwater",
+    "qty": 1,
+    "orientation": "tilted -30 deg about x, +0 deg about y, on supports",
+    "supports": "light resin supports (rotation from miniature_support_plan)"
+   },
+   {
+    "name": "VH3-06 Deckhand",
+    "qty": 1,
+    "orientation": "tilted -45 deg about x, +0 deg about y, on supports",
+    "supports": "light resin supports (rotation from miniature_support_plan)"
+   },
+   {
+    "name": "VH3-07 Longsight",
+    "qty": 1,
+    "orientation": "tilted +45 deg about x, +0 deg about y, on supports",
+    "supports": "light resin supports (rotation from miniature_support_plan)"
+   },
+   {
+    "name": "VH3-08 Grimward",
+    "qty": 1,
+    "orientation": "tilted -30 deg about x, +0 deg about y, on supports",
+    "supports": "light resin supports (rotation from miniature_support_plan)"
+   }
+  ]
+ }
+}

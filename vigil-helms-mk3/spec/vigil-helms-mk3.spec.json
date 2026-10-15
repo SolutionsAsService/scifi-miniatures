@@ -1,0 +1,88 @@
+{
+ "id": "vigil-helms-mk3",
+ "name": "Vigil helm library Mk 3 (VH3)",
+ "revision": "0.1",
+ "line": "scifi",
+ "process": "msla_resin",
+ "scale": {
+  "label": "30 mm heroic",
+  "ratio": "1:56",
+  "tool_scale": "28mm"
+ },
+ "voxel_mm": 0.05,
+ "max_triangles": 290000,
+ "peg": {
+  "kind": "D-flat",
+  "d_mm": 1.6,
+  "len_mm": 2,
+  "flat_from_axis": "0.3 d",
+  "key": "flat faces -y (front)",
+  "source": "tools/exosuit.py PEG_HEAD (same as VH-01..10 and VH2)"
+ },
+ "helm_frame": {
+  "neck_cut_z": 0,
+  "helm_centre_z_mm": 2.8,
+  "helm_scale_HS": 1.12,
+  "faces": "-y",
+  "units": "mm"
+ },
+ "family": {
+  "split_chevron": "every glass outline has a lower edge falling to a V at the centre and is split by the keel bar (or a bridge on the goggles); glass recessed 0.25-0.34 mm under a raised frame 0.45-0.5 mm wide",
+  "keel": "one keel line from nape over the crown to the face split (crest tube, flat ridge plate, cap ridge, fin)"
+ },
+ "feature_floor": {
+  "raised_min_mm": 0.5,
+  "slot_min_w_mm": 0.3,
+  "slot_depth_max_mm": 0.35,
+  "rib_min_mm": 0.42,
+  "frame_min_mm": 0.42,
+  "wire_min_d_mm": 0.76
+ },
+ "fit_test": {
+  "figure": "vigil-rifleman-mk2/build/upright/figure.stl (+ backpack.stl)",
+  "pose": "vigil-rifleman-mk2/spec/vigil-rifleman-mk2.spec.json via its source/build.py",
+  "placement": "exosuit.helm_placement(pose)",
+  "method": "sdfkit.overlap_volume (manifold3d exact intersection), same 0.02 mm3 threshold as sdfkit.Package interference"
+ },
+ "catalog": {
+  "family": "Bits & Helms",
+  "revision_note": "8 swappable VH3 helms on the line's 1.6 mm D-flat peg",
+  "base": "none (bits)",
+  "footprint": "8 helms",
+  "description": "Third-generation Vigil helm library (VH3): eight helms chosen for silhouette. VH3-01 Plummet (drop trooper: wide wrap visor under a brow ridge, flared jaw armour), VH3-02 Sightline (recon: twin chevron lenses, side optic pod), VH3-03 Ironclad (heavy assault: flat-topped, portcullis grille faceplate, hoses to a collar), VH3-04 Herald (officer: swept keel fin, comm mast, rank chevrons), VH3-05 Stillwater (sealed void globe with a domed window, collar and back pack), VH3-06 Deckhand (open-face crew cap with goggles and headset), VH3-07 Longsight (sniper: sallet tail, flip-down monocular), VH3-08 Grimward (scarred veteran: original relief death's-head faceplate, shattered fin). Every helm keeps the split-chevron glass and keel line, with the glass as a separate recessed surface for painting. Same 1.6 mm D-flat neck peg as VH-01..10 and VH2.",
+  "images": [
+   {
+    "path": "images/vigil-helms-mk3-sheet-front.png",
+    "label": "Display sheet: front"
+   },
+   {
+    "path": "images/vigil-helms-mk3-sheet-34.png",
+    "label": "Display sheet: 3/4"
+   },
+   {
+    "path": "images/vigil-helms-mk3-sheet-side.png",
+    "label": "Display sheet: side"
+   },
+   {
+    "path": "images/vigil-helms-mk3-fit.png",
+    "label": "Fit test: each helm on the rifleman"
+   },
+   {
+    "path": "images/vigil-helms-mk3-hero.png",
+    "label": "Library, 3/4 (render)"
+   },
+   {
+    "path": "images/vigil-helms-mk3-turnaround.png",
+    "label": "Turnaround: 3/4, front, side, back"
+   }
+  ],
+  "defaultExplode": 0,
+  "buildNotes": [
+   "Defined in tools/helms3.py (VH3 registry, signed-distance sculpt on tools/vh2.py building blocks); built on a 0.05 mm grid, print meshes not simplified or decimated.",
+   "Silhouette variety is measured (source/silhouettes.py: front/side silhouette IoU); see DESIGN-LOG.md.",
+   "Fit tested on the rifleman (source/fit.py): exact helm/figure and helm/backpack overlap volume after exosuit.helm_placement.",
+   "Display sheets colour the glass from each helm's own glass masks; the print files are one solid each."
+  ],
+  "limitations": "Procedural sculpt at about 6 mm helm width: faces are stylised; damage is cut geometry. No STEP on this host (no FreeCAD). Printability is a heuristic screen (unified-CAD-MCP), not a test print."
+ }
+}

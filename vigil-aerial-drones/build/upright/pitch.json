@@ -1,0 +1,21 @@
+{
+ "belfry": 0.1244,
+ "angelus": 0.1,
+ "angelus-main-rotor": 0.06,
+ "angelus-tail-rotor": 0.04,
+ "knell": 0.1,
+ "launcher-rail": 0.092,
+ "launcher-tripod": 0.07,
+ "launcher-roof-pad": 0.06,
+ "vl-01-eo-turret": 0.05,
+ "vl-02-sar-pod": 0.05,
+ "vl-03-twin-munitions": 0.05,
+ "vl-04-cargo-pod": 0.05,
+ "vl-10-eo-mast": 0.05,
+ "vl-11-relay-mast": 0.05,
+ "vl-12-radar-mast": 0.05,
+ "flight-stem": 0.1,
+ "base-50-stem": 0.2,
+ "base-40-stem": 0.18,
+ "base-50-tether": 0.2334
+}

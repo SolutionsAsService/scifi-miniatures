@@ -1,0 +1,428 @@
+{
+ "tool_calls": [
+  {
+   "tool": "miniature_floor_clearance_check",
+   "label": "Vigilant on a 32 mm base (rifleman / heavy)",
+   "args": {
+    "scale": "30mm",
+    "storey_clear_mm": 24.2,
+    "door_mm": [
+     26,
+     23.7
+    ],
+    "base_height_mm": 4.0,
+    "figure_base_mm": 32.0,
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "process": "msla_resin"
+   },
+   "result": {
+    "scale": "30mm",
+    "ratio": 55.54,
+    "figure_crown_mm": 32.05,
+    "figure_on_base_heroic_mm": 39.25,
+    "checks": [
+     {
+      "name": "storey clear height vs figure on base",
+      "value": 24.2,
+      "limit": 42.25,
+      "pass": false
+     },
+     {
+      "name": "door width vs base",
+      "value": 26.0,
+      "limit": 22.4,
+      "pass": true
+     },
+     {
+      "name": "door height vs figure on base",
+      "value": 23.7,
+      "limit": 36.05,
+      "pass": false
+     },
+     {
+      "name": "floor hatch fits a fingertip",
+      "value": 16.8,
+      "limit": 10.0,
+      "pass": true
+     }
+    ],
+    "all_checks_pass": false,
+    "basis": "HEURISTIC: crown height of a 1.78 m figure, +10 % heroic, + base, + 3 mm hand room; door width 0.7 x base; slip clearance from PROCESSES; 2 mm lip so storeys do not slide; 10 mm hatch for a fingertip."
+   }
+  },
+  {
+   "tool": "miniature_floor_clearance_check",
+   "label": "Vigilant on a 25 mm base",
+   "args": {
+    "scale": "30mm",
+    "storey_clear_mm": 24.2,
+    "door_mm": [
+     26,
+     23.7
+    ],
+    "base_height_mm": 4.0,
+    "figure_base_mm": 25.0,
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "process": "msla_resin"
+   },
+   "result": {
+    "scale": "30mm",
+    "ratio": 55.54,
+    "figure_crown_mm": 32.05,
+    "figure_on_base_heroic_mm": 39.25,
+    "checks": [
+     {
+      "name": "storey clear height vs figure on base",
+      "value": 24.2,
+      "limit": 42.25,
+      "pass": false
+     },
+     {
+      "name": "door width vs base",
+      "value": 26.0,
+      "limit": 17.5,
+      "pass": true
+     },
+     {
+      "name": "door height vs figure on base",
+      "value": 23.7,
+      "limit": 36.05,
+      "pass": false
+     },
+     {
+      "name": "floor hatch fits a fingertip",
+      "value": 16.8,
+      "limit": 10.0,
+      "pass": true
+     }
+    ],
+    "all_checks_pass": false,
+    "basis": "HEURISTIC: crown height of a 1.78 m figure, +10 % heroic, + base, + 3 mm hand room; door width 0.7 x base; slip clearance from PROCESSES; 2 mm lip so storeys do not slide; 10 mm hatch for a fingertip."
+   }
+  }
+ ],
+ "envelope_test": {
+  "figures": {
+   "vigil-rifleman": {
+    "height_mm": 32.37,
+    "plan_min_rect_mm": [
+     13.74,
+     23.02
+    ],
+    "upper_body_min_rect_mm": [
+     13.82,
+     21.43
+    ]
+   },
+   "vigil-rifleman-mk2": {
+    "height_mm": 32.38,
+    "plan_min_rect_mm": [
+     13.79,
+     23.47
+    ],
+    "upper_body_min_rect_mm": [
+     13.78,
+     21.94
+    ]
+   },
+   "vigil-marksman": {
+    "height_mm": 26.53,
+    "plan_min_rect_mm": [
+     13.9,
+     31.04
+    ],
+    "upper_body_min_rect_mm": [
+     13.83,
+     25.08
+    ]
+   },
+   "vigil-heavy": {
+    "height_mm": 31.91,
+    "plan_min_rect_mm": [
+     14.72,
+     21.79
+    ],
+    "upper_body_min_rect_mm": [
+     13.35,
+     20.77
+    ]
+   },
+   "vigil-warden": {
+    "height_mm": 35.65,
+    "plan_min_rect_mm": [
+     13.08,
+     20.86
+    ],
+    "upper_body_min_rect_mm": [
+     13.08,
+     20.54
+    ]
+   }
+  },
+  "openings": [
+   {
+    "figure": "vigil-rifleman",
+    "opening": "stern door (crouched to 65 % of height, Dreyfuss)",
+    "needs_height_mm": 21.54,
+    "door_clear_height_mm": 23.7,
+    "fits": true
+   },
+   {
+    "figure": "vigil-rifleman",
+    "opening": "stern door (lying, lengthwise)",
+    "needs_mm": [
+     24.02,
+     14.74
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-rifleman",
+    "opening": "stern door (standing)",
+    "needs_height_mm": 32.37,
+    "door_clear_height_mm": 23.7,
+    "fits": false
+   },
+   {
+    "figure": "vigil-rifleman",
+    "opening": "roof hatch (upper body standing in the hatch)",
+    "needs_mm": [
+     14.82,
+     22.43
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-rifleman",
+    "opening": "roof hatch (whole figure passing through, lengthwise)",
+    "needs_mm": [
+     14.74,
+     24.02
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-rifleman-mk2",
+    "opening": "stern door (crouched to 65 % of height, Dreyfuss)",
+    "needs_height_mm": 21.55,
+    "door_clear_height_mm": 23.7,
+    "fits": true
+   },
+   {
+    "figure": "vigil-rifleman-mk2",
+    "opening": "stern door (lying, lengthwise)",
+    "needs_mm": [
+     24.47,
+     14.79
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-rifleman-mk2",
+    "opening": "stern door (standing)",
+    "needs_height_mm": 32.38,
+    "door_clear_height_mm": 23.7,
+    "fits": false
+   },
+   {
+    "figure": "vigil-rifleman-mk2",
+    "opening": "roof hatch (upper body standing in the hatch)",
+    "needs_mm": [
+     14.78,
+     22.94
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-rifleman-mk2",
+    "opening": "roof hatch (whole figure passing through, lengthwise)",
+    "needs_mm": [
+     14.79,
+     24.47
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-marksman",
+    "opening": "stern door (crouched to 65 % of height, Dreyfuss)",
+    "needs_height_mm": 17.74,
+    "door_clear_height_mm": 23.7,
+    "fits": true
+   },
+   {
+    "figure": "vigil-marksman",
+    "opening": "stern door (lying, lengthwise)",
+    "needs_mm": [
+     32.04,
+     14.9
+    ],
+    "fits": false
+   },
+   {
+    "figure": "vigil-marksman",
+    "opening": "stern door (standing)",
+    "needs_height_mm": 26.53,
+    "door_clear_height_mm": 23.7,
+    "fits": false
+   },
+   {
+    "figure": "vigil-marksman",
+    "opening": "roof hatch (upper body standing in the hatch)",
+    "needs_mm": [
+     14.83,
+     26.08
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": false
+   },
+   {
+    "figure": "vigil-marksman",
+    "opening": "roof hatch (whole figure passing through, lengthwise)",
+    "needs_mm": [
+     14.9,
+     32.04
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": false
+   },
+   {
+    "figure": "vigil-heavy",
+    "opening": "stern door (crouched to 65 % of height, Dreyfuss)",
+    "needs_height_mm": 21.24,
+    "door_clear_height_mm": 23.7,
+    "fits": true
+   },
+   {
+    "figure": "vigil-heavy",
+    "opening": "stern door (lying, lengthwise)",
+    "needs_mm": [
+     22.79,
+     15.72
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-heavy",
+    "opening": "stern door (standing)",
+    "needs_height_mm": 31.91,
+    "door_clear_height_mm": 23.7,
+    "fits": false
+   },
+   {
+    "figure": "vigil-heavy",
+    "opening": "roof hatch (upper body standing in the hatch)",
+    "needs_mm": [
+     14.35,
+     21.77
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-heavy",
+    "opening": "roof hatch (whole figure passing through, lengthwise)",
+    "needs_mm": [
+     15.72,
+     22.79
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-warden",
+    "opening": "stern door (crouched to 65 % of height, Dreyfuss)",
+    "needs_height_mm": 23.67,
+    "door_clear_height_mm": 23.7,
+    "fits": true
+   },
+   {
+    "figure": "vigil-warden",
+    "opening": "stern door (lying, lengthwise)",
+    "needs_mm": [
+     21.86,
+     14.08
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-warden",
+    "opening": "stern door (standing)",
+    "needs_height_mm": 35.65,
+    "door_clear_height_mm": 23.7,
+    "fits": false
+   },
+   {
+    "figure": "vigil-warden",
+    "opening": "roof hatch (upper body standing in the hatch)",
+    "needs_mm": [
+     14.08,
+     21.54
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-warden",
+    "opening": "roof hatch (whole figure passing through, lengthwise)",
+    "needs_mm": [
+     14.08,
+     21.86
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   }
+  ],
+  "min_hatch_opening_mm": [
+   32.04,
+   15.72
+  ],
+  "hatch_opening_mm": [
+   24.5,
+   16.8
+  ],
+  "aisle_between_benches_mm": 40,
+  "bay_clear_height_mm": 24.2,
+  "seat_pitch_mm": 18.6,
+  "method": "Figure envelopes from the figure packages' assembled viewer meshes (base excluded): minimum-area rectangle of the plan projection (shapely); upper body = vertices above 55 % of the height. Openings from the spec. Clearance 0.5 mm per side (msla_resin min_clearance). Door test slides the rectangle over the door polygon in 0.1 mm steps."
+ }
+}

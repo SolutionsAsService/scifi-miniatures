@@ -1,0 +1,402 @@
+{
+ "id": "vigil-arsenal-vw3",
+ "generator": "source/build.py (tools/sdfkit.py: SDF sculpt, marching cubes, manifold3d simplification)",
+ "assembled_bbox_mm": [
+  43.18,
+  104.3,
+  26.8
+ ],
+ "parts": {
+  "vw3-01-saker-line-rifle": {
+   "volume_mm3": 128.27,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    22.0,
+    2.82,
+    7.44
+   ],
+   "triangles": 281864,
+   "instances": 1
+  },
+  "vw3-02-caliver-marksman-bullpup": {
+   "volume_mm3": 139.29,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    25.6,
+    2.66,
+    8.45
+   ],
+   "triangles": 258936,
+   "instances": 1
+  },
+  "vw3-03-serpentine-grenadier-bullpup": {
+   "volume_mm3": 130.06,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    19.5,
+    2.66,
+    7.48
+   ],
+   "triangles": 284070,
+   "instances": 1
+  },
+  "vw3-04-minion-bullpup-carbine": {
+   "volume_mm3": 108.25,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    18.2,
+    2.66,
+    7.84
+   ],
+   "triangles": 241300,
+   "instances": 1
+  },
+  "vw3-05-falconet-carbine": {
+   "volume_mm3": 93.72,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    19.46,
+    2.58,
+    8.79
+   ],
+   "triangles": 230744,
+   "instances": 1
+  },
+  "vw3-06-basilisk-battle-rifle": {
+   "volume_mm3": 134.06,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    24.31,
+    2.62,
+    10.5
+   ],
+   "triangles": 257436,
+   "instances": 1
+  },
+  "vw3-07-petronel-assault-rifle": {
+   "volume_mm3": 111.83,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    19.68,
+    2.7,
+    8.49
+   ],
+   "triangles": 270056,
+   "instances": 1
+  },
+  "vw3-08-hackbut-heavy-rifle": {
+   "volume_mm3": 126.88,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    20.88,
+    3.28,
+    7.69
+   ],
+   "triangles": 261528,
+   "instances": 1
+  },
+  "vw3-09-fowler-las-carbine": {
+   "volume_mm3": 108.16,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    19.98,
+    2.65,
+    6.67
+   ],
+   "triangles": 241372,
+   "instances": 1
+  },
+  "vw3-10-arquebus-assault-rifle": {
+   "volume_mm3": 88.1,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    17.2,
+    2.9,
+    8.74
+   ],
+   "triangles": 216616,
+   "instances": 1
+  },
+  "vw3-11-musketoon-combat-shotgun": {
+   "volume_mm3": 102.95,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    19.88,
+    2.52,
+    5.94
+   ],
+   "triangles": 236744,
+   "instances": 1
+  },
+  "vw3-12-snaphance-smg": {
+   "volume_mm3": 50.98,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    9.65,
+    2.63,
+    6.91
+   ],
+   "triangles": 141552,
+   "instances": 1
+  },
+  "vw3-13-dag-heavy-pistol": {
+   "volume_mm3": 16.27,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    6.6,
+    1.4,
+    4.48
+   ],
+   "triangles": 57068,
+   "instances": 1
+  },
+  "vw3-14-wheellock-machine-pistol": {
+   "volume_mm3": 22.29,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    7.0,
+    1.48,
+    7.92
+   ],
+   "triangles": 80724,
+   "instances": 1
+  },
+  "vb3-01-thorn-power-sword": {
+   "volume_mm3": 42.22,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    6.34,
+    1.96,
+    19.13
+   ],
+   "triangles": 146860,
+   "instances": 1
+  },
+  "vb3-02-tulwar-power-sabre": {
+   "volume_mm3": 32.12,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.64,
+    1.3,
+    18.3
+   ],
+   "triangles": 112156,
+   "instances": 1
+  },
+  "vb3-03-estoc-great-blade": {
+   "volume_mm3": 52.23,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.56,
+    2.0,
+    26.8
+   ],
+   "triangles": 168188,
+   "instances": 1
+  },
+  "vb3-04-flamberge-power-sword": {
+   "volume_mm3": 48.84,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.63,
+    1.64,
+    19.13
+   ],
+   "triangles": 151780,
+   "instances": 1
+  },
+  "vb3-05-falx-power-cleaver": {
+   "volume_mm3": 34.5,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    4.77,
+    1.32,
+    17.82
+   ],
+   "triangles": 110868,
+   "instances": 1
+  },
+  "vb3-06-keel-power-sword": {
+   "volume_mm3": 55.92,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.01,
+    1.64,
+    19.47
+   ],
+   "triangles": 160124,
+   "instances": 1
+  }
+ },
+ "interference": [],
+ "step": {
+  "file": null,
+  "status": "SKIPPED",
+  "reason": "STEP SKIPPED: FreeCAD is not installed on this build host (WSL, no FreeCAD / freecad-shim), so the faceted reference STEP that tools/sdfkit.write_step makes through FreeCAD could not be written. The print STLs in print/stl/ and build/upright/ are the deliverable; re-run source/build.py on a host with FreeCAD for a STEP."
+ },
+ "voxel_mm": {
+  "vw3-01-saker-line-rifle": 0.05,
+  "vw3-02-caliver-marksman-bullpup": 0.0558,
+  "vw3-03-serpentine-grenadier-bullpup": 0.05,
+  "vw3-04-minion-bullpup-carbine": 0.05,
+  "vw3-05-falconet-carbine": 0.05,
+  "vw3-06-basilisk-battle-rifle": 0.056,
+  "vw3-07-petronel-assault-rifle": 0.05,
+  "vw3-08-hackbut-heavy-rifle": 0.0526,
+  "vw3-09-fowler-las-carbine": 0.05,
+  "vw3-10-arquebus-assault-rifle": 0.05,
+  "vw3-11-musketoon-combat-shotgun": 0.05,
+  "vw3-12-snaphance-smg": 0.05,
+  "vw3-13-dag-heavy-pistol": 0.05,
+  "vw3-14-wheellock-machine-pistol": 0.05,
+  "vb3-01-thorn-power-sword": 0.05,
+  "vb3-02-tulwar-power-sabre": 0.05,
+  "vb3-03-estoc-great-blade": 0.05,
+  "vb3-04-flamberge-power-sword": 0.05,
+  "vb3-05-falx-power-cleaver": 0.05,
+  "vb3-06-keel-power-sword": 0.05
+ },
+ "mesh_log": {
+  "VW3-01 Saker line rifle": {
+   "pitch_mm": 0.05,
+   "triangles": 281864,
+   "opening_r_mm": 0.22,
+   "opened_away_mm3": 4.7639
+  },
+  "VW3-02 Caliver marksman bullpup": {
+   "pitch_mm": 0.0558,
+   "triangles": 258936,
+   "opening_r_mm": 0.22,
+   "opened_away_mm3": 2.0931
+  },
+  "VW3-03 Serpentine grenadier bullpup": {
+   "pitch_mm": 0.05,
+   "triangles": 284070,
+   "opening_r_mm": 0.22,
+   "opened_away_mm3": 4.371
+  },
+  "VW3-04 Minion bullpup carbine": {
+   "pitch_mm": 0.05,
+   "triangles": 241300,
+   "opening_r_mm": 0.22,
+   "opened_away_mm3": 3.3123
+  },
+  "VW3-05 Falconet carbine": {
+   "pitch_mm": 0.05,
+   "triangles": 230744,
+   "opening_r_mm": 0.22,
+   "opened_away_mm3": 4.3041
+  },
+  "VW3-06 Basilisk battle rifle": {
+   "pitch_mm": 0.056,
+   "triangles": 257436,
+   "opening_r_mm": 0.22,
+   "opened_away_mm3": 1.7881
+  },
+  "VW3-07 Petronel assault rifle": {
+   "pitch_mm": 0.05,
+   "triangles": 270056,
+   "opening_r_mm": 0.22,
+   "opened_away_mm3": 4.0696
+  },
+  "VW3-08 Hackbut heavy rifle": {
+   "pitch_mm": 0.0526,
+   "triangles": 261528,
+   "opening_r_mm": 0.22,
+   "opened_away_mm3": 5.3524
+  },
+  "VW3-09 Fowler las carbine": {
+   "pitch_mm": 0.05,
+   "triangles": 241372,
+   "opening_r_mm": 0.22,
+   "opened_away_mm3": 3.9179
+  },
+  "VW3-10 Arquebus assault rifle": {
+   "pitch_mm": 0.05,
+   "triangles": 216616,
+   "opening_r_mm": 0.22,
+   "opened_away_mm3": 3.4513
+  },
+  "VW3-11 Musketoon combat shotgun": {
+   "pitch_mm": 0.05,
+   "triangles": 236744,
+   "opening_r_mm": 0.22,
+   "opened_away_mm3": 3.5836
+  },
+  "VW3-12 Snaphance SMG": {
+   "pitch_mm": 0.05,
+   "triangles": 141552,
+   "opening_r_mm": 0.22,
+   "opened_away_mm3": 2.1501
+  },
+  "VW3-13 Dag heavy pistol": {
+   "pitch_mm": 0.05,
+   "triangles": 57068,
+   "opening_r_mm": 0.22,
+   "opened_away_mm3": 1.2085
+  },
+  "VW3-14 Wheellock machine pistol": {
+   "pitch_mm": 0.05,
+   "triangles": 80724,
+   "opening_r_mm": 0.22,
+   "opened_away_mm3": 1.4979
+  },
+  "VB3-01 Thorn power sword": {
+   "pitch_mm": 0.05,
+   "triangles": 146860,
+   "opening_r_mm": null,
+   "opened_away_mm3": 0.0
+  },
+  "VB3-02 Tulwar power sabre": {
+   "pitch_mm": 0.05,
+   "triangles": 112156,
+   "opening_r_mm": null,
+   "opened_away_mm3": 0.0
+  },
+  "VB3-03 Estoc great-blade": {
+   "pitch_mm": 0.05,
+   "triangles": 168188,
+   "opening_r_mm": null,
+   "opened_away_mm3": 0.0
+  },
+  "VB3-04 Flamberge power sword": {
+   "pitch_mm": 0.05,
+   "triangles": 151780,
+   "opening_r_mm": null,
+   "opened_away_mm3": 0.0
+  },
+  "VB3-05 Falx power cleaver": {
+   "pitch_mm": 0.05,
+   "triangles": 110868,
+   "opening_r_mm": null,
+   "opened_away_mm3": 0.0
+  },
+  "VB3-06 Keel power sword": {
+   "pitch_mm": 0.05,
+   "triangles": 160124,
+   "opening_r_mm": null,
+   "opened_away_mm3": 0.0
+  }
+ },
+ "print_mesh_policy": "marching cubes at the listed pitch after a morphological opening of the SDF grid (guns: ball r 0.22 mm, arsenal3.open_slivers; blades: none), largest body kept (sub-0.05 mm3 dust dropped), no decimation"
+}

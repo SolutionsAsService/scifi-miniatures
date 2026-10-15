@@ -1,0 +1,102 @@
+[
+ {
+  "stl": "vw3-01-saker-line-rifle",
+  "label": "VW3-01 Saker line rifle",
+  "plan": false
+ },
+ {
+  "stl": "vw3-02-caliver-marksman-bullpup",
+  "label": "VW3-02 Caliver marksman bullpup",
+  "plan": false
+ },
+ {
+  "stl": "vw3-03-serpentine-grenadier-bullpup",
+  "label": "VW3-03 Serpentine grenadier bullpup",
+  "plan": false
+ },
+ {
+  "stl": "vw3-04-minion-bullpup-carbine",
+  "label": "VW3-04 Minion bullpup carbine",
+  "plan": false
+ },
+ {
+  "stl": "vw3-05-falconet-carbine",
+  "label": "VW3-05 Falconet carbine",
+  "plan": false
+ },
+ {
+  "stl": "vw3-06-basilisk-battle-rifle",
+  "label": "VW3-06 Basilisk battle rifle",
+  "plan": false
+ },
+ {
+  "stl": "vw3-07-petronel-assault-rifle",
+  "label": "VW3-07 Petronel assault rifle",
+  "plan": false
+ },
+ {
+  "stl": "vw3-08-hackbut-heavy-rifle",
+  "label": "VW3-08 Hackbut heavy rifle",
+  "plan": false
+ },
+ {
+  "stl": "vw3-09-fowler-las-carbine",
+  "label": "VW3-09 Fowler las carbine",
+  "plan": false
+ },
+ {
+  "stl": "vw3-10-arquebus-assault-rifle",
+  "label": "VW3-10 Arquebus assault rifle",
+  "plan": false
+ },
+ {
+  "stl": "vw3-11-musketoon-combat-shotgun",
+  "label": "VW3-11 Musketoon combat shotgun",
+  "plan": false
+ },
+ {
+  "stl": "vw3-12-snaphance-smg",
+  "label": "VW3-12 Snaphance SMG",
+  "plan": false
+ },
+ {
+  "stl": "vw3-13-dag-heavy-pistol",
+  "label": "VW3-13 Dag heavy pistol",
+  "plan": false
+ },
+ {
+  "stl": "vw3-14-wheellock-machine-pistol",
+  "label": "VW3-14 Wheellock machine pistol",
+  "plan": false
+ },
+ {
+  "stl": "vb3-01-thorn-power-sword",
+  "label": "VB3-01 Thorn power sword",
+  "plan": false
+ },
+ {
+  "stl": "vb3-02-tulwar-power-sabre",
+  "label": "VB3-02 Tulwar power sabre",
+  "plan": false
+ },
+ {
+  "stl": "vb3-03-estoc-great-blade",
+  "label": "VB3-03 Estoc great-blade",
+  "plan": false
+ },
+ {
+  "stl": "vb3-04-flamberge-power-sword",
+  "label": "VB3-04 Flamberge power sword",
+  "plan": false
+ },
+ {
+  "stl": "vb3-05-falx-power-cleaver",
+  "label": "VB3-05 Falx power cleaver",
+  "plan": false
+ },
+ {
+  "stl": "vb3-06-keel-power-sword",
+  "label": "VB3-06 Keel power sword",
+  "plan": false
+ }
+]

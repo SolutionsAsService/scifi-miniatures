@@ -1,0 +1,181 @@
+{
+ "id": "vigil-arsenal-vw3",
+ "name": "Vigil arsenal VW3: heroic rifles, sidearms and power blades",
+ "line": "scifi",
+ "family": "Bits & Weapons",
+ "revision": "0.1 · VW3 series: 14 chunky heroic guns + 6 VB3 power blades, loose parts sized for the Vigil hands",
+ "description": "Third-generation Vigilant weapons, chunkier and more detailed than VW2: VW3-01 Saker line rifle, VW3-02 Caliver marksman bullpup, VW3-03 Serpentine grenadier bullpup, VW3-04 Minion bullpup carbine, VW3-05 Falconet carbine, VW3-06 Basilisk battle rifle, VW3-07 Petronel assault rifle (pump launcher), VW3-08 Hackbut heavy rifle, VW3-09 Fowler las carbine, VW3-10 Arquebus assault rifle, VW3-11 Musketoon combat shotgun, VW3-12 Snaphance SMG, VW3-13 Dag heavy pistol, VW3-14 Wheellock machine pistol; and power blades VB3-01 Thorn, VB3-02 Tulwar sabre, VB3-03 Estoc great-blade, VB3-04 Flamberge, VB3-05 Falx cleaver, VB3-06 Keel sword. Bullpup and conventional layouts, integrated optics and large scopes, under-barrel launchers, vertical and angled fore grips, boxy receivers with big seams and vent rhythm, separate magazines; pierced and stepped blades with sweeping guards, segmented grips and ring pommels.",
+ "images": [
+  {
+   "path": "images/vigil-arsenal-vw3-sheet.png",
+   "label": "Display sheet: guns in side profile, common scale"
+  },
+  {
+   "path": "images/vigil-arsenal-vw3-blades.png",
+   "label": "Display sheet: power blades, common scale"
+  },
+  {
+   "path": "images/vigil-arsenal-vw3-closeups-1.png",
+   "label": "3/4 close-ups VW3-01..10"
+  },
+  {
+   "path": "images/vigil-arsenal-vw3-closeups-2.png",
+   "label": "3/4 close-ups VW3-11..14, VB3-01..06"
+  },
+  {
+   "path": "images/vigil-arsenal-vw3-hero.png",
+   "label": "Arsenal (3/4)"
+  }
+ ],
+ "defaultExplode": 0,
+ "buildNotes": [
+  "Defined in tools/arsenal3.py (WEAPONS3, BLADES3); built by source/build.py on a 0.05 mm SDF grid, re-meshed coarser per part only if over the 285k-triangle checker budget (pitch per part in reports/build.json).",
+  "Every pistol grip is the VW grip block (1.0 x 1.1 x 2.0 mm at the origin) and every blade grip a 1.0 mm core with 1.26 mm rings, so figures hold VW3/VB3 parts with the existing gauntlets.",
+  "Blade edges are 0.5 mm flats (no knife edges); seams 0.45 x 0.3 mm, vents 0.45 x 0.32 mm, rail teeth 0.5 mm; see DESIGN-LOG.md."
+ ],
+ "limitations": "Procedural designs; printability is a heuristic screen (unified-CAD-MCP), not a test print. No STEP export: FreeCAD is not installed on the build host (WSL), so cad/ holds a SKIPPED note instead of an assembly STEP.",
+ "mini": {
+  "scale": {
+   "label": "30 mm heroic",
+   "ratio": "1:56"
+  },
+  "base": "none (bits)",
+  "footprint": "20 weapon bits",
+  "process": "MSLA resin · 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
+  "volumeMl": 1.6,
+  "volumeLabel": "Resin volume",
+  "printHeightMm": 26.8,
+  "printability": {
+   "verdict": "fail",
+   "preset": "msla_resin",
+   "checkedBy": "unified-CAD-MCP miniature_printability_check",
+   "summary": "vw3-01-saker-line-rifle: minimum wall (supported) = 14.4525 (limit <= 0.5 mm2 thinner than 0.4 mm); vw3-02-caliver-marksman-bullpup: minimum wall (supported) = 9.0059 (limit <= 0.5 mm2 thinner than 0.4 mm); vw3-03-serpentine-grenadier-bullpup: minimum wall (supported) = 15.3006 (limit <= 0.5 mm2 thinner than 0.4 mm); vw3-04-minion-bullpup-carbine: minimum wall (supported) = 7.9337 (limit <= 0.5 mm",
+   "issues": [
+    "Advisory: minimum wall (unsupported)"
+   ],
+   "report": "reports/printability.md"
+  },
+  "printParts": [
+   {
+    "name": "VW3-01 Saker line rifle",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VW3-02 Caliver marksman bullpup",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VW3-03 Serpentine grenadier bullpup",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VW3-04 Minion bullpup carbine",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VW3-05 Falconet carbine",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VW3-06 Basilisk battle rifle",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VW3-07 Petronel assault rifle",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VW3-08 Hackbut heavy rifle",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VW3-09 Fowler las carbine",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VW3-10 Arquebus assault rifle",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VW3-11 Musketoon combat shotgun",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VW3-12 Snaphance SMG",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VW3-13 Dag heavy pistol",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VW3-14 Wheellock machine pistol",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VB3-01 Thorn power sword",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VB3-02 Tulwar power sabre",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VB3-03 Estoc great-blade",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VB3-04 Flamberge power sword",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VB3-05 Falx power cleaver",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   },
+   {
+    "name": "VB3-06 Keel power sword",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports under the part, as modelled (guns lying, blades standing)"
+   }
+  ]
+ }
+}

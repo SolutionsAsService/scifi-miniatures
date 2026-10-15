@@ -1,0 +1,71 @@
+{
+ "all_pass": false,
+ "problems": [
+  "vh3-01-plummet: minimum wall (supported) = 4.7891 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "vh3-02-sightline: minimum wall (supported) = 4.781 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "vh3-03-ironclad: minimum wall (supported) = 4.2972 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "vh3-04-herald: minimum wall (supported) = 7.357 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "vh3-05-stillwater: minimum wall (supported) = 6.5091 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "vh3-06-deckhand: minimum wall (supported) = 4.8918 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "vh3-07-longsight: minimum wall (supported) = 10.5473 (limit <= 0.5 mm2 thinner than 0.4 mm)",
+  "vh3-08-grimward: minimum wall (supported) = 11.0227 (limit <= 0.5 mm2 thinner than 0.4 mm)"
+ ],
+ "parts": {
+  "vh3-01-plummet": {
+   "pose": "tilted +45 deg about x, +0 deg about y, on supports",
+   "ml": 0.124,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh3-02-sightline": {
+   "pose": "tilted +45 deg about x, +0 deg about y, on supports",
+   "ml": 0.118,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh3-03-ironclad": {
+   "pose": "tilted +30 deg about x, +0 deg about y, on supports",
+   "ml": 0.127,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh3-04-herald": {
+   "pose": "tilted +30 deg about x, +0 deg about y, on supports",
+   "ml": 0.119,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh3-05-stillwater": {
+   "pose": "tilted -30 deg about x, +0 deg about y, on supports",
+   "ml": 0.122,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh3-06-deckhand": {
+   "pose": "tilted -45 deg about x, +0 deg about y, on supports",
+   "ml": 0.094,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh3-07-longsight": {
+   "pose": "tilted +45 deg about x, +0 deg about y, on supports",
+   "ml": 0.13,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "vh3-08-grimward": {
+   "pose": "tilted -30 deg about x, +0 deg about y, on supports",
+   "ml": 0.119,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  }
+ }
+}

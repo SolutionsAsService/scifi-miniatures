@@ -1,0 +1,7 @@
+body bad 0 [] comps 1
+helm bad 0 [] comps 1
+pack bad 0 [] comps 1
+body+helm bad 0 [] comps 2
+body+pack bad 0 [] comps 8
+all trimmed bad 0 [] comps 9
+neck_cut [0.023878532776339355, -0.13884799063741005, 25.35535397271319] cut_z 25.35535397271319

@@ -1,0 +1,18 @@
+wisp-landed: 572668 triangles over budget, re-meshing at 0.0764 mm
+wisp-landed: 246428 tris at 0.0764 mm, vol 244.37 mm3, bbox [16.0, 14.4, 4.9] (24 s)
+flight-stem: 99328 tris at 0.06 mm, vol 54.15 mm3, bbox [1.6, 1.6, 27.0] (1 s)
+tick-hull: 506940 triangles over budget, re-meshing at 0.0863 mm
+tick-hull: 247448 tris at 0.0863 mm, vol 1006.68 mm3, bbox [12.96, 18.53, 6.5] (12 s)
+tick-mast: 73568 tris at 0.04 mm, vol 13.47 mm3, bbox [2.6, 2.2, 7.5] (1 s)
+tick-weapon-a-talon: 165348 tris at 0.04 mm, vol 42.45 mm3, bbox [3.37, 8.9, 7.5] (7 s)
+tick-weapon-b-plough: 363328 triangles over budget, re-meshing at 0.0487 mm
+tick-weapon-b-plough: 246076 tris at 0.0487 mm, vol 77.07 mm3, bbox [13.14, 13.0, 8.68] (12 s)
+tick-weapon-c-relay: 170976 tris at 0.04 mm, vol 31.85 mm3, bbox [5.19, 3.44, 10.7] (3 s)
+sdc-cradle: 491482 triangles over budget, re-meshing at 0.0637 mm
+sdc-cradle: 245312 tris at 0.0637 mm, vol 261.44 mm3, bbox [9.4, 8.35, 10.35] (25 s)
+sdc-pack-saddle: 202224 tris at 0.045 mm, vol 82.57 mm3, bbox [6.3, 5.8, 5.07] (3 s)
+base-32-stem: 702462 triangles over budget, re-meshing at 0.1354 mm
+base-32-stem: 249334 tris at 0.1354 mm, vol 2230.26 mm3, bbox [31.94, 31.95, 4.55] (19 s)
+base-32-plain: 685544 triangles over budget, re-meshing at 0.1338 mm
+base-32-plain: 241308 tris at 0.1338 mm, vol 2211.84 mm3, bbox [31.94, 31.95, 3.0] (20 s)
+partial build done in 132 s

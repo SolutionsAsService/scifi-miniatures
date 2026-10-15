@@ -1,0 +1,120 @@
+{
+ "id": "vigil-arsenal-vw3",
+ "name": "Vigil arsenal VW3: heroic rifles, sidearms and power blades",
+ "revision": "0.1",
+ "line": "scifi",
+ "process": "msla_resin",
+ "scale": {
+  "label": "30 mm heroic",
+  "ratio": "1:56",
+  "tool_scale": "28mm"
+ },
+ "voxel_mm": 0.05,
+ "max_print_triangles": 285000,
+ "mesh_policy": "re-mesh the SDF coarser until under the checker budget; no decimation of print meshes (3dada lesson)",
+ "registry": "tools/arsenal3.py WEAPONS3 (VW3-01..14), BLADES3 (VB3-01..06); tools/armory.py and tools/arsenal.py unchanged",
+ "frame": "mm at print scale; guns: x to the muzzle, z up, origin = main grip / fist centre; blades: grip along +z (blade up), origin = grip centre",
+ "hand_fit": {
+  "grip_block": {
+   "centre_mm": [
+    0,
+    0,
+    -0.45
+   ],
+   "section_mm": [
+    1,
+    1.1
+   ],
+   "length_mm": 2,
+   "rake_deg": "10-18, bottom toward the stock"
+  },
+  "blade_grip": {
+   "core_d_mm": 1,
+   "ring_d_mm": 1.26,
+   "note": "inside the exosuit.fist() gauntlet (rbox half 0.85 x 1.0 x 1.05, r 0.55) closed on the grip axis"
+  },
+  "fore_grips": "1.0 x 1.1 mm vertical grips / 1.0 mm bars: the same fist closes on them (FORE3 in tools/arsenal3.py)"
+ },
+ "detail_rules_mm": {
+  "panel_seam": {
+   "width": 0.45,
+   "depth": 0.3
+  },
+  "vent_slot": {
+   "width": 0.45,
+   "depth": 0.32,
+   "min_land": 0.5
+  },
+  "rail_tooth": {
+   "width": 0.5,
+   "pitch": 1,
+   "height": 0.3
+  },
+  "raised_plate": 0.2,
+  "bolt_d": 0.5,
+  "barrel_min_d": 1.2,
+  "bore_or_lens_recess": {
+   "depth": "0.35-0.6",
+   "min_rim": 0.46
+  },
+  "bars_min_d": 0.64,
+  "window_min_land": 0.6,
+  "blade_edge_flat": 0.5,
+  "brief_blade_edge_flat_min": 0.4,
+  "blade_spine": "1.0-1.3",
+  "convex_edge_round": "0.22 (guns, from the opening)"
+ },
+ "receiver_mm": {
+  "width": "2.0-2.24 (VW2 1.9)",
+  "depth": "2.6-3.4 (VW2 2.3)",
+  "long_arm_length": "17-23"
+ },
+ "exaggerations": [
+  "receivers 2.0-2.24 mm wide and up to 3.4 mm deep: about 1.3x a true 1:56 rifle so seams and vents read at arm's length",
+  "panel seams 0.45 x 0.3 mm (a true 6 mm seam is 0.1 mm); vent slots 0.45 mm with 0.5 mm lands",
+  "rail teeth 0.5 mm on a 1.0 mm pitch (true picatinny pitch 0.09 mm at 1:56)",
+  "barrels 1.2-1.6 mm (true 0.3-0.5 mm)",
+  "blade edges are 0.5 mm flats, blade spines 1.0-1.3 mm (true sword edge ~0 mm, spine 0.1 mm at 1:56)",
+  "grips sized to the Vigil gauntlet (1.0 x 1.1 mm), not to a scaled human hand"
+ ],
+ "catalog": {
+  "family": "Bits & Weapons",
+  "revision_note": "VW3 series: 14 chunky heroic guns + 6 VB3 power blades, loose parts sized for the Vigil hands",
+  "base": "none (bits)",
+  "footprint": "20 weapon bits",
+  "description": "Third-generation Vigilant weapons, chunkier and more detailed than VW2: VW3-01 Saker line rifle, VW3-02 Caliver marksman bullpup, VW3-03 Serpentine grenadier bullpup, VW3-04 Minion bullpup carbine, VW3-05 Falconet carbine, VW3-06 Basilisk battle rifle, VW3-07 Petronel assault rifle (pump launcher), VW3-08 Hackbut heavy rifle, VW3-09 Fowler las carbine, VW3-10 Arquebus assault rifle, VW3-11 Musketoon combat shotgun, VW3-12 Snaphance SMG, VW3-13 Dag heavy pistol, VW3-14 Wheellock machine pistol; and power blades VB3-01 Thorn, VB3-02 Tulwar sabre, VB3-03 Estoc great-blade, VB3-04 Flamberge, VB3-05 Falx cleaver, VB3-06 Keel sword. Bullpup and conventional layouts, integrated optics and large scopes, under-barrel launchers, vertical and angled fore grips, boxy receivers with big seams and vent rhythm, separate magazines; pierced and stepped blades with sweeping guards, segmented grips and ring pommels.",
+  "images": [
+   {
+    "path": "images/vigil-arsenal-vw3-sheet.png",
+    "label": "Display sheet: guns in side profile, common scale"
+   },
+   {
+    "path": "images/vigil-arsenal-vw3-blades.png",
+    "label": "Display sheet: power blades, common scale"
+   },
+   {
+    "path": "images/vigil-arsenal-vw3-closeups-1.png",
+    "label": "3/4 close-ups VW3-01..10"
+   },
+   {
+    "path": "images/vigil-arsenal-vw3-closeups-2.png",
+    "label": "3/4 close-ups VW3-11..14, VB3-01..06"
+   },
+   {
+    "path": "images/vigil-arsenal-vw3-hero.png",
+    "label": "Arsenal (3/4)"
+   }
+  ],
+  "buildNotes": [
+   "Defined in tools/arsenal3.py (WEAPONS3, BLADES3); built by source/build.py on a 0.05 mm SDF grid, re-meshed coarser per part only if over the 285k-triangle checker budget (pitch per part in reports/build.json).",
+   "Every pistol grip is the VW grip block (1.0 x 1.1 x 2.0 mm at the origin) and every blade grip a 1.0 mm core with 1.26 mm rings, so figures hold VW3/VB3 parts with the existing gauntlets.",
+   "Blade edges are 0.5 mm flats (no knife edges); seams 0.45 x 0.3 mm, vents 0.45 x 0.32 mm, rail teeth 0.5 mm; see DESIGN-LOG.md."
+  ],
+  "limitations": "Procedural designs; printability is a heuristic screen (unified-CAD-MCP), not a test print. No STEP export: FreeCAD is not installed on the build host (WSL), so cad/ holds a SKIPPED note instead of an assembly STEP."
+ },
+ "opening_r_mm": {
+  "VW3": 0.22,
+  "VB3": null,
+  "_note": "arsenal3.open_slivers: morphological opening of the SDF solid (M6); blades keep crisp 0.5 mm edge flats and are fixed at the source instead (M8)"
+ }
+}

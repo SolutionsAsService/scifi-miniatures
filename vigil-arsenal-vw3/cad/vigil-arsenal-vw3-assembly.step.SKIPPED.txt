@@ -1,0 +1,1 @@
+STEP SKIPPED: FreeCAD is not installed on this build host (WSL, no FreeCAD / freecad-shim), so the faceted reference STEP that tools/sdfkit.write_step makes through FreeCAD could not be written. The print STLs in print/stl/ and build/upright/ are the deliverable; re-run source/build.py on a host with FreeCAD for a STEP.
