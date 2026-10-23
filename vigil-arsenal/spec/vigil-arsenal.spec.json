@@ -1,7 +1,7 @@
 {
  "id": "vigil-arsenal",
  "name": "Vigil arsenal: VW2 detailed weapon set",
- "revision": "0.1",
+ "revision": "0.2",
  "line": "scifi",
  "process": "msla_resin",
  "scale": {
@@ -31,41 +31,53 @@
  },
  "detail_rules_mm": {
   "panel_line": {
-   "width": 0.35,
+   "profile": "90 deg V-groove",
+   "mouth": 0.5,
    "depth": 0.25
   },
   "vent_slot": {
-   "width": 0.4,
+   "width": 0.46,
    "depth": 0.3,
-   "min_land": 0.35
+   "min_land": 0.45
   },
   "rail_tooth": {
-   "width": 0.42,
-   "pitch": 0.85,
-   "height": 0.25
+   "width": 0.45,
+   "pitch": 1.0,
+   "height": 0.25,
+   "gap": 0.55
   },
-  "raised_detail_min": 0.35,
+  "raised_detail": {
+   "bolt_head_diameter": 0.4,
+   "bolt_head_proud": 0.12,
+   "bolt_pitch_min": 0.86,
+   "plate_thickness": 0.16,
+   "plate_seam": 0.5
+  },
+  "min_recess": 0.46,
+  "min_land": 0.45,
   "barrel_min_diameter": 1,
   "brief_barrel_min_diameter": 0.8,
   "lens_or_bore_recess": {
    "depth": "0.3-0.6",
    "min_rim": 0.3
   },
-  "grip_texture": "finger grooves r 0.19 mm, side grooves 0.34 x 0.18 mm"
+  "grip_texture": "finger grooves r 0.24 mm (0.48 wide), side grooves 0.46 x 0.18 mm",
+  "near_bodies": "two bodies either fuse (smooth union k 0.12-0.25, or overlap) or clear each other by > 0.46 mm",
+  "measured_by": "unified-CAD-MCP miniature_detail_resolution_check: 0 fills on every part"
  },
  "exaggerations": [
   "barrels 1.0-1.4 mm (true 1:56 bore/barrel would be 0.3-0.5 mm)",
-  "panel lines 0.35 mm wide (true 6 mm seams would be 0.1 mm)",
-  "rail teeth 0.42 mm on a 0.85 mm pitch (true picatinny 5.2 mm pitch would be 0.09 mm)",
+  "panel lines 0.5 mm V-grooves (true 6 mm seams would be 0.1 mm)",
+  "rail teeth 0.45 mm on a 1.0 mm pitch (true picatinny 5.2 mm pitch would be 0.09 mm)",
   "knife blade 1.0 mm thick at the spine, edge a 0.4 mm rounded flat (no knife edge)",
   "grips sized to the Vigil gauntlet (1.0 x 1.1 mm), not to a scaled human hand"
  ],
  "catalog": {
   "family": "Bits & Weapons",
-  "revision_note": "VW2 series: 16 detailed weapons as loose parts, sized for the Vigil hands",
+  "revision_note": "VW2 series 0.2: 16 detailed weapons, every engraved detail at or over the 0.4 mm resin limit, bolted plates, signature hardware",
   "base": "none (bits)",
   "footprint": "16 weapons and ordnance bits",
-  "description": "Second-generation Vigilant weapons, more detailed than VW-01..08: VW2-01 Glaive service rifle, VW2-02 Quarrel carbine, VW2-03 Bodkin marksman rifle, VW2-04 Ranseur grenadier rifle, VW2-05 Thresher drum shotgun, VW2-06 Rondel PDW, VW2-07 Culverin heavy revolver, VW2-08 Awl service pistol, VW2-09 Partisan LMG, VW2-10 Arbalest rail rifle, VW2-11 Censer plasma projector, VW2-12 Ballista launcher, VW2-13 Misericorde combat knife, VW2-14 Crowbill breaching tool, VW2-15 Cinder grenade, VW2-16 Petard breaching charge. Panel lines, vent slots, rails, separate magazines, optics, muzzle devices and grip texture at 0.35-0.4 mm.",
+  "description": "Second-generation Vigilant weapons, much more detailed than VW-01..08: VW2-01 Glaive service rifle (rail laser), VW2-02 Quarrel carbine, VW2-03 Bodkin marksman rifle (scope sunshade, bipod), VW2-04 Ranseur grenadier rifle, VW2-05 Thresher drum shotgun, VW2-06 Rondel PDW, VW2-07 Culverin heavy revolver (charge cell), VW2-08 Awl service pistol (rail light), VW2-09 Partisan LMG, VW2-10 Arbalest rail rifle (coil windings, charge lenses), VW2-11 Censer plasma projector (sight-glass), VW2-12 Ballista launcher (strakes, fire-control box, carry handle), VW2-13 Misericorde combat knife, VW2-14 Crowbill breaching tool, VW2-15 Cinder grenade, VW2-16 Petard breaching charge. 0.5 mm V-groove panel lines, 0.46 mm vents with 0.45 mm lands, bolted access plates, bolt carriers in the ejection ports, round-count studs, cooling rings and lenses; every recess measured to resolve at 0.4 mm.",
   "images": [
    {
     "path": "images/vigil-arsenal-sheet.png",
@@ -91,8 +103,12 @@
   "buildNotes": [
    "Defined in tools/arsenal.py (WEAPONS2 registry, VW2-01..16); built by tools/bitspack.py on a 0.05 mm SDF grid; display sheets by source/sheet.py.",
    "Every pistol grip is the VW grip block (1.0 x 1.1 x 2.0 mm at the origin), so figures hold VW2 weapons with the existing gauntlets.",
-   "Barrels 1.0-1.4 mm, panel lines 0.35 x 0.25 mm, vent slots 0.4 x 0.3 mm, rail teeth 0.42 mm; see DESIGN.md."
+   "0.2: panel lines are 0.5 mm 90-degree V-grooves, vents 0.46 mm with 0.45 mm lands, rail teeth 0.45 mm with 0.55 mm gaps; raised plates, bolts, lenses and cooling rings carry most of the new detail (raised detail needs only 0.1 mm).",
+   "Measured with unified-CAD-MCP miniature_detail_resolution_check (new in this revision): 0 recesses fill in on any part; see reports/printability.md and DESIGN-LOG.md."
   ],
-  "limitations": "Procedural designs; printability is a heuristic screen (unified-CAD-MCP), not a test print. Print meshes are simplified by manifold3d only as far as the 280k-triangle check budget needs (tolerance in reports/build.json)."
- }
+  "limitations": "Procedural designs; printability and detail are heuristic screens (unified-CAD-MCP), not a test print. Print meshes are simplified by manifold3d only as far as the 280k-triangle check budget needs (tolerance in reports/build.json). The assembly STEP is an envelope reference re-meshed at 0.35 mm (about 1,000-1,600 triangles per weapon): it does not carry the fine detail; the print STLs do."
+ },
+ "step_tris_per_part": 1000,
+ "step_voxel_mm": 0.35,
+ "viewer_tris_per_part": 8000
 }

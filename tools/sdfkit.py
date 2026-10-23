@@ -306,17 +306,19 @@ def largest_body(m, name, dust_mm3=0.05):
     return keep  # sub-voxel dust
 
 
-def decimate(m, n, name="mesh", dust_mm3=0.05):
+def decimate(m, n, name="mesh", dust_mm3=0.05, coarse=False):
     """Manifold-preserving simplification (manifold3d Manifold.simplify, a tolerance in mm): pick the smallest
     tolerance that brings the mesh to <= n triangles. Quadric decimation (fast-simplification) pinched non-manifold
-    edges on these sculpts; Manifold keeps the result closed and manifold by construction."""
+    edges on these sculpts; Manifold keeps the result closed and manifold by construction. coarse=True allows
+    tolerances up to 0.4 mm, for reference exports only (faceted STEP), never for print or viewer meshes."""
     if len(m.faces) <= n:
         return m
     M = manifold3d.Manifold(manifold3d.Mesh(vert_properties=np.asarray(m.vertices, dtype=np.float32),
                                             tri_verts=np.asarray(m.faces, dtype=np.uint32)))
     if M.status() != manifold3d.Error.NoError:
         raise SystemExit(f"{name}: not a manifold input ({M.status()})")
-    for tol in (0.002, 0.003, 0.004, 0.005, 0.006, 0.008, 0.01, 0.013, 0.017, 0.022, 0.03, 0.04, 0.055, 0.075, 0.1, 0.14):
+    tols = (0.002, 0.003, 0.004, 0.005, 0.006, 0.008, 0.01, 0.013, 0.017, 0.022, 0.03, 0.04, 0.055, 0.075, 0.1, 0.14)
+    for tol in tols + ((0.2, 0.28, 0.4) if coarse else ()):
         S = M.simplify(tol)
         if S.num_tri() <= n:
             break
@@ -364,7 +366,7 @@ class Package:
             viewer.append({"name": p["name"], "group": p["group"], "color": p["color"], "note": p["note"], "explode": p["explode"],
                            "printStl": f"print/stl/{p['stl']}.stl",
                            "vertices": np.round(vm.vertices, 3).tolist(), "triangles": vm.faces.tolist()})
-            sm = decimate(a, step_tris)
+            sm = decimate(a, step_tris, coarse=True)
             step_parts.append({"name": p["name"], "vertices": sm.vertices.tolist(), "faces": sm.faces.tolist()})
         (self.pkg / "viewer" / f"{self.id}.parts.json").write_text(json.dumps(viewer, separators=(",", ":")))
         step = self.pkg / "cad" / f"{self.id}-assembly.step"

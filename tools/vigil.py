@@ -60,7 +60,7 @@ def build_loose(pkg, spec, parts):
     k = Package(spec["id"], pkg)
     for name, mesh, stl, color, note, at in parts:
         k.add(name, mesh, stl=stl, color=color, group=stl, note=note, explode=(0, 0, 4), placement=translate(*at))
-    rep = k.write()
+    rep = k.write(step_tris=spec.get("step_tris_per_part", 5_000))                # a faceted STEP costs ~3.5 kB/triangle
     images(pkg, spec["id"], [(p["asm"], p["color"]) for p in k.parts], spec["name"])
     return rep
 

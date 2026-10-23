@@ -1,0 +1,158 @@
+{
+ "id": "vigil-arsenal",
+ "name": "Vigil arsenal: VW2 detailed weapon set",
+ "line": "scifi",
+ "family": "Bits & Weapons",
+ "revision": "0.2 · VW2 series 0.2: 16 detailed weapons, every engraved detail at or over the 0.4 mm resin limit, bolted plates, signature hardware",
+ "description": "Second-generation Vigilant weapons, much more detailed than VW-01..08: VW2-01 Glaive service rifle (rail laser), VW2-02 Quarrel carbine, VW2-03 Bodkin marksman rifle (scope sunshade, bipod), VW2-04 Ranseur grenadier rifle, VW2-05 Thresher drum shotgun, VW2-06 Rondel PDW, VW2-07 Culverin heavy revolver (charge cell), VW2-08 Awl service pistol (rail light), VW2-09 Partisan LMG, VW2-10 Arbalest rail rifle (coil windings, charge lenses), VW2-11 Censer plasma projector (sight-glass), VW2-12 Ballista launcher (strakes, fire-control box, carry handle), VW2-13 Misericorde combat knife, VW2-14 Crowbill breaching tool, VW2-15 Cinder grenade, VW2-16 Petard breaching charge. 0.5 mm V-groove panel lines, 0.46 mm vents with 0.45 mm lands, bolted access plates, bolt carriers in the ejection ports, round-count studs, cooling rings and lenses; every recess measured to resolve at 0.4 mm.",
+ "images": [
+  {
+   "path": "images/vigil-arsenal-sheet.png",
+   "label": "Display sheet (side profile, common scale)"
+  },
+  {
+   "path": "images/vigil-arsenal-closeups-1.png",
+   "label": "3/4 close-ups VW2-01..08"
+  },
+  {
+   "path": "images/vigil-arsenal-closeups-2.png",
+   "label": "3/4 close-ups VW2-09..16"
+  },
+  {
+   "path": "images/vigil-arsenal-hero.png",
+   "label": "Arsenal"
+  },
+  {
+   "path": "images/vigil-arsenal-turnaround.png",
+   "label": "Turnaround"
+  }
+ ],
+ "defaultExplode": 0,
+ "buildNotes": [
+  "Defined in tools/arsenal.py (WEAPONS2 registry, VW2-01..16); built by tools/bitspack.py on a 0.05 mm SDF grid; display sheets by source/sheet.py.",
+  "Every pistol grip is the VW grip block (1.0 x 1.1 x 2.0 mm at the origin), so figures hold VW2 weapons with the existing gauntlets.",
+  "0.2: panel lines are 0.5 mm 90-degree V-grooves, vents 0.46 mm with 0.45 mm lands, rail teeth 0.45 mm with 0.55 mm gaps; raised plates, bolts, lenses and cooling rings carry most of the new detail (raised detail needs only 0.1 mm).",
+  "Measured with unified-CAD-MCP miniature_detail_resolution_check (new in this revision): 0 recesses fill in on any part; see reports/printability.md and DESIGN-LOG.md."
+ ],
+ "limitations": "Procedural designs; printability and detail are heuristic screens (unified-CAD-MCP), not a test print. Print meshes are simplified by manifold3d only as far as the 280k-triangle check budget needs (tolerance in reports/build.json). The assembly STEP is an envelope reference re-meshed at 0.35 mm (about 1,000-1,600 triangles per weapon): it does not carry the fine detail; the print STLs do.",
+ "mini": {
+  "scale": {
+   "label": "30 mm heroic",
+   "ratio": "1:56"
+  },
+  "base": "none (bits)",
+  "footprint": "16 weapons and ordnance bits",
+  "process": "MSLA resin · 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
+  "volumeMl": 0.9,
+  "volumeLabel": "Resin volume",
+  "printHeightMm": 10.4,
+  "printability": {
+   "verdict": "fail",
+   "preset": "msla_resin",
+   "checkedBy": "unified-CAD-MCP miniature_printability_check",
+   "summary": "miniature_detail_resolution_check: failed; miniature_detail_resolution_check: failed; miniature_detail_resolution_check: failed; miniature_detail_resolution_check: failed; miniature_detail_resolution_check: failed; vw2-01-glaive-service-rifle: minimum wall (supported) = 4.8762 (limit <= 0.5 mm2 thinner than 0.4 mm); vw2-02-quarrel-carbine: minimum wall (supported) = 7.5055 (limit <= 0.5 mm2 thinne",
+   "issues": [
+    "Advisory: minimum wall (unsupported)"
+   ],
+   "report": "reports/printability.md"
+  },
+  "printParts": [
+   {
+    "name": "VW2-01 Glaive service rifle",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-02 Quarrel carbine",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-03 Bodkin marksman rifle",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-04 Ranseur grenadier rifle",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-05 Thresher drum shotgun",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-06 Rondel PDW",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-07 Culverin heavy revolver",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-08 Awl service pistol",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-09 Partisan LMG",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-10 Arbalest rail rifle",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-11 Censer plasma projector",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-12 Ballista launcher",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-13 Misericorde combat knife",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-14 Crowbill breaching tool",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-15 Cinder grenade",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   },
+   {
+    "name": "VW2-16 Petard breaching charge",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports, upright (grip down) as modelled"
+   }
+  ]
+ }
+}

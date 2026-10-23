@@ -1,0 +1,82 @@
+[
+ {
+  "stl": "vw2-01-glaive-service-rifle",
+  "label": "VW2-01 Glaive service rifle",
+  "plan": true
+ },
+ {
+  "stl": "vw2-02-quarrel-carbine",
+  "label": "VW2-02 Quarrel carbine",
+  "plan": true
+ },
+ {
+  "stl": "vw2-03-bodkin-marksman-rifle",
+  "label": "VW2-03 Bodkin marksman rifle",
+  "plan": true
+ },
+ {
+  "stl": "vw2-04-ranseur-grenadier-rifle",
+  "label": "VW2-04 Ranseur grenadier rifle",
+  "plan": true
+ },
+ {
+  "stl": "vw2-05-thresher-drum-shotgun",
+  "label": "VW2-05 Thresher drum shotgun",
+  "plan": true
+ },
+ {
+  "stl": "vw2-06-rondel-pdw",
+  "label": "VW2-06 Rondel PDW",
+  "plan": true
+ },
+ {
+  "stl": "vw2-07-culverin-heavy-revolver",
+  "label": "VW2-07 Culverin heavy revolver",
+  "plan": true
+ },
+ {
+  "stl": "vw2-08-awl-service-pistol",
+  "label": "VW2-08 Awl service pistol",
+  "plan": true
+ },
+ {
+  "stl": "vw2-09-partisan-lmg",
+  "label": "VW2-09 Partisan LMG",
+  "plan": true
+ },
+ {
+  "stl": "vw2-10-arbalest-rail-rifle",
+  "label": "VW2-10 Arbalest rail rifle",
+  "plan": true
+ },
+ {
+  "stl": "vw2-11-censer-plasma-projector",
+  "label": "VW2-11 Censer plasma projector",
+  "plan": true
+ },
+ {
+  "stl": "vw2-12-ballista-launcher",
+  "label": "VW2-12 Ballista launcher",
+  "plan": true
+ },
+ {
+  "stl": "vw2-13-misericorde-combat-knife",
+  "label": "VW2-13 Misericorde combat knife",
+  "plan": true
+ },
+ {
+  "stl": "vw2-14-crowbill-breaching-tool",
+  "label": "VW2-14 Crowbill breaching tool",
+  "plan": true
+ },
+ {
+  "stl": "vw2-15-cinder-grenade",
+  "label": "VW2-15 Cinder grenade",
+  "plan": true
+ },
+ {
+  "stl": "vw2-16-petard-breaching-charge",
+  "label": "VW2-16 Petard breaching charge",
+  "plan": true
+ }
+]

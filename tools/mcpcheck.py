@@ -80,7 +80,7 @@ async def run_checks(pkg: Path, spec: dict, plan: dict) -> int:
             problems += [f"base_and_peg: {ch['name']} = {ch['value']} (limit {ch['limit']})" for ch in r["checks"] if not ch["pass"]]
         for extra in plan.get("extra_calls", []):
             r = await call(extra["tool"], extra["args"])
-            report.setdefault("extra", []).append({"tool": extra["tool"], "result": r})
+            report.setdefault("extra", []).append({"tool": extra["tool"], "args": extra["args"], "result": r})
             if r.get("all_checks_pass") is False:
                 problems.append(f"{extra['tool']}: failed")
         report["parts"] = {}
@@ -154,8 +154,21 @@ def write_markdown(pkg, spec, rep):
             h = e["hollow_plan"]
             L += [f"## Hollowing: {e['label']} (miniature_hollow_plan)", "", f"Hollow: {'yes' if h['recommend_hollow'] else 'no'}; "
                   f"{h['volume_ml']} ml solid, shell {h['shell_mm']} mm would save {h['resin_saved_ml']} ml. " + "; ".join(h["reasons"]) + ".", ""]
+    detail = [x for x in rep.get("extra", []) if x["tool"] == "miniature_detail_resolution_check"]
+    if detail:
+        L += ["## Fine detail (miniature_detail_resolution_check, as modelled)", "",
+              f"Engraved-detail limit {detail[0]['result']['min_recess_mm']} mm (marginal from {detail[0]['result']['marginal_from_mm']} mm); "
+              "resolving = surface recesses whose mouth is at or over the limit; edge loops = sharp-edge loops >= 1 mm (raised relief).", "",
+              "| Part | Resolving recesses | per cm2 | Edge loops | Edge length mm | Marginal | Fills | Slits |", "|---|---|---|---|---|---|---|---|"]
+        for x in detail:
+            r, inv = x["result"], x["result"]["inventory"]
+            L.append(f"| {Path(x['args']['stl_path']).stem} | {inv['resolving_surface_detail']} | {inv['resolving_detail_per_cm2']} | "
+                     f"{inv['edge_features']['sharp_edge_loops']} | {inv['edge_features']['sharp_edge_length_mm']} | {inv['marginal']} | "
+                     f"{inv['fills']} | {inv['slits']} |")
+        L.append("")
     for x in rep.get("extra", []):
-        L += [f"## {x['tool']}", "", "```json", json.dumps(x["result"], indent=1)[:2500], "```", ""]
+        if x["tool"] != "miniature_detail_resolution_check":
+            L += [f"## {x['tool']}", "", "```json", json.dumps(x["result"], indent=1)[:2500], "```", ""]
     if rep.get("plate_pack"):
         pp = rep["plate_pack"]
         L += ["## Print batch (miniature_plate_pack)", "", f"One full set on a {pp['printer']}: {pp['plates']} plate(s), "

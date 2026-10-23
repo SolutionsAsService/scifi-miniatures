@@ -2,7 +2,9 @@
 """Printability check for the Vigil arsenal (unified-CAD-MCP miniature_* tools via tools/mcpcheck.py); run after build.py
 with the unified-CAD-MCP venv, e.g.  ~/ai-stack/repos/unified-CAD-MCP/.venv/bin/python source/check.py
 Besides miniature_printability_check on every part (print pose), the plan records miniature_scale_convert for the
-exaggerated details, miniature_detail_advice for the heroic sizes, and miniature_shell_audit on every upright STL."""
+exaggerated details, miniature_detail_advice for the heroic sizes, miniature_shell_audit on every upright STL, and (0.2)
+miniature_detail_resolution_check on every upright STL: recess widths against the 0.4 mm engraved limit plus the detail
+inventory (resolving recesses, sharp-edge loops)."""
 import json
 import sys
 from pathlib import Path
@@ -31,6 +33,10 @@ PLAN = {
             {"kind": "blade", "real_mm": 6, "name": "knife blade"},
         ]}},
         *[{"tool": "miniature_shell_audit", "args": {"stl_path": str(PKG / "build" / "upright" / f"{q['stl']}.stl")}} for q in PARTS],
+        # 0.2: every engraved recess must resolve at the 0.4 mm limit (fills fail the package); the inventory is the
+        # measured "how detailed" figure the catalogue and DESIGN.md print
+        *[{"tool": "miniature_detail_resolution_check", "args": {"stl_path": str(PKG / "build" / "upright" / f"{q['stl']}.stl")}}
+          for q in PARTS],
     ],
     "parts": [{**q, "plan": False, "supports": "light resin supports, upright (grip down) as modelled"} for q in PARTS],
 }
