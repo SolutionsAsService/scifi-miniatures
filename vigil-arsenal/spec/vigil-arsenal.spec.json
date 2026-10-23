@@ -74,10 +74,10 @@
  ],
  "catalog": {
   "family": "Bits & Weapons",
-  "revision_note": "VW2 series 0.2: 16 detailed weapons, every engraved detail at or over the 0.4 mm resin limit, bolted plates, signature hardware",
+  "revision_note": "VW2 series 0.2: 16 detailed weapons with measured fine detail, bolted plates and signature hardware (printability not yet passing)",
   "base": "none (bits)",
   "footprint": "16 weapons and ordnance bits",
-  "description": "Second-generation Vigilant weapons, much more detailed than VW-01..08: VW2-01 Glaive service rifle (rail laser), VW2-02 Quarrel carbine, VW2-03 Bodkin marksman rifle (scope sunshade, bipod), VW2-04 Ranseur grenadier rifle, VW2-05 Thresher drum shotgun, VW2-06 Rondel PDW, VW2-07 Culverin heavy revolver (charge cell), VW2-08 Awl service pistol (rail light), VW2-09 Partisan LMG, VW2-10 Arbalest rail rifle (coil windings, charge lenses), VW2-11 Censer plasma projector (sight-glass), VW2-12 Ballista launcher (strakes, fire-control box, carry handle), VW2-13 Misericorde combat knife, VW2-14 Crowbill breaching tool, VW2-15 Cinder grenade, VW2-16 Petard breaching charge. 0.5 mm V-groove panel lines, 0.46 mm vents with 0.45 mm lands, bolted access plates, bolt carriers in the ejection ports, round-count studs, cooling rings and lenses; every recess measured to resolve at 0.4 mm.",
+  "description": "Second-generation Vigilant weapons, much more detailed than VW-01..08: VW2-01 Glaive service rifle (rail laser), VW2-02 Quarrel carbine, VW2-03 Bodkin marksman rifle (scope sunshade, bipod), VW2-04 Ranseur grenadier rifle, VW2-05 Thresher drum shotgun, VW2-06 Rondel PDW, VW2-07 Culverin heavy revolver (charge cell), VW2-08 Awl service pistol (rail light), VW2-09 Partisan LMG, VW2-10 Arbalest rail rifle (coil windings, charge lenses), VW2-11 Censer plasma projector (sight-glass), VW2-12 Ballista launcher (strakes, fire-control box, carry handle), VW2-13 Misericorde combat knife, VW2-14 Crowbill breaching tool, VW2-15 Cinder grenade, VW2-16 Petard breaching charge. 0.5 mm V-groove panel lines, 0.46 mm vents with 0.45 mm lands, bolted access plates, bolt carriers in the ejection ports, round-count studs, cooling rings and lenses. Fine detail measured with unified-CAD-MCP miniature_detail_resolution_check; printability not yet passing (thin walls on every part, a few recesses still fill in: see the printability report).",
   "images": [
    {
     "path": "images/vigil-arsenal-sheet.png",
