@@ -1,0 +1,92 @@
+[
+ {
+  "stl": "vh4-01-lineguard",
+  "label": "VH4-01 Lineguard",
+  "plan": true
+ },
+ {
+  "stl": "vh4-02-marshal",
+  "label": "VH4-02 Marshal",
+  "plan": true
+ },
+ {
+  "stl": "vh4-03-plummet",
+  "label": "VH4-03 Plummet",
+  "plan": true
+ },
+ {
+  "stl": "vh4-04-sightline",
+  "label": "VH4-04 Sightline",
+  "plan": true
+ },
+ {
+  "stl": "vh4-05-ironclad",
+  "label": "VH4-05 Ironclad",
+  "plan": true
+ },
+ {
+  "stl": "vh4-06-breacher",
+  "label": "VH4-06 Breacher",
+  "plan": true
+ },
+ {
+  "stl": "vh4-07-sentinel",
+  "label": "VH4-07 Sentinel",
+  "plan": true
+ },
+ {
+  "stl": "vh4-08-raptor",
+  "label": "VH4-08 Raptor",
+  "plan": true
+ },
+ {
+  "stl": "vh4-09-diver",
+  "label": "VH4-09 Diver",
+  "plan": true
+ },
+ {
+  "stl": "vh4-10-stillwater",
+  "label": "VH4-10 Stillwater",
+  "plan": true
+ },
+ {
+  "stl": "vh4-11-hunter",
+  "label": "VH4-11 Hunter",
+  "plan": true
+ },
+ {
+  "stl": "vh4-12-specter",
+  "label": "VH4-12 Specter",
+  "plan": true
+ },
+ {
+  "stl": "vh4-13-herald",
+  "label": "VH4-13 Herald",
+  "plan": true
+ },
+ {
+  "stl": "vh4-14-longsight",
+  "label": "VH4-14 Longsight",
+  "plan": true
+ },
+ {
+  "stl": "vh4-15-deckhand",
+  "label": "VH4-15 Deckhand",
+  "plan": true
+ },
+ {
+  "stl": "vh4-16-mender",
+  "label": "VH4-16 Mender",
+  "plan": true
+ },
+ {
+  "stl": "vh4-17-wright",
+  "label": "VH4-17 Wright",
+  "plan": true
+ },
+ {
+  "stl": "vh4-18-grimward",
+  "label": "VH4-18 Grimward",
+  "plan": true
+ }
+]

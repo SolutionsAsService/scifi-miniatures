@@ -1,0 +1,89 @@
+{
+ "id": "vigil-helms-03",
+ "name": "Vigil helm library 0.3 (VH4)",
+ "revision": "0.3",
+ "line": "scifi",
+ "process": "msla_resin",
+ "scale": {
+  "label": "30 mm heroic",
+  "ratio": "1:56",
+  "tool_scale": "28mm"
+ },
+ "voxel_mm": 0.05,
+ "max_triangles": 290000,
+ "peg": {
+  "kind": "D-flat",
+  "d_mm": 1.6,
+  "len_mm": 2,
+  "flat_from_axis": "0.3 d",
+  "key": "flat faces -y (front)",
+  "source": "tools/exosuit.py PEG_HEAD (same as VH-01..10, VH2 and VH3: any helm fits any Vigil trooper)"
+ },
+ "helm_frame": {
+  "neck_cut_z": 0,
+  "helm_centre_z_mm": 2.8,
+  "helm_scale_HS": 1.12,
+  "faces": "-y",
+  "units": "mm"
+ },
+ "family": {
+  "split_chevron": "every helm has a recessed glass surface (visor, lenses, faceport, T-visor or goggles) split by the keel or falling to a V, painted on its own",
+  "keel": "one keel line from the nape over the crown to the face (crest tube, ridge plate, blade or fin, hood seam, lamp cable)"
+ },
+ "feature_floor": {
+  "glass_and_slot_min_w_mm": 0.5,
+  "frame_min_mm": 0.45,
+  "raised_bar_min_mm": 0.44,
+  "gap_between_raised_min_mm": 0.5,
+  "wire_min_d_mm": 0.76
+ },
+ "morph": {
+  "r_open_mm": 0.21,
+  "r_close_mm": 0.22,
+  "deep_mm": 0.12,
+  "why": "tools/morph.py print_safe_selective: the opening/closing is applied only where it moves the surface by more than 0.12 mm (a wall thinner than 0.42 mm, a slot narrower than 0.5 mm). VH3's print_safe applied it everywhere: every convex edge rounded to 0.25 mm and the integer-voxel distance fields terraced every face (visible contour rings); on the detailed VH2-style helms it melted the plates and frames. Measured on VH4-01: raw sculpt 10.75 mm2 of supported wall under 0.4 mm, selective 0.15 mm2 (limit 0.5) with edges kept.",
+  "deep_close_mm": 0.04
+ },
+ "catalog": {
+  "family": "Bits & Helms",
+  "revision_note": "18 helms: every design from 0.1 and 0.2 in one print-safe library, crisp edges, no voxel terracing",
+  "base": "none (bits)",
+  "footprint": "18 helms",
+  "description": "The Vigil helm library 0.3 (VH4) brings every helm design of the line into one print-safe set on the same 1.6 mm D-flat neck peg. Carried from 0.2 (VH3) and cleaned: VH4-03 Plummet (drop trooper), VH4-04 Sightline (recon, side optic pod), VH4-05 Ironclad (heavy assault, portcullis faceplate), VH4-10 Stillwater (sealed void globe), VH4-13 Herald (officer, fin and comm mast), VH4-14 Longsight (sniper, sallet tail and monocular), VH4-15 Deckhand (open-face crew), VH4-18 Grimward (scarred veteran, death's-head faceplate). Re-sculpted from 0.1 and the unbuilt VH2 set: VH4-01 Lineguard (the line standard: gull-wing split visor, keel crest, cheek vents, aural hoses, lamp), VH4-02 Marshal (sergeant: swept blade crest, command antenna, rank bars), VH4-06 Breacher (armoured faceplate, slit lens, blast ribs, rivets), VH4-07 Sentinel (T-visor under a heavy brow, ribbed jaw), VH4-08 Raptor (faceted beak, slanted lenses, swept fin), VH4-09 Diver (round faceport with bolts, breather cans, collar), VH4-11 Hunter (tall helm, three lens slits, mandible guards, sensor spine), VH4-12 Specter (scout under a hood, monocular, filter snout), VH4-16 Mender (medic: paint channels, triage scanner, filters), VH4-17 Wright (engineer: flip-up goggles, headlamp, tool port). Glass is a separate recessed surface on every helm for painting.",
+  "images": [
+   {
+    "path": "images/vigil-helms-03-sheet-34.png",
+    "label": "Display sheet: 3/4"
+   },
+   {
+    "path": "images/vigil-helms-03-sheet-front.png",
+    "label": "Display sheet: front"
+   },
+   {
+    "path": "images/vigil-helms-03-sheet-side.png",
+    "label": "Display sheet: side"
+   },
+   {
+    "path": "images/vigil-helms-03-sheet-back.png",
+    "label": "Display sheet: back"
+   },
+   {
+    "path": "images/vigil-helms-03-hero.png",
+    "label": "Library, 3/4 (render)"
+   },
+   {
+    "path": "images/vigil-helms-03-turnaround.png",
+    "label": "Turnaround: 3/4, front, side, back"
+   }
+  ],
+  "defaultExplode": 0,
+  "buildNotes": [
+   "Defined in tools/helms04.py (VH4 registry: the eight VH3 helms plus ten re-sculpted from 0.1 and VH2 on the tools/helms3.py building blocks); built on a 0.05 mm grid, print meshes not simplified or decimated.",
+   "Print safety by tools/morph.py print_safe_selective: only walls under 0.42 mm and slots under 0.5 mm are changed, so edges stay crisp and faces carry no voxel terracing.",
+   "Every helm checked with unified-CAD-MCP miniature_printability_check (print pose from miniature_support_plan) and miniature_detail_resolution_check; see reports/printability.md and DESIGN-LOG.md.",
+   "Display sheets colour the glass from each helm's own glass masks; the print files are one solid each."
+  ],
+  "limitations": "Procedural sculpt at about 6 mm helm width: faces are stylised. No STEP reference in the package (STLs are the print files). Printability is a heuristic screen (unified-CAD-MCP), not a test print."
+ },
+ "viewer_tris_per_part": 5000
+}

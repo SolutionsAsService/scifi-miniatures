@@ -1,0 +1,163 @@
+{
+ "id": "vigil-helms-03",
+ "name": "Vigil helm library 0.3 (VH4)",
+ "line": "scifi",
+ "family": "Bits & Helms",
+ "revision": "0.3 · 18 helms: every design from 0.1 and 0.2 in one print-safe library, crisp edges, no voxel terracing",
+ "description": "The Vigil helm library 0.3 (VH4) brings every helm design of the line into one print-safe set on the same 1.6 mm D-flat neck peg. Carried from 0.2 (VH3) and cleaned: VH4-03 Plummet (drop trooper), VH4-04 Sightline (recon, side optic pod), VH4-05 Ironclad (heavy assault, portcullis faceplate), VH4-10 Stillwater (sealed void globe), VH4-13 Herald (officer, fin and comm mast), VH4-14 Longsight (sniper, sallet tail and monocular), VH4-15 Deckhand (open-face crew), VH4-18 Grimward (scarred veteran, death's-head faceplate). Re-sculpted from 0.1 and the unbuilt VH2 set: VH4-01 Lineguard (the line standard: gull-wing split visor, keel crest, cheek vents, aural hoses, lamp), VH4-02 Marshal (sergeant: swept blade crest, command antenna, rank bars), VH4-06 Breacher (armoured faceplate, slit lens, blast ribs, rivets), VH4-07 Sentinel (T-visor under a heavy brow, ribbed jaw), VH4-08 Raptor (faceted beak, slanted lenses, swept fin), VH4-09 Diver (round faceport with bolts, breather cans, collar), VH4-11 Hunter (tall helm, three lens slits, mandible guards, sensor spine), VH4-12 Specter (scout under a hood, monocular, filter snout), VH4-16 Mender (medic: paint channels, triage scanner, filters), VH4-17 Wright (engineer: flip-up goggles, headlamp, tool port). Glass is a separate recessed surface on every helm for painting.",
+ "images": [
+  {
+   "path": "images/vigil-helms-03-sheet-front.png",
+   "label": "Display sheet: front"
+  },
+  {
+   "path": "images/vigil-helms-03-hero.png",
+   "label": "Library, 3/4 (render)"
+  },
+  {
+   "path": "images/vigil-helms-03-turnaround.png",
+   "label": "Turnaround: 3/4, front, side, back"
+  }
+ ],
+ "defaultExplode": 0,
+ "buildNotes": [
+  "Defined in tools/helms04.py (VH4 registry: the eight VH3 helms plus ten re-sculpted from 0.1 and VH2 on the tools/helms3.py building blocks); built on a 0.05 mm grid, print meshes not simplified or decimated.",
+  "Print safety by tools/morph.py print_safe_selective: only walls under 0.42 mm and slots under 0.5 mm are changed, so edges stay crisp and faces carry no voxel terracing.",
+  "Every helm checked with unified-CAD-MCP miniature_printability_check (print pose from miniature_support_plan) and miniature_detail_resolution_check; see reports/printability.md and DESIGN-LOG.md.",
+  "Display sheets colour the glass from each helm's own glass masks; the print files are one solid each."
+ ],
+ "limitations": "Procedural sculpt at about 6 mm helm width: faces are stylised. No STEP reference in the package (STLs are the print files). Printability is a heuristic screen (unified-CAD-MCP), not a test print.",
+ "mini": {
+  "scale": {
+   "label": "30 mm heroic",
+   "ratio": "1:56"
+  },
+  "base": "none (bits)",
+  "footprint": "18 helms",
+  "process": "MSLA resin · 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
+  "volumeMl": 2.1,
+  "volumeLabel": "Resin volume",
+  "printHeightMm": 10.9,
+  "printability": {
+   "verdict": "pass",
+   "preset": "msla_resin",
+   "checkedBy": "unified-CAD-MCP miniature_printability_check + miniature_detail_resolution_check",
+   "summary": "18 print files checked upright as modelled; no fail-severity findings and no recesses that fill in. Support plans not yet run.",
+   "issues": [
+    "Advisory: minimum wall (unsupported)",
+    "Advisory: 1-8 marginal recesses (0.3-0.4 mm) per helm"
+   ],
+   "report": "reports/printability.md"
+  },
+  "printParts": [
+   {
+    "name": "VH4-01 Lineguard",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-02 Marshal",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-03 Plummet",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-04 Sightline",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-05 Ironclad",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-06 Breacher",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-07 Sentinel",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-08 Raptor",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-09 Diver",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-10 Stillwater",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-11 Hunter",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-12 Specter",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-13 Herald",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-14 Longsight",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-15 Deckhand",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-16 Mender",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-17 Wright",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   },
+   {
+    "name": "VH4-18 Grimward",
+    "qty": 1,
+    "orientation": "upright as modelled (neck down), on supports",
+    "supports": "light resin supports; run a support plan in your slicer"
+   }
+  ]
+ }
+}
