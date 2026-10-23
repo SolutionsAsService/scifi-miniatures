@@ -50,7 +50,7 @@
    "verdict": "fail",
    "preset": "msla_resin",
    "checkedBy": "unified-CAD-MCP miniature_printability_check",
-   "summary": "miniature_detail_resolution_check: failed; miniature_detail_resolution_check: failed; miniature_detail_resolution_check: failed; miniature_detail_resolution_check: failed; miniature_detail_resolution_check: failed; vw2-01-glaive-service-rifle: minimum wall (supported) = 4.8762 (limit <= 0.5 mm2 thinner than 0.4 mm); vw2-02-quarrel-carbine: minimum wall (supported) = 7.5055 (limit <= 0.5 mm2 thinne",
+   "summary": "Not yet passing. Supported walls under 0.4 mm on every part (0.6-30 mm2; worst VW2-12 Ballista 30.2, VW2-03 Bodkin 17.9). Fine detail: recesses that fill in on VW2-07 (1), VW2-08 (2), VW2-09 (3), VW2-12 (1), VW2-15 (2); the other 11 parts have none. Details in the printability report and DESIGN-LOG.md.",
    "issues": [
     "Advisory: minimum wall (unsupported)"
    ],

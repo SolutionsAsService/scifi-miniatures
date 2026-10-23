@@ -82,7 +82,9 @@ async def run_checks(pkg: Path, spec: dict, plan: dict) -> int:
             r = await call(extra["tool"], extra["args"])
             report.setdefault("extra", []).append({"tool": extra["tool"], "args": extra["args"], "result": r})
             if r.get("all_checks_pass") is False:
-                problems.append(f"{extra['tool']}: failed")
+                stl = Path(extra["args"]["stl_path"]).stem if "stl_path" in extra["args"] else ""
+                fails = [f"{c['name']} = {c['value']}" for c in r.get("checks", []) if not c["pass"] and c.get("severity") == "fail"]
+                problems.append(f"{extra['tool']}{' ' + stl if stl else ''}: {', '.join(fails) or 'failed'}")
         report["parts"] = {}
         for part in plan["parts"]:
             name = part["stl"]
