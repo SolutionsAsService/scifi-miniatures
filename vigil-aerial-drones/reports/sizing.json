@@ -1,0 +1,1038 @@
+{
+ "note": "In-world (1:1) heuristic sizing; the model is 1:56 of these numbers plus the exaggerations listed in the spec.",
+ "calls": [
+  {
+   "tool": "drone_propulsion_estimate",
+   "args": {
+    "all_up_mass_g": 31000,
+    "rotor_count": 12,
+    "coaxial": true,
+    "prop_diameter_in": 24,
+    "battery_cells": 12,
+    "battery_capacity_mah": 44000,
+    "max_thrust_per_motor_g": 7500,
+    "avionics_power_w": 60
+   }
+  },
+  {
+   "tool": "drone_mass_cg_budget",
+   "args": {
+    "items": [
+     {
+      "name": "core body + avionics",
+      "mass_g": 7000,
+      "position_mm": [
+       0,
+       0,
+       20
+      ],
+      "size_mm": [
+       480,
+       600,
+       250
+      ]
+     },
+     {
+      "name": "battery pack L",
+      "mass_g": 5200,
+      "position_mm": [
+       90,
+       0,
+       40
+      ],
+      "size_mm": [
+       90,
+       300,
+       120
+      ]
+     },
+     {
+      "name": "battery pack R",
+      "mass_g": 5200,
+      "position_mm": [
+       -90,
+       0,
+       40
+      ],
+      "size_mm": [
+       90,
+       300,
+       120
+      ]
+     },
+     {
+      "name": "chin gimbal turret",
+      "mass_g": 1100,
+      "position_mm": [
+       0,
+       -280,
+       -130
+      ]
+     },
+     {
+      "name": "mast + EO/radar ball",
+      "mass_g": 700,
+      "position_mm": [
+       0,
+       150,
+       420
+      ]
+     },
+     {
+      "name": "skid gear",
+      "mass_g": 900,
+      "position_mm": [
+       0,
+       0,
+       -260
+      ]
+     },
+     {
+      "name": "arm + coaxial motor pair 1",
+      "mass_g": 780,
+      "position_mm": [
+       389.0,
+       -673.8,
+       10
+      ]
+     },
+     {
+      "name": "arm + coaxial motor pair 2",
+      "mass_g": 780,
+      "position_mm": [
+       778.0,
+       -0.0,
+       10
+      ]
+     },
+     {
+      "name": "arm + coaxial motor pair 3",
+      "mass_g": 780,
+      "position_mm": [
+       389.0,
+       673.8,
+       10
+      ]
+     },
+     {
+      "name": "arm + coaxial motor pair 4",
+      "mass_g": 780,
+      "position_mm": [
+       -389.0,
+       673.8,
+       10
+      ]
+     },
+     {
+      "name": "arm + coaxial motor pair 5",
+      "mass_g": 780,
+      "position_mm": [
+       -778.0,
+       -0.0,
+       10
+      ]
+     },
+     {
+      "name": "arm + coaxial motor pair 6",
+      "mass_g": 780,
+      "position_mm": [
+       -389.0,
+       -673.8,
+       10
+      ]
+     },
+     {
+      "name": "payload on the hardpoint",
+      "mass_g": 6000,
+      "position_mm": [
+       0,
+       -8,
+       -150
+      ]
+     }
+    ],
+    "reference_point_mm": [
+     0,
+     0,
+     0
+    ],
+    "max_takeoff_mass_g": 31000,
+    "cg_tolerance_mm": 15
+   }
+  },
+  {
+   "tool": "drone_mass_cg_budget",
+   "args": {
+    "items": [
+     {
+      "name": "core body + avionics",
+      "mass_g": 7000,
+      "position_mm": [
+       0,
+       0,
+       20
+      ],
+      "size_mm": [
+       480,
+       600,
+       250
+      ]
+     },
+     {
+      "name": "battery pack L",
+      "mass_g": 5200,
+      "position_mm": [
+       90,
+       0,
+       40
+      ],
+      "size_mm": [
+       90,
+       300,
+       120
+      ]
+     },
+     {
+      "name": "battery pack R",
+      "mass_g": 5200,
+      "position_mm": [
+       -90,
+       0,
+       40
+      ],
+      "size_mm": [
+       90,
+       300,
+       120
+      ]
+     },
+     {
+      "name": "chin gimbal turret",
+      "mass_g": 1100,
+      "position_mm": [
+       0,
+       -280,
+       -130
+      ]
+     },
+     {
+      "name": "mast + EO/radar ball",
+      "mass_g": 700,
+      "position_mm": [
+       0,
+       150,
+       420
+      ]
+     },
+     {
+      "name": "skid gear",
+      "mass_g": 900,
+      "position_mm": [
+       0,
+       0,
+       -260
+      ]
+     },
+     {
+      "name": "arm + coaxial motor pair 1",
+      "mass_g": 780,
+      "position_mm": [
+       389.0,
+       -673.8,
+       10
+      ]
+     },
+     {
+      "name": "arm + coaxial motor pair 2",
+      "mass_g": 780,
+      "position_mm": [
+       778.0,
+       -0.0,
+       10
+      ]
+     },
+     {
+      "name": "arm + coaxial motor pair 3",
+      "mass_g": 780,
+      "position_mm": [
+       389.0,
+       673.8,
+       10
+      ]
+     },
+     {
+      "name": "arm + coaxial motor pair 4",
+      "mass_g": 780,
+      "position_mm": [
+       -389.0,
+       673.8,
+       10
+      ]
+     },
+     {
+      "name": "arm + coaxial motor pair 5",
+      "mass_g": 780,
+      "position_mm": [
+       -778.0,
+       -0.0,
+       10
+      ]
+     },
+     {
+      "name": "arm + coaxial motor pair 6",
+      "mass_g": 780,
+      "position_mm": [
+       -389.0,
+       -673.8,
+       10
+      ]
+     }
+    ],
+    "reference_point_mm": [
+     0,
+     0,
+     0
+    ],
+    "cg_tolerance_mm": 15
+   }
+  },
+  {
+   "tool": "drone_propulsion_estimate",
+   "args": {
+    "all_up_mass_g": 18000,
+    "rotor_count": 1,
+    "prop_diameter_in": 80,
+    "battery_cells": 12,
+    "battery_capacity_mah": 32000,
+    "figure_of_merit": 0.65,
+    "avionics_power_w": 40
+   }
+  },
+  {
+   "tool": "drone_mass_cg_budget",
+   "args": {
+    "items": [
+     {
+      "name": "pod structure",
+      "mass_g": 3200,
+      "position_mm": [
+       0,
+       -40,
+       560
+      ]
+     },
+     {
+      "name": "motor + gearbox",
+      "mass_g": 3400,
+      "position_mm": [
+       0,
+       -60,
+       700
+      ]
+     },
+     {
+      "name": "battery",
+      "mass_g": 5600,
+      "position_mm": [
+       0,
+       -290,
+       470
+      ]
+     },
+     {
+      "name": "nose sensor ball",
+      "mass_g": 1100,
+      "position_mm": [
+       0,
+       -430,
+       310
+      ]
+     },
+     {
+      "name": "tail boom, fin, tail rotor",
+      "mass_g": 1500,
+      "position_mm": [
+       0,
+       960,
+       690
+      ]
+     },
+     {
+      "name": "main rotor + head",
+      "mass_g": 1600,
+      "position_mm": [
+       0,
+       -84,
+       930
+      ]
+     },
+     {
+      "name": "skids",
+      "mass_g": 1600,
+      "position_mm": [
+       0,
+       -60,
+       40
+      ]
+     }
+    ],
+    "reference_point_mm": [
+     0,
+     -84,
+     0
+    ],
+    "max_takeoff_mass_g": 18000,
+    "cg_tolerance_mm": 25
+   }
+  },
+  {
+   "tool": "drone_fixed_wing_analysis",
+   "args": {
+    "aircraft": {
+     "mass_g": 12000,
+     "cg_x_mm": 762,
+     "wing": {
+      "stations": [
+       {
+        "s_mm": 0,
+        "x_le_mm": 380,
+        "chord_mm": 820
+       },
+       {
+        "s_mm": 900,
+        "x_le_mm": 1135,
+        "chord_mm": 250
+       }
+      ],
+      "thickness_ratio": 0.12,
+      "cl_max": 1
+     },
+     "tails": [
+      {
+       "role": "vertical",
+       "stations": [
+        {
+         "s_mm": 0,
+         "x_le_mm": 1120,
+         "chord_mm": 280
+        },
+        {
+         "s_mm": 230,
+         "x_le_mm": 1270,
+         "chord_mm": 150
+        }
+       ]
+      },
+      {
+       "role": "vertical",
+       "stations": [
+        {
+         "s_mm": 0,
+         "x_le_mm": 1120,
+         "chord_mm": 280
+        },
+        {
+         "s_mm": 230,
+         "x_le_mm": 1270,
+         "chord_mm": 150
+        }
+       ]
+      }
+     ],
+     "fuselage": {
+      "length_mm": 1300,
+      "max_width_mm": 200,
+      "max_height_mm": 200
+     },
+     "battery": {
+      "cells_series": 6,
+      "cells_parallel": 4,
+      "cell_capacity_mah": 5000
+     },
+     "propulsion": {
+      "prop_diameter_in": 16,
+      "max_shaft_power_w": 1600
+     },
+     "cruise_speed_m_s": 28,
+     "launch": {
+      "accel_g": 12,
+      "end_speed_m_s": 24,
+      "max_stroke_m": 2.5,
+      "mounts": [
+       {
+        "name": "rail shoe (flight-stem socket boss)",
+        "mass_g": 12000,
+        "allowable_n": 4000
+       }
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "belfry_propulsion": {
+  "air_density_kg_m3": 1.225,
+  "hover_thrust_per_rotor_g": 2583.333,
+  "disk_loading_n_m2": 86.8,
+  "ideal_induced_power_per_rotor_w": 150.792,
+  "hover_shaft_power_per_rotor_w": 314.15,
+  "hover_electrical_power_w": 5020.268,
+  "hover_efficiency_g_per_w": 6.175,
+  "battery_nominal_voltage_v": 44.4,
+  "usable_energy_wh": 1562.88,
+  "hover_current_a": 113.069,
+  "hover_flight_time_min": 18.68,
+  "estimate_kind": "HEURISTIC first-order estimate (momentum theory with figure of merit and lumped efficiencies). Validate with manufacturer thrust tables, bench tests and flight logs.",
+  "assumptions": {
+   "figure_of_merit": 0.6,
+   "motor_efficiency": 0.8,
+   "esc_efficiency": 0.95,
+   "avionics_power_w": 60.0,
+   "usable_capacity_fraction": 0.8,
+   "coaxial_penalty_factor": 1.25,
+   "cell_nominal_v": 3.7,
+   "scope": "Static hover only: no forward flight, wind, climb, battery sag, temperature or ageing effects"
+  },
+  "warnings": [],
+  "thrust_to_weight": 2.903,
+  "hover_thrust_fraction": 0.3444,
+  "twr_guidance": "rule of thumb: <2 marginal; 2-3 camera/survey; 3-5 general/freestyle; >5 racing"
+ },
+ "belfry_mass_cg_payload": {
+  "total_mass_g": 30780.0,
+  "cg_mm": [
+   0.0,
+   -8.1546,
+   -12.3522
+  ],
+  "reference_point_mm": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "cg_offset_from_reference_mm": [
+   0.0,
+   -8.1546,
+   -12.3522
+  ],
+  "horizontal_cg_offset_mm": 8.1546,
+  "inertia_about_cg_kg_m2": [
+   [
+    2.206887312,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    2.044084596,
+    -0.088239604
+   ],
+   [
+    0.0,
+    -0.088239604,
+    3.446851837
+   ]
+  ],
+  "principal_moments_kg_m2": [
+   2.038555767,
+   2.206887312,
+   3.452380665
+  ],
+  "mass_by_category_g": {
+   "other": 30780.0
+  },
+  "mass_fraction_by_category": {
+   "other": 1.0
+  },
+  "frame": "caller-defined right-handed body frame, mm; horizontal offset uses x/y, so put z along the thrust axis",
+  "model": "point masses plus optional axis-aligned uniform solid boxes or caller-supplied self-inertia tensors; list wiring, fasteners and adhesive explicitly",
+  "warnings": [],
+  "mass_margin_g": 220.0,
+  "cg_within_tolerance": true
+ },
+ "belfry_mass_cg_empty": {
+  "total_mass_g": 24780.0,
+  "cg_mm": [
+   0.0,
+   -8.1921,
+   20.9766
+  ],
+  "reference_point_mm": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "cg_offset_from_reference_mm": [
+   0.0,
+   -8.1921,
+   20.9766
+  ],
+  "horizontal_cg_offset_mm": 8.1921,
+  "inertia_about_cg_kg_m2": [
+   [
+    2.065679798,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    1.90287726,
+    -0.088398249
+   ],
+   [
+    -0.0,
+    -0.088398249,
+    3.446851658
+   ]
+  ],
+  "principal_moments_kg_m2": [
+   1.897832615,
+   2.065679798,
+   3.451896303
+  ],
+  "mass_by_category_g": {
+   "other": 24780.0
+  },
+  "mass_fraction_by_category": {
+   "other": 1.0
+  },
+  "frame": "caller-defined right-handed body frame, mm; horizontal offset uses x/y, so put z along the thrust axis",
+  "model": "point masses plus optional axis-aligned uniform solid boxes or caller-supplied self-inertia tensors; list wiring, fasteners and adhesive explicitly",
+  "warnings": [],
+  "cg_within_tolerance": true
+ },
+ "angelus_propulsion": {
+  "air_density_kg_m3": 1.225,
+  "hover_thrust_per_rotor_g": 18000.0,
+  "disk_loading_n_m2": 54.432,
+  "ideal_induced_power_per_rotor_w": 832.028,
+  "hover_shaft_power_per_rotor_w": 1280.043,
+  "hover_electrical_power_w": 1724.268,
+  "hover_efficiency_g_per_w": 10.4392,
+  "battery_nominal_voltage_v": 44.4,
+  "usable_energy_wh": 1136.64,
+  "hover_current_a": 38.835,
+  "hover_flight_time_min": 39.55,
+  "estimate_kind": "HEURISTIC first-order estimate (momentum theory with figure of merit and lumped efficiencies). Validate with manufacturer thrust tables, bench tests and flight logs.",
+  "assumptions": {
+   "figure_of_merit": 0.65,
+   "motor_efficiency": 0.8,
+   "esc_efficiency": 0.95,
+   "avionics_power_w": 40.0,
+   "usable_capacity_fraction": 0.8,
+   "coaxial_penalty_factor": 1.0,
+   "cell_nominal_v": 3.7,
+   "scope": "Static hover only: no forward flight, wind, climb, battery sag, temperature or ageing effects"
+  },
+  "warnings": [
+   "max_thrust_per_motor_g not supplied: thrust-to-weight UNKNOWN (use the motor's published thrust table for this prop and voltage)",
+   "Propeller diameter outside 2-40 in; default figure of merit is unreliable"
+  ],
+  "thrust_to_weight": null
+ },
+ "angelus_mass_cg": {
+  "total_mass_g": 18000.0,
+  "cg_mm": [
+   0.0,
+   -67.7444,
+   540.6667
+  ],
+  "reference_point_mm": [
+   0.0,
+   -84.0,
+   0.0
+  ],
+  "cg_offset_from_reference_mm": [
+   0.0,
+   16.2556,
+   540.6667
+  ],
+  "horizontal_cg_offset_mm": 16.2556,
+  "inertia_about_cg_kg_m2": [
+   [
+    2.859604024,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.851052,
+    -0.399666933
+   ],
+   [
+    0.0,
+    -0.399666933,
+    2.008552024
+   ]
+  ],
+  "principal_moments_kg_m2": [
+   0.726463378,
+   2.133140646,
+   2.859604024
+  ],
+  "mass_by_category_g": {
+   "other": 18000.0
+  },
+  "mass_fraction_by_category": {
+   "other": 1.0
+  },
+  "frame": "caller-defined right-handed body frame, mm; horizontal offset uses x/y, so put z along the thrust axis",
+  "model": "point masses plus optional axis-aligned uniform solid boxes or caller-supplied self-inertia tensors; list wiring, fasteners and adhesive explicitly",
+  "warnings": [],
+  "mass_margin_g": 0.0,
+  "cg_within_tolerance": true
+ },
+ "knell_fixed_wing": {
+  "estimate_kind": "HEURISTIC conceptual-design estimate (closed-form textbook methods). Validate with VLM/CFD (e.g. airframe_aero_crosscheck), bench thrust data and flight logs.",
+  "atmosphere": {
+   "temperature_k": 288.15,
+   "pressure_pa": 101325.0,
+   "density_kg_m3": 1.225,
+   "dynamic_viscosity_pa_s": 1.8e-05,
+   "speed_of_sound_m_s": 340.293988
+  },
+  "geometry": {
+   "wing_area_m2": 0.963,
+   "wing_span_m": 1.8,
+   "aspect_ratio": 3.3645,
+   "mac_mm": 585.607,
+   "mac_x_le_mm": 690.467,
+   "mac_spanwise_station_mm": 370.09,
+   "taper_ratio": 0.3049,
+   "sweep_half_chord_deg": 27.575,
+   "wing_ac_x_mm": 836.869,
+   "wing_exposed_area_m2": 0.81167,
+   "tails": [
+    {
+     "role": "vertical",
+     "area_mm2": 49450.0,
+     "span_mm": 230.0,
+     "mac_mm": 221.55,
+     "x_ac_mm": 1242.83,
+     "aspect_ratio_unfolded": 2.14,
+     "cl_alpha_per_rad": 2.628,
+     "effective_horizontal_area_mm2": 0.0,
+     "effective_vertical_area_mm2": 49450.0,
+     "dihedral_deg": 0,
+     "inverted_v": false
+    },
+    {
+     "role": "vertical",
+     "area_mm2": 49450.0,
+     "span_mm": 230.0,
+     "mac_mm": 221.55,
+     "x_ac_mm": 1242.83,
+     "aspect_ratio_unfolded": 2.14,
+     "cl_alpha_per_rad": 2.628,
+     "effective_horizontal_area_mm2": 0.0,
+     "effective_vertical_area_mm2": 49450.0,
+     "dihedral_deg": 0,
+     "inverted_v": false
+    }
+   ],
+   "effective_horizontal_tail_area_m2": 0.0,
+   "effective_vertical_tail_area_m2": 0.0989,
+   "horizontal_tail_volume": 0.0,
+   "vertical_tail_volume": 0.02316,
+   "fuselage_fineness_ratio": 6.5,
+   "wing_loading_kg_m2": 12.461,
+   "wing_loading_g_dm2": 124.61
+  },
+  "stability": {
+   "wing_cl_alpha_per_rad": 3.2121,
+   "downwash_gradient": 0.6078,
+   "aircraft_cl_alpha_per_rad": 3.2121,
+   "fuselage_cm_alpha_per_rad": 0.08552,
+   "fuselage_apparent_mass_k2_minus_k1": 0.8857,
+   "neutral_point_x_mm": 821.28,
+   "neutral_point_without_fuselage_x_mm": 836.87,
+   "cg_x_mm": 762.0,
+   "static_margin_mac": 0.1012,
+   "cg_range_for_margin_x_mm": [
+    733.44,
+    792.0
+   ]
+  },
+  "aerodynamics": {
+   "reference_speed_m_s": 28.0,
+   "mach": 0.0823,
+   "cd0_components": [
+    {
+     "component": "wing",
+     "cf": 0.004373,
+     "form_factor": 1.2607,
+     "interference_q": 1.0,
+     "wetted_area_mm2": 1655313.0,
+     "cd0_contribution": 0.009477
+    },
+    {
+     "component": "tail (vertical)",
+     "cf": 0.00527,
+     "form_factor": 1.2607,
+     "interference_q": 1.04,
+     "wetted_area_mm2": 100848.3,
+     "cd0_contribution": 0.000724
+    },
+    {
+     "component": "tail (vertical)",
+     "cf": 0.00527,
+     "form_factor": 1.2607,
+     "interference_q": 1.04,
+     "wetted_area_mm2": 100848.3,
+     "cd0_contribution": 0.000724
+    },
+    {
+     "component": "fuselage",
+     "cf": 0.003788,
+     "form_factor": 1.2347,
+     "interference_q": 1.0,
+     "wetted_area_mm2": 612610.6,
+     "cd0_contribution": 0.002975
+    }
+   ],
+   "misc_drag_fraction": 0.1,
+   "cd0": 0.015289,
+   "oswald_efficiency": 0.95,
+   "induced_drag_factor_k": 0.099588,
+   "max_lift_to_drag": 12.814,
+   "cl_max": 1.0
+  },
+  "performance": {
+   "mass_kg": 12.0,
+   "weight_n": 117.68,
+   "stall_speed_m_s": 14.125,
+   "min_power_speed_m_s": 17.146,
+   "min_drag_speed_m_s": 22.565,
+   "battery_pack_nominal_v": 21.6,
+   "battery_pack_energy_wh": 432.0,
+   "usable_energy_wh": 345.6,
+   "mission_energy_wh_to_reserve": 276.48,
+   "powertrain_efficiency_cruise": 0.5249,
+   "hotel_power_w": 6.0,
+   "loiter": {
+    "label": "loiter (max endurance, >= 1.3 Vs)",
+    "speed_m_s": 18.362,
+    "cl": 0.5917,
+    "cd": 0.05016,
+    "lift_to_drag": 11.797,
+    "aero_power_w": 183.17,
+    "electrical_power_w": 354.98,
+    "battery_current_a": 16.434,
+    "endurance_min_to_reserve": 46.7,
+    "range_km_to_reserve": 51.49,
+    "reynolds_mac": 736153
+   },
+   "cruise": {
+    "label": "cruise (requested)",
+    "speed_m_s": 28.0,
+    "cl": 0.2545,
+    "cd": 0.02174,
+    "lift_to_drag": 11.707,
+    "aero_power_w": 281.47,
+    "electrical_power_w": 542.26,
+    "battery_current_a": 25.105,
+    "endurance_min_to_reserve": 30.6,
+    "range_km_to_reserve": 51.39,
+    "reynolds_mac": 1122530
+   },
+   "power_curve": [
+    {
+     "label": "sweep",
+     "speed_m_s": 18.362,
+     "cl": 0.5917,
+     "cd": 0.05016,
+     "lift_to_drag": 11.797,
+     "aero_power_w": 183.17,
+     "electrical_power_w": 354.98,
+     "battery_current_a": 16.434,
+     "endurance_min_to_reserve": 46.7,
+     "range_km_to_reserve": 51.49,
+     "reynolds_mac": 736153
+    },
+    {
+     "label": "sweep",
+     "speed_m_s": 21.117,
+     "cl": 0.4474,
+     "cd": 0.03523,
+     "lift_to_drag": 12.702,
+     "aero_power_w": 195.64,
+     "electrical_power_w": 378.74,
+     "battery_current_a": 17.534,
+     "endurance_min_to_reserve": 43.8,
+     "range_km_to_reserve": 55.49,
+     "reynolds_mac": 846576
+    },
+    {
+     "label": "sweep",
+     "speed_m_s": 23.871,
+     "cl": 0.3501,
+     "cd": 0.0275,
+     "lift_to_drag": 12.733,
+     "aero_power_w": 220.62,
+     "electrical_power_w": 426.32,
+     "battery_current_a": 19.737,
+     "endurance_min_to_reserve": 38.9,
+     "range_km_to_reserve": 55.73,
+     "reynolds_mac": 956999
+    },
+    {
+     "label": "sweep",
+     "speed_m_s": 27.544,
+     "cl": 0.263,
+     "cd": 0.02218,
+     "lift_to_drag": 11.859,
+     "aero_power_w": 273.33,
+     "electrical_power_w": 526.75,
+     "battery_current_a": 24.387,
+     "endurance_min_to_reserve": 31.5,
+     "range_km_to_reserve": 52.05,
+     "reynolds_mac": 1104230
+    },
+    {
+     "label": "sweep",
+     "speed_m_s": 32.134,
+     "cl": 0.1932,
+     "cd": 0.01901,
+     "lift_to_drag": 10.166,
+     "aero_power_w": 372.0,
+     "electrical_power_w": 714.73,
+     "battery_current_a": 33.089,
+     "endurance_min_to_reserve": 23.2,
+     "range_km_to_reserve": 44.75,
+     "reynolds_mac": 1288268
+    },
+    {
+     "label": "sweep",
+     "speed_m_s": 36.725,
+     "cl": 0.1479,
+     "cd": 0.01747,
+     "lift_to_drag": 8.468,
+     "aero_power_w": 510.34,
+     "electrical_power_w": 978.3,
+     "battery_current_a": 45.292,
+     "endurance_min_to_reserve": 17.0,
+     "range_km_to_reserve": 37.36,
+     "reynolds_mac": 1472306
+    },
+    {
+     "label": "sweep",
+     "speed_m_s": 44.07,
+     "cl": 0.1027,
+     "cd": 0.01634,
+     "lift_to_drag": 6.287,
+     "aero_power_w": 824.9,
+     "electrical_power_w": 1577.61,
+     "battery_current_a": 73.037,
+     "endurance_min_to_reserve": 10.5,
+     "range_km_to_reserve": 27.8,
+     "reynolds_mac": 1766768
+    }
+   ],
+   "static_thrust_source": "momentum theory with static figure of merit (HEURISTIC)",
+   "static_thrust_g": 5996.9,
+   "static_thrust_to_weight": 0.5,
+   "max_climb_rate_m_s": 5.921,
+   "climb_speed_m_s": 18.362,
+   "max_electrical_power_w": 1987.4,
+   "max_battery_current_a": 92.01,
+   "required_continuous_c_rating": 4.6,
+   "power_loading_w_per_kg": 133.3
+  },
+  "structure": {
+   "limit_load_factor": 4.0,
+   "safety_factor": 1.5,
+   "root_bending_moment_ultimate_n_m": 134.85
+  },
+  "launch": {
+   "accel_g": 12.0,
+   "end_speed_m_s": 24.0,
+   "stroke_m": 2.447,
+   "end_speed_over_stall": 1.699,
+   "airframe_axial_load_ultimate_n": 2118.2,
+   "mounts": [
+    {
+     "name": "rail shoe (flight-stem socket boss)",
+     "load_ultimate_n": 2118.24,
+     "allowable_n": 4000.0,
+     "margin_of_safety": 0.888
+    }
+   ],
+   "model": "rigid body, constant acceleration over the stroke, ultimate = mass x accel x safety factor"
+  },
+  "checks": [
+   {
+    "name": "static_margin",
+    "value": 0.1012,
+    "limit": [
+     0.05,
+     0.15
+    ],
+    "pass": true
+   },
+   {
+    "name": "horizontal_tail_volume",
+    "value": 0.0,
+    "limit": [
+     0.35,
+     0.7
+    ],
+    "pass": false
+   },
+   {
+    "name": "vertical_tail_volume",
+    "value": 0.02316,
+    "limit": [
+     0.02,
+     0.05
+    ],
+    "pass": true
+   },
+   {
+    "name": "launch_end_speed_over_stall",
+    "value": 1.699,
+    "limit": 1.2,
+    "pass": true
+   },
+   {
+    "name": "launch_stroke_m",
+    "value": 2.447,
+    "limit": 2.5,
+    "pass": true
+   },
+   {
+    "name": "launch_mount_margin: rail shoe (flight-stem socket boss)",
+    "value": 0.888,
+    "limit": 0,
+    "pass": true
+   }
+  ],
+  "all_checks_pass": false,
+  "assumptions": {
+   "wing_ac": "25 % MAC (subsonic)",
+   "lift_curve_slope": "Helmbold/DATCOM with fuselage lift factor F = 1.07(1+d/b)^2 x S_exposed/S (capped 0.98)",
+   "downwash": "d(eps)/d(alpha) = 2 CL_alpha_w / (pi A), tail-height effects ignored",
+   "v_tail": "Purser-Campbell: pitch uses S cos^2(Gamma), yaw uses S sin^2(Gamma); lift-curve slope from the unfolded panel aspect ratio",
+   "fuselage_pitch": "Munk slender-body moment 2(k2-k1) Vol, Lamb spheroid k2-k1 at the fineness ratio; conservative (moves the neutral point forward)",
+   "parasite_drag": "Raymer component build-up; wetted area of lifting surfaces = S_exposed (1.977 + 0.52 t/c); misc/leakage/protuberance as a fraction",
+   "induced_drag": "Oswald e = 1.78(1 - 0.045 A^0.68) - 0.64 (Raymer straight-wing fit)",
+   "speeds": "loiter = max(min-power speed, 1.3 Vs); cruise = max(min-drag speed, 1.3 Vs) unless requested",
+   "energy": "endurance = usable energy x (1 - reserve) / electrical power; constant efficiencies, no battery sag, wind or climb segments",
+   "static_thrust": "datasheet value if given, else momentum theory T = (2 rho A)^(1/3) (FM P)^(2/3)",
+   "spar": "ultimate root moment n_ult (W/2)(4 s / 3 pi) for elliptic lift with no inertia relief"
+  },
+  "sources": {
+   "raymer": "D. P. Raymer, Aircraft Design: A Conceptual Approach, 6th ed., AIAA, 2018 - ch. 6 (tail volume coefficients), ch. 12 (lift-curve slope, component drag build-up, skin friction, form factors, Oswald efficiency), ch. 16 (neutral point / static margin)",
+   "purser_campbell": "P. E. Purser and J. P. Campbell, Experimental verification of a simplified vee-tail theory and analysis of available data on complete models with vee tails, NACA Report 823, 1945",
+   "munk": "M. M. Munk, The aerodynamic forces on airship hulls, NACA Report 184, 1924 (slender-body destabilizing moment with apparent-mass factor k2-k1)",
+   "lamb": "H. Lamb, Hydrodynamics, 6th ed., 1932, sec. 373 (prolate-spheroid apparent-mass coefficients)",
+   "isa": "ICAO Doc 7488/3, Manual of the ICAO Standard Atmosphere (troposphere); Sutherland viscosity law (mu0 = 1.458e-6, S = 110.4 K)",
+   "hepperle": "M. Hepperle, Electric Flight - Potential and Limitations, NATO STO-MP-AVT-209, 2012 (battery-electric endurance/range = usable energy / electrical power)",
+   "momentum": "Actuator-disk momentum theory, e.g. J. G. Leishman, Principles of Helicopter Aerodynamics, 2nd ed., 2006, ch. 2 (static thrust from shaft power with a figure of merit)",
+   "fs": "Factor of safety 1.5 on limit loads: 14 CFR 23 (former sec. 23.303) / CS-23 convention, adopted here for a small UAS"
+  },
+  "warnings": [
+   "Oswald estimate 0.957 outside 0.5-0.95; Raymer straight-wing fit is outside its range",
+   "Check failed: horizontal_tail_volume = 0.0 (limit [0.35, 0.7])"
+  ]
+ }
+}

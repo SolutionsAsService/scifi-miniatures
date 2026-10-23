@@ -1,0 +1,523 @@
+{
+ "id": "wayfarer-apc",
+ "stage": 6,
+ "generator": "source/build.py (manifold3d CSG; tools/turret_ring.py)",
+ "assembled_bbox_mm": [
+  151.0,
+  59.0,
+  51.72
+ ],
+ "assembled_min_mm": [
+  -76.4,
+  -29.5,
+  0.0
+ ],
+ "assembled_max_mm": [
+  74.6,
+  29.5,
+  51.72
+ ],
+ "parts": {
+  "hull-front": {
+   "label": "Hull, front half",
+   "volume_mm3": 28511.94,
+   "bbox_mm": [
+    86.1,
+    59.0,
+    35.65
+   ],
+   "triangles": 9324,
+   "bodies": 1,
+   "watertight": true,
+   "mesh_quality": {
+    "min_angle_deg": 0.002,
+    "p05_min_angle_deg": 0.52,
+    "median_min_angle_deg": 9.2,
+    "max_aspect": 52178.5,
+    "shortest_edge_mm": 0.00138,
+    "faces_below_1deg": 826
+   },
+   "instances": 1
+  },
+  "hull-rear": {
+   "label": "Hull, rear half",
+   "volume_mm3": 20318.35,
+   "bbox_mm": [
+    64.9,
+    59.0,
+    33.2
+   ],
+   "triangles": 7842,
+   "bodies": 1,
+   "watertight": true,
+   "mesh_quality": {
+    "min_angle_deg": 0.0,
+    "p05_min_angle_deg": 0.52,
+    "median_min_angle_deg": 8.66,
+    "max_aspect": 729550.6,
+    "shortest_edge_mm": 0.00131,
+    "faces_below_1deg": 632
+   },
+   "instances": 1
+  },
+  "split-pin": {
+   "label": "Split pin (D-flat, 3 mm)",
+   "volume_mm3": 44.79,
+   "bbox_mm": [
+    7.5,
+    3.0,
+    2.4
+   ],
+   "triangles": 308,
+   "bodies": 1,
+   "watertight": true,
+   "mesh_quality": {
+    "min_angle_deg": 0.252,
+    "p05_min_angle_deg": 1.63,
+    "median_min_angle_deg": 19.16,
+    "max_aspect": 249.7,
+    "shortest_edge_mm": 0.03372,
+    "faces_below_1deg": 5
+   },
+   "instances": 2
+  },
+  "wheel": {
+   "label": "Wheel (x8)",
+   "volume_mm3": 1583.91,
+   "bbox_mm": [
+    20.8,
+    20.8,
+    8.05
+   ],
+   "triangles": 4624,
+   "bodies": 1,
+   "watertight": true,
+   "mesh_quality": {
+    "min_angle_deg": 0.001,
+    "p05_min_angle_deg": 1.48,
+    "median_min_angle_deg": 12.74,
+    "max_aspect": 113446.7,
+    "shortest_edge_mm": 0.00999,
+    "faces_below_1deg": 124
+   },
+   "instances": 8
+  },
+  "rws": {
+   "label": "Tally RWS on 30 mm ring turntable",
+   "volume_mm3": 2081.89,
+   "bbox_mm": [
+    39.2,
+    30.0,
+    13.2
+   ],
+   "triangles": 2884,
+   "bodies": 1,
+   "watertight": true,
+   "mesh_quality": {
+    "min_angle_deg": 0.031,
+    "p05_min_angle_deg": 1.13,
+    "median_min_angle_deg": 21.36,
+    "max_aspect": 1852.2,
+    "shortest_edge_mm": 0.00245,
+    "faces_below_1deg": 96
+   },
+   "instances": 1
+  },
+  "ramp": {
+   "label": "Stern ramp",
+   "volume_mm3": 1321.13,
+   "bbox_mm": [
+    3.45,
+    30.0,
+    25.45
+   ],
+   "triangles": 1064,
+   "bodies": 1,
+   "watertight": true,
+   "mesh_quality": {
+    "min_angle_deg": 0.016,
+    "p05_min_angle_deg": 0.39,
+    "median_min_angle_deg": 10.22,
+    "max_aspect": 3725.7,
+    "shortest_edge_mm": 0.02642,
+    "faces_below_1deg": 96
+   },
+   "instances": 1
+  },
+  "hatch": {
+   "label": "Roof hatch (x4)",
+   "volume_mm3": 704.17,
+   "bbox_mm": [
+    26.1,
+    18.0,
+    3.6
+   ],
+   "triangles": 1056,
+   "bodies": 1,
+   "watertight": true,
+   "mesh_quality": {
+    "min_angle_deg": 0.085,
+    "p05_min_angle_deg": 0.86,
+    "median_min_angle_deg": 15.0,
+    "max_aspect": 877.5,
+    "shortest_edge_mm": 0.00364,
+    "faces_below_1deg": 66
+   },
+   "instances": 4
+  }
+ },
+ "kit_resin_ml_solid_parts": 67.81,
+ "interference_closed": [],
+ "ramp_open": [
+  {
+   "a": "Stern ramp (open)",
+   "b": "Hull rear (troop bay)",
+   "overlap_mm3": 0.0
+  },
+  {
+   "ramp_open_lowest_z_mm": 0.011,
+   "ramp_open_rear_x_mm": -95.823
+  }
+ ],
+ "ring": {
+  "turntable_d": 30.0,
+  "seat_clearance": 0.2,
+  "seat_depth": 1.2,
+  "collar_wall": 1.6,
+  "turntable_h": 1.8,
+  "turntable_chamfer": 0.4,
+  "magnet": "5x2",
+  "magnet_pocket_d": 5.2,
+  "magnet_pocket_depth": 2.1,
+  "segments": 128,
+  "seat_d": 30.4,
+  "collar_od": 33.6,
+  "note": "Shared Vigil vehicle ring: Wayfarer AW-8 Tally RWS, Palisade AV-3 turrets / AV-3W Ward RWS."
+ },
+ "fit": {
+  "figures": {
+   "vigil-rifleman": {
+    "height_mm": 32.37,
+    "plan_min_rect_mm": [
+     13.74,
+     23.02
+    ],
+    "upper_body_min_rect_mm": [
+     13.82,
+     21.43
+    ]
+   },
+   "vigil-rifleman-mk2": {
+    "height_mm": 32.38,
+    "plan_min_rect_mm": [
+     13.79,
+     23.47
+    ],
+    "upper_body_min_rect_mm": [
+     13.78,
+     21.94
+    ]
+   },
+   "vigil-marksman": {
+    "height_mm": 26.53,
+    "plan_min_rect_mm": [
+     13.9,
+     31.04
+    ],
+    "upper_body_min_rect_mm": [
+     13.83,
+     25.08
+    ]
+   },
+   "vigil-heavy": {
+    "height_mm": 31.91,
+    "plan_min_rect_mm": [
+     14.72,
+     21.79
+    ],
+    "upper_body_min_rect_mm": [
+     13.35,
+     20.77
+    ]
+   },
+   "vigil-warden": {
+    "height_mm": 35.65,
+    "plan_min_rect_mm": [
+     13.08,
+     20.86
+    ],
+    "upper_body_min_rect_mm": [
+     13.08,
+     20.54
+    ]
+   }
+  },
+  "openings": [
+   {
+    "figure": "vigil-rifleman",
+    "opening": "stern door (crouched to 65 % of height, Dreyfuss)",
+    "needs_height_mm": 21.54,
+    "door_clear_height_mm": 23.7,
+    "fits": true
+   },
+   {
+    "figure": "vigil-rifleman",
+    "opening": "stern door (lying, lengthwise)",
+    "needs_mm": [
+     24.02,
+     14.74
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-rifleman",
+    "opening": "stern door (standing)",
+    "needs_height_mm": 32.37,
+    "door_clear_height_mm": 23.7,
+    "fits": false
+   },
+   {
+    "figure": "vigil-rifleman",
+    "opening": "roof hatch (upper body standing in the hatch)",
+    "needs_mm": [
+     14.82,
+     22.43
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-rifleman",
+    "opening": "roof hatch (whole figure passing through, lengthwise)",
+    "needs_mm": [
+     14.74,
+     24.02
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-rifleman-mk2",
+    "opening": "stern door (crouched to 65 % of height, Dreyfuss)",
+    "needs_height_mm": 21.55,
+    "door_clear_height_mm": 23.7,
+    "fits": true
+   },
+   {
+    "figure": "vigil-rifleman-mk2",
+    "opening": "stern door (lying, lengthwise)",
+    "needs_mm": [
+     24.47,
+     14.79
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-rifleman-mk2",
+    "opening": "stern door (standing)",
+    "needs_height_mm": 32.38,
+    "door_clear_height_mm": 23.7,
+    "fits": false
+   },
+   {
+    "figure": "vigil-rifleman-mk2",
+    "opening": "roof hatch (upper body standing in the hatch)",
+    "needs_mm": [
+     14.78,
+     22.94
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-rifleman-mk2",
+    "opening": "roof hatch (whole figure passing through, lengthwise)",
+    "needs_mm": [
+     14.79,
+     24.47
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-marksman",
+    "opening": "stern door (crouched to 65 % of height, Dreyfuss)",
+    "needs_height_mm": 17.74,
+    "door_clear_height_mm": 23.7,
+    "fits": true
+   },
+   {
+    "figure": "vigil-marksman",
+    "opening": "stern door (lying, lengthwise)",
+    "needs_mm": [
+     32.04,
+     14.9
+    ],
+    "fits": false
+   },
+   {
+    "figure": "vigil-marksman",
+    "opening": "stern door (standing)",
+    "needs_height_mm": 26.53,
+    "door_clear_height_mm": 23.7,
+    "fits": false
+   },
+   {
+    "figure": "vigil-marksman",
+    "opening": "roof hatch (upper body standing in the hatch)",
+    "needs_mm": [
+     14.83,
+     26.08
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": false
+   },
+   {
+    "figure": "vigil-marksman",
+    "opening": "roof hatch (whole figure passing through, lengthwise)",
+    "needs_mm": [
+     14.9,
+     32.04
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": false
+   },
+   {
+    "figure": "vigil-heavy",
+    "opening": "stern door (crouched to 65 % of height, Dreyfuss)",
+    "needs_height_mm": 21.24,
+    "door_clear_height_mm": 23.7,
+    "fits": true
+   },
+   {
+    "figure": "vigil-heavy",
+    "opening": "stern door (lying, lengthwise)",
+    "needs_mm": [
+     22.79,
+     15.72
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-heavy",
+    "opening": "stern door (standing)",
+    "needs_height_mm": 31.91,
+    "door_clear_height_mm": 23.7,
+    "fits": false
+   },
+   {
+    "figure": "vigil-heavy",
+    "opening": "roof hatch (upper body standing in the hatch)",
+    "needs_mm": [
+     14.35,
+     21.77
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-heavy",
+    "opening": "roof hatch (whole figure passing through, lengthwise)",
+    "needs_mm": [
+     15.72,
+     22.79
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-warden",
+    "opening": "stern door (crouched to 65 % of height, Dreyfuss)",
+    "needs_height_mm": 23.67,
+    "door_clear_height_mm": 23.7,
+    "fits": true
+   },
+   {
+    "figure": "vigil-warden",
+    "opening": "stern door (lying, lengthwise)",
+    "needs_mm": [
+     21.86,
+     14.08
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-warden",
+    "opening": "stern door (standing)",
+    "needs_height_mm": 35.65,
+    "door_clear_height_mm": 23.7,
+    "fits": false
+   },
+   {
+    "figure": "vigil-warden",
+    "opening": "roof hatch (upper body standing in the hatch)",
+    "needs_mm": [
+     14.08,
+     21.54
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   },
+   {
+    "figure": "vigil-warden",
+    "opening": "roof hatch (whole figure passing through, lengthwise)",
+    "needs_mm": [
+     14.08,
+     21.86
+    ],
+    "hatch_mm": [
+     24.5,
+     16.8
+    ],
+    "fits": true
+   }
+  ],
+  "min_hatch_opening_mm": [
+   32.04,
+   15.72
+  ],
+  "hatch_opening_mm": [
+   24.5,
+   16.8
+  ],
+  "aisle_between_benches_mm": 40,
+  "bay_clear_height_mm": 24.2,
+  "seat_pitch_mm": 18.6,
+  "method": "Figure envelopes from the figure packages' assembled viewer meshes (base excluded): minimum-area rectangle of the plan projection (shapely); upper body = vertices above 55 % of the height. Openings from the spec. Clearance 0.5 mm per side (msla_resin min_clearance). Door test slides the rectangle over the door polygon in 0.1 mm steps."
+ },
+ "hull_stats": {
+  "relief_outside_hull_mm3": 9392.1,
+  "shell_only_mm3": 40430.3
+ },
+ "step": {
+  "file": null,
+  "status": "SKIPPED: FreeCAD is not installed in this environment (sdfkit.write_step needs a FreeCAD Python)."
+ }
+}

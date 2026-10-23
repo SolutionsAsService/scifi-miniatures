@@ -1,0 +1,220 @@
+{
+ "id": "lantern-drones",
+ "generator": "source/build.py (tools/sdfkit.py: SDF sculpt, marching cubes, manifold3d simplification)",
+ "assembled_bbox_mm": [
+  139.94,
+  61.08,
+  36.76
+ ],
+ "parts": {
+  "base-32-stem": {
+   "volume_mm3": 2259.1,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    31.94,
+    31.95,
+    4.55
+   ],
+   "triangles": 235256,
+   "instances": 2,
+   "pitch_mm": 0.1384
+  },
+  "flight-stem": {
+   "volume_mm3": 54.15,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    1.6,
+    1.6,
+    27.0
+   ],
+   "triangles": 99328,
+   "instances": 2,
+   "pitch_mm": 0.06
+  },
+  "wisp-a-recon": {
+   "volume_mm3": 208.16,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    16.0,
+    14.4,
+    4.1
+   ],
+   "triangles": 151016,
+   "instances": 1,
+   "pitch_mm": 0.0944
+  },
+  "wisp-b-designator": {
+   "volume_mm3": 217.08,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    16.0,
+    14.4,
+    4.72
+   ],
+   "triangles": 146828,
+   "instances": 1,
+   "pitch_mm": 0.0975
+  },
+  "base-32-plain": {
+   "volume_mm3": 2223.9,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    31.93,
+    31.94,
+    3.0
+   ],
+   "triangles": 232852,
+   "instances": 2,
+   "pitch_mm": 0.1366
+  },
+  "tick-hull": {
+   "volume_mm3": 987.44,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    12.96,
+    18.54,
+    6.5
+   ],
+   "triangles": 151860,
+   "instances": 1,
+   "pitch_mm": 0.1069
+  },
+  "tick-mast": {
+   "volume_mm3": 13.57,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    2.6,
+    2.2,
+    7.5
+   ],
+   "triangles": 72880,
+   "instances": 1,
+   "pitch_mm": 0.04
+  },
+  "tick-weapon-a-talon": {
+   "volume_mm3": 42.45,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    3.37,
+    8.9,
+    7.5
+   ],
+   "triangles": 151192,
+   "instances": 1,
+   "pitch_mm": 0.0418
+  },
+  "wisp-landed": {
+   "volume_mm3": 246.9,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    16.0,
+    14.4,
+    4.9
+   ],
+   "triangles": 146632,
+   "instances": 1,
+   "pitch_mm": 0.0974
+  },
+  "tick-weapon-b-plough": {
+   "volume_mm3": 77.02,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    13.13,
+    13.0,
+    8.68
+   ],
+   "triangles": 150104,
+   "instances": 1,
+   "pitch_mm": 0.0623
+  },
+  "tick-weapon-c-relay": {
+   "volume_mm3": 35.49,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.54,
+    3.4,
+    10.7
+   ],
+   "triangles": 151100,
+   "instances": 1,
+   "pitch_mm": 0.0418
+  },
+  "sdc-pack-saddle": {
+   "volume_mm3": 81.13,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    6.3,
+    5.8,
+    5.07
+   ],
+   "triangles": 150328,
+   "instances": 1,
+   "pitch_mm": 0.0523
+  },
+  "sdc-cradle": {
+   "volume_mm3": 298.32,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    9.41,
+    8.0,
+    10.35
+   ],
+   "triangles": 150732,
+   "instances": 1,
+   "pitch_mm": 0.0715
+  }
+ },
+ "interference": [],
+ "step": {
+  "file": null,
+  "status": "skipped",
+  "reason": "FreeCAD is not installed on the build host (WSL); tools/sdfkit.write_step needs it. UNKNOWN until rebuilt where FreeCAD exists."
+ },
+ "fits": {
+  "saddle_on_pack": {
+   "overlap_mm3": 0.0,
+   "min_clearance_mm": 0.05,
+   "method": "manifold3d boolean intersection volume; clearance = pack signed distance field (exosuit.backpack('power'), 0.05 mm grid) sampled at every saddle vertex, minimum"
+  },
+  "cradle_in_saddle": {
+   "overlap_mm3": -0.0
+  },
+  "cradle_on_pack_stickout_mm": 12.3,
+  "cradle_folded_wisp_envelope_mm": [
+   9.41,
+   8.0,
+   10.35
+  ],
+  "tick_hull_extent_mm": [
+   12.96,
+   18.54,
+   6.5
+  ],
+  "wisp_a_extent_mm": [
+   16.0,
+   14.4,
+   4.1
+  ],
+  "flying_wisp": {
+   "stem_lean_deg": 24,
+   "wisp_pitch_nose_down_deg": 24.0,
+   "wisp_centre_offset_from_base_centre_mm": 0.08,
+   "wisp_top_above_table_mm": 30.93,
+   "wisp_bottom_above_base_top_mm": 20.55
+  },
+  "tick_with_mast_height_mm": 11.5
+ }
+}

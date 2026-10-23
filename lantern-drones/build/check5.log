@@ -1,0 +1,173 @@
+  miniature_scale_convert  (cached)
+  miniature_base_and_peg  (cached)
+  miniature_base_and_peg  (cached)
+  miniature_base_and_peg  (cached)
+  miniature_base_and_peg  (cached)
+  miniature_base_and_peg  (cached)
+  miniature_base_and_peg  (cached)
+  miniature_detail_advice  (cached)
+  miniature_base_layout_check  (cached)
+  miniature_base_layout_check  (cached)
+  miniature_base_layout_check  (cached)
+  miniature_slender_feature_check wisp-a-recon.stl (4 s)
+  miniature_slender_feature_check wisp-landed.stl (cached)
+  miniature_slender_feature_check tick-mast.stl (cached)
+  miniature_slender_feature_check tick-weapon-c-relay.stl (3 s)
+  miniature_slender_feature_check tick-weapon-a-talon.stl (cached)
+  miniature_slender_feature_check tick-weapon-b-plough.stl (cached)
+  miniature_slender_feature_check flight-stem.stl (cached)
+  miniature_gap_check wisp-a-recon.stl (cached)
+  miniature_gap_check wisp-b-designator.stl (cached)
+  miniature_gap_check wisp-landed.stl (cached)
+  miniature_gap_check tick-hull.stl (cached)
+  miniature_gap_check tick-mast.stl (cached)
+  miniature_gap_check tick-weapon-a-talon.stl (cached)
+  miniature_gap_check tick-weapon-b-plough.stl (cached)
+  miniature_gap_check tick-weapon-c-relay.stl (cached)
+  miniature_gap_check sdc-cradle.stl (cached)
+  miniature_gap_check sdc-pack-saddle.stl (cached)
+  miniature_gap_check base-32-stem.stl (cached)
+  miniature_gap_check base-32-plain.stl (cached)
+  miniature_support_plan wisp-a-recon.stl (cached)
+  miniature_printability_check wisp-a-recon.stl (cached)
+  miniature_support_plan wisp-b-designator.stl (cached)
+  miniature_printability_check wisp-b-designator.stl (cached)
+  miniature_support_plan wisp-landed.stl (cached)
+  miniature_printability_check wisp-landed.stl (cached)
+  miniature_support_plan flight-stem.stl (cached)
+  miniature_printability_check flight-stem.stl (cached)
+  miniature_support_plan tick-hull.stl (cached)
+  miniature_printability_check tick-hull.stl (cached)
+  miniature_support_plan tick-mast.stl (cached)
+  miniature_printability_check tick-mast.stl (cached)
+  miniature_support_plan tick-weapon-a-talon.stl (cached)
+  miniature_printability_check tick-weapon-a-talon.stl (cached)
+  miniature_support_plan tick-weapon-b-plough.stl (cached)
+  miniature_printability_check tick-weapon-b-plough.stl (cached)
+  miniature_support_plan tick-weapon-c-relay.stl (cached)
+  miniature_printability_check tick-weapon-c-relay.stl (cached)
+  miniature_support_plan sdc-cradle.stl (cached)
+  miniature_printability_check sdc-cradle.stl (cached)
+  miniature_support_plan sdc-pack-saddle.stl (cached)
+  miniature_printability_check sdc-pack-saddle.stl (cached)
+  miniature_support_plan base-32-stem.stl (cached)
+  miniature_printability_check base-32-stem.stl (cached)
+  miniature_support_plan base-32-plain.stl (cached)
+  miniature_printability_check base-32-plain.stl (cached)
+  miniature_plate_pack  (cached)
+  miniature_shell_audit wisp-a-recon.stl (cached)
+  miniature_mesh_budget  (cached)
+  miniature_shell_audit wisp-b-designator.stl (cached)
+  miniature_mesh_budget  (cached)
+  miniature_shell_audit wisp-landed.stl (cached)
+  miniature_mesh_budget  (cached)
+  miniature_shell_audit flight-stem.stl (cached)
+  miniature_mesh_budget  (cached)
+  miniature_shell_audit tick-hull.stl (cached)
+  miniature_mesh_budget  (cached)
+  miniature_shell_audit tick-mast.stl (cached)
+  miniature_mesh_budget  (cached)
+  miniature_shell_audit tick-weapon-a-talon.stl (cached)
+  miniature_mesh_budget  (cached)
+  miniature_shell_audit tick-weapon-b-plough.stl (cached)
+  miniature_mesh_budget  (cached)
+  miniature_shell_audit tick-weapon-c-relay.stl (cached)
+  miniature_mesh_budget  (cached)
+  miniature_shell_audit sdc-cradle.stl (cached)
+  miniature_mesh_budget  (cached)
+  miniature_shell_audit sdc-pack-saddle.stl (cached)
+  miniature_mesh_budget  (cached)
+  miniature_shell_audit base-32-stem.stl (cached)
+  miniature_mesh_budget  (cached)
+  miniature_shell_audit base-32-plain.stl (cached)
+  miniature_mesh_budget  (cached)
+{
+ "all_pass": false,
+ "problems": [
+  "miniature_slender_feature_check wisp-a-recon.stl: failed"
+ ],
+ "parts": {
+  "wisp-a-recon": {
+   "pose": "tilted +0 deg about x, -45 deg about y, on supports",
+   "ml": 0.208,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "wisp-b-designator": {
+   "pose": "tilted +0 deg about x, +45 deg about y, on supports",
+   "ml": 0.217,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "wisp-landed": {
+   "pose": "tilted +45 deg about x, +0 deg about y, on supports",
+   "ml": 0.247,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "flight-stem": {
+   "pose": "tilted +15 deg about x, -15 deg about y, on supports",
+   "ml": 0.054,
+   "warnings": []
+  },
+  "tick-hull": {
+   "pose": "tilted +45 deg about x, +0 deg about y, on supports",
+   "ml": 0.987,
+   "warnings": []
+  },
+  "tick-mast": {
+   "pose": "tilted +0 deg about x, -45 deg about y, on supports",
+   "ml": 0.014,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "tick-weapon-a-talon": {
+   "pose": "tilted +45 deg about x, +0 deg about y, on supports",
+   "ml": 0.042,
+   "warnings": []
+  },
+  "tick-weapon-b-plough": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.077,
+   "warnings": []
+  },
+  "tick-weapon-c-relay": {
+   "pose": "tilted +45 deg about x, +0 deg about y, on supports",
+   "ml": 0.035,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "sdc-cradle": {
+   "pose": "tilted +30 deg about x, -45 deg about y, on supports",
+   "ml": 0.298,
+   "warnings": []
+  },
+  "sdc-pack-saddle": {
+   "pose": "tilted -45 deg about x, +0 deg about y, on supports",
+   "ml": 0.081,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "base-32-stem": {
+   "pose": "tilted +45 deg about x, +45 deg about y, on supports",
+   "ml": 2.259,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "base-32-plain": {
+   "pose": "tilted +45 deg about x, +45 deg about y, on supports",
+   "ml": 2.224,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  }
+ }
+}
+EXIT 1

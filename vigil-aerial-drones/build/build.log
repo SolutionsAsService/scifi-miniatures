@@ -1,0 +1,202 @@
+start Wed Oct 14 17:35:42 MDT 2026 avail=2799
+launcher-roof-pad: 131156 tris at 0.06 mm, vol 104.80 mm3, bbox [10.0, 5.8, 4.0] (4 s)
+base-50-tether: 521372 triangles over budget, re-meshing at 0.2334 mm
+base-50-tether: 250864 tris at 0.2334 mm, vol 8880.53 mm3, bbox [49.88, 49.89, 14.4] (36 s)
+{
+ "assembled_bbox_mm": [
+  224.92,
+  111.97,
+  57.15
+ ],
+ "interference": [
+  {
+   "a": "VA-1 Belfry heavy-lift coaxial hexacopter",
+   "b": "VL-10 EO / radar ball mast (mast socket)",
+   "overlap_mm3": 0.034
+  },
+  {
+   "a": "VA-1 Belfry heavy-lift coaxial hexacopter",
+   "b": "VL-11 relay antenna mast (mast socket)",
+   "overlap_mm3": 0.034
+  }
+ ]
+}
+{
+ "belfry_flying": {
+  "rake_deg": 10,
+  "drone_centre_offset_from_base_centre_mm": 3.55,
+  "drone_bottom_above_base_top_mm": 28.26,
+  "drone_top_above_table_mm": 45.54,
+  "stem_drone_overlap_mm3": 0.0,
+  "stem_base_overlap_mm3": 0.0,
+  "drone_base_overlap_mm3": 0.0
+ },
+ "angelus_flying": {
+  "rake_deg": 10,
+  "drone_centre_offset_from_base_centre_mm": 8.11,
+  "drone_bottom_above_base_top_mm": 28.33,
+  "drone_top_above_table_mm": 55.29,
+  "stem_drone_overlap_mm3": 0.0,
+  "stem_base_overlap_mm3": 0.0,
+  "drone_base_overlap_mm3": 0.0,
+  "rotor_axis_offset_from_base_centre_mm": 1.53
+ },
+ "knell_flying": {
+  "rake_deg": 15,
+  "drone_centre_offset_from_base_centre_mm": 0.59,
+  "drone_bottom_above_base_top_mm": 31.27,
+  "drone_top_above_table_mm": 46.92,
+  "stem_drone_overlap_mm3": 0.0,
+  "stem_base_overlap_mm3": 0.0,
+  "drone_base_overlap_mm3": 0.0
+ },
+ "belfry_tethered_station_masts": {
+  "vl-10-eo-mast": {
+   "overlap_with_station_mm3": 0.0,
+   "overlap_with_tethered_belfry_mm3": 0.0,
+   "gap_to_tethered_belfry_mm": 18.203,
+   "top_z_mm": 21.55
+  },
+  "vl-11-relay-mast": {
+   "overlap_with_station_mm3": 0.0,
+   "overlap_with_tethered_belfry_mm3": 0.0,
+   "gap_to_tethered_belfry_mm": 18.462,
+   "top_z_mm": 21.7
+  },
+  "vl-12-radar-mast": {
+   "overlap_with_station_mm3": 0.0,
+   "overlap_with_tethered_belfry_mm3": 0.0,
+   "gap_to_tethered_belfry_mm": 18.589,
+   "top_z_mm": 20.13
+  }
+ },
+ "belfry_tethered": {
+  "drone_centre_offset_from_base_centre_mm": 4.4,
+  "drone_bottom_above_base_top_mm": 33.75,
+  "drone_bottom_above_station_top_mm": 23.35,
+  "stem_drone_overlap_mm3": 0.0,
+  "stem_base_overlap_mm3": 0.0
+ },
+ "belfry_loadouts": {
+  "vl-01-eo-turret": {
+   "overlap_with_belfry_mm3": 0.0,
+   "gap_to_belfry_mm": 0.004,
+   "lowest_z_mm": -6.15,
+   "clearance_above_skid_plane_mm": 0.85,
+   "overlap_with_flying_stem_mm3": 0.0,
+   "gap_to_flying_stem_mm": 2.041
+  },
+  "vl-02-sar-pod": {
+   "overlap_with_belfry_mm3": 0.0,
+   "gap_to_belfry_mm": 0.01,
+   "lowest_z_mm": -6.3,
+   "clearance_above_skid_plane_mm": 0.7,
+   "overlap_with_flying_stem_mm3": 0.0,
+   "gap_to_flying_stem_mm": 0.691
+  },
+  "vl-03-twin-munitions": {
+   "overlap_with_belfry_mm3": 0.0,
+   "gap_to_belfry_mm": 0.008,
+   "lowest_z_mm": -6.097,
+   "clearance_above_skid_plane_mm": 0.903,
+   "overlap_with_flying_stem_mm3": 0.0,
+   "gap_to_flying_stem_mm": 1.949
+  },
+  "vl-04-cargo-pod": {
+   "overlap_with_belfry_mm3": 0.0,
+   "gap_to_belfry_mm": 0.01,
+   "lowest_z_mm": -6.35,
+   "clearance_above_skid_plane_mm": 0.65,
+   "overlap_with_flying_stem_mm3": 0.0,
+   "gap_to_flying_stem_mm": 1.041
+  },
+  "vl-10-eo-mast": {
+   "overlap_with_belfry_mm3": 0.0344,
+   "gap_to_belfry_mm": 0.006,
+   "top_z_mm": 12.25
+  },
+  "vl-11-relay-mast": {
+   "overlap_with_belfry_mm3": 0.0344,
+   "gap_to_belfry_mm": 0.006,
+   "top_z_mm": 12.4
+  },
+  "vl-12-radar-mast": {
+   "overlap_with_belfry_mm3": 0.0344,
+   "gap_to_belfry_mm": 0.006,
+   "top_z_mm": 10.827
+  }
+ },
+ "angelus_rotors": {
+  "angelus-main-rotor": {
+   "overlap_with_airframe_mm3": 0.0
+  },
+  "angelus-tail-rotor": {
+   "overlap_with_airframe_mm3": 0.0
+  },
+  "main_rotor_disc_mm": 36.28,
+  "tail_rotor_disc_mm": 6.4,
+  "main_rotor_aft_reach_y_mm": 7.8,
+  "tail_rotor_fore_y_mm": 22.36,
+  "main_to_tail_rotor_gap_mm": 19.287,
+  "tail_rotor_gap_to_airframe_mm": 0.002,
+  "main_rotor_gap_to_airframe_mm": 0.002,
+  "airframe_extent_mm": [
+   10.87,
+   38.27,
+   18.35
+  ]
+ },
+ "knell_on_launcher": {
+  "overlap_knell_rail_mm3": 0.0,
+  "overlap_rail_tripod_mm3": 0.0,
+  "knell_lowest_z_on_tripod_mm": 15.02,
+  "rail_length_mm": 46.4,
+  "stroke_mm": 44.2,
+  "stroke_in_world_m": 2.475
+ },
+ "wayfarer_roof": {
+  "pad_centre_wayfarer_frame": [
+   44,
+   -12,
+   38.5
+  ],
+  "yaw": "launcher -y (launch direction) -> Wayfarer +x; launcher +x -> Wayfarer +y",
+  "roof_z_under_pad_min_max": [
+   38.5,
+   38.5
+  ],
+  "roof_samples": 60,
+  "roof_fraction_at_plane": 1.0,
+  "roof_max_above_plane_mm": 0.0,
+  "overlap_pad_hull_mm3": -0.0,
+  "overlap_rail_hull_mm3": 0.0,
+  "overlap_knell_hull_mm3": 0.0,
+  "overlap_stack_rws_at_yaw0_mm3": 0.0,
+  "rws_yaw_blocked_deg": [
+   335
+  ],
+  "rws_yaw_clear_count_of_72": 71,
+  "knell_lowest_z_above_roof_mm": 9.02,
+  "stack_top_z_above_roof_mm": 20.6,
+  "method": "manifold3d intersection volumes; RWS rotated about the ring axis (0, 0) in 5 deg steps; roof heights by downward ray cast on a 1 mm grid"
+ },
+ "extents_mm": {
+  "belfry": [
+   37.7,
+   34.96,
+   10.4
+  ],
+  "angelus": [
+   10.87,
+   38.27,
+   18.35
+  ],
+  "knell": [
+   34.01,
+   25.65,
+   7.19
+  ]
+ }
+}
+build done in 670 s
+EXIT 0 Wed Oct 14 17:46:57 MDT 2026

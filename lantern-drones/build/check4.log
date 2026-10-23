@@ -1,0 +1,175 @@
+Mem:            7921        3053        3211           2        1861        4868
+  miniature_scale_convert  (cached)
+  miniature_base_and_peg  (cached)
+  miniature_base_and_peg  (cached)
+  miniature_base_and_peg  (cached)
+  miniature_base_and_peg  (cached)
+  miniature_base_and_peg  (cached)
+  miniature_base_and_peg  (0 s)
+  miniature_detail_advice  (cached)
+  miniature_base_layout_check  (0 s)
+  miniature_base_layout_check  (cached)
+  miniature_base_layout_check  (cached)
+  miniature_slender_feature_check wisp-a-recon.stl (4 s)
+  miniature_slender_feature_check wisp-landed.stl (2 s)
+  miniature_slender_feature_check tick-mast.stl (1 s)
+  miniature_slender_feature_check tick-weapon-c-relay.stl (3 s)
+  miniature_slender_feature_check tick-weapon-a-talon.stl (2 s)
+  miniature_slender_feature_check tick-weapon-b-plough.stl (2 s)
+  miniature_slender_feature_check flight-stem.stl (2 s)
+  miniature_gap_check wisp-a-recon.stl (28 s)
+  miniature_gap_check wisp-b-designator.stl (29 s)
+  miniature_gap_check wisp-landed.stl (28 s)
+  miniature_gap_check tick-hull.stl (21 s)
+  miniature_gap_check tick-mast.stl (92 s)
+  miniature_gap_check tick-weapon-a-talon.stl (97 s)
+  miniature_gap_check tick-weapon-b-plough.stl (54 s)
+  miniature_gap_check tick-weapon-c-relay.stl (134 s)
+  miniature_gap_check sdc-cradle.stl (42 s)
+  miniature_gap_check sdc-pack-saddle.stl (68 s)
+  miniature_gap_check base-32-stem.stl (21 s)
+  miniature_gap_check base-32-plain.stl (19 s)
+  miniature_support_plan wisp-a-recon.stl (101 s)
+  miniature_printability_check wisp-a-recon.stl (45 s)
+  miniature_support_plan wisp-b-designator.stl (86 s)
+  miniature_printability_check wisp-b-designator.stl (36 s)
+  miniature_support_plan wisp-landed.stl (92 s)
+  miniature_printability_check wisp-landed.stl (34 s)
+  miniature_support_plan flight-stem.stl (47 s)
+  miniature_printability_check flight-stem.stl (cached)
+  miniature_support_plan tick-hull.stl (91 s)
+  miniature_printability_check tick-hull.stl (29 s)
+  miniature_support_plan tick-mast.stl (50 s)
+  miniature_printability_check tick-mast.stl (195 s)
+  miniature_support_plan tick-weapon-a-talon.stl (88 s)
+  miniature_printability_check tick-weapon-a-talon.stl (156 s)
+  miniature_support_plan tick-weapon-b-plough.stl (83 s)
+  miniature_printability_check tick-weapon-b-plough.stl (60 s)
+  miniature_support_plan tick-weapon-c-relay.stl (94 s)
+  miniature_printability_check tick-weapon-c-relay.stl (193 s)
+  miniature_support_plan sdc-cradle.stl (95 s)
+  miniature_printability_check sdc-cradle.stl (47 s)
+  miniature_support_plan sdc-pack-saddle.stl (84 s)
+  miniature_printability_check sdc-pack-saddle.stl (74 s)
+  miniature_support_plan base-32-stem.stl (148 s)
+  miniature_printability_check base-32-stem.stl (28 s)
+  miniature_support_plan base-32-plain.stl (132 s)
+  miniature_printability_check base-32-plain.stl (26 s)
+  miniature_plate_pack  (0 s)
+  miniature_shell_audit wisp-a-recon.stl (2 s)
+  miniature_mesh_budget  (0 s)
+  miniature_shell_audit wisp-b-designator.stl (2 s)
+  miniature_mesh_budget  (0 s)
+  miniature_shell_audit wisp-landed.stl (2 s)
+  miniature_mesh_budget  (0 s)
+  miniature_shell_audit flight-stem.stl (cached)
+  miniature_mesh_budget  (cached)
+  miniature_shell_audit tick-hull.stl (2 s)
+  miniature_mesh_budget  (0 s)
+  miniature_shell_audit tick-mast.stl (1 s)
+  miniature_mesh_budget  (0 s)
+  miniature_shell_audit tick-weapon-a-talon.stl (2 s)
+  miniature_mesh_budget  (0 s)
+  miniature_shell_audit tick-weapon-b-plough.stl (2 s)
+  miniature_mesh_budget  (0 s)
+  miniature_shell_audit tick-weapon-c-relay.stl (2 s)
+  miniature_mesh_budget  (0 s)
+  miniature_shell_audit sdc-cradle.stl (2 s)
+  miniature_mesh_budget  (0 s)
+  miniature_shell_audit sdc-pack-saddle.stl (2 s)
+  miniature_mesh_budget  (0 s)
+  miniature_shell_audit base-32-stem.stl (3 s)
+  miniature_mesh_budget  (0 s)
+  miniature_shell_audit base-32-plain.stl (3 s)
+  miniature_mesh_budget  (0 s)
+{
+ "all_pass": false,
+ "problems": [
+  "miniature_slender_feature_check wisp-a-recon.stl: failed",
+  "miniature_slender_feature_check tick-weapon-c-relay.stl: failed"
+ ],
+ "parts": {
+  "wisp-a-recon": {
+   "pose": "tilted +0 deg about x, -45 deg about y, on supports",
+   "ml": 0.208,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "wisp-b-designator": {
+   "pose": "tilted +0 deg about x, +45 deg about y, on supports",
+   "ml": 0.217,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "wisp-landed": {
+   "pose": "tilted +45 deg about x, +0 deg about y, on supports",
+   "ml": 0.247,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "flight-stem": {
+   "pose": "tilted +15 deg about x, -15 deg about y, on supports",
+   "ml": 0.054,
+   "warnings": []
+  },
+  "tick-hull": {
+   "pose": "tilted +45 deg about x, +0 deg about y, on supports",
+   "ml": 0.987,
+   "warnings": []
+  },
+  "tick-mast": {
+   "pose": "tilted +0 deg about x, -45 deg about y, on supports",
+   "ml": 0.014,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "tick-weapon-a-talon": {
+   "pose": "tilted +45 deg about x, +0 deg about y, on supports",
+   "ml": 0.042,
+   "warnings": []
+  },
+  "tick-weapon-b-plough": {
+   "pose": "upright as modelled, on supports",
+   "ml": 0.077,
+   "warnings": []
+  },
+  "tick-weapon-c-relay": {
+   "pose": "tilted +45 deg about x, +0 deg about y, on supports",
+   "ml": 0.035,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "sdc-cradle": {
+   "pose": "tilted +30 deg about x, -45 deg about y, on supports",
+   "ml": 0.298,
+   "warnings": []
+  },
+  "sdc-pack-saddle": {
+   "pose": "tilted -45 deg about x, +0 deg about y, on supports",
+   "ml": 0.081,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "base-32-stem": {
+   "pose": "tilted +45 deg about x, +45 deg about y, on supports",
+   "ml": 2.259,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  },
+  "base-32-plain": {
+   "pose": "tilted +45 deg about x, +45 deg about y, on supports",
+   "ml": 2.224,
+   "warnings": [
+    "minimum wall (unsupported)"
+   ]
+  }
+ }
+}
+EXIT 1

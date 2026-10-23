@@ -1,0 +1,100 @@
+VH3-01 morph {'r_open_mm': 0.25, 'r_close_mm': 0.26, 'voxels_before': 1012392, 'voxels_after': 993586, 'volume_change_mm3': -2.351}
+VH3-01 Plummet: built 182448 triangles
+VH3-02 morph {'r_open_mm': 0.25, 'r_close_mm': 0.26, 'voxels_before': 947909, 'voxels_after': 934007, 'volume_change_mm3': -1.738}
+VH3-02 Sightline: built 172988 triangles
+VH3-03 morph {'r_open_mm': 0.25, 'r_close_mm': 0.26, 'voxels_before': 1046237, 'voxels_after': 1028339, 'volume_change_mm3': -2.237}
+VH3-03 Ironclad: built 182676 triangles
+VH3-04 morph {'r_open_mm': 0.25, 'r_close_mm': 0.26, 'voxels_before': 962672, 'voxels_after': 941806, 'volume_change_mm3': -2.608}
+VH3-04 Herald: built 182080 triangles
+VH3-05 morph {'r_open_mm': 0.25, 'r_close_mm': 0.26, 'voxels_before': 977032, 'voxels_after': 973979, 'volume_change_mm3': -0.382}
+VH3-05 Stillwater: built 183228 triangles
+VH3-06 morph {'r_open_mm': 0.25, 'r_close_mm': 0.26, 'voxels_before': 753299, 'voxels_after': 741386, 'volume_change_mm3': -1.489}
+VH3-06 Deckhand: built 160468 triangles
+VH3-07 morph {'r_open_mm': 0.25, 'r_close_mm': 0.26, 'voxels_before': 1030526, 'voxels_after': 1016257, 'volume_change_mm3': -1.784}
+VH3-07 Longsight: built 173848 triangles
+VH3-08 morph {'r_open_mm': 0.25, 'r_close_mm': 0.26, 'voxels_before': 956915, 'voxels_after': 934640, 'volume_change_mm3': -2.784}
+VH3-08 Grimward: built 164468 triangles
+{
+ "id": "vigil-helms-mk3",
+ "parts": {
+  "vh3-01-plummet": [
+   125.23,
+   [
+    6.75,
+    6.7,
+    8.5
+   ],
+   182448
+  ],
+  "vh3-02-sightline": [
+   117.83,
+   [
+    7.55,
+    6.95,
+    8.45
+   ],
+   172988
+  ],
+  "vh3-03-ironclad": [
+   130.13,
+   [
+    6.3,
+    6.8,
+    7.85
+   ],
+   182676
+  ],
+  "vh3-04-herald": [
+   119.07,
+   [
+    6.15,
+    6.5,
+    10.8
+   ],
+   182080
+  ],
+  "vh3-05-stillwater": [
+   122.95,
+   [
+    5.85,
+    6.85,
+    8.7
+   ],
+   183228
+  ],
+  "vh3-06-deckhand": [
+   93.75,
+   [
+    6.0,
+    6.3,
+    8.3
+   ],
+   160468
+  ],
+  "vh3-07-longsight": [
+   128.14,
+   [
+    5.55,
+    7.8,
+    8.45
+   ],
+   173848
+  ],
+  "vh3-08-grimward": [
+   117.9,
+   [
+    5.7,
+    6.6,
+    9.05
+   ],
+   164468
+  ]
+ },
+ "assembled_bbox_mm": [
+  33.15,
+  18.55,
+  10.8
+ ],
+ "interference": []
+}
+EXIT 0

@@ -1,0 +1,210 @@
+{
+ "id": "lantern-drones",
+ "name": "Lantern-pattern Squad Drone Kit (SD-1 Wisp, SD-2 Tick, SD-C cradle)",
+ "revision": "0.1",
+ "line": "scifi",
+ "scale": {
+  "label": "1:56 (30 mm heroic Vigil line)",
+  "ratio": "1:56",
+  "tool_scale": "1:56",
+  "note": "Vehicle-tier ratio: every drone dimension is the in-world size / 56 (17.86 mm per metre), then heroic exaggeration where a feature would not print (see exaggerations)."
+ },
+ "process": "msla_resin",
+ "printer": "8K 7-inch class MSLA, build volume 153.36 x 77.76 x 165 mm (tools/mcpcheck.py PRINTERS)",
+ "frame": "mm, z up, every part faces -y (its left on +x); Wisp body centre at the origin; Tick, mast and weapon seats at z = 0; cradle and saddle in the Vigil backpack frame (front face y = 0, peg toward -y).",
+ "assumptions": [
+  {
+   "id": "A1",
+   "decision": "Flight stem: a printed 1.6 mm resin stem ships in the kit; every stem socket is a round 1.8 mm glue-fit bore, so a bought 1.6 mm clear acrylic rod fits the same sockets.",
+   "source": "owner default (concept open question 1)",
+   "overridable": true
+  },
+  {
+   "id": "A2",
+   "decision": "A 'landed' Wisp (legs and skids down, no stem socket) is included for objective markers.",
+   "source": "owner default (concept open question 2)",
+   "overridable": true
+  },
+  {
+   "id": "A3",
+   "decision": "The SD-C cradle clips on behind the spine pack: a contoured pack saddle seats over the top and back of the line-standard power pack and carries the standard 2.0 mm D-flat socket; the cradle's 2.0 mm D-flat peg plugs into it (or straight into a figure's pack socket to replace the pack).",
+   "source": "owner default (concept open question 3)",
+   "overridable": true
+  },
+  {
+   "id": "A4",
+   "decision": "Flying Wisps lean forward: the base stem socket is raked 24 deg from a launch pad 9.6 mm behind the centre, so a perpendicular Wisp socket puts the drone in a nose-down forward-flight attitude over the base centre (M4 at 18 deg, pushed to 24 deg in M6).",
+   "source": "design decision (DESIGN-LOG move M4, BREAK)",
+   "overridable": true
+  }
+ ],
+ "wisp": {
+  "span_mm": 16,
+  "duct_centre": [
+   5,
+   4.2,
+   0.2
+  ],
+  "duct_r": 3,
+  "duct_bore_r": 2.15,
+  "duct_h": 1.8,
+  "well_floor_local_z": 0.15,
+  "rotor_top_local_z": 0.5,
+  "bottom_well_top_local_z": -0.45,
+  "nose_y": -4.7,
+  "tail": [
+   3,
+   2.9
+  ],
+  "stem_socket": {
+   "xy": [
+    0,
+    -0.4
+   ],
+   "d": 1.8,
+   "depth": 2.2,
+   "boss_r": 1.6,
+   "boss_bottom_z": -2.5
+  },
+  "chin_ball": {
+   "c": [
+    0,
+    -4.2,
+    -0.75
+   ],
+   "r": 1.15
+  },
+  "landed_skid_z": -3.3
+ },
+ "stem": {
+  "d": 1.6,
+  "visible_mm": 22,
+  "insert_wisp": 2,
+  "insert_base": 3,
+  "lean_deg": 24,
+  "rod_note": "1.6 mm clear acrylic rod, cut to 27 mm, fits the same sockets"
+ },
+ "tick": {
+  "length": 19,
+  "width": 13,
+  "height_with_mast": 11,
+  "track": {
+   "xc": 4.7,
+   "w": 2.8,
+   "y0": -7.6,
+   "y1": 7.6,
+   "r": 2.2
+  },
+  "hull_half_w": 3.7,
+  "deck_z": 6,
+  "prow_y": -9.5,
+  "shoulder_y": -6.5,
+  "weapon_socket": {
+   "xy": [
+    0,
+    -2.2
+   ],
+   "peg_d": 1.6,
+   "peg_len": 2,
+   "sock_depth": 2.2
+  },
+  "mast_socket": {
+   "xy": [
+    -2,
+    3.8
+   ],
+   "peg_d": 1.2,
+   "peg_len": 2,
+   "sock_depth": 2.2
+  },
+  "min_feature_mm": 0.9
+ },
+ "cradle": {
+  "peg_d": 2,
+  "peg_len": 2.5,
+  "sock_depth": 2.7,
+  "saddle_socket": [
+   0,
+   6.8,
+   1
+  ],
+  "saddle_clearance": 0.1
+ },
+ "base": {
+  "d": 32,
+  "h": 3,
+  "top_inset": 0.8,
+  "magnet": "5x2",
+  "pocket_d": 5.2,
+  "pocket_depth": 2.1,
+  "vent_w": 1,
+  "vent_d": 0.6,
+  "stem_boss": {
+   "xy": [
+    0,
+    9.6
+   ],
+   "r": 3.0,
+   "h": 1.4,
+   "socket_d": 1.8,
+   "socket_depth": 3.2,
+   "note_r": "3.0 (build 3; 2.4 left the raked bore 0.11 mm inside the pad footprint, layout check needs 0.40)"
+  }
+ },
+ "voxel_mm": {
+  "wisp": 0.05,
+  "tick": 0.06,
+  "module": 0.04,
+  "cradle": 0.045,
+  "base": 0.08,
+  "stem": 0.06
+ },
+ "triangle_budget": 160000,
+ "exaggerations": [
+  "Duct walls 0.85 mm (true scale ~0.1 mm): MSLA unsupported-wall floor 0.6 mm, owner brief >= 0.8 mm.",
+  "Wisp arms 1.2 x 0.9 mm, keel spine 0.9 mm, Tick parts >= 0.9 mm everywhere (brief).",
+  "Split-chevron lens recesses 0.44 mm wide, about 0.35 mm deep (engraving limit 0.4 mm) so a wash finds them.",
+  "Talon carbine (VW-05, tools/armory.py) grown 0.05 mm so its 0.84 mm red-dot clears the Tick's 0.9 mm floor.",
+  "Track shoe grooves 0.4 x 0.3 mm on a 0.95 mm pitch (true shoe pitch ~0.1 m = 1.8 mm, halved so the track reads as a track)."
+ ],
+ "catalog": {
+  "family": "Drones",
+  "revision_note": "resin drone kit: 2 flying Wisps, landed Wisp, Tick + 3 weapon modules, cradle + pack saddle, stems, 32 mm bases",
+  "base": "32 mm round x 3 mm, 5 x 2 mm magnet pocket vented to the rim; stem bases carry a 24 deg raked 1.8 mm stem socket",
+  "footprint": "\u00d8 32 mm",
+  "description": "The Lantern kit every Vigil fireteam carries: the SD-1 Wisp ducted quadcopter (recon, or designator and munition, plus a landed marker), the SD-2 Tick tracked crawler with a periscope mast and swappable Talon carbine, mine-plough or relay-and-smoke modules, and the SD-C cradle that clips a folded Wisp behind a trooper's spine pack.",
+  "images": [
+   {
+    "path": "images/lantern-drones-hero.png",
+    "label": "3/4 front: Wisp A on its raked stem, Tick A (render)"
+   },
+   {
+    "path": "images/lantern-drones-turnaround.png",
+    "label": "Kit turnaround: 3/4, front, side, back"
+   },
+   {
+    "path": "images/lantern-drones-wisp.png",
+    "label": "Wisp A, B and landed: 3/4, front, side, top"
+   },
+   {
+    "path": "images/lantern-drones-tick.png",
+    "label": "Tick with modules A, B, C: 3/4, front, side, top"
+   },
+   {
+    "path": "images/lantern-drones-cradle.png",
+    "label": "SD-C cradle on the line power pack (pack not in this kit)"
+   }
+  ],
+  "defaultExplode": 0.2,
+  "buildNotes": [
+   "Wisp: one piece (chevron body, four 0.85 mm-wall ducts, rotors recessed 0.4 mm, chin ball with split-chevron lenses); round 1.8 mm stem socket under the body.",
+   "Flight stem: printed 1.6 mm resin, or cut a 1.6 mm clear acrylic rod to 27 mm; it seats 3 mm into the raked base socket and 2 mm into the Wisp.",
+   "Tick: hull and tracks in one piece; the periscope mast (1.2 mm D-flat peg) and one weapon module (1.6 mm D-flat peg) plug into the deck.",
+   "SD-C: glue the pack saddle over the top and back of a line-standard power pack; the cradle (folded Wisp) plugs into the saddle on the standard 2.0 mm D-flat pack peg, or straight into a figure's pack socket.",
+   "Every part prints on supports in the orientation miniature_support_plan picked (print/stl is already in that pose)."
+  ],
+  "limitations": "Procedural SDF sculpt, not a hand sculpt. Printability is a heuristic screen through unified-CAD-MCP, not a test print; print a tolerance coupon for the 0.1 mm glue fits. No STEP: FreeCAD is not installed on the build host, so cad/ holds no assembly STEP (recorded as skipped)."
+ },
+ "triangle_budget_base": 250000,
+ "triangle_budget_note": "Marched meshes are never decimated: if a part marches over budget the field is re-meshed at a coarser pitch (miniature_mesh_budget rule, triangles ~ 1/pitch^2). 160k keeps >= 3 voxels across every 0.4 mm feature on the small parts and halves the printability-check time; bases keep 250k so the 0.45 mm deck seams stay >= 3 voxels wide."
+}

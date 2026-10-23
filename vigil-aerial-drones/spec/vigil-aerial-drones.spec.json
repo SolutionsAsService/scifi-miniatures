@@ -1,0 +1,552 @@
+{
+ "id": "vigil-aerial-drones",
+ "name": "Vigil Aerial Wing (VA-1 Belfry, VA-2 Angelus, VA-3 Knell)",
+ "revision": "0.1",
+ "line": "scifi",
+ "scale": {
+  "label": "1:56 (30 mm heroic Vigil line)",
+  "ratio": "1:56",
+  "tool_scale": "1:56",
+  "note": "Vehicle-tier ratio: model mm = in-world mm / 56 (17.86 mm per metre); heroic exaggeration only where a feature would not print (see exaggerations)."
+ },
+ "process": "msla_resin",
+ "printer": "8K 7-inch class MSLA, build volume 153.36 x 77.76 x 165 mm (tools/mcpcheck.py PRINTERS)",
+ "frame": "mm, z up, every airframe faces -y (its left side on +x). Belfry: origin at the rotor-arm plane centre. Angelus: origin on the main-rotor axis, z = 0 at the skid bottoms. Knell: origin at its chosen CG (flight-stem socket axis) on the wing mid-plane. Bases: z = 0 at the underside, centre at the origin. Wayfarer interface numbers are in the Wayfarer frame (x forward, y left, z up).",
+ "voxel_mm": {
+  "airframe": 0.07,
+  "rotor": 0.06,
+  "small": 0.055,
+  "base": 0.2,
+  "stem": 0.06
+ },
+ "triangle_budget": 250000,
+ "triangle_budget_small": 160000,
+ "real_world": {
+  "belfry": {
+   "auw_g": 31000,
+   "payload_g": 6000,
+   "prop_in": 24,
+   "max_thrust_per_motor_g": 7500,
+   "motor_radius_mm": 778,
+   "arm_phi_deg": [
+    30,
+    90,
+    150,
+    -150,
+    -90,
+    -30
+   ],
+   "chin_turret_mm": [
+    0,
+    -280,
+    -130
+   ],
+   "mast_mm": [
+    0,
+    150,
+    420
+   ],
+   "hardpoint_mm": [
+    0,
+    -8,
+    -150
+   ]
+  },
+  "angelus": {
+   "auw_g": 18000,
+   "rotor_in": 80,
+   "mast_y_mm": -84,
+   "mass_items": [
+    {
+     "name": "pod structure",
+     "mass_g": 3200,
+     "position_mm": [
+      0,
+      -40,
+      560
+     ]
+    },
+    {
+     "name": "motor + gearbox",
+     "mass_g": 3400,
+     "position_mm": [
+      0,
+      -60,
+      700
+     ]
+    },
+    {
+     "name": "battery",
+     "mass_g": 5600,
+     "position_mm": [
+      0,
+      -290,
+      470
+     ]
+    },
+    {
+     "name": "nose sensor ball",
+     "mass_g": 1100,
+     "position_mm": [
+      0,
+      -430,
+      310
+     ]
+    },
+    {
+     "name": "tail boom, fin, tail rotor",
+     "mass_g": 1500,
+     "position_mm": [
+      0,
+      960,
+      690
+     ]
+    },
+    {
+     "name": "main rotor + head",
+     "mass_g": 1600,
+     "position_mm": [
+      0,
+      -84,
+      930
+     ]
+    },
+    {
+     "name": "skids",
+     "mass_g": 1600,
+     "position_mm": [
+      0,
+      -60,
+      40
+     ]
+    }
+   ]
+  },
+  "knell": {
+   "aircraft": {
+    "mass_g": 12000,
+    "cg_x_mm": 762,
+    "wing": {
+     "stations": [
+      {
+       "s_mm": 0,
+       "x_le_mm": 380,
+       "chord_mm": 820
+      },
+      {
+       "s_mm": 900,
+       "x_le_mm": 1135,
+       "chord_mm": 250
+      }
+     ],
+     "thickness_ratio": 0.12,
+     "cl_max": 1
+    },
+    "tails": [
+     {
+      "role": "vertical",
+      "stations": [
+       {
+        "s_mm": 0,
+        "x_le_mm": 1120,
+        "chord_mm": 280
+       },
+       {
+        "s_mm": 230,
+        "x_le_mm": 1270,
+        "chord_mm": 150
+       }
+      ]
+     },
+     {
+      "role": "vertical",
+      "stations": [
+       {
+        "s_mm": 0,
+        "x_le_mm": 1120,
+        "chord_mm": 280
+       },
+       {
+        "s_mm": 230,
+        "x_le_mm": 1270,
+        "chord_mm": 150
+       }
+      ]
+     }
+    ],
+    "fuselage": {
+     "length_mm": 1300,
+     "max_width_mm": 200,
+     "max_height_mm": 200
+    },
+    "battery": {
+     "cells_series": 6,
+     "cells_parallel": 4,
+     "cell_capacity_mah": 5000
+    },
+    "propulsion": {
+     "prop_diameter_in": 16,
+     "max_shaft_power_w": 1600
+    },
+    "cruise_speed_m_s": 28,
+    "launch": {
+     "accel_g": 12,
+     "end_speed_m_s": 24,
+     "max_stroke_m": 2.5,
+     "mounts": [
+      {
+       "name": "rail shoe (flight-stem socket boss)",
+       "mass_g": 12000,
+       "allowable_n": 4000
+      }
+     ]
+    }
+   }
+  }
+ },
+ "stem": {
+  "d": 1.6,
+  "socket_d": 1.8,
+  "visible_mm": 33,
+  "insert_air": 2,
+  "insert_base": 3,
+  "rod_note": "1.6 mm clear acrylic rod cut to 38 mm fits every flight socket (1.8 mm glue-fit bores); the tether base uses the same stem as the tether cable."
+ },
+ "bases": {
+  "base-50-stem": {
+   "d": 50,
+   "h": 4,
+   "inset": 1,
+   "rake_deg": 10,
+   "pad": {
+    "xy": [
+     0,
+     6.6
+    ],
+    "r": 2.8,
+    "h": 1.6,
+    "socket_depth": 3.4
+   }
+  },
+  "base-40-stem": {
+   "d": 40,
+   "h": 4,
+   "inset": 1,
+   "rake_deg": 15,
+   "pad": {
+    "xy": [
+     0,
+     9.4
+    ],
+    "r": 2.8,
+    "h": 1.6,
+    "socket_depth": 3.4
+   }
+  },
+  "base-50-tether": {
+   "d": 50,
+   "h": 4,
+   "inset": 1,
+   "rake_deg": 0,
+   "fairlead": {
+    "xy": [
+     0,
+     0
+    ],
+    "top_z": 9,
+    "r": 2.6,
+    "socket_depth": 3.4
+   },
+   "spool": {
+    "c": [
+     -1,
+     12.5,
+     9.4
+    ],
+    "r": 5,
+    "w": 9
+   },
+   "generator": {
+    "c": [
+     -11,
+     -9
+    ],
+    "half": [
+     6,
+     4.5,
+     4
+    ],
+    "mast_socket": {
+     "offset": [
+      -3.6,
+      -2.6
+     ],
+     "peg_d": 1.2,
+     "depth": 2.2,
+     "boss_r": 1.5,
+     "boss_h": 0.8
+    }
+   }
+  },
+  "magnet": "5x2",
+  "pocket_d": 5.2,
+  "pocket_depth": 2.1,
+  "vent_w": 1,
+  "vent_d": 0.6
+ },
+ "belfry": {
+  "motor_r": 13.9,
+  "prop_r": 5.44,
+  "arm_phi_deg": [
+   30,
+   90,
+   150,
+   -150,
+   -90,
+   -30
+  ],
+  "upper_prop_z": 2.35,
+  "lower_prop_z": -2.25,
+  "blade": {
+   "thick": 0.84,
+   "chord0": 1.4,
+   "chord1": 1,
+   "pitch_deg": 10
+  },
+  "hardpoint": {
+   "xy": [
+    0,
+    -0.14
+   ],
+   "peg_d": 1.6,
+   "peg_len": 2,
+   "sock_depth": 2.2,
+   "boss_r": 1.75,
+   "boss_bottom_z": -2.75
+  },
+  "stem_socket": {
+   "xy": [
+    0,
+    4.4
+   ],
+   "d": 1.8,
+   "depth": 2.2,
+   "boss_r": 1.6,
+   "boss_bottom_z": -2.75
+  },
+  "mast_socket": {
+   "xy": [
+    0,
+    3.4
+   ],
+   "peg_d": 1.2,
+   "peg_len": 2,
+   "sock_depth": 2.2,
+   "boss_r": 1.5,
+   "top_z": 3.3
+  },
+  "skid_z": -7,
+  "skid_x": 5.2,
+  "payload_clear_mm": 0.5
+ },
+ "angelus": {
+  "rotor_r": 18.14,
+  "mast_xy": [
+   0,
+   -1.5
+  ],
+  "head_top_z": 17.05,
+  "pin_d": 1.4,
+  "pin_top_z": 18.35,
+  "rotor": {
+   "hub_r": 2,
+   "hub_t": 1.1,
+   "hole_d": 1.6,
+   "chord": 1.8,
+   "thick": 0.9,
+   "root_r": 2.2
+  },
+  "tail_rotor": {
+   "c": [
+    0,
+    24.6,
+    14
+   ],
+   "r": 3.2,
+   "pin_d": 1,
+   "hole_d": 1.2,
+   "inner_x": 1.35,
+   "hub_r": 1,
+   "hub_t": 0.9,
+   "chord": 1,
+   "thick": 0.84
+  },
+  "stem_socket": {
+   "xy": [
+    0,
+    -1.21
+   ],
+   "d": 1.8,
+   "depth": 2.2,
+   "boss_r": 1.6,
+   "boss_bottom_z": 4.9
+  },
+  "skid_x": 4.9,
+  "pod_x_scale": 0.86
+ },
+ "knell": {
+  "cg_x_real_mm": 762,
+  "half_span": 16.07,
+  "root_le_y": -6.82,
+  "root_te_y": 7.82,
+  "tip_le_y": 6.66,
+  "tip_te_y": 11.13,
+  "nose_y": -13.61,
+  "fuselage_end_y": 9.61,
+  "fuselage_r": 1.8,
+  "t_root": 1.75,
+  "t_tip": 0.95,
+  "te_half_min": 0.36,
+  "winglet": {
+   "root_le_y": 6.39,
+   "root_chord": 5,
+   "top_le_y": 9.07,
+   "top_chord": 2.68,
+   "height": 4.1,
+   "lower_height": 1.8,
+   "cant_deg": 12,
+   "thick": 0.8
+  },
+  "prop": {
+   "y": 10.6,
+   "r": 3.63,
+   "chord0": 1.1,
+   "chord1": 0.85,
+   "thick": 0.8,
+   "pitch_deg": 25,
+   "phase_deg": 60
+  },
+  "stem_socket": {
+   "xy": [
+    0,
+    0
+   ],
+   "d": 1.8,
+   "depth": 2.2,
+   "boss_r": 1.6,
+   "boss_bottom_z": -2.45
+  }
+ },
+ "launcher": {
+  "rail_len": 46.4,
+  "elev_deg": 12,
+  "pivot_z": 8.2,
+  "rail_half": [
+   1.1,
+   1.2
+  ],
+  "shuttle_s": -21.6,
+  "shuttle_pin_d": 1.6,
+  "shuttle_pin_len": 2,
+  "peg_d": 2,
+  "peg_len": 2.5,
+  "sock_depth": 2.7,
+  "key": [
+   0,
+   -1,
+   0
+  ],
+  "roof_pad": {
+   "half": [
+    5,
+    2.9
+   ],
+   "t": 1.2,
+   "boss_r": 2.4,
+   "boss_top_z": 4
+  },
+  "tripod": {
+   "head_top_z": 10,
+   "head_r": 2.3,
+   "foot_r": 13,
+   "leg_r": 0.7
+  },
+  "wayfarer": {
+   "pad_centre": [
+    44,
+    -12,
+    38.5
+   ],
+   "yaw_note": "launcher -y (launch direction) -> Wayfarer +x; launcher +x -> Wayfarer +y",
+   "roof_flat_zone": {
+    "note": "0.25 mm ray-cast grid: roof plane z 38.5; engine-deck louvre slots (0.5 wide, 0.6 deep) at x 36.5 / 38.5 / 40.5 for y -14.25..-7; flat strip x 41..47 (to the glacis), y -17..-2; smoke dischargers at y <= -18 for x 28-35",
+    "x": [
+     41,
+     47
+    ],
+    "y": [
+     -17,
+     -2
+    ],
+    "z": 38.5
+   }
+  }
+ },
+ "loadout": {
+  "hardpoint_peg_d": 1.6,
+  "mast_peg_d": 1.2,
+  "peg_len": 2
+ },
+ "catalog": {
+  "family": "Vehicles & Drones",
+  "revision_note": "resin aerial wing: Belfry heavy-lift coaxial hexacopter (flying or tethered), Angelus observation helicopter + separate rotors, Knell flying-wing loitering UAV + rail launcher (tripod or Wayfarer roof pad), 7 loadout bits, stems, 40/50 mm bases",
+  "base": "50 mm (Belfry, Angelus, tether station) and 40 mm (Knell) round x 4 mm, 5 x 2 mm magnet pocket vented to the rim; flight bases carry a 10 or 15 deg raked 1.8 mm stem socket, the tether station a vertical one",
+  "footprint": "Ø 50 mm / Ø 40 mm",
+  "description": "The Vigil aerial wing: VA-1 Belfry, a heavy-lift coaxial hexacopter with a chin gimbal, swappable masts (EO ball, relay, radar) and belly loads (EO turret, SAR pod, twin glide munitions, cargo pod), flown on a stem or tethered to its spool-and-generator station; VA-2 Angelus, an unmanned observation helicopter with separate main and tail rotors; VA-3 Knell, a flying-wing loitering munition with a rail launcher that stands on a tripod or plugs onto the Wayfarer APC roof.",
+  "images": [
+   {
+    "path": "images/vigil-aerial-hero.png",
+    "label": "3/4 front: Belfry flying and tethered, Angelus, Knell, Knell on its launcher (render)"
+   },
+   {
+    "path": "images/vigil-aerial-turnaround.png",
+    "label": "Wing turnaround: 3/4, front, side, back"
+   },
+   {
+    "path": "images/vigil-aerial-belfry.png",
+    "label": "VA-1 Belfry with four loadout combinations"
+   },
+   {
+    "path": "images/vigil-aerial-angelus.png",
+    "label": "VA-2 Angelus with its rotors: 3/4, front, side, top"
+   },
+   {
+    "path": "images/vigil-aerial-knell.png",
+    "label": "VA-3 Knell, and on its rail launcher + tripod"
+   },
+   {
+    "path": "images/vigil-aerial-launcher-wayfarer.png",
+    "label": "Knell launcher on the Wayfarer APC roof pad (Wayfarer not in this kit)"
+   },
+   {
+    "path": "images/vigil-aerial-loadout.png",
+    "label": "Loadout bits and the roof pad"
+   },
+   {
+    "path": "images/vigil-aerial-bases.png",
+    "label": "40 / 50 mm flight bases and the tether station"
+   }
+  ],
+  "defaultExplode": 0.2,
+  "buildNotes": [
+   "Flight stem: printed 1.6 mm resin, or a 1.6 mm clear acrylic rod cut to 38 mm; it seats 3 mm into the base socket and 2 mm into the airframe's 1.8 mm belly socket (glue).",
+   "Belfry: one piece with its 12 props. Mast socket (1.2 mm D-flat) takes VL-10 EO ball, VL-11 relay or VL-12 radar; belly hardpoint (1.6 mm D-flat, on the CG) takes VL-01 EO turret, VL-02 SAR pod, VL-03 twin munitions or VL-04 cargo pod. Every load clears the skid plane and the flying stem.",
+   "Tethered Belfry: put the stem in the tether-station fairlead (vertical socket) instead of a flight base: the stem reads as the tether cable. Print a second Belfry to field both versions.",
+   "Angelus: slide the main rotor (1.6 bore) onto the 1.4 mm mast pin and the tail rotor (1.2 bore) onto the 1.0 mm pin on the left of the fin; set any blade angle, then glue. Both rotors print flat on the plate with no supports.",
+   "Knell: flies on the 40 mm base (15 deg dive) or sits on the launcher shuttle pin (its stem socket). The launcher's 2.0 mm D-flat peg plugs into the tripod or into the roof pad.",
+   "Wayfarer roof: glue the 10 x 5.8 mm roof pad flat on the Wayfarer APC roof with its chevron pointing forward, centre at Wayfarer (x 44.0, y -12.0) on the z 38.5 roof plane: the flat strip between the engine-deck louvres and the glacis, left of the keel crest; nothing on the Wayfarer is modified. With the launcher fitted the RWS must not traverse through the measured blocked arc (see DESIGN-LOG / reports/build.json fits.wayfarer_roof).",
+   "Every other part prints on supports in the orientation miniature_support_plan picked (print/stl is already in that pose)."
+  ],
+  "limitations": "Procedural SDF sculpt, not a hand sculpt. Printability is a heuristic screen through unified-CAD-MCP, not a test print; print a tolerance coupon for the 0.1 mm glue fits. In-world sizing is heuristic (drone_* calculators). No STEP: FreeCAD is not installed on the build host (recorded as skipped / UNKNOWN). Rotor blades are 0.8-0.9 mm resin: handle with care."
+ }
+}

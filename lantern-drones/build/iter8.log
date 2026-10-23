@@ -1,0 +1,7 @@
+tick-hull: probe predicts 478512 triangles at 0.06 mm, meshing at 0.1069 mm
+tick-hull: 151860 tris at 0.1069 mm, vol 987.44 mm3, bbox [12.96, 18.54, 6.5] (4 s)
+partial build done in 4 s
+EXIT 0 source/build.py tick-hull
+{"file": "tick-hull.stl", "tris": 151860, "gap": {"area": 0.797, "min": 0.333, "cells": [[0.071, 0.368, [3.79, 4.97, 5.3]], [0.071, 0.378, [3.79, -4.97, 5.3]], [0.069, 0.479, [0.95, 1.86, 6.16]], [0.069, 0.479, [0.95, 0.9, 6.16]], [0.061, 0.384, [3.09, -7.01, 1.88]], [0.053, 0.46, [-3.3, -7.17, 2.81]], [0.04, 0.412, [-3.05, -7.03, 1.88]], [0.036, 0.411, [3.79, 4.98, 4.66]], [0.036, 0.427, [3.79, -4.98, 4.66]], [0.035, 0.396, [3.79, 4.97, 4.98]]]}, "thin": {"area": 0.105, "sheet": 0.0, "crease": 0.105, "min": 0.268, "area_lt_0.6": 0.105, "cells": [[0.035, 0.268, [-2.3, 3.35, 5.94]], [0.035, 0.268, [-1.55, 3.35, 5.94]], [0.035, 0.268, [-1.98, 3.35, 5.94]]]}}
+EXIT 0 /home/openclaw/projects/scifi-miniatures/lantern-drones/source/diag.py build/upright/tick-hull.stl
+ALL DONE Wed Oct 14 19:18:28 MDT 2026

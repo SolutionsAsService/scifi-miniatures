@@ -1,0 +1,42 @@
+[
+ {
+  "stl": "vh3-01-plummet",
+  "label": "VH3-01 Plummet",
+  "plan": true
+ },
+ {
+  "stl": "vh3-02-sightline",
+  "label": "VH3-02 Sightline",
+  "plan": true
+ },
+ {
+  "stl": "vh3-03-ironclad",
+  "label": "VH3-03 Ironclad",
+  "plan": true
+ },
+ {
+  "stl": "vh3-04-herald",
+  "label": "VH3-04 Herald",
+  "plan": true
+ },
+ {
+  "stl": "vh3-05-stillwater",
+  "label": "VH3-05 Stillwater",
+  "plan": true
+ },
+ {
+  "stl": "vh3-06-deckhand",
+  "label": "VH3-06 Deckhand",
+  "plan": true
+ },
+ {
+  "stl": "vh3-07-longsight",
+  "label": "VH3-07 Longsight",
+  "plan": true
+ },
+ {
+  "stl": "vh3-08-grimward",
+  "label": "VH3-08 Grimward",
+  "plan": true
+ }
+]

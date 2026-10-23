@@ -1,0 +1,51 @@
+wisp-a-recon: probe predicts 542400 triangles at 0.05 mm, meshing at 0.0948 mm
+wisp-a-recon: 150916 tris at 0.0948 mm, vol 205.95 mm3, bbox [16.0, 14.4, 4.09] (5 s)
+partial build done in 6 s
+EXIT 0 source/build.py wisp-a-recon
+wisp-b-designator: probe predicts 577488 triangles at 0.05 mm, meshing at 0.0978 mm
+wisp-b-designator: 149660 tris at 0.0978 mm, vol 214.81 mm3, bbox [16.0, 14.4, 4.36] (6 s)
+partial build done in 6 s
+EXIT 0 source/build.py wisp-b-designator
+wisp-landed: probe predicts 576640 triangles at 0.05 mm, meshing at 0.0978 mm
+wisp-landed: 149640 tris at 0.0978 mm, vol 244.51 mm3, bbox [16.0, 14.4, 4.89] (5 s)
+partial build done in 5 s
+EXIT 0 source/build.py wisp-landed
+flight-stem: 99328 tris at 0.06 mm, vol 54.15 mm3, bbox [1.6, 1.6, 27.0] (1 s)
+partial build done in 1 s
+EXIT 0 source/build.py flight-stem
+tick-hull: probe predicts 485616 triangles at 0.06 mm, meshing at 0.1077 mm
+tick-hull: 151480 tris at 0.1077 mm, vol 980.42 mm3, bbox [12.96, 18.52, 6.5] (4 s)
+partial build done in 4 s
+EXIT 0 source/build.py tick-hull
+tick-mast: 72880 tris at 0.04 mm, vol 13.57 mm3, bbox [2.6, 2.2, 7.5] (2 s)
+partial build done in 2 s
+EXIT 0 source/build.py tick-mast
+tick-weapon-a-talon: probe predicts 164880 triangles at 0.04 mm, meshing at 0.0418 mm
+tick-weapon-a-talon: 151192 tris at 0.0418 mm, vol 42.45 mm3, bbox [3.37, 8.9, 7.5] (7 s)
+partial build done in 7 s
+EXIT 0 source/build.py tick-weapon-a-talon
+tick-weapon-b-plough: probe predicts 365904 triangles at 0.04 mm, meshing at 0.0623 mm
+tick-weapon-b-plough: 150104 tris at 0.0623 mm, vol 77.02 mm3, bbox [13.13, 13.0, 8.68] (4 s)
+partial build done in 4 s
+EXIT 0 source/build.py tick-weapon-b-plough
+tick-weapon-c-relay: 2 bodies, stray volumes [np.float64(7.2759)] mm3 (a piece is not joined)
+EXIT 1 source/build.py tick-weapon-c-relay
+sdc-cradle: probe predicts 492232 triangles at 0.045 mm, meshing at 0.0813 mm
+sdc-cradle: 149912 tris at 0.0813 mm, vol 261.82 mm3, bbox [9.4, 8.34, 10.35] (6 s)
+partial build done in 6 s
+EXIT 0 source/build.py sdc-cradle
+sdc-pack-saddle: probe predicts 204000 triangles at 0.045 mm, meshing at 0.0523 mm
+sdc-pack-saddle: 150328 tris at 0.0523 mm, vol 81.13 mm3, bbox [6.3, 5.8, 5.07] (3 s)
+partial build done in 6 s
+EXIT 0 source/build.py sdc-pack-saddle
+base-32-stem: probe predicts 701616 triangles at 0.08 mm, meshing at 0.138 mm
+base-32-stem: 229640 tris at 0.138 mm, vol 2243.07 mm3, bbox [31.93, 31.94, 4.55] (5 s)
+partial build done in 5 s
+EXIT 0 source/build.py base-32-stem
+base-32-plain: probe predicts 687072 triangles at 0.08 mm, meshing at 0.1366 mm
+base-32-plain: 232852 tris at 0.1366 mm, vol 2223.90 mm3, bbox [31.93, 31.94, 3.0] (5 s)
+partial build done in 5 s
+EXIT 0 source/build.py base-32-plain
+tick-weapon-c-relay: 2 bodies, stray volumes [np.float64(7.2759)] mm3 (a piece is not joined)
+EXIT 1 source/build.py --reuse
+ALL DONE Wed Oct 14 19:03:45 MDT 2026

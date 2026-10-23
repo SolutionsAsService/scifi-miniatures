@@ -1,0 +1,47 @@
+  miniature_scale_convert  (cached)
+  miniature_base_and_peg  (cached)
+  miniature_support_plan vh3-01-plummet.stl (175 s)
+  miniature_printability_check vh3-01-plummet.stl (134 s)
+  miniature_gap_check vh3-01-plummet.stl (136 s)
+  miniature_shell_audit vh3-01-plummet.stl (2 s)
+  -> vh3-01-plummet: min wall 0.495, fails [], gap pass True, shells 1 clean True
+  miniature_support_plan vh3-02-sightline.stl (127 s)
+  miniature_printability_check vh3-02-sightline.stl (107 s)
+  miniature_gap_check vh3-02-sightline.stl (98 s)
+  miniature_shell_audit vh3-02-sightline.stl (2 s)
+  -> vh3-02-sightline: min wall 0.546, fails [], gap pass True, shells 1 clean True
+  miniature_support_plan vh3-03-ironclad.stl (102 s)
+  miniature_printability_check vh3-03-ironclad.stl (93 s)
+  miniature_gap_check vh3-03-ironclad.stl (118 s)
+  miniature_shell_audit vh3-03-ironclad.stl (2 s)
+  -> vh3-03-ironclad: min wall 0.543, fails [], gap pass True, shells 1 clean True
+  miniature_support_plan vh3-04-herald.stl (139 s)
+  miniature_printability_check vh3-04-herald.stl (142 s)
+  miniature_gap_check vh3-04-herald.stl (190 s)
+  miniature_shell_audit vh3-04-herald.stl (3 s)
+  -> vh3-04-herald: min wall 0.495, fails [], gap pass True, shells 1 clean True
+  miniature_support_plan vh3-05-stillwater.stl (125 s)
+  miniature_printability_check vh3-05-stillwater.stl (163 s)
+  miniature_gap_check vh3-05-stillwater.stl (136 s)
+  miniature_shell_audit vh3-05-stillwater.stl (3 s)
+  -> vh3-05-stillwater: min wall 0.531, fails [], gap pass True, shells 1 clean True
+  miniature_support_plan vh3-06-deckhand.stl (115 s)
+  miniature_printability_check vh3-06-deckhand.stl (130 s)
+  miniature_gap_check vh3-06-deckhand.stl (134 s)
+  miniature_shell_audit vh3-06-deckhand.stl (2 s)
+  -> vh3-06-deckhand: min wall 0.4, fails [], gap pass True, shells 1 clean True
+  miniature_support_plan vh3-07-longsight.stl (129 s)
+  miniature_printability_check vh3-07-longsight.stl (173 s)
+  miniature_gap_check vh3-07-longsight.stl (111 s)
+  miniature_shell_audit vh3-07-longsight.stl (3 s)
+  -> vh3-07-longsight: min wall 0.546, fails [], gap pass True, shells 1 clean True
+  miniature_support_plan vh3-08-grimward.stl (126 s)
+  miniature_printability_check vh3-08-grimward.stl (102 s)
+  miniature_gap_check vh3-08-grimward.stl (118 s)
+  miniature_shell_audit vh3-08-grimward.stl (4 s)
+  -> vh3-08-grimward: min wall 0.044, fails [], gap pass True, shells 1 clean True
+{
+ "all_pass": true,
+ "problems": []
+}
+EXIT 0

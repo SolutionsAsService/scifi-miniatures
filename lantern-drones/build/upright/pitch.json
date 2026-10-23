@@ -1,0 +1,15 @@
+{
+ "wisp-a-recon": 0.0944,
+ "wisp-b-designator": 0.0975,
+ "wisp-landed": 0.0974,
+ "flight-stem": 0.06,
+ "tick-hull": 0.1069,
+ "tick-mast": 0.04,
+ "tick-weapon-a-talon": 0.0418,
+ "tick-weapon-b-plough": 0.0623,
+ "sdc-cradle": 0.0715,
+ "sdc-pack-saddle": 0.0523,
+ "base-32-stem": 0.1384,
+ "base-32-plain": 0.1366,
+ "tick-weapon-c-relay": 0.0418
+}

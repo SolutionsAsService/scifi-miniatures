@@ -1,0 +1,157 @@
+{
+ "id": "vigil-helms-mk3",
+ "generator": "source/build.py (tools/sdfkit.py: SDF sculpt, marching cubes, manifold3d simplification)",
+ "assembled_bbox_mm": [
+  33.15,
+  18.55,
+  10.8
+ ],
+ "parts": {
+  "vh3-01-plummet": {
+   "volume_mm3": 125.23,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    6.75,
+    6.7,
+    8.5
+   ],
+   "triangles": 182448,
+   "instances": 1
+  },
+  "vh3-02-sightline": {
+   "volume_mm3": 117.83,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    7.55,
+    6.95,
+    8.45
+   ],
+   "triangles": 172988,
+   "instances": 1
+  },
+  "vh3-03-ironclad": {
+   "volume_mm3": 130.13,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    6.3,
+    6.8,
+    7.85
+   ],
+   "triangles": 182676,
+   "instances": 1
+  },
+  "vh3-04-herald": {
+   "volume_mm3": 119.07,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    6.15,
+    6.5,
+    10.8
+   ],
+   "triangles": 182080,
+   "instances": 1
+  },
+  "vh3-05-stillwater": {
+   "volume_mm3": 122.95,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.85,
+    6.85,
+    8.7
+   ],
+   "triangles": 183228,
+   "instances": 1
+  },
+  "vh3-06-deckhand": {
+   "volume_mm3": 93.75,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    6.0,
+    6.3,
+    8.3
+   ],
+   "triangles": 160468,
+   "instances": 1
+  },
+  "vh3-07-longsight": {
+   "volume_mm3": 128.14,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.55,
+    7.8,
+    8.45
+   ],
+   "triangles": 173848,
+   "instances": 1
+  },
+  "vh3-08-grimward": {
+   "volume_mm3": 117.9,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    5.7,
+    6.6,
+    9.05
+   ],
+   "triangles": 164468,
+   "instances": 1
+  }
+ },
+ "interference": [],
+ "step": {
+  "file": null,
+  "status": "skipped",
+  "reason": "no FreeCAD Python on this host (WSL without FreeCAD; $FREECAD_PYTHON unset)"
+ },
+ "voxel_mm": 0.05,
+ "print_mesh_simplified": false,
+ "glass": {
+  "vh3-01-plummet": {
+   "triangles": 182448,
+   "glass_faces": 6995,
+   "glass_area_mm2": 5.5
+  },
+  "vh3-02-sightline": {
+   "triangles": 172988,
+   "glass_faces": 4291,
+   "glass_area_mm2": 3.42
+  },
+  "vh3-03-ironclad": {
+   "triangles": 182676,
+   "glass_faces": 0,
+   "glass_area_mm2": 0.0
+  },
+  "vh3-04-herald": {
+   "triangles": 182080,
+   "glass_faces": 5523,
+   "glass_area_mm2": 4.37
+  },
+  "vh3-05-stillwater": {
+   "triangles": 183228,
+   "glass_faces": 19261,
+   "glass_area_mm2": 15.89
+  },
+  "vh3-06-deckhand": {
+   "triangles": 160468,
+   "glass_faces": 2678,
+   "glass_area_mm2": 2.05
+  },
+  "vh3-07-longsight": {
+   "triangles": 173848,
+   "glass_faces": 4583,
+   "glass_area_mm2": 3.75
+  },
+  "vh3-08-grimward": {
+   "triangles": 164468,
+   "glass_faces": 3388,
+   "glass_area_mm2": 2.7
+  }
+ }
+}

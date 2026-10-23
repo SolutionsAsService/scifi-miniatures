@@ -1,0 +1,6 @@
+commander try {'voxel_mm': 0.1, 'welded_bad_edges': 0, 'tris': 257648}
+opt-commander 1692.37 [32.18, 22.1, 25.69] 257648
+
+real	0m47.312s
+user	1m34.953s
+sys	0m11.998s

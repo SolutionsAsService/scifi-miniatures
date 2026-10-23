@@ -1,0 +1,139 @@
+{
+ "id": "vigil-heavy-mk2",
+ "name": "Vigilant Heavy Gunner Mk2 (Bombard rotary repeater, drum pack)",
+ "revision": "0.1",
+ "line": "scifi",
+ "process": "msla_resin",
+ "scale": {
+  "label": "30 mm heroic",
+  "ratio": "1:56",
+  "tool_scale": "28mm"
+ },
+ "voxel_mm": 0.11,
+ "bit_voxel_mm": 0.06,
+ "max_print_triangles": 285000,
+ "mesh_policy": "re-mesh the SDF coarser until under the checker budget; no decimation of print meshes",
+ "base": {
+  "d": 40,
+  "h": 4,
+  "top_inset": 1,
+  "magnet": "5x2",
+  "recess_depth": 1.1,
+  "recess_clearance": 0.1,
+  "note": "40 mm is new for the line: registered at build time as exosuit.BASES[40] (runtime only, exosuit.py unchanged)"
+ },
+ "base_seed": 11,
+ "bbox": [
+  [
+   -12.5,
+   -27,
+   -1.3
+  ],
+  [
+   11,
+   10.5,
+   28.5
+  ]
+ ],
+ "helm": "VH2-04 Bastion (tools/vh2.py)",
+ "pose": {
+  "pelvis": [
+   0.3,
+   0.6,
+   14.3
+  ],
+  "yaw": -12,
+  "lean": 7,
+  "twist": -18,
+  "ankles": [
+   [
+    -4.9,
+    2.9,
+    1.9
+   ],
+   [
+    4.2,
+    -3.6,
+    1.9
+   ]
+  ],
+  "feet_yaw": [
+   -36,
+   10
+  ],
+  "knee_poles": [
+   [
+    -0.6,
+    -1,
+    0
+   ],
+   [
+    0.5,
+    -1,
+    0
+   ]
+  ],
+  "elbow_poles": [
+   [
+    -1,
+    0.5,
+    -0.7
+   ],
+   [
+    0.4,
+    0.1,
+    -1
+   ]
+  ],
+  "head_yaw": 16,
+  "gun": {
+   "ident": "VHW-01",
+   "grip": [
+    -3.5,
+    -3.5,
+    13.9
+   ],
+   "dir": [
+    0.2,
+    -1,
+    0.07
+   ]
+  }
+ },
+ "pack_boss_half_mm": [
+  2.3,
+  0.5,
+  2.4
+ ],
+ "catalog": {
+  "family": "Infantry",
+  "revision_note": "Mk2 heavy gunner: Bombard rotary repeater from the hip, ammunition drum backpack and feed belt; three heavy weapons also as loose bits",
+  "base": "40 mm round",
+  "footprint": "40 mm base",
+  "description": "Vigilant heavy gunner Mk2 braced behind a six-barrel Bombard rotary repeater fed by a belt from a large ammunition drum backpack; VH2-04 Bastion helm. Loose heavy weapons: VHW-01 Bombard rotary repeater, VHW-02 Carronade rail cannon, VHW-03 Siphon heavy flamer.",
+  "images": [
+   {
+    "path": "images/vigil-heavy-mk2-turnaround.png",
+    "label": "Turnaround"
+   },
+   {
+    "path": "images/vigil-heavy-mk2-hero.png",
+    "label": "Hero 3/4"
+   },
+   {
+    "path": "images/vigil-heavy-mk2-heavies.png",
+    "label": "Display sheet: heavy weapons, common scale"
+   },
+   {
+    "path": "images/vigil-heavy-mk2-parts.png",
+    "label": "Parts as printed"
+   }
+  ],
+  "buildNotes": [
+   "Exosuit body (tools/exosuit.py) posed with the Bombard (tools/arsenal3.py VHW-01) integral, both gauntlets closed on its grip and support handle; feed belt integral, butting the drum pack's throat with a 0.1 mm glue gap.",
+   "Drum backpack keys on the standard 2.0 mm D-flat pack peg; the figure's back boss is enlarged to 4.6 x 4.8 mm so the socket keeps a 1.2 mm wall.",
+   "Figure meshed at spec voxel_mm, loose weapons at bit_voxel_mm, re-meshed coarser only if over budget (reports/build.json)."
+  ],
+  "limitations": "Procedural design; printability is a heuristic screen. No STEP export (FreeCAD not installed on the build host)."
+ }
+}
