@@ -11,7 +11,7 @@ weapon frame for the grip hands) and builds the Pose, retrying with a smaller ji
     from poses import squad
     figs = squad(["rifleman"], count=6, seed=2)                        # six different stances
 
-Hand types: weapon (grip + direction; M = the weapon frame), weapon_up (muzzle up: sidearm), on_weapon (second hand at weapon
+Hand types: weapon (grip + direction; M = the weapon frame), weapon_up (muzzle up: sidearm), weapon_vert (long weapon held vertically at the side, muzzle up), on_weapon (second hand at weapon
 x, z = fore; set the real foregrip with `fore=` if the weapon has one), point (pointing hand: dir, reach), free.
 """
 import importlib.util
@@ -56,10 +56,10 @@ def resolve(v, fore=None, shrink=1.0):
     for i, h in enumerate(hands):                                    # pass 1: grips, free hands, pointing hands
         sh = probe.sh[i]
         t = h["type"]
-        if t in ("weapon", "weapon_up"):
+        if t in ("weapon", "weapon_up", "weapon_vert"):
             d = unit(v3(h["dir"]))
             h["fist"] = sh + v3(h["off"]) * shrink
-            h["M"] = X.place(h["fist"], d, (0, 1, 0) if t == "weapon_up" else Z)
+            h["M"] = X.place(h["fist"], d, {"weapon": Z, "weapon_up": (0, 1, 0), "weapon_vert": (0, -1, 0)}[t])
             fists[i] = h["fist"]
         elif t == "free":
             h["fist"] = sh + v3(h["off"]) * shrink
