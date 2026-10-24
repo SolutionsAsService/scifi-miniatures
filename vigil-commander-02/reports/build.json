@@ -1,0 +1,73 @@
+{
+ "id": "vigil-commander-02",
+ "generator": "source/build.py (tools/sdfkit.py: SDF sculpt, marching cubes, manifold3d simplification)",
+ "assembled_bbox_mm": [
+  31.96,
+  31.97,
+  38.26
+ ],
+ "parts": {
+  "figure": {
+   "volume_mm3": 2110.81,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    21.76,
+    16.82,
+    29.48
+   ],
+   "triangles": 248894,
+   "instances": 1
+  },
+  "helm": {
+   "volume_mm3": 121.51,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    6.55,
+    6.57,
+    10.16
+   ],
+   "triangles": 186084,
+   "instances": 1
+  },
+  "backpack": {
+   "volume_mm3": 209.71,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    7.8,
+    7.3,
+    16.8
+   ],
+   "triangles": 131628,
+   "instances": 1
+  },
+  "base": {
+   "volume_mm3": 2835.21,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    31.96,
+    31.97,
+    5.28
+   ],
+   "triangles": 90788,
+   "instances": 1
+  }
+ },
+ "interference": [
+  {
+   "a": "Vigilant commander 0.2",
+   "b": "32 mm base",
+   "overlap_mm3": 0.041
+  }
+ ],
+ "step": {
+  "file": "cad/vigil-commander-02-assembly.step",
+  "kind": "faceted B-rep reference (about 5000 triangles per part) written by FreeCAD"
+ },
+ "heights_above_base_top_mm": {
+  "crown": 33.21
+ }
+}

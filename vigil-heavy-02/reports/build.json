@@ -1,0 +1,73 @@
+{
+ "id": "vigil-heavy-02",
+ "generator": "source/build.py (tools/sdfkit.py: SDF sculpt, marching cubes, manifold3d simplification)",
+ "assembled_bbox_mm": [
+  31.96,
+  31.97,
+  34.35
+ ],
+ "parts": {
+  "figure": {
+   "volume_mm3": 2363.9,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    21.0,
+    23.57,
+    28.74
+   ],
+   "triangles": 266900,
+   "instances": 1
+  },
+  "helm": {
+   "volume_mm3": 132.75,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    6.38,
+    6.86,
+    7.9
+   ],
+   "triangles": 195574,
+   "instances": 1
+  },
+  "backpack": {
+   "volume_mm3": 299.39,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    9.1,
+    8.55,
+    10.84
+   ],
+   "triangles": 161920,
+   "instances": 1
+  },
+  "base": {
+   "volume_mm3": 2839.18,
+   "bodies": 1,
+   "watertight": true,
+   "bbox_mm": [
+    31.96,
+    31.97,
+    5.24
+   ],
+   "triangles": 98710,
+   "instances": 1
+  }
+ },
+ "interference": [
+  {
+   "a": "Vigilant heavy gunner 0.2",
+   "b": "32 mm base",
+   "overlap_mm3": 0.044
+  }
+ ],
+ "step": {
+  "file": "cad/vigil-heavy-02-assembly.step",
+  "kind": "faceted B-rep reference (about 5000 triangles per part) written by FreeCAD"
+ },
+ "heights_above_base_top_mm": {
+  "crown": 30.35
+ }
+}

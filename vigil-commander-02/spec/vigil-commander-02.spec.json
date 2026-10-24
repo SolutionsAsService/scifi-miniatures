@@ -1,0 +1,134 @@
+{
+ "id": "vigil-commander-02",
+ "name": "Vigilant Commander 0.2 (power armour)",
+ "revision": "0.2",
+ "line": "scifi",
+ "scale": {
+  "label": "30 mm heroic (about 32.5 mm to the visor crest)",
+  "ratio": "1:56",
+  "tool_scale": "30mm",
+  "note": "30 mm from the soles to the visor line (eye convention); same Kestrel kit and proportions as the whole line."
+ },
+ "process": "msla_resin",
+ "base": {
+  "d": 32,
+  "h": 4.0,
+  "top_inset": 1,
+  "magnet": "5x2",
+  "recess_depth": 1.1,
+  "recess_clearance": 0.1
+ },
+ "pose": {
+  "pelvis": [
+   0,
+   0,
+   15.5
+  ],
+  "yaw": 4,
+  "lean": 3,
+  "twist": 6,
+  "ankles": [
+   [
+    -3.3,
+    1.6,
+    1.9
+   ],
+   [
+    3.1,
+    -3,
+    1.9
+   ]
+  ],
+  "feet_yaw": [
+   -18,
+   14
+  ],
+  "knee_poles": [
+   [
+    -0.35,
+    -1,
+    0
+   ],
+   [
+    0.35,
+    -1,
+    0
+   ]
+  ],
+  "elbow_poles": [
+   [
+    -0.3,
+    0.4,
+    -1
+   ],
+   [
+    1,
+    0.3,
+    -1
+   ]
+  ],
+  "head_yaw": 14,
+  "point": {
+   "dir": [
+    0.32,
+    -1,
+    0.14
+   ],
+   "reach": 10
+  },
+  "sidearm": {
+   "grip": [
+    -4.7,
+    -3.8,
+    22.4
+   ],
+   "dir": [
+    0.05,
+    -0.2,
+    1
+   ]
+  }
+ },
+ "base_seed": 11,
+ "bbox": [
+  [
+   -14.5,
+   -21.0,
+   -1.3
+  ],
+  [
+   14.5,
+   11.5,
+   34.0
+  ]
+ ],
+ "catalog": {
+  "family": "Command",
+  "revision_note": "power-armour rebuild: resin figure, helm, backpack and 32 mm base",
+  "base": "32 mm round",
+  "footprint": "Ø 25 mm",
+  "description": "The Vigil squad commander rebuilt in power armour: domed pauldrons with a raised rank chevron, barrel cuirass with the split-chevron emblem, high collar round the Marshal helm (swept blade crest, command antenna), abdominal lames, knee hydraulics and a command pack with a comms mast. Points the advance with the left gauntlet and raises the VW2-07 Culverin heavy revolver; cloth tabard over the leading leg. Helm and backpack are separate keyed parts; the 0.1 Warden stays in the catalogue.",
+  "images": [
+   {
+    "path": "images/vigil-commander-02-hero.png",
+    "label": "3/4 front (render)"
+   },
+   {
+    "path": "images/vigil-commander-02-turnaround.png",
+    "label": "Turnaround: 3/4, front, side, back"
+   }
+  ],
+  "defaultExplode": 0.25,
+  "buildNotes": [
+   "Pose and skeleton from the 0.1 figure (same sockets, pegs and base); armour from tools/powerarmor.py, sized with unified-CAD-MCP miniature_power_armor_plan.",
+   "Helm from the 0.3 helm library (tools/helms04.py) and pack from tools/powerarmor.py, both through tools/morph.py print_safe_selective.",
+   "Quick printability screen only (unified-CAD-MCP miniature_printability_check, upright); no support plans or full certification yet."
+  ],
+  "limitations": "Procedural sculpt; quick printability screen, not a test print or full check. No STEP reference."
+ },
+ "voxel_mm": 0.12,
+ "power_armor": {
+  "plan": "unified-CAD-MCP miniature_power_armor_plan (archetype commander, crown 33 mm)",
+  "kit": "tools/powerarmor.py"
+ }
+}

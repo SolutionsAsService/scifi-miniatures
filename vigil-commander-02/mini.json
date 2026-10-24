@@ -1,0 +1,71 @@
+{
+ "id": "vigil-commander-02",
+ "name": "Vigilant Commander 0.2 (power armour)",
+ "line": "scifi",
+ "family": "Command",
+ "revision": "0.2 · power-armour rebuild: resin figure, helm, backpack and 32 mm base",
+ "description": "The Vigil squad commander rebuilt in power armour: domed pauldrons with a raised rank chevron, barrel cuirass with the split-chevron emblem, high collar round the Marshal helm (swept blade crest, command antenna), abdominal lames, knee hydraulics and a command pack with a comms mast. Points the advance with the left gauntlet and raises the VW2-07 Culverin heavy revolver; cloth tabard over the leading leg. Helm and backpack are separate keyed parts; the 0.1 Warden stays in the catalogue.",
+ "images": [
+  {
+   "path": "images/vigil-commander-02-hero.png",
+   "label": "3/4 front (render)"
+  },
+  {
+   "path": "images/vigil-commander-02-turnaround.png",
+   "label": "Turnaround: 3/4, front, side, back"
+  }
+ ],
+ "defaultExplode": 0.25,
+ "buildNotes": [
+  "Pose and skeleton from the 0.1 figure (same sockets, pegs and base); armour from tools/powerarmor.py, sized with unified-CAD-MCP miniature_power_armor_plan.",
+  "Helm from the 0.3 helm library (tools/helms04.py) and pack from tools/powerarmor.py, both through tools/morph.py print_safe_selective.",
+  "Quick printability screen only (unified-CAD-MCP miniature_printability_check, upright); no support plans or full certification yet."
+ ],
+ "limitations": "Procedural sculpt; quick printability screen, not a test print or full check. No STEP reference.",
+ "mini": {
+  "scale": {
+   "label": "30 mm heroic (about 32.5 mm to the visor crest)",
+   "ratio": "1:56"
+  },
+  "base": "32 mm round",
+  "footprint": "Ø 25 mm",
+  "process": "MSLA resin · 8K 7-inch class MSLA (e.g. Elegoo Saturn/Mars class)",
+  "volumeMl": 5.3,
+  "volumeLabel": "Resin volume",
+  "printHeightMm": 29.5,
+  "printability": {
+   "verdict": "fail",
+   "preset": "msla_resin",
+   "checkedBy": "unified-CAD-MCP miniature_printability_check (quick screen, upright)",
+   "summary": "Not yet passing: base: minimum wall (supported) = 5.7052; base: suction cups = 164.254; figure: minimum wall (supported) = 0.6978",
+   "issues": [],
+   "report": "reports/printability.md"
+  },
+  "printParts": [
+   {
+    "name": "backpack",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports; plan them in your slicer"
+   },
+   {
+    "name": "base",
+    "qty": 1,
+    "orientation": "upright as modelled, flat on the plate",
+    "supports": "none"
+   },
+   {
+    "name": "figure",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports; plan them in your slicer"
+   },
+   {
+    "name": "helm",
+    "qty": 1,
+    "orientation": "upright as modelled, on supports",
+    "supports": "light resin supports; plan them in your slicer"
+   }
+  ]
+ }
+}

@@ -47,8 +47,8 @@ def open_field(D, h, r):
     return np.maximum(D, (e - r).astype(D.dtype))
 
 
-def print_safe_selective(sculpt, r_open=0.21, r_close=0.22, deep_mm=0.12, blend_vox=1.5, drop_islands_mm3=0.5,
-                         deep_close_mm=0.04):
+def print_safe_selective(sculpt, r_open=0.21, r_close=0.22, deep_mm=None, blend_vox=1.5, drop_islands_mm3=0.5,
+                         deep_close_mm=None):
     """Print-safety filter that leaves the sculpt untouched except where it is genuinely unprintable (helms 0.3).
 
     A closing by c and an opening by r change the surface in two ways: shallowly everywhere (an opening shaves at most
@@ -61,6 +61,10 @@ def print_safe_selective(sculpt, r_open=0.21, r_close=0.22, deep_mm=0.12, blend_
     Guarantees: walls >= 2*r_open (0.42 mm) and slots >= 2*r_close (0.5 mm) wherever the filter acts."""
     from scipy.ndimage import gaussian_filter
     D, h = sculpt.D, sculpt.h
+    # The thresholds sit above the voxel noise of the distance transforms (~1 voxel). 0.12 / 0.04 mm were set on the
+    # 0.05 mm helm grid; on a 0.12 mm figure grid they sat under the noise and the filter re-wrote (terraced) every face.
+    deep_mm = max(0.12, 1.6 * h) if deep_mm is None else deep_mm
+    deep_close_mm = (0.04 if h <= 0.06 else 1.1 * h) if deep_close_mm is None else deep_close_mm
     v0 = int((D < 0).sum())
     g = _dist(~(_dist(D >= 0, h) > r_close + 0.5 * h), h)
     closed = -(g - r_close)
