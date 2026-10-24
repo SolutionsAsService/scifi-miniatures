@@ -48,7 +48,7 @@ def open_field(D, h, r):
 
 
 def print_safe_selective(sculpt, r_open=0.21, r_close=0.22, deep_mm=None, blend_vox=1.5, drop_islands_mm3=0.5,
-                         deep_close_mm=None):
+                         deep_close_mm=None, chunk_voxels=12_000_000):
     """Print-safety filter that leaves the sculpt untouched except where it is genuinely unprintable (helms 0.3).
 
     A closing by c and an opening by r change the surface in two ways: shallowly everywhere (an opening shaves at most
@@ -58,36 +58,52 @@ def print_safe_selective(sculpt, r_open=0.21, r_close=0.22, deep_mm=None, blend_
     lumpy and the detailed VH2/VH4 helms melted. Here a voxel takes the filtered value only where the filter moves the
     surface by more than deep_mm (a narrow slot filled, a thin feature removed); the mask is feathered over blend_vox
     voxels so the seam is smooth. Edges, corners and every face elsewhere keep the original field exactly.
-    Guarantees: walls >= 2*r_open (0.42 mm) and slots >= 2*r_close (0.5 mm) wherever the filter acts."""
-    from scipy.ndimage import gaussian_filter
-    D, h = sculpt.D, sculpt.h
+    Guarantees: walls >= 2*r_open (0.42 mm) and slots >= 2*r_close (0.5 mm) wherever the filter acts.
+
+    Memory: the distance transforms need ~25-40 bytes per voxel (a 40 M-voxel figure grid asked for a 900 MB array and died on a busy
+    machine), so grids larger than chunk_voxels are filtered in overlapping slabs along the longest axis (2 mm halo): the result is
+    identical to a single pass and the peak is ~chunk_voxels * 40 bytes."""
+    h = sculpt.h
+    D = sculpt.D
     # The thresholds sit above the voxel noise of the distance transforms (~1 voxel). 0.12 / 0.04 mm were set on the
     # 0.05 mm helm grid; on a 0.12 mm figure grid they sat under the noise and the filter re-wrote (terraced) every face.
     deep_mm = max(0.12, 1.6 * h) if deep_mm is None else deep_mm
     deep_close_mm = (0.04 if h <= 0.06 else 1.1 * h) if deep_close_mm is None else deep_close_mm
     v0 = int((D < 0).sum())
-    g = _dist(~(_dist(D >= 0, h) > r_close + 0.5 * h), h)
-    closed = -(g - r_close)
-    del g
-    # Closing: an inside-corner fillet is shallow but so is the middle of a 0.2 mm crack, so fills use their own,
-    # smaller threshold (a 0.04 mm fillet is invisible; an unfilled crack is a fill-in defect).
-    w = gaussian_filter(((D - closed) > deep_close_mm).astype(np.float32), blend_vox)  # fills: slots and cracks
-    D = np.where(w > 0.02, np.minimum(D, w * closed + (1 - w) * D), D).astype(D.dtype)
-    filled = int(((D < 0).sum()) - v0)
-    e = _dist(~(_dist(D < 0, h) > r_open + 0.5 * h), h)
-    opened = e - r_open
-    del e
-    w = gaussian_filter(((opened - D) > deep_mm).astype(np.float32), blend_vox)      # deep removals only (thin features)
-    D = np.where(w > 0.02, np.maximum(D, w * opened + (1 - w) * D), D).astype(D.dtype)
+    args = (h, r_open, r_close, deep_mm, deep_close_mm, blend_vox)
+    ax = int(np.argmax(D.shape))
+    n = D.shape[ax]
+    per = D.size // n                                   # voxels per slab plane
+    margin = int(math.ceil(2.0 / h))                    # 2 mm halo: > the closing + opening + blend influence
+    core = max(2 * margin, chunk_voxels // per - 2 * margin)
+    if core + 2 * margin >= n:                          # small grid: one pass
+        D, filled = _selective_array(D, *args)
+    else:                                               # large grid: overlapping slabs keep peak memory ~ chunk_voxels
+        out = np.empty_like(D)
+        filled = 0
+        for a in range(0, n, core):
+            b = min(n, a + core)
+            lo, hi = max(0, a - margin), min(n, b + margin)
+            sl = [slice(None)] * 3
+            sl[ax] = slice(lo, hi)
+            sub, f = _selective_array(D[tuple(sl)], *args, core=(a - lo, a - lo + (b - a), ax))
+            dst = [slice(None)] * 3
+            dst[ax] = slice(a, b)
+            src = [slice(None)] * 3
+            src[ax] = slice(a - lo, a - lo + (b - a))
+            out[tuple(dst)] = sub[tuple(src)]
+            filled += f
+            del sub
+        D = out
     # Removing a thin bridge can leave a loose speck (VH4-18: a 0.1 mm3 fin shard); a floating speck cannot print, drop it.
     from scipy.ndimage import label
-    lab, n = label(D < 0)
+    lab, n_lab = label(D < 0)
     dropped = 0.0
-    if n > 1:
+    if n_lab > 1:
         sizes = np.bincount(lab.ravel())
         sizes[0] = 0
         keep = sizes.argmax()
-        for i in range(1, n + 1):
+        for i in range(1, n_lab + 1):
             if i != keep and sizes[i] * h ** 3 < drop_islands_mm3:
                 D[lab == i] = np.maximum(D[lab == i], h)
                 dropped += sizes[i] * h ** 3
@@ -95,6 +111,33 @@ def print_safe_selective(sculpt, r_open=0.21, r_close=0.22, deep_mm=None, blend_
     v1 = int((D < 0).sum())
     return {"r_open_mm": r_open, "r_close_mm": r_close, "deep_mm": deep_mm, "deep_close_mm": deep_close_mm, "filled_mm3": round(filled * h ** 3, 3),
             "dropped_islands_mm3": round(dropped, 3), "volume_change_mm3": round((v1 - v0) * h ** 3, 3)}
+
+
+def _selective_array(D, h, r_open, r_close, deep_mm, deep_close_mm, blend_vox, core=None):
+    """The closing then opening of print_safe_selective on one array. core = (a, b, axis): count filled voxels only inside that slab range."""
+    from scipy.ndimage import gaussian_filter
+    D0 = D
+    g = _dist(~(_dist(D >= 0, h) > r_close + 0.5 * h), h)
+    closed = -(g - r_close)
+    del g
+    # Closing: an inside-corner fillet is shallow but so is the middle of a 0.2 mm crack, so fills use their own,
+    # smaller threshold (a 0.04 mm fillet is invisible; an unfilled crack is a fill-in defect).
+    w = gaussian_filter(((D - closed) > deep_close_mm).astype(np.float32), blend_vox)  # fills: slots and cracks
+    D = np.where(w > 0.02, np.minimum(D, w * closed + (1 - w) * D), D).astype(D.dtype)
+    del closed
+    if core is None:
+        filled = int((D < 0).sum() - (D0 < 0).sum())
+    else:
+        a, b, axis = core
+        sl = [slice(None)] * 3
+        sl[axis] = slice(a, b)
+        filled = int((D[tuple(sl)] < 0).sum() - (D0[tuple(sl)] < 0).sum())
+    e = _dist(~(_dist(D < 0, h) > r_open + 0.5 * h), h)
+    opened = e - r_open
+    del e
+    w = gaussian_filter(((opened - D) > deep_mm).astype(np.float32), blend_vox)      # deep removals only (thin features)
+    D = np.where(w > 0.02, np.maximum(D, w * opened + (1 - w) * D), D).astype(D.dtype)
+    return D, filled
 
 
 def thicken_thin(sculpt, t_min=0.44, grow=0.1, edge_depth=None, rounds=3, sigma_vox=0.7, tol_vox=0.35):
