@@ -250,16 +250,31 @@ class Sculpt:
         P = np.stack([X.ravel(), Y.ravel(), Z.ravel()], axis=1)
         return tuple(slice(i0[k], i1[k]) for k in range(3)), P
 
+    SLAB_POINTS = 2_000_000   # evaluate big blocks in x-slabs: a 25.8 M point block needed 592 MB for its coordinates alone
+
     def _apply(self, s, op, k=0.0):
-        sl, P = self._block(s, 3 * self.h + 2 * k + 0.3)
-        if sl is None:
+        pad = 3 * self.h + 2 * k + 0.3
+        i0 = np.clip(np.floor((s.lo - pad - self.lo) / self.h).astype(int), 0, self.n - 1)
+        i1 = np.clip(np.ceil((s.hi + pad - self.lo) / self.h).astype(int) + 1, 0, self.n)
+        if np.any(i1 <= i0):
             return self
-        cur = self.D[sl]
-        d = s(P).reshape(cur.shape).astype(F)
-        if op == "add":
-            self.D[sl] = np.minimum(cur, d) if k == 0 else smin(cur, d, F(k))
-        else:  # carve
-            self.D[sl] = np.maximum(cur, -d) if k == 0 else -smin(-cur, d, F(k))
+        per_x = int((i1[1] - i0[1]) * (i1[2] - i0[2]))
+        step = max(1, self.SLAB_POINTS // max(per_x, 1))
+        ay = self.lo[1] + self.h * np.arange(i0[1], i1[1])
+        az = self.lo[2] + self.h * np.arange(i0[2], i1[2])
+        for xa in range(i0[0], i1[0], step):
+            xb = min(xa + step, i1[0])
+            sl = (slice(xa, xb), slice(i0[1], i1[1]), slice(i0[2], i1[2]))
+            X, Y, Zg = np.meshgrid(self.lo[0] + self.h * np.arange(xa, xb), ay, az, indexing="ij")
+            P = np.stack([X.ravel(), Y.ravel(), Zg.ravel()], axis=1)
+            del X, Y, Zg
+            cur = self.D[sl]
+            d = s(P).reshape(cur.shape).astype(F)
+            del P
+            if op == "add":
+                self.D[sl] = np.minimum(cur, d) if k == 0 else smin(cur, d, F(k))
+            else:  # carve
+                self.D[sl] = np.maximum(cur, -d) if k == 0 else -smin(-cur, d, F(k))
         return self
 
     def add(self, s, k=0.0):
