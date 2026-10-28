@@ -317,7 +317,12 @@ def largest_body(m, name, dust_mm3=0.05):
     keep = max(parts, key=lambda p: abs(p.volume))
     junk = sorted(round(abs(p.volume), 4) for p in parts if p is not keep)
     if max(junk) > dust_mm3:
-        raise SystemExit(f"{name}: {len(parts)} bodies, stray volumes {junk[-5:]} mm3 (a piece is not joined)")
+        # say what each stray piece is and where: a negative volume is a sealed cavity inside the part (a cut closed over
+        # by later adds), a positive one a loose piece; this used to need a separate diagnosis run per failure
+        big = sorted((p for p in parts if p is not keep and abs(p.volume) > dust_mm3), key=lambda p: -abs(p.volume))[:6]
+        where = "; ".join(f"{'sealed void' if p.volume < 0 else 'loose piece'} {abs(p.volume):.2f} mm3 at "
+                          f"{np.round(p.bounds.mean(axis=0), 1).tolist()}" for p in big)
+        raise SystemExit(f"{name}: {len(parts)} bodies, stray volumes {junk[-5:]} mm3 (a piece is not joined): {where}")
     return keep  # sub-voxel dust
 
 
