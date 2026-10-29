@@ -283,9 +283,21 @@ class Sculpt:
     def cut(self, s, k=0.0):
         return self._apply(s, "cut", k)
 
-    def mesh(self, name, target_tris=None, dust_mm3=0.05):
-        """Marching cubes -> one closed, manifold, outward-wound body (asserted), optionally simplified (manifold3d)."""
+    def mesh(self, name, target_tris=None, dust_mm3=0.05, fill_voids=False):
+        """Marching cubes -> one closed, manifold, outward-wound body (asserted), optionally simplified (manifold3d).
+        fill_voids: fill every sealed cavity (outside voxels not connected to the grid border) before meshing. A cavity
+        changes nothing a viewer or a painter sees, but traps resin; folds that overlap (a valley roofed over by the next
+        fold, Eldritch kit 3) make them faster than they can be designed out. The filled volume is printed."""
         D = self.D.copy()
+        if fill_voids:
+            from scipy import ndimage
+            lab, _ = ndimage.label(D >= 0)
+            border = np.unique(np.concatenate([lab[[0, -1], :, :].ravel(), lab[:, [0, -1], :].ravel(), lab[:, :, [0, -1]].ravel()]))
+            sealed = (D >= 0) & ~np.isin(lab, border)
+            del lab
+            if sealed.any():
+                print(f"{name}: filled {sealed.sum() * self.h ** 3:.3f} mm3 of sealed voids")
+                D[sealed] = -self.h
         D[[0, -1], :, :] = 5.0
         D[:, [0, -1], :] = 5.0
         D[:, :, [0, -1]] = 5.0
