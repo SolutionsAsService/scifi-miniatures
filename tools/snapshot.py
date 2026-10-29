@@ -16,7 +16,7 @@ from pathlib import Path
 
 TOOL_ROOTS = [Path(r"E:\scifi-miniatures\tools"), Path(r"E:\solar-legion-min\tools"), Path(r"E:\neowest-minatures\tools"),
               Path(r"E:\signal-eaters-min\tools"), Path(r"E:\gilded-hand-miniatures\tools"), Path(r"E:\fantasy-miniatures\tools"),
-              Path(r"E:\eldritch-nightmare-minis\tools")]
+              Path(r"E:\eldritch-nightmare-minis\tools"), Path(r"H:\eldritch-nightmare-minis\tools")]
 
 
 def _git_head(repo):
